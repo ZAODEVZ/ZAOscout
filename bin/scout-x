@@ -1,0 +1,281 @@
+#!/usr/bin/env bash
+# scout-x.sh v2 - Fetch X (Twitter) content without login.
+#
+# v2 changes (2026-05-17, doc 660):
+#   - Article-wrapper tweets detected from syndication 'article' field.
+#     Title + preview + cover image emitted; ARTICLE_DETECTED flag set so the
+#     calling agent (or /fetch skill) follows up with mirror search.
+#   - --mirrors flag prints likely mirror URLs to try (LinkedIn pulse pattern,
+#     author-domain slug guesses, common paragraph.com / mirror.xyz / substack
+#     handles).
+#   - Stays no-login. No Keychain. No burner account. No paid API.
+#
+# Tier order:
+#   1. cdn.syndication.twimg.com/tweet-result?id=ID&token=4   (~95% tweets)
+#   2. nitter.net/i/status/ID                                  (HTML scrape)
+#   3. web.archive.org/web/2026/x.com/i/status/ID              (last resort)
+#
+# X Articles (URL form /i/article/<id>) are NOT directly fetchable without
+# login. Best path: pass the WRAPPING tweet id, then follow ARTICLE_DETECTED
+# hint to mirror search via the /fetch skill (doc 660).
+#
+# Usage:
+#   scout-x.sh <tweet-url-or-id>
+#   scout-x.sh --mirrors <tweet-url-or-id>
+#   scout-x.sh https://x.com/USER/status/ID
+#   scout-x.sh ID
+#
+# Exit codes:
+#   0 = success
+#   2 = tombstone / deleted / private
+#   3 = parse error
+#   4 = all tiers failed
+#   5 = bad args
+
+set -uo pipefail
+
+UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+EMIT_MIRRORS=0
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --mirrors) EMIT_MIRRORS=1; shift ;;
+    -h|--help)
+      sed -n '2,33p' "$0"
+      exit 0
+      ;;
+    *) break ;;
+  esac
+done
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: $0 [--mirrors] <tweet-url-or-id>" >&2
+  exit 5
+fi
+
+ARG="$1"
+ID=""
+
+if [[ "$ARG" =~ /status/([0-9]+) ]]; then
+  ID="${BASH_REMATCH[1]}"
+elif [[ "$ARG" =~ /i/article/([0-9]+) ]]; then
+  AID="${BASH_REMATCH[1]}"
+  echo "=== X ARTICLE URL DETECTED ===" >&2
+  echo "ARTICLE_ID=$AID" >&2
+  echo "" >&2
+  echo "X Articles are not directly fetchable without login." >&2
+  echo "To get title + preview, you need the wrapping tweet ID instead." >&2
+  echo "Search X for: 'from:USER url:i/article/$AID' (e.g. via WebSearch)" >&2
+  echo "Then re-run: scout-x.sh <wrapping-tweet-id>" >&2
+  exit 5
+elif [[ "$ARG" =~ ^[0-9]+$ ]] && (( ${#ARG} >= 15 && ${#ARG} <= 20 )); then
+  ID="$ARG"
+else
+  echo "ERROR: argument must be a tweet URL or 15-20 digit ID, got: $ARG" >&2
+  exit 5
+fi
+
+emit_mirror_hints() {
+  local title="$1" author="$2" slug=""
+  slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | tr -c '[:alnum:]' '-' | tr -s '-' | sed 's/^-//;s/-$//')
+  echo ""
+  echo "=== MIRROR HINTS (try these via WebFetch or /fetch) ==="
+  echo "https://www.linkedin.com/pulse/$slug-$author"
+  echo "https://medium.com/@$author/$slug"
+  echo "https://$author.substack.com/p/$slug"
+  echo "https://paragraph.com/@$author/$slug"
+  echo "https://mirror.xyz/$author/$slug"
+  echo "https://$author.com/post/$slug"
+  echo "https://$author.com/blog/$slug"
+  echo "https://$author.com/$slug"
+  echo ""
+  echo "Then WebSearch for: \"$title\" $author full text"
+}
+
+# Tier 0: FxTwitter (api.fxtwitter.com) - free, no-login, INCLUDES full X Article body.
+# Added 2026-06-08 (the README). The syndication tier below does NOT return article
+# bodies; FxTwitter exposes article.content.blocks (draft-js). Primary path now.
+FX_URL="https://api.fxtwitter.com/status/${ID}"
+FX=$(curl -sSL -A "$UA" --max-time 12 "$FX_URL" 2>/dev/null) || FX=""
+if [[ -n "$FX" && "${FX:0:1}" == "{" ]]; then
+  FXOUT=$(echo "$FX" | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+if d.get('code') != 200: sys.exit(10)
+t = d.get('tweet') or {}
+if not t: sys.exit(10)
+u = t.get('author') or {}
+print('USER:', u.get('screen_name'), '/', u.get('name'))
+print('CREATED:', t.get('created_at'))
+print('FAVS:', t.get('likes'), '/ REPLIES:', t.get('replies'), '/ VIEWS:', t.get('views'))
+art = t.get('article') or {}
+if art:
+    print()
+    print('=== ARTICLE_DETECTED (full body via FxTwitter) ===')
+    print('ARTICLE_TITLE:', art.get('title', ''))
+    print('ARTICLE_PREVIEW:', (art.get('preview_text') or '').strip())
+    blocks = (art.get('content') or {}).get('blocks', [])
+    hmap = {'header-one':'# ','header-two':'## ','header-three':'### ',
+            'unordered-list-item':'- ','ordered-list-item':'1. ','blockquote':'> '}
+    print()
+    print('--- ARTICLE BODY (' + str(len(blocks)) + ' blocks) ---')
+    for b in blocks:
+        x = (b.get('text') or '').strip()
+        if x: print(hmap.get(b.get('type',''), '') + x)
+else:
+    print('TEXT:')
+    print((t.get('text') or '').strip())
+m = t.get('media') or {}
+for ph in (m.get('photos') or []):
+    print('MEDIA photo:', ph.get('url'))
+for vid in (m.get('videos') or []):
+    print('MEDIA video:', vid.get('url'))
+" 2>/dev/null)
+  FXRC=$?
+  if [[ $FXRC -eq 0 && -n "$FXOUT" ]]; then
+    echo "=== TIER 0: api.fxtwitter.com (no-login, article-body aware) ===" >&2
+    echo "$FXOUT"
+    exit 0
+  fi
+fi
+
+# Tier 1: syndication endpoint
+SYND_URL="https://cdn.syndication.twimg.com/tweet-result?id=${ID}&token=4"
+RESPONSE=$(curl -sSL -A "$UA" --max-time 8 "$SYND_URL" 2>&1) || RESPONSE=""
+
+if [[ -n "$RESPONSE" && "${RESPONSE:0:1}" == "{" ]]; then
+  echo "=== TIER 1: syndication.twimg.com ===" >&2
+
+  PARSED=$(echo "$RESPONSE" | python3 -c "
+import sys, json
+try:
+    d = json.load(sys.stdin)
+    if d.get('__typename') == 'TweetTombstone' or 'errors' in d:
+        print('TOMBSTONE / ERROR - tweet deleted or private', file=sys.stderr)
+        sys.exit(2)
+    user = d.get('user', {})
+    print('USER:', user.get('screen_name'), '/', user.get('name'))
+    print('CREATED:', d.get('created_at'))
+    print('LANG:', d.get('lang'))
+    print('FAVS:', d.get('favorite_count'), '/ REPLIES:', d.get('conversation_count'))
+    print('TEXT:')
+    print(d.get('text', '').strip())
+    print()
+    ents = d.get('entities', {})
+    if ents.get('urls'):
+        print('URLS:')
+        for u in ents['urls']:
+            print(' ', u.get('url'), '->', u.get('expanded_url'))
+    if ents.get('user_mentions'):
+        print('MENTIONS:', ', '.join('@'+m['screen_name'] for m in ents['user_mentions']))
+    if ents.get('hashtags'):
+        print('HASHTAGS:', ', '.join('#'+h['text'] for h in ents['hashtags']))
+    md = d.get('mediaDetails') or []
+    for m in md:
+        print('MEDIA:', m.get('type'), '->', m.get('media_url_https'))
+        for v in (m.get('video_info') or {}).get('variants', []):
+            if v.get('content_type') == 'video/mp4':
+                print('  mp4:', v.get('url'))
+                break
+    parent = d.get('parent')
+    if parent:
+        print()
+        print('PARENT TWEET (replied to):')
+        print('  user:', parent.get('user', {}).get('screen_name'))
+        print('  text:', parent.get('text', '')[:200])
+
+    article = d.get('article')
+    if article:
+        print()
+        print('=== ARTICLE_DETECTED ===')
+        print('ARTICLE_TITLE:', article.get('title', ''))
+        print('ARTICLE_REST_ID:', article.get('rest_id', ''))
+        print('ARTICLE_PREVIEW:')
+        print(article.get('preview_text', '').strip())
+        cm = article.get('cover_media') or {}
+        mi = cm.get('media_info') or {}
+        if mi.get('original_img_url'):
+            print('ARTICLE_COVER:', mi.get('original_img_url'))
+        print()
+        print('!! Body NOT in syndication payload - needs mirror search.')
+        print('!! Use --mirrors flag or call /fetch article-mirror branch.')
+        print('ARTICLE_AUTHOR:', user.get('screen_name', ''))
+
+    print()
+    print('=== FULL JSON (truncated to 1500 chars) ===')
+    raw = json.dumps(d, indent=2)
+    print(raw[:1500])
+    if len(raw) > 1500:
+        print(f'... [{len(raw)-1500} more chars]')
+except SystemExit:
+    raise
+except Exception as e:
+    print(f'PARSE ERROR: {e}', file=sys.stderr)
+    sys.exit(3)
+")
+  RC=$?
+  echo "$PARSED"
+
+  if [[ "$EMIT_MIRRORS" -eq 1 ]]; then
+    TITLE=$(echo "$PARSED" | grep -E '^ARTICLE_TITLE:' | sed 's/^ARTICLE_TITLE: //')
+    AUTHOR=$(echo "$PARSED" | grep -E '^ARTICLE_AUTHOR:' | sed 's/^ARTICLE_AUTHOR: //')
+    if [[ -n "$TITLE" && -n "$AUTHOR" ]]; then
+      emit_mirror_hints "$TITLE" "$AUTHOR"
+    fi
+  fi
+  exit "$RC"
+fi
+
+# Tier 2: nitter.net
+echo "Tier 1 failed, trying nitter.net..." >&2
+NITTER="https://nitter.net/i/status/${ID}"
+RESP2=$(curl -sSL -A "$UA" --max-time 10 "$NITTER" 2>&1) || RESP2=""
+
+if [[ -n "$RESP2" && "$RESP2" == *"<title"* ]]; then
+  echo "=== TIER 2: nitter.net ==="
+  echo "$RESP2" | python3 -c "
+import sys, re, html
+h = sys.stdin.read()
+m = re.search(r'<title>(.*?)</title>', h, re.S)
+if m:
+    print('TITLE:', html.unescape(m.group(1).strip()))
+m = re.search(r'<a class=\"username\"[^>]*>([^<]+)</a>', h)
+if m:
+    print('USER:', m.group(1).strip())
+m = re.search(r'<span class=\"tweet-date\"[^>]*><a[^>]*title=\"([^\"]+)\"', h)
+if m:
+    print('DATE:', m.group(1))
+m = re.search(r'<div class=\"tweet-content[^\"]*\"[^>]*>(.*?)</div>', h, re.S)
+if m:
+    text = re.sub(r'<[^>]+>', ' ', m.group(1))
+    print('TEXT:', html.unescape(re.sub(r'\s+', ' ', text)).strip())
+"
+  exit 0
+fi
+
+# Tier 3: wayback machine
+echo "Tier 2 failed, trying wayback..." >&2
+WB="https://web.archive.org/web/2026/https://x.com/i/status/${ID}"
+RESP3=$(curl -sSL -A "$UA" --max-time 12 "$WB" 2>&1) || RESP3=""
+
+if [[ -n "$RESP3" ]]; then
+  echo "=== TIER 3: web.archive.org (raw HTML, manual extraction) ==="
+  echo "$RESP3" | python3 -c "
+import sys, re, html
+h = sys.stdin.read()
+m = re.search(r'<title>(.*?)</title>', h, re.S)
+if m:
+    print('TITLE:', html.unescape(m.group(1).strip()))
+print('LENGTH:', len(h), 'chars')
+print('---first 1000 chars of body---')
+body_match = re.search(r'<body[^>]*>(.*?)</body>', h, re.S)
+if body_match:
+    body = re.sub(r'<[^>]+>', ' ', body_match.group(1))
+    body = html.unescape(re.sub(r'\s+', ' ', body))
+    print(body[:1000])
+"
+  exit 0
+fi
+
+echo "ALL TIERS FAILED for tweet $ID" >&2
+exit 4

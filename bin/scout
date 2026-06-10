@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# scout - route a URL (or handle) to the right keyless fetcher.
+# No API keys. Reddit via Redlib, X via FxTwitter, Farcaster via Haatz.
+set -uo pipefail
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+if [[ $# -lt 1 ]]; then
+  cat >&2 <<EOF
+usage: scout <url-or-handle>
+
+  reddit.com/...        -> Redlib   (post + comments, no key)
+  x.com / twitter.com   -> FxTwitter (tweet + full Article body, no key)
+  farcaster.xyz/...     -> Haatz     (cast/profile, no key)
+  health                -> run the fetcher health-check
+
+examples:
+  scout https://www.reddit.com/r/ClaudeCode/comments/1typ8fb/
+  scout https://x.com/0xricker/status/2062149859394585061
+  scout https://farcaster.xyz/dwr.eth
+  scout health
+EOF
+  exit 2
+fi
+
+ARG="$1"
+case "$ARG" in
+  health) exec "$DIR/scout-health" ;;
+  *reddit.com*)              exec "$DIR/scout-reddit" "$ARG" ;;
+  *x.com*|*twitter.com*)     exec "$DIR/scout-x" "$ARG" ;;
+  *farcaster.xyz*|*warpcast.com*) exec "$DIR/scout-farcaster" "$ARG" ;;
+  [0-9]*)                    exec "$DIR/scout-x" "$ARG" ;;   # bare tweet id
+  *) echo "scout: unrecognized target '$ARG' (expected a reddit/x/farcaster URL)" >&2; exit 2 ;;
+esac

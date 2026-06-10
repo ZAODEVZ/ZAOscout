@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+# scout-reddit.sh (v3) - Fetch a Reddit thread FREE, no API key, no OAuth, no env.
+#
+# WHY v3: Reddit's unauthenticated .json double-gates on IP reputation + TLS
+# fingerprint, so curl/exa/Jina all 403 (the README). Rather than require an OAuth
+# script-app (env vars = not forkable), this version reads through Redlib - a
+# public Reddit front-end that emulates the official Reddit Android app, so
+# Reddit serves it normally. Zero config: clone and run. Same pattern as
+# FxTwitter (X, the README) and Haatz (Farcaster, the README). Doc 824.
+#
+# Multi-instance fallback: public Redlib instances are rate-limited / occasionally
+# blocked, so we try a list until one returns the thread. Refresh the list from
+# https://github.com/redlib-org/redlib-instances (instances.json) if all die.
+#
+# Usage:
+#   scout-reddit.sh <reddit-url-or-/s/-share-link>
+#   scout-reddit.sh r/SUBREDDIT [hot|top|new]
+#
+# Exit: 0 ok | 2 not found / all instances failed | 5 bad args
+
+set -uo pipefail
+UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+
+# Vetted public Redlib instances (verified reachable 2026-06-08). Order = try order.
+INSTANCES=(
+  "redlib.perennialte.ch"
+  "reddit.rtrace.io"
+  "redlib.privadency.com"
+  "redlib.catsarch.com"
+  "redlib.privacydev.net"
+  "redlib.nerdvpn.de"
+  "redlib.fmhy.net"
+)
+# Allow override: REDLIB_INSTANCES="a.com b.com" scout-reddit.sh ...
+if [[ -n "${REDLIB_INSTANCES:-}" ]]; then read -r -a INSTANCES <<< "$REDLIB_INSTANCES"; fi
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: $0 <reddit-url-or-permalink-or-/s/-link-or-r/sub>" >&2
+  exit 5
+fi
+
+ARG="$1"
+REDDIT_PATH=""
+
+# Resolve /s/ share links to the canonical /comments/ path (interstitial is keyless).
+if [[ "$ARG" =~ /r/[A-Za-z0-9_]+/s/[A-Za-z0-9]+ ]]; then
+  CANON=$(curl -sL -A "$UA" --max-time 18 "$ARG" \
+    | grep -oiE '/r/[A-Za-z0-9_]+/comments/[a-z0-9]+/[a-z0-9_]+' | head -1)
+  if [[ -z "$CANON" ]]; then
+    echo "ERROR: could not resolve /s/ share link to a canonical /comments/ URL" >&2
+    exit 2
+  fi
+  REDDIT_PATH="$CANON/"
+elif [[ "$ARG" =~ ^https?:// ]]; then
+  REDDIT_PATH=$(echo "$ARG" | sed -E 's#^https?://[^/]+##; s#\?.*$##')
+  [[ "$REDDIT_PATH" != */ ]] && REDDIT_PATH="$REDDIT_PATH/"
+elif [[ "$ARG" =~ ^r/ ]]; then
+  SUB="${ARG#r/}"; MODE="${2:-hot}"
+  REDDIT_PATH="/r/${SUB}/${MODE}/"
+else
+  echo "ERROR: argument must be a URL, permalink, /s/ link, or r/SUBREDDIT" >&2
+  exit 5
+fi
+
+fetch_html() {
+  local inst="$1" path="$2"
+  curl -s -A "$UA" --max-time 18 -w '\n__HTTP__%{http_code}' "https://${inst}${path}" 2>/dev/null
+}
+
+HTML=""; USED=""
+for inst in "${INSTANCES[@]}"; do
+  RAW=$(fetch_html "$inst" "$REDDIT_PATH")
+  CODE=$(echo "$RAW" | tail -1 | sed 's/__HTTP__//')
+  BODY=$(echo "$RAW" | sed '$d')
+  if [[ "$CODE" == "200" && ${#BODY} -gt 4000 && "$BODY" == *"post_"* ]]; then
+    HTML="$BODY"; USED="$inst"; break
+  fi
+done
+
+if [[ -z "$HTML" ]]; then
+  echo "ERROR: no Redlib instance returned the thread (tried ${#INSTANCES[@]}). Refresh the instance list from github.com/redlib-org/redlib-instances." >&2
+  exit 2
+fi
+
+echo "=== via Redlib: $USED (no-auth) ===" >&2
+echo "$HTML" | python3 -c "
+import sys, re, html
+h = sys.stdin.read()
+def clean(s): return re.sub(r'\s+',' ', html.unescape(re.sub('<[^>]+>',' ', s))).strip()
+m = re.search(r'<h1[^>]*class=\"post_title\"[^>]*>(.*?)</h1>', h, re.S)
+print('TITLE:', clean(m.group(1)) if m else '?')
+ma = re.search(r'<a[^>]*class=\"post_author[^\"]*\"[^>]*>(.*?)</a>', h, re.S)
+if ma: print('AUTHOR:', clean(ma.group(1)))
+msub = re.search(r'<a[^>]*class=\"post_subreddit\"[^>]*>(.*?)</a>', h, re.S)
+if msub: print('SUBREDDIT:', clean(msub.group(1)))
+mb = re.search(r'<div[^>]*class=\"post_body\"[^>]*>(.*?)</div>\s*<div[^>]*class=\"post_media', h, re.S) or re.search(r'<div[^>]*class=\"post_body\"[^>]*>(.*?)</div>', h, re.S)
+if mb:
+    body = clean(mb.group(1))
+    if body: print('BODY:'); print(body)
+coms = re.findall(r'<div[^>]*class=\"comment_body[^\"]*\"[^>]*>(.*?)</div>', h, re.S)
+print()
+print('=== COMMENTS (' + str(len(coms)) + ' total, showing up to 25) ===')
+n = 0
+for c in coms:
+    t = clean(c)
+    if t:
+        print('-', t)
+        n += 1
+        if n >= 25: break
+"

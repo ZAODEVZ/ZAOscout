@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# zao-fetch-healthcheck.sh - Catch silent regressions in the keyless fetch trio.
+#
+# Doc 564 shipped "Reddit fetch FIXED + TESTED" and rotted ~3 weeks later with
+# nobody noticing - the inbox kept indexing blocked HTML shells. This runs each
+# fetcher against a known-stable target and asserts REAL content came back.
+# Run weekly (cron) or on demand. Exit 0 = all green, non-zero = a fetcher regressed.
+# Docs 822/823/824.
+
+LOG="${SCOUT_LOG:-/tmp/scout-health.log}"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+mkdir -p "$(dirname "$LOG")"
+TS="$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+FAIL=0
+report=""
+
+check() {
+  local name="$1" cmd="$2" needle="$3"
+  local out attempt
+  # Retry once on miss - public mirrors blip; only a 2nd miss is a real regression.
+  for attempt in 1 2; do
+    out="$(eval "$cmd" 2>/dev/null)"
+    if echo "$out" | grep -qiE "$needle"; then
+      report+="PASS  $name"$'\n'
+      return
+    fi
+    [[ $attempt -eq 1 ]] && sleep 5
+  done
+  report+="FAIL  $name (no '$needle' after 2 tries; first 120b: ${out:0:120})"$'\n'
+  FAIL=1
+}
+
+# Reddit (Redlib) - a stable, high-traffic thread root
+check "reddit (Redlib)" "$DIR/scout-reddit 'https://www.reddit.com/r/ClaudeCode/comments/1typ8fb/'" "COMMENTS|post|TITLE"
+# X (FxTwitter) - a stable public tweet/article
+check "x (FxTwitter)" "$DIR/scout-x 2062149859394585061" "USER:|ARTICLE|TEXT:"
+# Farcaster (Haatz) - dwr.eth profile (fid 3, permanent)
+check "farcaster (Haatz)" "$DIR/scout-farcaster 3" "FID: 3|Dan Romero"
+
+printf "%s\n%s" "$TS" "$report" | tr -s '\n' >> "$LOG"
+echo "[$TS] zao-fetch healthcheck:"
+printf "%s" "$report"
+if [[ $FAIL -ne 0 ]]; then
+  echo "REGRESSION DETECTED - a fetcher is broken. Re-validate per docs 822/823/824." >&2
+  echo "FAIL $TS" >> "$LOG"
+  exit 1
+fi
+echo "all green"
+echo "OK $TS" >> "$LOG"

@@ -1,0 +1,6 @@
+# Example author list for the mining workflow (edit AUTHORS in workflows/mine.js).
+# Format: handle | topic
+trq212 | Claude agents skills building
+walden_yan | context engineering multi-agent
+0xricker | Opus Kimi agent swarm orchestration
+shawmakesmagic | eliza autonomous agents framework

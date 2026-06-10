@@ -1,0 +1,7 @@
+.env
+*.private.json
+*.gmail.json
+/tmp/
+scout-health.log
+.DS_Store
+node_modules/

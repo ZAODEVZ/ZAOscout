@@ -1,0 +1,136 @@
+#!/usr/bin/env bash
+# scout-farcaster.sh - Fetch a Farcaster cast or profile, FREE, no API key.
+#
+# Uses Haatz (haatz.quilibrium.com), a free public Snapchain hub read mirror on
+# Quilibrium. Standard Farcaster hub HTTP API, no auth. Added 2026-06-08, the README.
+#
+# Handles inbox URL shapes:
+#   farcaster.xyz/<user>/<0xSHORTHASH>   -> single cast (resolves user->fid, prefix-matches hash)
+#   warpcast.com/<user>/<0xSHORTHASH>    -> same
+#   farcaster.xyz/<user>                 -> profile + recent casts
+#   <fid>                                -> profile + recent casts by FID
+#
+# Usage:
+#   scout-farcaster.sh <farcaster-url-or-fid>
+#
+# Exit: 0 ok | 2 not found | 5 bad args
+
+set -uo pipefail
+HUB="${FARCASTER_HUB:-https://haatz.quilibrium.com}"
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: $0 <farcaster-url-or-fid>" >&2
+  exit 5
+fi
+
+ARG="$1"
+USER=""; SHORTHASH=""; FID=""
+
+if [[ "$ARG" =~ ^[0-9]+$ ]]; then
+  FID="$ARG"
+elif [[ "$ARG" =~ (farcaster\.xyz|warpcast\.com)/([^/]+)/(0x[0-9a-fA-F]+) ]]; then
+  USER="${BASH_REMATCH[2]}"; SHORTHASH="${BASH_REMATCH[3]}"
+elif [[ "$ARG" =~ (farcaster\.xyz|warpcast\.com)/([^/?]+) ]]; then
+  USER="${BASH_REMATCH[2]}"
+else
+  echo "ERROR: not a Farcaster URL or FID: $ARG" >&2
+  exit 5
+fi
+
+python3 - "$HUB" "$USER" "$SHORTHASH" "$FID" <<'PY'
+import sys, json, urllib.request, urllib.parse
+
+HUB, USER, SHORTHASH, FID = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+
+def get(path):
+    req = urllib.request.Request(HUB + path, headers={"User-Agent": "scout-farcaster/1.0"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return json.load(r)
+
+def resolve_fid(name):
+    # try fname then ENS; userNameProofByName returns {fid,...} for both
+    try:
+        d = get("/v1/userNameProofByName?name=" + urllib.parse.quote(name))
+        if d.get("fid"): return d["fid"]
+    except Exception:
+        pass
+    return None
+
+def user_meta(fid):
+    out = {}
+    try:
+        d = get(f"/v1/userDataByFid?fid={fid}")
+        for m in d.get("messages", []):
+            b = m.get("data", {}).get("userDataBody", {})
+            t, v = b.get("type"), b.get("value")
+            if t == "USER_DATA_TYPE_DISPLAY": out["display"] = v
+            elif t == "USER_DATA_TYPE_USERNAME": out["username"] = v
+            elif t == "USER_DATA_TYPE_BIO": out["bio"] = v
+            elif t == "USER_DATA_TYPE_PFP": out["pfp"] = v
+    except Exception:
+        pass
+    return out
+
+def fmt_cast(m, label="CAST"):
+    d = m.get("data", {})
+    body = d.get("castAddBody", {})
+    print(f"=== {label} ===")
+    print("HASH:", m.get("hash"))
+    print("FID:", d.get("fid"), "| TS(farcaster-epoch):", d.get("timestamp"))
+    txt = (body.get("text") or "").strip()
+    print("TEXT:")
+    print(txt if txt else "(no text - likely media/embed only)")
+    embeds = [e.get("url") for e in body.get("embeds", []) if e.get("url")]
+    if embeds:
+        print("EMBEDS:")
+        for e in embeds: print("  " + e)
+    pc = body.get("parentCastId")
+    if pc: print("REPLY_TO: fid", pc.get("fid"), "hash", pc.get("hash"))
+
+if not FID and USER:
+    FID = resolve_fid(USER)
+    if not FID:
+        print(f"ERROR: could not resolve username '{USER}' to a FID", file=sys.stderr)
+        sys.exit(2)
+
+meta = user_meta(FID)
+print("=== FARCASTER (via Haatz, no-auth) ===")
+print("USER:", meta.get("display") or USER or "", "| @" + (meta.get("username") or USER or ""), "| FID:", FID)
+if meta.get("bio"): print("BIO:", meta["bio"])
+print()
+
+if SHORTHASH:
+    # paginate recent casts (reverse), prefix-match the short hash from the URL
+    sh = SHORTHASH.lower()
+    token = ""; found = None; pages = 0
+    while pages < 6 and not found:
+        path = f"/v1/castsByFid?fid={FID}&reverse=true&pageSize=1000"
+        if token: path += "&pageToken=" + urllib.parse.quote(token)
+        try:
+            d = get(path)
+        except Exception as e:
+            print("ERROR paging castsByFid:", e, file=sys.stderr); sys.exit(2)
+        for m in d.get("messages", []):
+            if (m.get("hash") or "").lower().startswith(sh):
+                found = m; break
+        token = d.get("nextPageToken") or ""
+        pages += 1
+        if not token: break
+    if found:
+        fmt_cast(found, "CAST (matched %s)" % SHORTHASH)
+        sys.exit(0)
+    print(f"NOT FOUND: no cast starting {SHORTHASH} in last ~{pages*1000} casts of fid {FID}.", file=sys.stderr)
+    print("Provide the full 40-char hash to fetch directly via /v1/castById.", file=sys.stderr)
+    sys.exit(2)
+else:
+    # profile mode: show recent casts
+    try:
+        d = get(f"/v1/castsByFid?fid={FID}&reverse=true&pageSize=5")
+        print("--- RECENT CASTS (5) ---")
+        for m in d.get("messages", []):
+            t = (m.get("data", {}).get("castAddBody", {}).get("text") or "").strip().replace("\n", " ")
+            print(f"  [{m.get('hash')[:10]}] {t[:160]}")
+    except Exception as e:
+        print("(could not list recent casts:", e, ")", file=sys.stderr)
+    sys.exit(0)
+PY
