@@ -6,7 +6,8 @@ function render(picks) {
   if (!picks.length) return null;
   const lines = picks.map((p) => {
     const tag = p.source === 'reddit' ? `r/${p.sub}` : p.source === 'farcaster' ? `@${p.user}` : p.source;
-    return `- [${tag}] ${p.title}\n  ${p.url}`;
+    const why = p.why ? `\n  ${p.why}` : '';
+    return `- [${tag}] ${p.title}${why}\n  ${p.url}`;
   });
   return `**ZAOscout - ${picks.length} new**\n` + lines.join('\n');
 }

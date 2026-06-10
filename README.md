@@ -65,6 +65,19 @@ DRY_RUN=1 scout watch  # print picks instead of posting
 - **X is watch-unsupported** - timelines are walled (see [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)); forward individual X links instead, or fetch a known tweet with `scout-x`.
 - Dedup state lives in `~/.zaoscout/seen.json`.
 
+### Optional BYOK synthesis (a grounded "why it matters")
+
+By default `scout watch` delivers links - fully keyless. Add **your own** LLM key and it grounds each pick in its real body (via the keyless fetchers) and attaches a one-sentence "why it matters" - cite-or-drop, so it never free-associates. Bring any one provider:
+
+```bash
+# in .env - pick ONE
+LLM_PROVIDER=openrouter   # openrouter | anthropic | openai | ollama
+LLM_API_KEY=sk-...        # your key (omit for local ollama)
+LLM_MODEL=                # optional - sensible default per provider
+```
+
+No key = link-only (still works). Unreachable LLM = fail-soft back to link-only. Your key stays in your `.env`, never in the repo.
+
 This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
 
 ## Roadmap: capture -> synthesize -> distribute
