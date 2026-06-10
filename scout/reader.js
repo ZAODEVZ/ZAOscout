@@ -25,19 +25,23 @@ async function redditSub(sub, mode = 'hot', limit = 10) {
       if (html.length < 4000 || !html.includes('post_')) continue;
       const items = [];
       const seenIds = new Set();
-      // The real title lives inside the <h2 class="post_title"> block, in the anchor
-      // whose href points to /comments/ (siblings include flair-search + thumbnail links).
-      const blockRe = /<h2[^>]*class="post_title"[^>]*>([\s\S]*?)<\/h2>/g;
-      let b;
-      while ((b = blockRe.exec(html)) && items.length < limit) {
-        const block = b[1];
-        const a = block.match(/<a[^>]*href="(\/r\/[A-Za-z0-9_]+\/comments\/([a-z0-9]+)\/[^"]*)"[^>]*>([\s\S]*?)<\/a>/);
+      // Split into per-post chunks: each post is `<div class="post ..." id="ID">...`.
+      // Skip stickied/pinned (megathreads, mod posts). Capture real engagement from
+      // the title="N" attrs on post_score + post_comments.
+      const chunks = html.split(/<div class="post[" ]/).slice(1);
+      for (const chunk of chunks) {
+        if (items.length >= limit) break;
+        if (chunk.slice(0, 20).includes('stickied')) continue;    // drop pinned noise
+        const idM = chunk.match(/id="([a-z0-9]+)"/);
+        const a = chunk.match(/<h2[^>]*class="post_title"[^>]*>[\s\S]*?<a[^>]*href="(\/r\/[A-Za-z0-9_]+\/comments\/([a-z0-9]+)\/[^"]*)"[^>]*>([\s\S]*?)<\/a>/);
         if (!a) continue;
         const id = a[2];
         const title = decodeEnt(a[3].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
         if (!title || title.length < 4 || seenIds.has(id)) continue;
+        const score = Number((chunk.match(/class="post_score"[^>]*title="(\d+)"/) || [])[1] || 0);
+        const comments = Number((chunk.match(/class="post_comments"[^>]*title="(\d+)/) || [])[1] || 0);
         seenIds.add(id);
-        items.push({ source: 'reddit', sub, id, title, url: `https://www.reddit.com${a[1].split('?')[0]}`, engagement: 0 });
+        items.push({ source: 'reddit', sub, id, title, url: `https://www.reddit.com${a[1].split('?')[0]}`, engagement: score + comments * 2 });
       }
       return items;
     } catch { /* try next instance */ }
