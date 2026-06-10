@@ -45,6 +45,28 @@ Requirements: `bash`, `curl`, `python3` (all standard on macOS/Linux). That's it
 | `scout-farcaster <url-or-fid>` | Haatz | resolves `@handle` -> FID, short-hash -> full cast |
 | `scout health` | all three | run weekly (cron) to catch silent breakage |
 
+## `scout watch` - the multi-platform feed
+
+Point a watchlist at subreddits + Farcaster users; `scout watch` reads recent items keyless, dedupes against what it already sent, and delivers the fresh top picks to Discord (a webhook, or a bot-token DM). Run it on a cron for a standing feed.
+
+```bash
+cp watchlist.example.json watchlist.json   # edit your sources
+cp .env.example .env                        # set DISCORD_WEBHOOK (or DISCORD_BOT_TOKEN + DISCORD_USER_ID)
+scout watch            # one cycle
+DRY_RUN=1 scout watch  # print picks instead of posting
+```
+
+```json
+// watchlist.json
+{ "reddit": ["LocalLLaMA", "ClaudeAI"], "farcaster": ["dwr.eth", "v"], "x": [] }
+```
+
+- **Reddit** (subreddit listings) and **Farcaster** (a user's recent casts) work keyless.
+- **X is watch-unsupported** - timelines are walled (see [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)); forward individual X links instead, or fetch a known tweet with `scout-x`.
+- Dedup state lives in `~/.zaoscout/seen.json`.
+
+This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
+
 ## Roadmap: capture -> synthesize -> distribute
 
 ZAOscout v1 is the **capture** layer. The larger vision is a media-intelligence loop: capture good information from media, synthesize it once, and distribute it everywhere. The mining workflow (`workflows/mine.js`) is the push-discovery half (find signal from known authors). See [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md).

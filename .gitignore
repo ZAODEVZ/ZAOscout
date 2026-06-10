@@ -5,3 +5,6 @@
 scout-health.log
 .DS_Store
 node_modules/
+
+watchlist.json
+.zaoscout/

@@ -12,6 +12,7 @@ usage: scout <url-or-handle>
   x.com / twitter.com   -> FxTwitter (tweet + full Article body, no key)
   farcaster.xyz/...     -> Haatz     (cast/profile, no key)
   health                -> run the fetcher health-check
+  watch                 -> read your watchlist -> triage -> Discord (see watchlist.example.json)
 
 examples:
   scout https://www.reddit.com/r/ClaudeCode/comments/1typ8fb/
@@ -25,6 +26,7 @@ fi
 ARG="$1"
 case "$ARG" in
   health) exec "$DIR/scout-health" ;;
+  watch)  exec node "$DIR/../scout/watch.js" ;;
   *reddit.com*)              exec "$DIR/scout-reddit" "$ARG" ;;
   *x.com*|*twitter.com*)     exec "$DIR/scout-x" "$ARG" ;;
   *farcaster.xyz*|*warpcast.com*) exec "$DIR/scout-farcaster" "$ARG" ;;
