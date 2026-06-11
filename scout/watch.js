@@ -12,6 +12,16 @@ import { makeBrain } from './brain.js';
 import { groundBody } from './ground.js';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
+
+// Zero-dep .env loader: load <repo>/.env into process.env (existing env wins).
+try {
+  const envText = fs.readFileSync(path.join(dir, '..', '.env'), 'utf8');
+  for (const line of envText.split('\n')) {
+    const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.*)\s*$/i);
+    if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+} catch { /* no .env - fine, env-only or zero-config */ }
+
 const wlPath = process.env.SCOUT_WATCHLIST || path.join(dir, '..', 'watchlist.json');
 let wl;
 try { wl = JSON.parse(fs.readFileSync(wlPath, 'utf8')); }

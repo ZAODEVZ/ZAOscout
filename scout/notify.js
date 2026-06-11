@@ -34,7 +34,15 @@ export async function notify(picks) {
     }
     return { delivered: picks.length, via: 'bot-dm' };
   }
+  // Default (no Discord configured): append to a local markdown feed file. Zero env.
+  const { default: fs } = await import('node:fs');
+  const { default: os } = await import('node:os');
+  const { default: path } = await import('node:path');
+  const dir = process.env.SCOUT_STATE_DIR || path.join(os.homedir(), '.zaoscout');
+  fs.mkdirSync(dir, { recursive: true });
+  const file = path.join(dir, 'feed.md');
+  fs.appendFileSync(file, `\n---\n${text}\n`);
   console.log(text);
-  console.error('[scout] no DISCORD_WEBHOOK or DISCORD_BOT_TOKEN+DISCORD_USER_ID set - printed above instead.');
-  return { delivered: picks.length, via: 'stdout' };
+  console.error(`[scout] appended to ${file} (set DISCORD_WEBHOOK to push to Discord instead).`);
+  return { delivered: picks.length, via: 'file' };
 }

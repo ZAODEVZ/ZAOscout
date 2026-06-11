@@ -78,6 +78,15 @@ LLM_MODEL=                # optional - sensible default per provider
 
 No key = link-only (still works). Unreachable LLM = fail-soft back to link-only. Your key stays in your `.env`, never in the repo.
 
+**Minimal setup is one line.** No Discord required - with no `DISCORD_WEBHOOK` set, `scout watch` appends the feed to `~/.zaoscout/feed.md`. So the whole thing can be just:
+
+```bash
+echo 'OPENROUTER_API_KEY=sk-or-v1-...' > .env   # one line: free OpenRouter model + grounded synthesis
+scout watch                                      # feed -> ~/.zaoscout/feed.md
+```
+
+Add `DISCORD_WEBHOOK=...` later to push to Discord instead of the file.
+
 This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
 
 ## Roadmap: capture -> synthesize -> distribute
