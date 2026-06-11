@@ -83,5 +83,24 @@ export function makeBrain() {
         return out.replace(/^["']|["']$/g, '');
       } catch { return ''; }
     },
+
+    // Two-pass digest (farscout pattern): extract one grounded claim per item, then
+    // synthesize a connected brief that names the cross-cutting theme. cite-or-drop:
+    // every claim carries its item index; the brief references items by [n].
+    async digest(items) {
+      // items: [{ title, body, tag, url }]
+      const grounded = items.filter((it) => it.body && it.body.length >= 40);
+      if (!grounded.length) return '';
+      const claimsSys = 'For each numbered item, write ONE factual claim (max 20 words) grounded ONLY in its text. Output one line per item as "n. claim". If an item is empty/off-topic, output "n. SKIP". No preamble.';
+      const claimsUser = grounded.map((it, i) => `[${i + 1}] ${it.title}\n${it.body.slice(0, 1500)}`).join('\n\n');
+      let claims;
+      try { claims = (await call(cfg, claimsSys, claimsUser) || '').trim(); } catch { return ''; }
+      if (!claims) return '';
+      const synthSys = 'You are a research scout. Given a numbered list of claims, write a SHORT brief (max 120 words): one opening sentence naming the single biggest cross-cutting theme, then 2-4 bullet lines on the most notable items, each ending with its [n] reference. Ground only in the claims. No fluff, no preamble.';
+      try {
+        const brief = (await call(cfg, synthSys, `CLAIMS:\n${claims}`) || '').trim();
+        return brief || '';
+      } catch { return ''; }
+    },
   };
 }

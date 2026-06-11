@@ -13,10 +13,19 @@ function render(picks) {
 }
 
 export async function notify(picks) {
-  const text = render(picks);
-  if (!text) return { delivered: 0, via: 'none' };
-  if (process.env.DRY_RUN) { console.log('[dry-run]\n' + text); return { delivered: picks.length, via: 'dry-run' }; }
+  return deliver(render(picks), picks.length);
+}
 
+// Deliver an arbitrary string through the same surfaces (used by `scout digest`).
+export async function notifyText(text) {
+  return deliver(text, 1);
+}
+
+async function deliver(text, count) {
+  if (!text) return { delivered: 0, via: 'none' };
+  if (process.env.DRY_RUN) { console.log('[dry-run]\n' + text); return { delivered: count, via: 'dry-run' }; }
+
+  const picks = { length: count };
   const chunks = text.match(/[\s\S]{1,1900}/g);
 
   const hook = process.env.DISCORD_WEBHOOK;

@@ -87,6 +87,15 @@ scout watch                                      # feed -> ~/.zaoscout/feed.md
 
 Add `DISCORD_WEBHOOK=...` later to push to Discord instead of the file.
 
+### `scout digest` - one connected brief
+
+Where `scout watch` gives you a feed of items, `scout digest` synthesizes **all** fresh picks into a single short brief - it names the cross-cutting theme and the most notable items (each with a `[n]` source ref). Two-pass, cite-or-drop, so it grounds in the real posts, not the model's memory. Needs a BYOK key for the synthesis; with no key it falls back to a grouped link digest.
+
+```bash
+scout digest            # brief across all fresh picks
+DRY_RUN=1 scout digest  # preview
+```
+
 This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
 
 ## Roadmap: capture -> synthesize -> distribute

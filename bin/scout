@@ -13,6 +13,7 @@ usage: scout <url-or-handle>
   farcaster.xyz/...     -> Haatz     (cast/profile, no key)
   health                -> run the fetcher health-check
   watch                 -> read your watchlist -> triage -> Discord (see watchlist.example.json)
+  digest                -> one connected brief across all fresh picks (needs a BYOK key for synthesis)
 
 examples:
   scout https://www.reddit.com/r/ClaudeCode/comments/1typ8fb/
@@ -27,6 +28,7 @@ ARG="$1"
 case "$ARG" in
   health) exec "$DIR/scout-health" ;;
   watch)  exec node "$DIR/../scout/watch.js" ;;
+  digest) exec node "$DIR/../scout/digest.js" ;;
   *reddit.com*)              exec "$DIR/scout-reddit" "$ARG" ;;
   *x.com*|*twitter.com*)     exec "$DIR/scout-x" "$ARG" ;;
   *farcaster.xyz*|*warpcast.com*) exec "$DIR/scout-farcaster" "$ARG" ;;
