@@ -17,8 +17,12 @@ const dir = path.dirname(fileURLToPath(import.meta.url));
 try {
   const envText = fs.readFileSync(path.join(dir, '..', '.env'), 'utf8');
   for (const line of envText.split('\n')) {
-    const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.*)\s*$/i);
-    if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+    if (/^\s*#/.test(line)) continue;                           // skip comments
+    const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$/);  // trim trailing ws
+    if (!m || (m[1] in process.env)) continue;
+    let v = m[2];
+    if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);  // strip only balanced quotes
+    process.env[m[1]] = v;
   }
 } catch { /* no .env - fine, env-only or zero-config */ }
 
@@ -37,7 +41,8 @@ const brain = makeBrain();
 if (brain) {
   console.error(`[scout] grounding picks with ${brain.provider} (${brain.model})`);
   for (const p of picks) {
-    p.why = await brain.whyItMatters(p.title, await groundBody(p));
+    try { p.why = await brain.whyItMatters(p.title, await groundBody(p)); }
+    catch { p.why = ''; }   // one bad pick never sinks the cycle
   }
 }
 

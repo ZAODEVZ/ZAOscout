@@ -14,12 +14,13 @@ TS="$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 FAIL=0
 report=""
 
+# check NAME SCRIPT ARG NEEDLE - array call, no eval.
 check() {
-  local name="$1" cmd="$2" needle="$3"
+  local name="$1" script="$2" arg="$3" needle="$4"
   local out attempt
   # Retry once on miss - public mirrors blip; only a 2nd miss is a real regression.
   for attempt in 1 2; do
-    out="$(eval "$cmd" 2>/dev/null)"
+    out="$("$script" "$arg" 2>/dev/null)"
     if echo "$out" | grep -qiE "$needle"; then
       report+="PASS  $name"$'\n'
       return
@@ -30,12 +31,12 @@ check() {
   FAIL=1
 }
 
-# Reddit (Redlib) - a stable, high-traffic thread root
-check "reddit (Redlib)" "$DIR/scout-reddit 'https://www.reddit.com/r/ClaudeCode/comments/1typ8fb/'" "COMMENTS|post|TITLE"
+# Reddit (Redlib) - a subreddit listing (resilient: never a deletable single thread)
+check "reddit (Redlib)" "$DIR/scout-reddit" "r/announcements" "COMMENTS|post|TITLE|post_title"
 # X (FxTwitter) - a stable public tweet/article
-check "x (FxTwitter)" "$DIR/scout-x 2062149859394585061" "USER:|ARTICLE|TEXT:"
+check "x (FxTwitter)" "$DIR/scout-x" "2062149859394585061" "USER:|ARTICLE|TEXT:"
 # Farcaster (Haatz) - dwr.eth profile (fid 3, permanent)
-check "farcaster (Haatz)" "$DIR/scout-farcaster 3" "FID: 3|Dan Romero"
+check "farcaster (Haatz)" "$DIR/scout-farcaster" "3" "FID: 3|Dan Romero"
 
 printf "%s\n%s" "$TS" "$report" | tr -s '\n' >> "$LOG"
 echo "[$TS] zao-fetch healthcheck:"

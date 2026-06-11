@@ -17,22 +17,39 @@ export async function notify(picks) {
   if (!text) return { delivered: 0, via: 'none' };
   if (process.env.DRY_RUN) { console.log('[dry-run]\n' + text); return { delivered: picks.length, via: 'dry-run' }; }
 
+  const chunks = text.match(/[\s\S]{1,1900}/g);
+
   const hook = process.env.DISCORD_WEBHOOK;
   if (hook) {
-    for (const chunk of text.match(/[\s\S]{1,1900}/g)) {
-      await fetch(hook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: chunk }) });
+    try {
+      for (const chunk of chunks) {
+        const r = await fetch(hook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: chunk }), signal: AbortSignal.timeout(15000) });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      }
+      return { delivered: picks.length, via: 'webhook' };
+    } catch (e) {
+      // Never surface the webhook URL (it's a credential). Fall through to file.
+      console.error(`[scout] webhook delivery failed (${e.message}); falling back to file.`);
     }
-    return { delivered: picks.length, via: 'webhook' };
   }
 
   const token = process.env.DISCORD_BOT_TOKEN, uid = process.env.DISCORD_USER_ID;
   if (token && uid) {
-    const h = { Authorization: `Bot ${token}`, 'Content-Type': 'application/json' };
-    const dm = await (await fetch(`${API}/users/@me/channels`, { method: 'POST', headers: h, body: JSON.stringify({ recipient_id: uid }) })).json();
-    for (const chunk of text.match(/[\s\S]{1,1900}/g)) {
-      await fetch(`${API}/channels/${dm.id}/messages`, { method: 'POST', headers: h, body: JSON.stringify({ content: chunk }) });
+    try {
+      const h = { Authorization: `Bot ${token}`, 'Content-Type': 'application/json' };
+      const dmRes = await fetch(`${API}/users/@me/channels`, { method: 'POST', headers: h, body: JSON.stringify({ recipient_id: uid }), signal: AbortSignal.timeout(15000) });
+      if (!dmRes.ok) throw new Error(`open DM HTTP ${dmRes.status}`);
+      const dm = await dmRes.json();
+      if (!dm?.id) throw new Error('no DM channel id');
+      for (const chunk of chunks) {
+        const r = await fetch(`${API}/channels/${dm.id}/messages`, { method: 'POST', headers: h, body: JSON.stringify({ content: chunk }), signal: AbortSignal.timeout(15000) });
+        if (!r.ok) throw new Error(`send HTTP ${r.status}`);
+      }
+      return { delivered: picks.length, via: 'bot-dm' };
+    } catch (e) {
+      // Sanitized error only - never log headers/token. Fall through to file.
+      console.error(`[scout] bot-DM delivery failed (${e.message}); falling back to file.`);
     }
-    return { delivered: picks.length, via: 'bot-dm' };
   }
   // Default (no Discord configured): append to a local markdown feed file. Zero env.
   const { default: fs } = await import('node:fs');

@@ -8,7 +8,11 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const pexec = promisify(execFile);
-const decodeEnt = (t) => t.replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#x27;/g,"'");
+const NAMED = { amp:'&', lt:'<', gt:'>', quot:'"', apos:"'", nbsp:' ', mdash:'—', ndash:'–', hellip:'…', rsquo:'’', lsquo:'‘', ldquo:'“', rdquo:'”' };
+const decodeEnt = (t) => t
+  .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+  .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+  .replace(/&([a-zA-Z]+);/g, (m, n) => (n in NAMED ? NAMED[n] : m));
 
 const BIN = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'bin');
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36';
@@ -79,7 +83,7 @@ async function farcasterUser(handleOrFid, limit = 8) {
   if (!validFcUser(String(handleOrFid))) { console.error(`[scout] skipping invalid farcaster user: ${JSON.stringify(handleOrFid)}`); return []; }
   const arg = FID_RE.test(String(handleOrFid)) ? String(handleOrFid) : `https://farcaster.xyz/${handleOrFid}`;
   try {
-    const { stdout } = await pexec(path.join(BIN, 'scout-farcaster'), [arg], { timeout: 30000, maxBuffer: 4 * 1024 * 1024 });
+    const { stdout } = await pexec(path.join(BIN, 'scout-farcaster'), [arg], { timeout: 30000, maxBuffer: 1024 * 1024 });
     return parseFarcasterCasts(stdout, handleOrFid, limit);
   } catch { return []; }
 }
