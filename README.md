@@ -96,6 +96,15 @@ scout digest            # brief across all fresh picks
 DRY_RUN=1 scout digest  # preview
 ```
 
+### `scout share` - the distribute half (review-first)
+
+Turns the top picks into social-post drafts queued to `~/.zaoscout/drafts.md`. **It never auto-posts** - drafts are for you to review and send. BYOK key -> punchy grounded posts; no key -> clean templates. This closes the capture -> synthesize -> distribute loop (see [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md)).
+
+```bash
+scout share             # draft N posts from top picks
+DRY_RUN=1 scout share   # preview, queues nothing
+```
+
 This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
 
 ## Roadmap: capture -> synthesize -> distribute

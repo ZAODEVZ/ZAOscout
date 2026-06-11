@@ -14,6 +14,7 @@ usage: scout <url-or-handle>
   health                -> run the fetcher health-check
   watch                 -> read your watchlist -> triage -> Discord (see watchlist.example.json)
   digest                -> one connected brief across all fresh picks (needs a BYOK key for synthesis)
+  share                 -> draft social posts from top picks -> ~/.zaoscout/drafts.md (review-first, never auto-posts)
 
 examples:
   scout https://www.reddit.com/r/ClaudeCode/comments/1typ8fb/
@@ -29,6 +30,7 @@ case "$ARG" in
   health) exec "$DIR/scout-health" ;;
   watch)  exec node "$DIR/../scout/watch.js" ;;
   digest) exec node "$DIR/../scout/digest.js" ;;
+  share)  exec node "$DIR/../scout/share.js" ;;
   *reddit.com*)              exec "$DIR/scout-reddit" "$ARG" ;;
   *x.com*|*twitter.com*)     exec "$DIR/scout-x" "$ARG" ;;
   *farcaster.xyz*|*warpcast.com*) exec "$DIR/scout-farcaster" "$ARG" ;;

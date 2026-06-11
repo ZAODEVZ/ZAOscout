@@ -102,5 +102,17 @@ export function makeBrain() {
         return brief || '';
       } catch { return ''; }
     },
+
+    // Draft a punchy social post about one item, grounded in its body. <=280 chars,
+    // no hashtags-spam, no emojis. Returns '' if it can't ground it (caller templates).
+    async socialPost(title, body, url) {
+      if (!body || body.length < 40) return '';
+      const system = 'You draft ONE punchy social post (max 260 chars) about the item, grounded ONLY in the provided text. Plain, specific, no emojis, no hashtag spam, no preamble. Do not include the URL (it is appended). If you cannot ground it, reply "SKIP".';
+      try {
+        const out = (await call(cfg, system, `TITLE: ${title}\n\nCONTENT:\n${body.slice(0, 3000)}`) || '').trim();
+        if (!out || /^skip$/i.test(out)) return '';
+        return out.replace(/^["']|["']$/g, '').slice(0, 260) + `\n\n${url}`;
+      } catch { return ''; }
+    },
   };
 }
