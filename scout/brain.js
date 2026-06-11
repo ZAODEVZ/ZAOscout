@@ -11,7 +11,7 @@
 // fail-soft: any error returns null and the caller falls back to link-only.
 
 const DEFAULT_MODEL = {
-  openrouter: 'meta-llama/llama-3.3-70b-instruct:free',
+  openrouter: 'google/gemma-4-31b-it:free',
   anthropic: 'claude-haiku-4-5-20251001',
   openai: 'gpt-4o-mini',
   ollama: 'llama3.1:8b',
@@ -34,34 +34,66 @@ function resolveConfig() {
   return { provider, key, model, ollamaUrl: env.OLLAMA_URL || env.OLLAMA_TUNNEL_URL || 'http://localhost:11434' };
 }
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// OpenRouter free models rotate/congest; try alternates on a 429 before giving up.
+const OPENROUTER_FREE_FALLBACKS = [
+  'google/gemma-4-31b-it:free',
+  'qwen/qwen3-next-80b-a3b-instruct:free',
+  'google/gemma-4-26b-a4b-it:free',
+  'meta-llama/llama-3.3-70b-instruct:free',
+  'nousresearch/hermes-3-llama-3.1-405b:free',
+  'meta-llama/llama-3.2-3b-instruct:free',
+];
+
+// One 429-aware retry (respect Retry-After, capped), then extract via pick().
+async function chatRetry(doFetch, pick) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let r;
+    try { r = await doFetch(); } catch { return null; }
+    if (r.status === 429 && attempt === 0) {
+      const wait = Math.min(Number(r.headers.get('retry-after')) || 3, 25);
+      await sleep(wait * 1000);
+      continue;
+    }
+    if (!r.ok) return null;
+    try { return pick(await r.json()) || null; } catch { return null; }
+  }
+  return null;
+}
+
 async function call(cfg, system, user) {
-  const t = AbortSignal.timeout(45000);
   if (cfg.provider === 'anthropic') {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST', signal: t,
+    return chatRetry(() => fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST', signal: AbortSignal.timeout(45000),
       headers: { 'x-api-key': cfg.key, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
       body: JSON.stringify({ model: cfg.model, max_tokens: 400, system, messages: [{ role: 'user', content: user }] }),
-    });
-    const d = await r.json();
-    return d?.content?.[0]?.text || null;
+    }), (d) => d?.content?.[0]?.text);
   }
   if (cfg.provider === 'ollama') {
-    const r = await fetch(`${cfg.ollamaUrl}/api/chat`, {
-      method: 'POST', signal: t, headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ model: cfg.model, stream: false, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
-    });
-    const d = await r.json();
-    return d?.message?.content || null;
+    try {
+      const r = await fetch(`${cfg.ollamaUrl}/api/chat`, {
+        method: 'POST', signal: AbortSignal.timeout(45000), headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ model: cfg.model, stream: false, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
+      });
+      return (await r.json())?.message?.content || null;
+    } catch { return null; }
   }
   // openrouter + openai share the chat-completions shape
   const base = cfg.provider === 'openrouter' ? 'https://openrouter.ai/api/v1' : 'https://api.openai.com/v1';
-  const r = await fetch(`${base}/chat/completions`, {
-    method: 'POST', signal: t,
-    headers: { Authorization: `Bearer ${cfg.key}`, 'content-type': 'application/json' },
-    body: JSON.stringify({ model: cfg.model, max_tokens: 400, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
-  });
-  const d = await r.json();
-  return d?.choices?.[0]?.message?.content || null;
+  // openrouter + no explicit model -> rotate through free fallbacks on 429.
+  const models = (cfg.provider === 'openrouter' && !process.env.LLM_MODEL)
+    ? [cfg.model, ...OPENROUTER_FREE_FALLBACKS.filter((m) => m !== cfg.model)]
+    : [cfg.model];
+  for (const model of models) {
+    const out = await chatRetry(() => fetch(`${base}/chat/completions`, {
+      method: 'POST', signal: AbortSignal.timeout(45000),
+      headers: { Authorization: `Bearer ${cfg.key}`, 'content-type': 'application/json' },
+      body: JSON.stringify({ model, max_tokens: 400, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
+    }), (d) => d?.choices?.[0]?.message?.content);
+    if (out) return out;
+  }
+  return null;
 }
 
 // makeBrain() returns null if no LLM is configured (caller stays link-only).
