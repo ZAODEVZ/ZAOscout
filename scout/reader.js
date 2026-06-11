@@ -14,57 +14,73 @@ const BIN = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'bin')
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36';
 const REDLIB = (process.env.REDLIB_INSTANCES || 'redlib.perennialte.ch reddit.rtrace.io redlib.privadency.com redlib.catsarch.com').split(/\s+/);
 
-// --- Reddit: parse a subreddit listing from a working Redlib instance ---
+// --- Input validation: watchlist entries flow into URLs / fetcher args, so they
+//     must be strictly shaped to prevent URL/path injection. Reject anything else.
+const SUB_RE = /^[A-Za-z0-9_]{1,40}$/;                 // subreddit name
+const FID_RE = /^[0-9]{1,12}$/;                        // numeric Farcaster id
+const HANDLE_RE = /^[A-Za-z0-9_.-]{1,40}$/;            // fname or .eth handle
+export const validSub = (s) => typeof s === 'string' && SUB_RE.test(s);
+export const validFcUser = (u) => typeof u === 'string' && (FID_RE.test(u) || HANDLE_RE.test(u));
+
+// --- Pure parsers (exported for tests; no network) ---
+
+// Parse a Redlib subreddit-listing HTML into items. Skips stickied/pinned posts;
+// reads real engagement from the title="N" attrs on post_score + post_comments.
+export function parseRedditListing(html, sub, limit = 10) {
+  const items = [];
+  const seenIds = new Set();
+  const chunks = html.split(/<div class="post[" ]/).slice(1);
+  for (const chunk of chunks) {
+    if (items.length >= limit) break;
+    if (chunk.slice(0, 20).includes('stickied')) continue;
+    const a = chunk.match(/<h2[^>]*class="post_title"[^>]*>[\s\S]{0,300}?<a[^>]*href="(\/r\/[A-Za-z0-9_]+\/comments\/([a-z0-9]+)\/[^"]*)"[^>]*>([\s\S]{0,400}?)<\/a>/);
+    if (!a) continue;
+    const id = a[2];
+    const title = decodeEnt(a[3].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
+    if (!title || title.length < 4 || seenIds.has(id)) continue;
+    const score = Number((chunk.match(/class="post_score"[^>]*title="(\d+)"/) || [])[1] || 0);
+    const comments = Number((chunk.match(/class="post_comments"[^>]*title="(\d+)/) || [])[1] || 0);
+    seenIds.add(id);
+    items.push({ source: 'reddit', sub, id, title, url: `https://www.reddit.com${a[1].split('?')[0]}`, engagement: score + comments * 2 });
+  }
+  return items;
+}
+
+// Parse scout-farcaster profile-mode stdout ("  [0xhash] text" lines) into items.
+export function parseFarcasterCasts(stdout, user, limit = 8) {
+  const items = [];
+  for (const line of stdout.split('\n')) {
+    const m = line.match(/^\s*\[(0x[0-9a-f]+)\]\s*(.*)$/i);
+    if (m && m[2].trim()) {
+      items.push({ source: 'farcaster', user: String(user), id: m[1], title: m[2].trim().slice(0, 140), url: `https://farcaster.xyz/${user}/${m[1]}`, engagement: 0 });
+    }
+    if (items.length >= limit) break;
+  }
+  return items;
+}
+
+// --- Network fetchers (use the validated input + pure parsers) ---
+
 async function redditSub(sub, mode = 'hot', limit = 10) {
-  const pathPart = `/r/${sub}/${mode}/`;
+  if (!validSub(sub)) { console.error(`[scout] skipping invalid subreddit: ${JSON.stringify(sub)}`); return []; }
   for (const inst of REDLIB) {
     try {
-      const r = await fetch(`https://${inst}${pathPart}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(18000) });
+      const r = await fetch(`https://${inst}/r/${sub}/${mode}/`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(18000) });
       if (!r.ok) continue;
       const html = await r.text();
       if (html.length < 4000 || !html.includes('post_')) continue;
-      const items = [];
-      const seenIds = new Set();
-      // Split into per-post chunks: each post is `<div class="post ..." id="ID">...`.
-      // Skip stickied/pinned (megathreads, mod posts). Capture real engagement from
-      // the title="N" attrs on post_score + post_comments.
-      const chunks = html.split(/<div class="post[" ]/).slice(1);
-      for (const chunk of chunks) {
-        if (items.length >= limit) break;
-        if (chunk.slice(0, 20).includes('stickied')) continue;    // drop pinned noise
-        const idM = chunk.match(/id="([a-z0-9]+)"/);
-        const a = chunk.match(/<h2[^>]*class="post_title"[^>]*>[\s\S]*?<a[^>]*href="(\/r\/[A-Za-z0-9_]+\/comments\/([a-z0-9]+)\/[^"]*)"[^>]*>([\s\S]*?)<\/a>/);
-        if (!a) continue;
-        const id = a[2];
-        const title = decodeEnt(a[3].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
-        if (!title || title.length < 4 || seenIds.has(id)) continue;
-        const score = Number((chunk.match(/class="post_score"[^>]*title="(\d+)"/) || [])[1] || 0);
-        const comments = Number((chunk.match(/class="post_comments"[^>]*title="(\d+)/) || [])[1] || 0);
-        seenIds.add(id);
-        items.push({ source: 'reddit', sub, id, title, url: `https://www.reddit.com${a[1].split('?')[0]}`, engagement: score + comments * 2 });
-      }
-      return items;
+      return parseRedditListing(html, sub, limit);
     } catch { /* try next instance */ }
   }
   return [];
 }
 
-// --- Farcaster: recent casts for a user/FID via scout-farcaster ---
 async function farcasterUser(handleOrFid, limit = 8) {
-  // scout-farcaster wants a URL or numeric FID; wrap bare handles as a profile URL.
-  const arg = /^[0-9]+$/.test(String(handleOrFid)) ? String(handleOrFid) : `https://farcaster.xyz/${handleOrFid}`;
+  if (!validFcUser(String(handleOrFid))) { console.error(`[scout] skipping invalid farcaster user: ${JSON.stringify(handleOrFid)}`); return []; }
+  const arg = FID_RE.test(String(handleOrFid)) ? String(handleOrFid) : `https://farcaster.xyz/${handleOrFid}`;
   try {
     const { stdout } = await pexec(path.join(BIN, 'scout-farcaster'), [arg], { timeout: 30000, maxBuffer: 4 * 1024 * 1024 });
-    // scout-farcaster profile mode prints "  [0xhash] text" lines under RECENT CASTS
-    const items = [];
-    for (const line of stdout.split('\n')) {
-      const m = line.match(/^\s*\[(0x[0-9a-f]+)\]\s*(.*)$/i);
-      if (m && m[2].trim()) {
-        items.push({ source: 'farcaster', user: String(handleOrFid), id: m[1], title: m[2].trim().slice(0, 140), url: `https://farcaster.xyz/${handleOrFid}/${m[1]}`, engagement: 0 });
-      }
-      if (items.length >= limit) break;
-    }
-    return items;
+    return parseFarcasterCasts(stdout, handleOrFid, limit);
   } catch { return []; }
 }
 
