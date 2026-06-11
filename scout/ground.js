@@ -6,11 +6,16 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const pexec = promisify(execFile);
 const SCOUT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'bin', 'scout');
+import { webContext } from './search.js';
 
 export async function groundBody(pick) {
   try {
     const { stdout } = await pexec(SCOUT, [pick.url], { timeout: 30000, maxBuffer: 6 * 1024 * 1024 });
     // strip the tool's own header lines; keep the content
-    return stdout.split('\n').filter((l) => !/^===|^\[scout\]|^via Redlib/.test(l)).join('\n').trim();
+    let body = stdout.split('\n').filter((l) => !/^===|^\[scout\]|^via Redlib/.test(l)).join('\n').trim();
+    // optional BYOK web enrichment (Exa). No key -> no-op, body-only.
+    const web = await webContext(pick.title);
+    if (web) body += `\n\n[web context]\n${web}`;
+    return body;
   } catch { return ''; }
 }
