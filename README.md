@@ -119,6 +119,14 @@ ZAOscout v1 is the **capture** layer. The larger vision is a media-intelligence 
 
 Public mirrors get rate-limited and occasionally blocked; the techniques platforms allow shift over time. `scout-reddit` tries a list of Redlib instances until one answers; refresh that list from [redlib-instances](https://github.com/redlib-org/redlib-instances) if they all die. Run `scout health` to know the moment something breaks instead of silently fetching nothing.
 
+## Use it from any agent (MCP)
+
+ZAOscout ships a zero-dep MCP server so any MCP client (Claude Desktop/Code, Cursor, Cline) can call it as tools - `scout_fetch` (any post by URL) and `scout_digest` (a watchlist brief). See [docs/MCP.md](docs/MCP.md).
+
+```json
+{ "mcpServers": { "zaoscout": { "command": "node", "args": ["/path/to/ZAOscout/mcp/server.js"] } } }
+```
+
 ## License
 
 MIT. Built in the [ZAO](https://thezao.com) lab.

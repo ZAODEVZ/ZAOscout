@@ -1,12 +1,13 @@
 {
   "name": "zaoscout",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "Keyless social fetch + multi-platform watch scout with optional BYOK synthesis (Reddit/X/Farcaster, no API keys)",
   "type": "module",
   "bin": {
     "scout-watch": "scout/watch.js",
     "scout-digest": "scout/digest.js",
-    "scout-share": "scout/share.js"
+    "scout-share": "scout/share.js",
+    "zaoscout-mcp": "mcp/server.js"
   },
   "scripts": {
     "watch": "node scout/watch.js",
