@@ -119,7 +119,7 @@ export function makeBrain() {
     // Two-pass digest (farscout pattern): extract one grounded claim per item, then
     // synthesize a connected brief that names the cross-cutting theme. cite-or-drop:
     // every claim carries its item index; the brief references items by [n].
-    async digest(items) {
+    async digest(items, priorThemes = []) {
       // items: [{ title, body, tag, url }]
       const grounded = items.filter((it) => it.body && it.body.length >= 40);
       if (!grounded.length) return '';
@@ -128,11 +128,32 @@ export function makeBrain() {
       let claims;
       try { claims = (await call(cfg, claimsSys, claimsUser) || '').trim(); } catch { return ''; }
       if (!claims) return '';
+      // Continuity: tell the model what's been recurring so it can connect or contrast.
+      const memo = priorThemes.length ? `\n\nRECURRING THEMES LATELY: ${priorThemes.join('; ')}. If today's items continue or break from these, say so in the opening sentence.` : '';
       const synthSys = 'You are a research scout. Given a numbered list of claims, write a SHORT brief (max 120 words): one opening sentence naming the single biggest cross-cutting theme, then 2-4 bullet lines on the most notable items, each ending with its [n] reference. Ground only in the claims. No fluff, no preamble.';
       try {
-        const brief = (await call(cfg, synthSys, `CLAIMS:\n${claims}`) || '').trim();
+        const brief = (await call(cfg, synthSys, `CLAIMS:\n${claims}${memo}`) || '').trim();
         return brief || '';
       } catch { return ''; }
+    },
+
+    // Extract ONE short theme tag per groundable item (for the memory store).
+    async extractThemes(items) {
+      const grounded = items.filter((it) => it.body && it.body.length >= 40);
+      if (!grounded.length) return [];
+      const sys = 'For each numbered item, output one line "n. <theme>" where <theme> is a 1-3 word lowercase topic tag (e.g. "agent memory", "local llms", "claude skills"). No preamble.';
+      const user = grounded.map((it, i) => `[${i + 1}] ${it.title}\n${(it.body || '').slice(0, 600)}`).join('\n\n');
+      let out;
+      try { out = (await call(cfg, sys, user) || '').trim(); } catch { return []; }
+      const pairs = [];
+      for (const line of out.split('\n')) {
+        const m = line.match(/^\s*(\d+)\.\s*(.+)$/);
+        if (!m) continue;
+        const theme = m[2].replace(/^["']|["']$/g, '').trim();
+        const item = grounded[Number(m[1]) - 1];
+        if (theme && /^skip$/i.test(theme) === false && item) pairs.push({ theme, url: item.url });
+      }
+      return pairs;
     },
 
     // Draft a punchy social post about one item, grounded in its body. <=280 chars,

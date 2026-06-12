@@ -105,6 +105,10 @@ scout share             # draft N posts from top picks
 DRY_RUN=1 scout share   # preview, queues nothing
 ```
 
+### Memory: continuity across runs
+
+With a BYOK key, `scout digest` remembers. It extracts a topic tag per item into `~/.zaoscout/memory/themes.json` and archives each brief to `memory/log.md`. The next digest reads the recurring themes back as context, so the brief can say "this continues the agent-memory thread from last week" instead of treating every run as new. No key -> the log still archives the link lists (a searchable history), themes are skipped.
+
 This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
 
 ## Roadmap: capture -> synthesize -> distribute

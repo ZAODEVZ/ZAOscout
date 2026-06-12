@@ -11,6 +11,7 @@ import { notifyText } from './notify.js';
 import { loadSeen, saveSeen } from './state.js';
 import { makeBrain } from './brain.js';
 import { groundBody } from './ground.js';
+import { recentThemes, recordThemes, appendLog } from './memory.js';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 try {
@@ -44,12 +45,21 @@ if (brain) {
   console.error(`[scout] synthesizing digest with ${brain.provider} (${brain.model})`);
   const grounded = [];
   for (const p of picks) { try { grounded.push({ title: p.title, body: await groundBody(p), tag: tag(p), url: p.url }); } catch { grounded.push({ title: p.title, body: '' }); } }
-  const brief = await brain.digest(grounded);
+  const prior = recentThemes();                          // memory: what's been recurring
+  if (prior.length) console.error(`[scout] continuity: ${prior.join(', ')}`);
+  const brief = await brain.digest(grounded, prior);
   body = brief
     ? `**ZAOscout digest - ${picks.length} items**\n\n${brief}\n\n— sources —\n${refs}`
     : `**ZAOscout digest - ${picks.length} items**\n${refs}`;
+  // memory: extract + record themes, archive the brief
+  try {
+    const themes = await brain.extractThemes(grounded);
+    if (themes.length && !process.env.DRY_RUN) recordThemes(themes);
+    if (brief && !process.env.DRY_RUN) appendLog(brief);
+  } catch { /* memory is best-effort */ }
 } else {
   body = `**ZAOscout digest - ${picks.length} items**\n${refs}`;
+  if (!process.env.DRY_RUN) appendLog(refs);             // no key: archive the link list
 }
 
 const res = await notifyText(body);
