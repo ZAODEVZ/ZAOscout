@@ -1,6 +1,6 @@
 {
   "name": "zaoscout",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Keyless social fetch + multi-platform watch scout with optional BYOK synthesis (Reddit/X/Farcaster, no API keys)",
   "type": "module",
   "bin": {

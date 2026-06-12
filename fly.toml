@@ -1,0 +1,14 @@
+# fly.io deploy: `fly launch --no-deploy` then `fly deploy`. Edit app name.
+app = "zaoscout"
+primary_region = "iad"
+[build]
+  dockerfile = "Dockerfile"
+[http_service]
+  internal_port = 8799
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+[mounts]
+  source = "scout_data"
+  destination = "/data"

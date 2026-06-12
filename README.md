@@ -142,7 +142,7 @@ PORT=8799 node api/server.js     # GET /fetch  POST /digest  POST /claim  GET /c
 | fc_pro | Farcaster 1000+ followers | 1500 | yes |
 | respect | any ZAO Respect / ZOLs | 5000 | yes |
 
-`POST /claim {fid}` or `{respectId}` -> a token carrying your tier. See [docs/API.md](docs/API.md) + [docs/TIERS.md](docs/TIERS.md). The `/scout` Claude Code skill lives in `skills/scout/`.
+`POST /claim {fid}` or `{respectId}` -> a token carrying your tier. **Fully keyless** - Farcaster follower counts come from Haatz (free, Neynar-compatible), no Neynar bill. Deploy anywhere with a container (Railway/Render/Fly/Cloud Run/own VPS) via the included `Dockerfile`. See [docs/API.md](docs/API.md) + [docs/TIERS.md](docs/TIERS.md). The `/scout` Claude Code skill lives in `skills/scout/`.
 
 ## License
 

@@ -9,4 +9,4 @@ ZAOscout is free for everyone (anon). Claim your usage with Farcaster OR ZAO Res
 | fc_pro | Farcaster, 1000+ followers (or 0.9+ Neynar score) | 1500 | 50 | yes | yes | yes |
 | respect | any ZAO Respect / ZOLs | 5000 | 200 | yes | yes | yes |
 
-ZAO Respect jumps you to the top tier by design - community loyalty outranks raw follower count. `POST /claim` with your `fid` and/or `respectId`; you get a token that carries your tier. Thresholds are env-tunable.
+Farcaster follower counts are read KEYLESS from Haatz (free Neynar-compatible API) - no Neynar key needed. ZAO Respect jumps you to the top tier by design - community loyalty outranks raw follower count. `POST /claim` with your `fid` and/or `respectId`; you get a token that carries your tier. Thresholds are env-tunable.

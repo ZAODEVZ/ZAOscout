@@ -1,26 +1,25 @@
-// identity.js - measure a claimer's social capital.
-// Farcaster: confirm the FID exists via Haatz (keyless), read follower count + score
-//   via Neynar IF NEYNAR_API_KEY is set (otherwise followers=0, score=0).
+// identity.js - measure a claimer's social capital. KEYLESS by default.
+// Farcaster: Haatz (haatz.quilibrium.com) is a free Neynar-compatible API - its
+//   /v2/farcaster/user/bulk returns follower_count with no key, no bill. The only
+//   thing it lacks is Neynar's proprietary score, which we don't need. Set
+//   NEYNAR_API_KEY only if you want the score as an extra signal.
 // ZAO Respect: query RESPECT_URL (your Respect ledger) for a fid/address -> number.
-// Both lookups fail-soft to 0 so the worst case is the anon tier.
-const HUB = process.env.FARCASTER_HUB || 'https://haatz.quilibrium.com';
+// All lookups fail-soft to 0 so the worst case is the anon tier.
+const HAATZ = process.env.FARCASTER_API || 'https://haatz.quilibrium.com';
 
 export async function farcasterCapital(fid) {
   if (!/^[0-9]{1,12}$/.test(String(fid))) return { exists: false, fcFollowers: 0, fcScore: 0 };
-  let exists = false;
+  let exists = false, fcFollowers = 0, fcScore = 0;
   try {
-    const r = await fetch(`${HUB}/v1/userDataByFid?fid=${fid}`, { signal: AbortSignal.timeout(12000) });
-    const d = await r.json();
-    exists = Array.isArray(d?.messages) && d.messages.length > 0;
+    const r = await fetch(`${HAATZ}/v2/farcaster/user/bulk?fids=${fid}`, { signal: AbortSignal.timeout(12000) });
+    const u = (await r.json())?.users?.[0];
+    if (u?.fid) { exists = true; fcFollowers = u.follower_count || 0; }
   } catch {}
-  let fcFollowers = 0, fcScore = 0;
-  const key = process.env.NEYNAR_API_KEY;
+  const key = process.env.NEYNAR_API_KEY;   // optional: proprietary score only
   if (exists && key) {
     try {
       const r = await fetch(`https://api.neynar.com/v2/farcaster/user/bulk?fids=${fid}`, { headers: { api_key: key, 'x-api-key': key }, signal: AbortSignal.timeout(12000) });
-      const d = await r.json();
-      const u = d?.users?.[0];
-      fcFollowers = u?.follower_count || 0;
+      const u = (await r.json())?.users?.[0];
       fcScore = u?.experimental?.neynar_user_score ?? u?.score ?? 0;
     } catch {}
   }
