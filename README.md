@@ -127,6 +127,23 @@ ZAOscout ships a zero-dep MCP server so any MCP client (Claude Desktop/Code, Cur
 { "mcpServers": { "zaoscout": { "command": "node", "args": ["/path/to/ZAOscout/mcp/server.js"] } } }
 ```
 
+## A platform: API + tiers claimed with social capital
+
+Beyond the CLI/MCP, ZAOscout runs as an HTTP API anyone can hit - keyless fetch + digest for everyone, with **tiers you claim using Farcaster OR ZAO Respect** (reputation, not dollars), and every call logged to a public chart.
+
+```bash
+PORT=8799 node api/server.js     # GET /fetch  POST /digest  POST /claim  GET /chart
+```
+
+| Tier | Claim with | Calls/day | Synthesis |
+|------|-----------|-----------|-----------|
+| anon | nothing | 50 | no |
+| fc_basic | Farcaster 50+ followers | 300 | no |
+| fc_pro | Farcaster 1000+ followers | 1500 | yes |
+| respect | any ZAO Respect / ZOLs | 5000 | yes |
+
+`POST /claim {fid}` or `{respectId}` -> a token carrying your tier. See [docs/API.md](docs/API.md) + [docs/TIERS.md](docs/TIERS.md). The `/scout` Claude Code skill lives in `skills/scout/`.
+
 ## License
 
 MIT. Built in the [ZAO](https://thezao.com) lab.
