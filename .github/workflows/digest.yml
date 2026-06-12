@@ -1,0 +1,56 @@
+name: scout digest
+
+# Free, serverless scheduled scouting. Runs on GitHub's hosted runners
+# (public repo = unlimited free minutes). No always-on server needed.
+#
+# Each run: keyless fetch (Redlib/FxTwitter/Haatz) -> triage/dedup ->
+# optional BYOK synthesis -> deliver. State (seen.json, memory, feed.md)
+# is committed back to state/ so dedup + theme-continuity survive runs.
+#
+# Secrets (Settings -> Secrets and variables -> Actions), all OPTIONAL:
+#   OPENROUTER_API_KEY  free-tier key -> turns on synthesized briefs.
+#                       Absent -> digest is a grouped link list (still useful).
+#   DISCORD_WEBHOOK     push the brief to a channel. Absent -> the committed
+#                       state/feed.md IS the delivery (read it in the repo).
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # daily ~13:00 UTC (~9am ET). Edit to taste.
+  workflow_dispatch: {}     # manual "Run workflow" button for testing now
+
+concurrency:
+  group: scout-digest
+  cancel-in-progress: false
+
+permissions:
+  contents: write           # to commit state/ back to the repo
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # zero-dep project: nothing to install. Just run.
+      - name: Run digest
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          SCOUT_WATCHLIST: ${{ github.workspace }}/watchlist.ci.json
+          SCOUT_STATE_DIR: ${{ github.workspace }}/state
+          SCOUT_TOP: '12'
+        run: |
+          mkdir -p "$SCOUT_STATE_DIR"
+          node scout/digest.js || true   # exit(0) when nothing new is normal
+
+      - name: Persist state
+        run: |
+          git config user.name  "zaoscout-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/
+          git diff --cached --quiet || git commit -m "scout: digest run $(date -u +%FT%TZ)"
+          git push
