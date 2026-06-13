@@ -52,3 +52,30 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1u3q1j9/huawei_released_openpangu_20_will_open_source_on/
 [12] (r/LocalLLaMA) Open Dungeon: local roleplay with Gemma 4 QAT + inline Uncen-FLUX images, running at full 256K context under 8GB RAM (OS)
     https://www.reddit.com/r/LocalLLaMA/comments/1u3uw8e/open_dungeon_local_roleplay_with_gemma_4_qat/
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeAI) Fable 5 indefinitely suspended due to national security concerns
+    https://www.reddit.com/r/ClaudeAI/comments/1u4cyvh/fable_5_indefinitely_suspended_due_to_national/
+[2] (r/ClaudeAI) The state of things: Claude Fable
+    https://www.reddit.com/r/ClaudeAI/comments/1u4gh16/the_state_of_things_claude_fable/
+[3] (r/ClaudeAI) Don’t you guys worry, I got this😮‍💨✋
+    https://www.reddit.com/r/ClaudeAI/comments/1u4m1ag/dont_you_guys_worry_i_got_this/
+[4] (r/ClaudeAI) Andrej Karpathy is an EB-1 extraordinary ability green card recipient, not a US citizen. Thus under these new restrictions he is not permitted to use, or work on, Mythos 5 or Fable 5 or really any advanced ai models as of 5:21pm tonight.
+    https://www.reddit.com/r/ClaudeAI/comments/1u4gn82/andrej_karpathy_is_an_eb1_extraordinary_ability/
+[5] (r/LocalLLaMA) Anthropic forced to abruptly disable Fable 5 & Mythos 5 globally by US Gov over a jailbreak. This is exactly why we need local models.
+    https://www.reddit.com/r/LocalLLaMA/comments/1u4e1p5/anthropic_forced_to_abruptly_disable_fable_5/
+[6] (r/LocalLLaMA) Friendly reminder
+    https://www.reddit.com/r/LocalLLaMA/comments/1u4epzr/friendly_reminder/
+[7] (r/ClaudeAI) EU be like
+    https://www.reddit.com/r/ClaudeAI/comments/1u4jons/eu_be_like/
+[8] (r/LocalLLaMA) Diffusion Gemma is 4x faster, but makes 6x more mistakes!
+    https://www.reddit.com/r/LocalLLaMA/comments/1u4bne8/diffusion_gemma_is_4x_faster_but_makes_6x_more/
+[9] (r/LocalLLaMA) when fable gets banned but it's ok because you've about to download qwen3.7_67b_21a_mythos_father_fable_mother_distilled_ablated_ablitereted_uncensored_agi_sparse_attention_MTP_SuperHOT_q6_maybe_q7_AGI_FINAL.gguf from huggingface
+    https://www.reddit.com/r/LocalLLaMA/comments/1u4l98a/when_fable_gets_banned_but_its_ok_because_youve/
+[10] (r/vibecoding) World Of Claudecraft: first MMORPG vibe-coded with Fable 5 (open source)
+    https://www.reddit.com/r/vibecoding/comments/1u47wo5/world_of_claudecraft_first_mmorpg_vibecoded_with/
+[11] (r/LocalLLaMA) Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+    https://www.reddit.com/r/LocalLLaMA/comments/1u4dur1/statement_on_the_us_government_directive_to/
+[12] (r/ClaudeAI) Any USA citizen wanna marry me? I’m tryna access Fable 5 in claude code
+    https://www.reddit.com/r/ClaudeAI/comments/1u4tjef/any_usa_citizen_wanna_marry_me_im_tryna_access/
