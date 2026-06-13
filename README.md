@@ -22,7 +22,7 @@ Platforms block generic scrapers but trust their own first-party clients. ZAOsco
 
 No secrets means it's forkable: a clone works immediately, and it survives any repo reset because there's nothing to configure.
 
-See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for the full method (and why the techniques most tutorials show you are already dead).
+See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for the full method (and why the techniques most tutorials show you are already dead). New here, or picking this back up? Start with [STATUS.md](STATUS.md) - it captures what is shipped, what is parked, and how to resume.
 
 ## Quickstart
 
@@ -111,6 +111,27 @@ With a BYOK key, `scout digest` remembers. It extracts a topic tag per item into
 
 This is the capture engine for the loop in [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) - the proven pattern from [farscout](https://github.com/bettercallzaal/farscout) (a Farcaster-only research scout), generalized across platforms on the keyless fetchers.
 
+## Run it free on a schedule (no server)
+
+You do not need a server to get standing, automated scouting. The included GitHub
+Actions workflow ([`.github/workflows/digest.yml`](.github/workflows/digest.yml))
+runs `scout digest` on GitHub's hosted runners - a **public** repo gets unlimited
+free Actions minutes, so this costs nothing and there is no machine to maintain.
+
+Each run keyless-fetches your `watchlist.ci.json`, synthesizes (if you set a key),
+delivers, and commits dedup + theme memory + the feed back to `state/` so
+continuity survives. Triggered daily by cron plus a manual button.
+
+```bash
+# turn on synthesized briefs (optional) - reads your local .env, uploads encrypted, never printed
+grep '^OPENROUTER_API_KEY=' .env | cut -d= -f2- | gh secret set OPENROUTER_API_KEY -R <owner>/<repo>
+# fire one now instead of waiting for the cron
+gh workflow run "scout digest" -R <owner>/<repo>
+```
+
+With no secrets it still runs and commits a grouped link digest to `state/feed.md`.
+Add `DISCORD_WEBHOOK` to push to a channel instead. Full guide: [docs/SCHEDULED.md](docs/SCHEDULED.md).
+
 ## Roadmap: capture -> synthesize -> distribute
 
 ZAOscout v1 is the **capture** layer. The larger vision is a media-intelligence loop: capture good information from media, synthesize it once, and distribute it everywhere. The mining workflow (`workflows/mine.js`) is the push-discovery half (find signal from known authors). See [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md).
@@ -129,6 +150,10 @@ ZAOscout ships a zero-dep MCP server so any MCP client (Claude Desktop/Code, Cur
 
 ## A platform: API + tiers claimed with social capital
 
+> Optional / advanced. This layer needs an always-on server and only matters when
+> *other people* hit your instance. For solo use, the CLI + MCP + free scheduled
+> digest above cover everything. This is parked by default - see [STATUS.md](STATUS.md).
+
 Beyond the CLI/MCP, ZAOscout runs as an HTTP API anyone can hit - keyless fetch + digest for everyone, with **tiers you claim using Farcaster OR ZAO Respect** (reputation, not dollars), and every call logged to a public chart.
 
 ```bash
@@ -144,6 +169,20 @@ PORT=8799 node api/server.js     # GET /fetch  POST /digest  POST /claim  GET /c
 
 `POST /claim {fid}` or `{respectId}` -> a token carrying your tier. **Fully keyless** - Farcaster follower counts come from Haatz (free, Neynar-compatible), no Neynar bill. Deploy anywhere with a container (Railway/Render/Fly/Cloud Run/own VPS) via the included `Dockerfile`. See [docs/API.md](docs/API.md) + [docs/TIERS.md](docs/TIERS.md). The `/scout` Claude Code skill lives in `skills/scout/`.
 
+## Documentation
+
+| Doc | What |
+|-----|------|
+| [STATUS.md](STATUS.md) | Current state, what is shipped vs parked, how to resume. Read first. |
+| [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) | The keyless method, per platform, and why common techniques are dead. |
+| [docs/SCHEDULED.md](docs/SCHEDULED.md) | Free serverless scheduled runs (GitHub Actions + local cron). |
+| [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) | The capture -> synthesize -> distribute loop and mining. |
+| [docs/MCP.md](docs/MCP.md) | Use ZAOscout from any AI agent via MCP. |
+| [docs/API.md](docs/API.md) | The HTTP API surface. |
+| [docs/TIERS.md](docs/TIERS.md) | Social-capital tiers (Farcaster / ZAO Respect). |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Architecture, how to add a source, conventions. |
+| [SECURITY.md](SECURITY.md) | Secret hygiene and the keyless guarantee. |
+
 ## License
 
-MIT. Built in the [ZAO](https://thezao.com) lab.
+MIT. Built in the [ZAO](https://thezao.com) lab. Fork it freely - it is designed to stand alone.
