@@ -76,3 +76,25 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1u4dur1/statement_on_the_us_government_directive_to/
 [12] (r/ClaudeAI) Any USA citizen wanna marry me? I’m tryna access Fable 5 in claude code
     https://www.reddit.com/r/ClaudeAI/comments/1u4tjef/any_usa_citizen_wanna_marry_me_im_tryna_access/
+
+## 2026-06-15T17:59:43.693Z
+[1] (r/LocalLLaMA) What's the lesson chat?
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6azol/whats_the_lesson_chat/
+[2] (r/LocalLLaMA) z.ai Poll on X: MIT-licensed open weights are losing
+    https://www.reddit.com/r/LocalLLaMA/comments/1u5wous/zai_poll_on_x_mitlicensed_open_weights_are_losing/
+[3] (r/LocalLLaMA) Why there is a lack of new 100B-120B models?
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6e0fo/why_there_is_a_lack_of_new_100b120b_models/
+[4] (r/LocalLLaMA) This is amazing. Token speed doubled + kv cache now need low vram - qwen 27b
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6bca1/this_is_amazing_token_speed_doubled_kv_cache_now/
+[5] (r/LocalLLaMA) People kept saying my comments sounded AI-generated, so I built this
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6d8q5/people_kept_saying_my_comments_sounded/
+[6] (r/LocalLLaMA) I'm still surprised on how good the kv quantization has become
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6bwz0/im_still_surprised_on_how_good_the_kv/
+[7] (r/LocalLLaMA) Local coding agents are good now, but only if you babysit them
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6mmuu/local_coding_agents_are_good_now_but_only_if_you/
+[8] (r/LocalLLaMA) Tower-Plus-72B-Ultra-Uncensored-Heretic, a Model That Support 22 Languages Making it Great for Multilingual Tasks and is Especially Strong on Translation Related Workflows Where No Censorship Is Essential, Now Ultra Uncensored With 5/100 Refusals!
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6etje/towerplus72bultrauncensoredheretic_a_model_that/
+[9] (r/LocalLLaMA) React Native ExecuTorch now runs Gemma 4 (Vulkan and MLX accelerated)
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6fham/react_native_executorch_now_runs_gemma_4_vulkan/
+[10] (r/LocalLLaMA) About the Rio model
+    https://www.reddit.com/r/LocalLLaMA/comments/1u6j9ht/about_the_rio_model/
