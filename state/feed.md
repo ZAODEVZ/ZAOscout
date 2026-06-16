@@ -102,3 +102,10 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1u6fham/react_native_executorch_now_runs_gemma_4_vulkan/
 [10] (r/LocalLLaMA) About the Rio model
     https://www.reddit.com/r/LocalLLaMA/comments/1u6j9ht/about_the_rio_model/
+
+---
+**ZAOscout digest - 2 items**
+[1] (@dwr.eth) From my walk this morning
+    https://farcaster.xyz/dwr.eth/0x6f0bb48b
+[2] (@dwr.eth) gm
+    https://farcaster.xyz/dwr.eth/0x7611d9f4
