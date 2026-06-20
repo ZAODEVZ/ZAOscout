@@ -111,14 +111,19 @@ fetch_html() {
 }
 
 HTML=""; USED=""
-for inst in "${INSTANCES[@]}"; do
-  RAW=$(fetch_html "$inst" "$REDDIT_PATH")
-  CODE=$(echo "$RAW" | tail -1 | sed 's/__HTTP__//')
-  BODY=$(echo "$RAW" | sed '$d')
-  if [[ "$CODE" == "200" && ${#BODY} -gt 4000 && "$BODY" == *"post_"* ]]; then
-    HTML="$BODY"; USED="$inst"; break
-  fi
-done
+# Test hook: feed saved HTML offline (used by the parser tests, never in prod).
+if [[ -n "${SCOUT_REDDIT_HTML:-}" && -f "${SCOUT_REDDIT_HTML}" ]]; then
+  HTML="$(cat "$SCOUT_REDDIT_HTML")"; USED="fixture"
+else
+  for inst in "${INSTANCES[@]}"; do
+    RAW=$(fetch_html "$inst" "$REDDIT_PATH")
+    CODE=$(echo "$RAW" | tail -1 | sed 's/__HTTP__//')
+    BODY=$(echo "$RAW" | sed '$d')
+    if [[ "$CODE" == "200" && ${#BODY} -gt 4000 && "$BODY" == *"post_"* ]]; then
+      HTML="$BODY"; USED="$inst"; break
+    fi
+  done
+fi
 
 if [[ -z "$HTML" ]]; then
   echo "ERROR: no Redlib instance returned the thread (tried ${#INSTANCES[@]}). Refresh the instance list from github.com/redlib-org/redlib-instances." >&2
@@ -130,7 +135,20 @@ echo "$HTML" | python3 -c "
 import sys, re, html
 h = sys.stdin.read()
 def clean(s): return re.sub(r'\s+',' ', html.unescape(re.sub('<[^>]+>',' ', s))).strip()
+# A single thread has <h1 class=post_title>; a subreddit LISTING has many
+# <h2 class=post_title><a href=...>. Render the listing instead of '?'.
 m = re.search(r'<h1[^>]*class=\"post_title\"[^>]*>(.*?)</h1>', h, re.S)
+if not m:
+    items = []
+    for block in re.findall(r'<h2[^>]*class=\"post_title\"[^>]*>(.*?)</h2>', h, re.S):
+        a = re.search(r'<a[^>]*href=\"(/r/[^\"]*?/comments/[^\"]+)\"[^>]*>(.*?)</a>', block, re.S)
+        if a:
+            items.append((a.group(1), clean(a.group(2))))
+    if items:
+        print('LISTING: ' + str(len(items)) + ' posts')
+        for href, title in items[:25]:
+            if title: print('- ' + title + ' | ' + href)
+        sys.exit(0)
 print('TITLE:', clean(m.group(1)) if m else '?')
 ma = re.search(r'<a[^>]*class=\"post_author[^\"]*\"[^>]*>(.*?)</a>', h, re.S)
 if ma: print('AUTHOR:', clean(ma.group(1)))
