@@ -7,6 +7,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { isAllowedFetchUrl } from '../scout/urlguard.js';
 const pexec = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BIN = path.join(ROOT, 'bin', 'scout');
@@ -27,6 +28,8 @@ async function logUsage(tool, target) {
 async function runTool(name, args) {
   if (name === 'scout_fetch') {
     if (!args?.url) throw new Error('url required');
+    const guard = isAllowedFetchUrl(String(args.url));
+    if (!guard.ok) throw new Error(`url not allowed: ${guard.reason} (allowed: reddit/x/twitter/farcaster/warpcast hosts or a tweet id)`);
     await logUsage('scout_fetch', args.url);
     const { stdout } = await pexec(BIN, [String(args.url)], { timeout: 35000, maxBuffer: 6 * 1024 * 1024 });
     return stdout.trim() || '(no content)';

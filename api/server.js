@@ -15,6 +15,7 @@ import { fileURLToPath } from 'node:url';
 import { TIERS, tierFor } from './tiers.js';
 import { logUsage, leaderboard, countToday } from './usage.js';
 import { farcasterCapital, respectFor } from './identity.js';
+import { isAllowedFetchUrl } from '../scout/urlguard.js';
 
 const pexec = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -69,6 +70,14 @@ const server = http.createServer(async (req, res) => {
     if (p === '/fetch') {
       const target = url.searchParams.get('url');
       if (!target) return json(res, 400, { error: 'url required' });
+      // SSRF guard: only the supported platform hosts (or a bare tweet id).
+      const guard = isAllowedFetchUrl(target);
+      if (!guard.ok) {
+        return json(res, 400, {
+          error: `url not allowed: ${guard.reason}`,
+          allowed: 'reddit.com, x.com, twitter.com, farcaster.xyz, warpcast.com, redd.it, or a tweet id',
+        });
+      }
       await logUsage({ who, tier: tier.name, tool: 'fetch', target });
       const { stdout } = await pexec(BIN, [target], { timeout: 35000, maxBuffer: 6 * 1024 * 1024 });
       return json(res, 200, { tier: tier.name, content: stdout.trim() });
