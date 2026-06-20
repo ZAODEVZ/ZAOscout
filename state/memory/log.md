@@ -104,3 +104,25 @@
     https://farcaster.xyz/dwr.eth/0x6f0bb48b
 [2] (@dwr.eth) gm
     https://farcaster.xyz/dwr.eth/0x7611d9f4
+
+## 2026-06-20T15:07:08.753Z
+[1] (r/vibecoding) good morning
+    https://www.reddit.com/r/vibecoding/comments/1ua2iy4/good_morning/
+[2] (r/vibecoding) I cried today
+    https://www.reddit.com/r/vibecoding/comments/1uaq5sh/i_cried_today/
+[3] (r/vibecoding) Subagents in a nutshell
+    https://www.reddit.com/r/vibecoding/comments/1uadref/subagents_in_a_nutshell/
+[4] (r/vibecoding) The internet is so dead
+    https://www.reddit.com/r/vibecoding/comments/1uajw2s/the_internet_is_so_dead/
+[5] (r/vibecoding) Okay Claude I get it, Fable 5 isn’t an option anymore
+    https://www.reddit.com/r/vibecoding/comments/1uagj5x/okay_claude_i_get_it_fable_5_isnt_an_option/
+[6] (r/vibecoding) Got tired of paid TTS apps so I built mine 100% free, what do you think?
+    https://www.reddit.com/r/vibecoding/comments/1uatnn7/got_tired_of_paid_tts_apps_so_i_built_mine_100/
+[7] (r/vibecoding) I think "vibe debugging" is becoming a bigger skill than vibe coding.
+    https://www.reddit.com/r/vibecoding/comments/1uaw3kc/i_think_vibe_debugging_is_becoming_a_bigger_skill/
+[8] (r/vibecoding) My 2-year-old loved an old grandfather clock, so I built one for iPhone.
+    https://www.reddit.com/r/vibecoding/comments/1uaow97/my_2yearold_loved_an_old_grandfather_clock_so_i/
+[9] (r/vibecoding) I built a game that teaches people how to code with AI properly
+    https://www.reddit.com/r/vibecoding/comments/1uaxzyn/i_built_a_game_that_teaches_people_how_to_code/
+[10] (r/vibecoding) Completely vibe coded a 60s Factorio tower defense you can play for free. Groovy!
+    https://www.reddit.com/r/vibecoding/comments/1uawofm/completely_vibe_coded_a_60s_factorio_tower/
