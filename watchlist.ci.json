@@ -1,5 +1,5 @@
 {
-  "reddit": ["LocalLLaMA", "ClaudeAI", "vibecoding"],
-  "farcaster": ["dwr.eth", "v"],
+  "reddit": ["ClaudeAI", "ClaudeCode", "LocalLLaMA", "vibecoding"],
+  "farcaster": ["thezao", "chriscocreated", "jacek", "dwr.eth", "v"],
   "x": []
 }
