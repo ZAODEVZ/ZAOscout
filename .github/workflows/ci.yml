@@ -19,4 +19,9 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           sudo apt-get update -qq && sudo apt-get install -y shellcheck
-          shellcheck -S warning bin/scout bin/scout-reddit bin/scout-x bin/scout-farcaster bin/scout-health || true
+          shellcheck -S warning bin/scout bin/scout-reddit bin/scout-x bin/scout-farcaster bin/scout-health scripts/secret-scan.sh || true
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/secret-scan.sh
