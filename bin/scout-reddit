@@ -21,8 +21,8 @@
 set -uo pipefail
 UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
-# Vetted public Redlib instances (verified reachable 2026-06-08). Order = try order.
-INSTANCES=(
+# Offline fallback list (used if the live list can't be fetched). Order = try order.
+FALLBACK_INSTANCES=(
   "redlib.perennialte.ch"
   "reddit.rtrace.io"
   "redlib.privadency.com"
@@ -31,8 +31,51 @@ INSTANCES=(
   "redlib.nerdvpn.de"
   "redlib.fmhy.net"
 )
-# Allow override: REDLIB_INSTANCES="a.com b.com" scout-reddit.sh ...
-if [[ -n "${REDLIB_INSTANCES:-}" ]]; then read -r -a INSTANCES <<< "$REDLIB_INSTANCES"; fi
+
+# Self-heal: the Redlib pool churns (instances die / get Cloudflare-gated). Pull
+# the CURRENT official list at runtime, cached 6h, so a stale clone still finds a
+# live mirror. The official list goes first, the hardcoded fallback second.
+CACHE_DIR="${SCOUT_CACHE_DIR:-$HOME/.zaoscout}"
+CACHE_FILE="$CACHE_DIR/redlib-instances.txt"
+CACHE_TTL="${REDLIB_CACHE_TTL:-21600}"   # 6h
+file_age() { local f="$1" m; m=$(stat -f %m "$f" 2>/dev/null || stat -c %Y "$f" 2>/dev/null || echo 0); echo $(( $(date +%s) - m )); }
+
+refresh_instances() {
+  mkdir -p "$CACHE_DIR" 2>/dev/null || return
+  if [[ -s "$CACHE_FILE" && $(file_age "$CACHE_FILE") -lt $CACHE_TTL ]]; then return; fi
+  local json
+  json=$(curl -s -A "$UA" --max-time 10 \
+    "https://raw.githubusercontent.com/redlib-org/redlib-instances/main/instances.json" 2>/dev/null) || return
+  [[ -z "$json" ]] && return
+  printf '%s' "$json" | python3 -c "
+import json,sys
+try:
+    d=json.load(sys.stdin)
+    items=d.get('instances', d if isinstance(d,list) else [])
+    for i in items:
+        u=(i.get('url') if isinstance(i,dict) else '') or ''
+        if u.startswith('https://'):
+            print(u[8:].rstrip('/'))
+except Exception:
+    pass
+" > "$CACHE_FILE.tmp" 2>/dev/null
+  if [[ -s "$CACHE_FILE.tmp" ]]; then mv "$CACHE_FILE.tmp" "$CACHE_FILE"; else rm -f "$CACHE_FILE.tmp"; fi
+}
+
+# Build the try-order: REDLIB_INSTANCES override wins; else live list + fallback (deduped).
+if [[ -n "${REDLIB_INSTANCES:-}" ]]; then
+  read -r -a INSTANCES <<< "$REDLIB_INSTANCES"
+else
+  [[ "${SCOUT_NO_REFRESH:-}" == "1" ]] || refresh_instances
+  # Dedup without associative arrays (macOS ships bash 3.2 - no `declare -A`).
+  INSTANCES=()
+  _seen=" "
+  _add_inst() { case "$_seen" in *" $1 "*) ;; *) INSTANCES+=("$1"); _seen="$_seen$1 " ;; esac; }
+  if [[ -s "$CACHE_FILE" ]]; then
+    while IFS= read -r line; do [[ -n "$line" ]] && _add_inst "$line"; done < "$CACHE_FILE"
+  fi
+  for inst in "${FALLBACK_INSTANCES[@]}"; do _add_inst "$inst"; done
+fi
 
 if [[ $# -lt 1 ]]; then
   echo "usage: $0 <reddit-url-or-permalink-or-/s/-link-or-r/sub>" >&2
