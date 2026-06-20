@@ -24,6 +24,8 @@ const AUTHORS = [
   { h: 'trq212', topic: 'Claude agents skills building' },
   { h: 'walden_yan', topic: 'context engineering multi-agent' },
   { h: '0xricker', topic: 'Opus Kimi agent swarm orchestration' },
+  { h: 'thezao', topic: 'ZAO artist DAO Farcaster music coordination' },
+  { h: 'dwr', topic: 'Farcaster mini apps protocol monetization' },
 ]
 
 const FINDING = { type:'object', properties:{
