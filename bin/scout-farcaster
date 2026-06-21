@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # scout-farcaster.sh - Fetch a Farcaster cast or profile, FREE, no API key.
 #
-# Uses Haatz (haatz.quilibrium.com), a free public Snapchain hub read mirror on
-# Quilibrium. Standard Farcaster hub HTTP API, no auth. Added 2026-06-08, the README.
+# Reads through free public Snapchain hub mirrors (Haatz on Quilibrium + Pinata),
+# standard Farcaster hub HTTP API, no auth. Tries hubs in order so one dead mirror
+# does not collapse Farcaster (see the multi-hub block below). Added 2026-06-08.
 #
 # Handles inbox URL shapes:
 #   farcaster.xyz/<user>/<0xSHORTHASH>   -> single cast (resolves user->fid, prefix-matches hash)
@@ -16,7 +17,14 @@
 # Exit: 0 ok | 2 not found | 5 bad args
 
 set -uo pipefail
-HUB="${FARCASTER_HUB:-https://haatz.quilibrium.com}"
+
+# Multi-hub fallback: the public Snapchain read mirror pool churns (Haatz has
+# blipped). Farcaster is a CRITICAL fetcher, so one dead hub must not collapse
+# it - try a list until one answers. Override with FARCASTER_HUBS (space list)
+# or FARCASTER_HUB (single). Both defaults verified live 2026-06-20.
+if [[ -n "${FARCASTER_HUBS:-}" ]]; then HUBS="$FARCASTER_HUBS"
+elif [[ -n "${FARCASTER_HUB:-}" ]]; then HUBS="$FARCASTER_HUB"
+else HUBS="https://haatz.quilibrium.com https://hub.pinata.cloud"; fi
 
 if [[ $# -lt 1 ]]; then
   echo "usage: $0 <farcaster-url-or-fid>" >&2
@@ -37,15 +45,36 @@ else
   exit 5
 fi
 
-python3 - "$HUB" "$USER" "$SHORTHASH" "$FID" <<'PY'
-import sys, json, urllib.request, urllib.parse
+python3 - "$HUBS" "$USER" "$SHORTHASH" "$FID" <<'PY'
+import sys, os, json, urllib.request, urllib.parse
 
-HUB, USER, SHORTHASH, FID = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+HUBS = [h for h in sys.argv[1].split() if h]
+USER, SHORTHASH, FID = sys.argv[2], sys.argv[3], sys.argv[4]
+FIXDIR = os.environ.get("SCOUT_FC_FIXTURE_DIR", "")  # offline test hook
+GOOD = [None]  # remember the hub that answered, so we don't re-probe dead ones
+
+def _fixture(path):
+    # map /v1/userDataByFid?fid=3 -> <dir>/userDataByFid.json
+    name = path.split("?")[0].rstrip("/").rsplit("/", 1)[-1] + ".json"
+    with open(os.path.join(FIXDIR, name)) as f:
+        return json.load(f)
 
 def get(path):
-    req = urllib.request.Request(HUB + path, headers={"User-Agent": "scout-farcaster/1.0"})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.load(r)
+    if FIXDIR:
+        return _fixture(path)
+    # Stick to the hub that already worked; else try each, remember the winner.
+    order = ([GOOD[0]] if GOOD[0] else []) + [h for h in HUBS if h != GOOD[0]]
+    last = None
+    for hub in order:
+        try:
+            req = urllib.request.Request(hub + path, headers={"User-Agent": "scout-farcaster/1.0"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                d = json.load(r)
+            GOOD[0] = hub
+            return d
+        except Exception as e:
+            last = e
+    raise last if last else RuntimeError("no Farcaster hubs configured")
 
 def resolve_fid(name):
     # try fname then ENS; userNameProofByName returns {fid,...} for both
@@ -94,7 +123,8 @@ if not FID and USER:
         sys.exit(2)
 
 meta = user_meta(FID)
-print("=== FARCASTER (via Haatz, no-auth) ===")
+_src = "fixture" if FIXDIR else ((GOOD[0] or "").replace("https://", "") or "hub")
+print("=== FARCASTER (via %s, no-auth) ===" % _src)
 print("USER:", meta.get("display") or USER or "", "| @" + (meta.get("username") or USER or ""), "| FID:", FID)
 if meta.get("bio"): print("BIO:", meta["bio"])
 print()
