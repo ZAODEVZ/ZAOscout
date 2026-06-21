@@ -11,6 +11,7 @@ usage: scout <url-or-handle>
   reddit.com/...        -> Redlib   (post + comments, no key)
   x.com / twitter.com   -> FxTwitter (tweet + full Article body, no key)
   farcaster.xyz/...     -> Haatz     (cast/profile, no key)
+  github.com/owner/repo -> GitHub    (commits/releases/issues/discussions, no key)
   health                -> run the fetcher health-check
   watch                 -> read your watchlist -> triage -> Discord (see watchlist.example.json)
   digest                -> one connected brief across all fresh picks (needs a BYOK key for synthesis)
@@ -34,6 +35,8 @@ case "$ARG" in
   *reddit.com*)              exec "$DIR/scout-reddit" "$ARG" ;;
   *x.com*|*twitter.com*)     exec "$DIR/scout-x" "$ARG" ;;
   *farcaster.xyz*|*warpcast.com*) exec "$DIR/scout-farcaster" "$ARG" ;;
+  *github.com*)              exec "$DIR/scout-github" "$ARG" ;;
   [0-9]*)                    exec "$DIR/scout-x" "$ARG" ;;   # bare tweet id
-  *) echo "scout: unrecognized target '$ARG' (expected a reddit/x/farcaster URL)" >&2; exit 2 ;;
+  */*)                       exec "$DIR/scout-github" "$ARG" ;;  # bare owner/repo
+  *) echo "scout: unrecognized target '$ARG' (expected a reddit/x/farcaster/github URL or owner/repo)" >&2; exit 2 ;;
 esac
