@@ -12,15 +12,19 @@ export async function farcasterCapital(fid) {
   let exists = false, fcFollowers = 0, fcScore = 0;
   try {
     const r = await fetch(`${HAATZ}/v2/farcaster/user/bulk?fids=${fid}`, { signal: AbortSignal.timeout(12000) });
-    const u = (await r.json())?.users?.[0];
-    if (u?.fid) { exists = true; fcFollowers = u.follower_count || 0; }
+    if (r.ok) {                                  // fail closed on a 4xx/5xx error body
+      const u = (await r.json())?.users?.[0];
+      if (u?.fid) { exists = true; fcFollowers = Math.max(0, Number(u.follower_count) || 0); }
+    }
   } catch {}
   const key = process.env.NEYNAR_API_KEY;   // optional: proprietary score only
   if (exists && key) {
     try {
       const r = await fetch(`https://api.neynar.com/v2/farcaster/user/bulk?fids=${fid}`, { headers: { api_key: key, 'x-api-key': key }, signal: AbortSignal.timeout(12000) });
-      const u = (await r.json())?.users?.[0];
-      fcScore = u?.experimental?.neynar_user_score ?? u?.score ?? 0;
+      if (r.ok) {
+        const u = (await r.json())?.users?.[0];
+        fcScore = Number(u?.experimental?.neynar_user_score ?? u?.score ?? 0) || 0;
+      }
     } catch {}
   }
   return { exists, fcFollowers, fcScore };
@@ -31,7 +35,8 @@ export async function respectFor(idOrAddr) {
   if (!url || !idOrAddr) return 0;
   try {
     const r = await fetch(`${url}${url.includes('?') ? '&' : '?'}id=${encodeURIComponent(idOrAddr)}`, { signal: AbortSignal.timeout(12000) });
+    if (!r.ok) return 0;                          // fail closed on a non-2xx error body
     const d = await r.json();
-    return Number(d?.respect ?? d?.zols ?? d?.amount ?? 0) || 0;
+    return Math.max(0, Number(d?.respect ?? d?.zols ?? d?.amount ?? 0) || 0);  // never negative
   } catch { return 0; }
 }
