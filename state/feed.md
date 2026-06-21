@@ -132,3 +132,30 @@
     https://www.reddit.com/r/vibecoding/comments/1uaxzyn/i_built_a_game_that_teaches_people_how_to_code/
 [10] (r/vibecoding) Completely vibe coded a 60s Factorio tower defense you can play for free. Groovy!
     https://www.reddit.com/r/vibecoding/comments/1uawofm/completely_vibe_coded_a_60s_factorio_tower/
+
+---
+**ZAOscout digest - 12 items**
+[1] (@thezao) zm showing zao fractals with vlad and candy  — Proposed by  • Approved by ZAO governance from zaoos.com
+    https://farcaster.xyz/thezao/0x16f1b3f1
+[2] (@thezao) zm testing zao os with print painter  — Proposed by  • Approved by ZAO governance from zaoos.com
+    https://farcaster.xyz/thezao/0xd11fb842
+[3] (@thezao) 📊 ZAO Daily: 1 active members, 0 tracks played, 0 rooms hosted today
+    https://farcaster.xyz/thezao/0xe4c537c8
+[4] (@thezao) zm showing  the zaoos  — Proposed by  • Approved by ZAO governance from zaoos.com
+    https://farcaster.xyz/thezao/0x3bbb4ee9
+[5] (@chriscocreated) I’d love casts to be able to be pulled into a channel. Appreciate multi-target might be a big change. Could we add a curation behaviour? Per
+    https://farcaster.xyz/chriscocreated/0xf952279a
+[6] (@chriscocreated) I didn’t even know about letterboxd  These guys want it to be a public good rather than bought out.   Seems relevant   https://www.statsigni
+    https://farcaster.xyz/chriscocreated/0xb67777d9
+[7] (@chriscocreated) Join us on the Sopha: ZABAL GAMEZ workshop w/Sopha  Introduce Sopha to the Zabal Games community   12:30pm Eastern
+    https://farcaster.xyz/chriscocreated/0x113b9e82
+[8] (@chriscocreated) https://www.sopha.social/snaps/event
+    https://farcaster.xyz/chriscocreated/0x170ca581
+[9] (@chriscocreated) Tomorrow we are On the Sopha with  as part of the Zabal Games workshop series 12:30pm Eastern 16:30 UTC.  https://www.sopha.social/event/e4e
+    https://farcaster.xyz/chriscocreated/0x4dba503f
+[10] (@jacek) appreciate it, sir 🫡 🎩
+    https://farcaster.xyz/jacek/0x70a62420
+[11] (@jacek) With pov.co, we’re building permissionless opinion markets.  Polymarket and Kalshi need deep liquidity and market resolution. POV doesn’t.  
+    https://farcaster.xyz/jacek/0x9c5c504f
+[12] (@jacek) Shoutout to  and /poidh for making this bounty happen and bringing these videos to life.
+    https://farcaster.xyz/jacek/0x5a440271
