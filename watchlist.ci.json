@@ -1,5 +1,22 @@
 {
-  "reddit": ["ClaudeAI", "ClaudeCode", "LocalLLaMA", "vibecoding"],
-  "farcaster": ["thezao", "chriscocreated", "jacek", "dwr.eth", "v"],
+  "reddit": [
+    "ClaudeAI",
+    "ClaudeCode",
+    "LocalLLaMA",
+    "vibecoding"
+  ],
+  "farcaster": [
+    "thezao",
+    "chriscocreated",
+    "jacek",
+    "dwr.eth",
+    "v"
+  ],
+  "github": [
+    "farcasterxyz/protocol",
+    "farcasterxyz/snapchain",
+    "farcasterxyz/miniapps",
+    "farcasterxyz/hub-monorepo"
+  ],
   "x": []
 }
