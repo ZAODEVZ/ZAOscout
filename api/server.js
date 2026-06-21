@@ -33,7 +33,22 @@ function whoTier(req, url) {
   return { who: `anon:${ip}`, tier: TIERS.anon, token: null };
 }
 const json = (res, code, obj) => { res.writeHead(code, { 'content-type': 'application/json', 'access-control-allow-origin': '*' }); res.end(JSON.stringify(obj)); };
-const body = (req) => new Promise((r) => { let b = ''; req.on('data', (d) => (b += d)); req.on('end', () => { try { r(JSON.parse(b || '{}')); } catch { r({}); } }); });
+
+// Cap the request body. This is a public, keyless POST API - without a cap a
+// single client can stream an unbounded body and exhaust server memory (a
+// trivial DoS). Legitimate /claim and /digest bodies are well under 256KB.
+const MAX_BODY = Number(process.env.SCOUT_MAX_BODY || 256 * 1024);
+const body = (req) => new Promise((resolve, reject) => {
+  let b = '', size = 0, done = false;
+  req.on('data', (d) => {
+    if (done) return;                 // already over cap - drop further chunks, don't buffer
+    size += d.length;
+    if (size > MAX_BODY) { done = true; reject(new Error('PAYLOAD_TOO_LARGE')); return; }
+    b += d;
+  });
+  req.on('end', () => { if (done) return; try { resolve(JSON.parse(b || '{}')); } catch { resolve({}); } });
+  req.on('error', () => { if (!done) resolve({}); });
+});
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
@@ -99,7 +114,14 @@ const server = http.createServer(async (req, res) => {
 
     return json(res, 404, { error: 'not found', routes: ['/fetch', '/digest', '/claim', '/me', '/chart', '/health'] });
   } catch (e) {
+    if (e.message === 'PAYLOAD_TOO_LARGE') return json(res, 413, { error: 'request body too large', limit: MAX_BODY });
     return json(res, 500, { error: e.message });
   }
 });
-server.listen(PORT, () => console.error(`[scout-api] listening on :${PORT} - GET /fetch /chart, POST /digest /claim`));
+
+// Only auto-listen when run directly (node api/server.js). When imported (tests)
+// the caller controls listen()/close() and the port.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) server.listen(PORT, () => console.error(`[scout-api] listening on :${PORT} - GET /fetch /chart, POST /digest /claim`));
+
+export { server };
