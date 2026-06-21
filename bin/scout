@@ -12,6 +12,7 @@ usage: scout <url-or-handle>
   x.com / twitter.com   -> FxTwitter (tweet + full Article body, no key)
   farcaster.xyz/...     -> Haatz     (cast/profile, no key)
   github.com/owner/repo -> GitHub    (commits/releases/issues/discussions, no key)
+  doctor                -> preflight: deps + config + next steps (offline; run after cloning)
   health                -> run the fetcher health-check
   watch                 -> read your watchlist -> triage -> Discord (see watchlist.example.json)
   digest                -> one connected brief across all fresh picks (needs a BYOK key for synthesis)
@@ -28,6 +29,7 @@ fi
 
 ARG="$1"
 case "$ARG" in
+  doctor) exec "$DIR/scout-doctor" ;;
   health) exec "$DIR/scout-health" ;;
   watch)  exec node "$DIR/../scout/watch.js" ;;
   digest) exec node "$DIR/../scout/digest.js" ;;

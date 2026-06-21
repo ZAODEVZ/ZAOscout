@@ -18,9 +18,10 @@ Platforms block generic scrapers but trust their own first-party clients. ZAOsco
 |--------|--------|-----------------|
 | **Reddit** | [Redlib](https://github.com/redlib-org/redlib) (emulates the Reddit Android app) | title, author, body, comment tree |
 | **X / Twitter** | [FxTwitter](https://github.com/FixTweet/FxTwitter) | tweet text, media, **full long-form Article body** |
-| **Farcaster** | [Haatz](https://haatz.quilibrium.com) (public Snapchain hub mirror) | cast text + embeds, profile, recent casts |
+| **Farcaster** | [Haatz](https://haatz.quilibrium.com) + Pinata (public Snapchain hub mirrors, with fallback) | cast text + embeds, profile, recent casts |
+| **GitHub** | public REST API + the discussions page | recent commits, latest release, open issues, discussions - keyless |
 
-No secrets means it's forkable: a clone works immediately, and it survives any repo reset because there's nothing to configure.
+No secrets means it's forkable: a clone works immediately, and it survives any repo reset because there's nothing to configure. After cloning, run `scout doctor` to see what's installed and configured.
 
 See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for the full method (and why the techniques most tutorials show you are already dead). New here, or picking this back up? Start with [STATUS.md](STATUS.md) - it captures what is shipped, what is parked, and how to resume.
 
@@ -29,8 +30,9 @@ See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for the full method (and why th
 ```bash
 git clone <this-repo> && cd ZAOscout
 ./setup.sh                 # chmod + dependency check, optionally adds bin/ to PATH
+scout doctor               # preflight: what's installed + configured (offline)
 scout https://www.reddit.com/r/LocalLLaMA/comments/...
-scout health               # verify all three fetchers still work
+scout health               # verify the fetchers still work live
 ```
 
 Requirements: `bash`, `curl`, `python3` (all standard on macOS/Linux). That's it.
@@ -42,8 +44,10 @@ Requirements: `bash`, `curl`, `python3` (all standard on macOS/Linux). That's it
 | `scout <url>` | auto-routes by host | the one you'll use |
 | `scout-reddit <url-or-/s/-link>` | Redlib (multi-instance fallback) | resolves `/s/` share links to canonical |
 | `scout-x <url-or-tweet-id>` | FxTwitter | renders draft-js Article blocks to markdown |
-| `scout-farcaster <url-or-fid>` | Haatz | resolves `@handle` -> FID, short-hash -> full cast |
-| `scout health` | all three | run weekly (cron) to catch silent breakage |
+| `scout-farcaster <url-or-fid>` | Haatz + Pinata (hub fallback) | resolves `@handle` -> FID, short-hash -> full cast |
+| `scout-github <owner/repo-or-url>` | GitHub REST + discussions | commits, latest release, open issues, discussions - keyless |
+| `scout doctor` | none (offline) | preflight: deps + what's configured + next steps |
+| `scout health` | all fetchers | run weekly (cron) to catch silent breakage |
 
 ## `scout watch` - the multi-platform feed
 
