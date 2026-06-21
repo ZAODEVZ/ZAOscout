@@ -120,11 +120,14 @@ export function makeBrain() {
     // synthesize a connected brief that names the cross-cutting theme. cite-or-drop:
     // every claim carries its item index; the brief references items by [n].
     async digest(items, priorThemes = []) {
-      // items: [{ title, body, tag, url }]
-      const grounded = items.filter((it) => it.body && it.body.length >= 40);
-      if (!grounded.length) return '';
+      // items: [{ title, body, tag, url }]. Number by ORIGINAL position, not by a
+      // re-filtered subset: the caller's source list is numbered over all items,
+      // so the brief's [n] citations must use the same indices or they point at
+      // the wrong source link whenever an item fails to ground. Empty items are
+      // marked SKIP in the claims pass instead of being renumbered out.
+      if (!items.some((it) => it.body && it.body.length >= 40)) return '';
       const claimsSys = 'For each numbered item, write ONE factual claim (max 20 words) grounded ONLY in its text. Output one line per item as "n. claim". If an item is empty/off-topic, output "n. SKIP". No preamble.';
-      const claimsUser = grounded.map((it, i) => `[${i + 1}] ${it.title}\n${it.body.slice(0, 1500)}`).join('\n\n');
+      const claimsUser = items.map((it, i) => `[${i + 1}] ${it.title}\n${(it.body || '').slice(0, 1500)}`).join('\n\n');
       let claims;
       try { claims = (await call(cfg, claimsSys, claimsUser) || '').trim(); } catch { return ''; }
       if (!claims) return '';
