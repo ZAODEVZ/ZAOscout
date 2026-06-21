@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# scout-doctor - a fork's preflight: what's installed, what's configured, what next.
+#
+# Answers the first question anyone has after cloning: "did I set this up right?"
+# It is OFFLINE - deps + env + files only. For live fetcher reachability run
+# `scout health`. Zero config; nothing here touches the network.
+#
+# Exit: 0 = core deps present (the keyless fetchers will run) | 1 = a required dep missing
+set -uo pipefail
+DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$DIR/.." && pwd)"
+FAIL=0
+
+ver() { "$1" --version 2>&1 | head -1; }
+state() { [[ -n "${!1:-}" ]] && echo set || echo "not set"; }
+
+echo "=== ZAOscout doctor ==="
+echo "(offline preflight - run 'scout health' for live fetcher checks)"
+echo
+echo "deps:"
+for dep in bash curl python3; do
+  if command -v "$dep" >/dev/null 2>&1; then
+    printf '  %-8s ok\n' "$dep"
+  else
+    printf '  %-8s MISSING (required for the keyless fetchers)\n' "$dep"; FAIL=1
+  fi
+done
+if command -v node >/dev/null 2>&1; then
+  printf '  %-8s ok (%s)  [needed for watch/digest/share/api/mcp]\n' "node" "$(node --version 2>/dev/null)"
+else
+  printf '  %-8s not found  [only needed for watch/digest/share/api/mcp; the fetchers work without it]\n' "node"
+fi
+
+echo
+echo "delivery (scout watch/digest):"
+if [[ -n "${DISCORD_WEBHOOK:-}" ]]; then
+  echo "  DISCORD_WEBHOOK     set        -> posts to Discord via webhook"
+elif [[ -n "${DISCORD_BOT_TOKEN:-}" && -n "${DISCORD_USER_ID:-}" ]]; then
+  echo "  DISCORD_BOT_TOKEN   set        -> posts to Discord via bot DM"
+else
+  echo "  Discord             not set    -> falls back to a local feed file (~/.zaoscout/feed.md)"
+fi
+
+echo
+echo "synthesis (optional BYOK - no key = keyless link-only digests):"
+if [[ -n "${LLM_API_KEY:-}${OPENROUTER_API_KEY:-}${ANTHROPIC_API_KEY:-}${OPENAI_API_KEY:-}${OLLAMA_URL:-}${OLLAMA_TUNNEL_URL:-}" ]]; then
+  echo "  LLM key             set        -> digests get a synthesized 'why it matters' brief"
+else
+  echo "  LLM key             not set    -> link-only digests (the keyless default)"
+fi
+printf '  EXA_API_KEY         %s    -> optional web enrichment for grounding\n' "$(state EXA_API_KEY)"
+
+echo
+echo "watchlist:"
+WL="${SCOUT_WATCHLIST:-$ROOT/watchlist.json}"
+if [[ -f "$WL" ]]; then
+  echo "  watchlist.json      found      ($WL)"
+else
+  echo "  watchlist.json      missing    -> cp watchlist.example.json watchlist.json, then edit your sources"
+fi
+
+echo
+echo "next:"
+echo "  scout health                              # live reachability of the fetchers"
+echo "  scout https://www.reddit.com/r/LocalLLaMA/comments/...   # fetch a post"
+if [[ $FAIL -ne 0 ]]; then
+  echo
+  echo "RESULT: a required dependency is missing - install it before the fetchers will run." >&2
+  exit 1
+fi
+echo
+echo "RESULT: core deps present - the keyless fetchers are ready."
