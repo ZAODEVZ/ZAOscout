@@ -1,6 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseRedditListing, parseFarcasterCasts, validSub, validFcUser, validRepo, parseGithubActivity } from '../scout/reader.js';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { parseRedditListing, parseFarcasterCasts, validSub, validFcUser, validRepo, parseGithubActivity, getRedlibInstances } from '../scout/reader.js';
 
 const FIXTURE = `
 <div class="post stickied" id="pin1"><h2 class="post_title"><a href="/r/Test/comments/pin1/megathread/">Megathread (pinned)</a></h2><div class="post_score" title="999">999</div><div class="post_comments" title="10 comments">10</div></div>
@@ -68,4 +71,29 @@ test('parseGithubActivity turns discussion lines into items', () => {
   assert.match(items[0].title, /\[farcasterxyz\/protocol\] FIP: Ungate/);
   assert.match(items[0].url, /discussions\/273/);
   assert.equal(items[0].id, 'disc-273');
+});
+
+test('getRedlibInstances: env override wins', () => {
+  const prev = process.env.REDLIB_INSTANCES;
+  process.env.REDLIB_INSTANCES = 'a.com b.com';
+  try { assert.deepEqual(getRedlibInstances('/nope'), ['a.com', 'b.com']); }
+  finally { if (prev === undefined) delete process.env.REDLIB_INSTANCES; else process.env.REDLIB_INSTANCES = prev; }
+});
+
+test('getRedlibInstances: reads the self-heal cache, merges fallback, dedupes', () => {
+  const prev = process.env.REDLIB_INSTANCES; delete process.env.REDLIB_INSTANCES;
+  const tmp = path.join(os.tmpdir(), `redlib-test-${Date.now()}.txt`);
+  fs.writeFileSync(tmp, 'live1.example\nredlib.perennialte.ch\nlive2.example\n');
+  try {
+    const list = getRedlibInstances(tmp);
+    assert.equal(list[0], 'live1.example');               // cache first
+    assert.ok(list.includes('reddit.rtrace.io'));         // fallback appended
+    assert.equal(new Set(list).size, list.length);        // deduped (perennialte not doubled)
+  } finally { fs.unlinkSync(tmp); if (prev !== undefined) process.env.REDLIB_INSTANCES = prev; }
+});
+
+test('getRedlibInstances: no cache -> fallback only', () => {
+  const prev = process.env.REDLIB_INSTANCES; delete process.env.REDLIB_INSTANCES;
+  try { assert.deepEqual(getRedlibInstances('/definitely/missing'), ['redlib.perennialte.ch', 'reddit.rtrace.io', 'redlib.privadency.com', 'redlib.catsarch.com']); }
+  finally { if (prev !== undefined) process.env.REDLIB_INSTANCES = prev; }
 });

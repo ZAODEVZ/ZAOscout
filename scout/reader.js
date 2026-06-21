@@ -6,6 +6,8 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import fs from 'node:fs';
+import os from 'node:os';
 
 const pexec = promisify(execFile);
 const NAMED = { amp:'&', lt:'<', gt:'>', quot:'"', apos:"'", nbsp:' ', mdash:'—', ndash:'–', hellip:'…', rsquo:'’', lsquo:'‘', ldquo:'“', rdquo:'”' };
@@ -16,7 +18,27 @@ const decodeEnt = (t) => t
 
 const BIN = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'bin');
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36';
-const REDLIB = (process.env.REDLIB_INSTANCES || 'redlib.perennialte.ch reddit.rtrace.io redlib.privadency.com redlib.catsarch.com').split(/\s+/);
+const FALLBACK_REDLIB = ['redlib.perennialte.ch', 'reddit.rtrace.io', 'redlib.privadency.com', 'redlib.catsarch.com'];
+
+// Single source of truth for Redlib instances: REDLIB_INSTANCES override, else
+// the self-healed cache that scout-reddit refreshes from the official list
+// (~/.zaoscout/redlib-instances.txt), else the hardcoded fallback. This way the
+// watch/digest path benefits from the same self-heal as the CLI fetcher instead
+// of a separate stale list.
+export function getRedlibInstances(
+  cacheFile = path.join(process.env.SCOUT_CACHE_DIR || path.join(os.homedir(), '.zaoscout'), 'redlib-instances.txt'),
+) {
+  if (process.env.REDLIB_INSTANCES) return process.env.REDLIB_INSTANCES.split(/\s+/).filter(Boolean);
+  const out = [];
+  try {
+    for (const line of fs.readFileSync(cacheFile, 'utf-8').split('\n')) {
+      const h = line.trim();
+      if (h && !out.includes(h)) out.push(h);
+    }
+  } catch { /* no cache yet - scout-reddit/health populates it */ }
+  for (const f of FALLBACK_REDLIB) if (!out.includes(f)) out.push(f);
+  return out;
+}
 
 // --- Input validation: watchlist entries flow into URLs / fetcher args, so they
 //     must be strictly shaped to prevent URL/path injection. Reject anything else.
@@ -91,7 +113,7 @@ async function githubRepo(repo, limit = 6) {
 
 async function redditSub(sub, mode = 'hot', limit = 10) {
   if (!validSub(sub)) { console.error(`[scout] skipping invalid subreddit: ${JSON.stringify(sub)}`); return []; }
-  for (const inst of REDLIB) {
+  for (const inst of getRedlibInstances()) {
     try {
       const r = await fetch(`https://${inst}/r/${sub}/${mode}/`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(18000) });
       if (!r.ok) continue;
