@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseRedditListing, parseFarcasterCasts, validSub, validFcUser } from '../scout/reader.js';
+import { parseRedditListing, parseFarcasterCasts, validSub, validFcUser, validRepo, parseGithubActivity } from '../scout/reader.js';
 
 const FIXTURE = `
 <div class="post stickied" id="pin1"><h2 class="post_title"><a href="/r/Test/comments/pin1/megathread/">Megathread (pinned)</a></h2><div class="post_score" title="999">999</div><div class="post_comments" title="10 comments">10</div></div>
@@ -46,4 +46,26 @@ test('input validation rejects injection', () => {
   assert.ok(validFcUser('3'));
   assert.ok(!validFcUser('../evil'));
   assert.ok(!validFcUser('a/b'));
+});
+
+test('validRepo accepts owner/repo and rejects junk', () => {
+  assert.equal(validRepo('farcasterxyz/protocol'), true);
+  assert.equal(validRepo('owner'), false);
+  assert.equal(validRepo('a/b/c'), false);
+  assert.equal(validRepo('bad space/repo'), false);
+});
+
+test('parseGithubActivity turns discussion lines into items', () => {
+  const stdout = [
+    '=== GitHub: farcasterxyz/protocol (keyless) ===',
+    'RECENT DISCUSSIONS:',
+    '- #273 FIP: Ungate Message Variants | https://github.com/farcasterxyz/protocol/discussions/273',
+    '- #207 FIP: Snapchain | https://github.com/farcasterxyz/protocol/discussions/207',
+  ].join('\n');
+  const items = parseGithubActivity(stdout, 'farcasterxyz/protocol');
+  assert.equal(items.length, 2);
+  assert.equal(items[0].source, 'github');
+  assert.match(items[0].title, /\[farcasterxyz\/protocol\] FIP: Ungate/);
+  assert.match(items[0].url, /discussions\/273/);
+  assert.equal(items[0].id, 'disc-273');
 });

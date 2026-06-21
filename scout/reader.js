@@ -23,8 +23,10 @@ const REDLIB = (process.env.REDLIB_INSTANCES || 'redlib.perennialte.ch reddit.rt
 const SUB_RE = /^[A-Za-z0-9_]{1,40}$/;                 // subreddit name
 const FID_RE = /^[0-9]{1,12}$/;                        // numeric Farcaster id
 const HANDLE_RE = /^[A-Za-z0-9_.-]{1,40}$/;            // fname or .eth handle
+const REPO_RE = /^[A-Za-z0-9_.-]{1,40}\/[A-Za-z0-9_.-]{1,100}$/; // owner/repo
 export const validSub = (s) => typeof s === 'string' && SUB_RE.test(s);
 export const validFcUser = (u) => typeof u === 'string' && (FID_RE.test(u) || HANDLE_RE.test(u));
+export const validRepo = (r) => typeof r === 'string' && REPO_RE.test(r);
 
 // --- Pure parsers (exported for tests; no network) ---
 
@@ -63,7 +65,29 @@ export function parseFarcasterCasts(stdout, user, limit = 8) {
   return items;
 }
 
+// Parse scout-github stdout into items (recent DISCUSSIONS are the high-signal
+// feed item for a repo - FIPs, proposals - each with a stable url).
+export function parseGithubActivity(stdout, repo, limit = 6) {
+  const items = [];
+  for (const line of stdout.split('\n')) {
+    const m = line.match(/^- #(\d+) (.+?) \| (https:\/\/github\.com\/\S+\/discussions\/\d+)/);
+    if (m) {
+      items.push({ source: 'github', repo: String(repo), id: `disc-${m[1]}`, title: `[${repo}] ${m[2].trim()}`.slice(0, 140), url: m[3], engagement: 0 });
+      if (items.length >= limit) break;
+    }
+  }
+  return items;
+}
+
 // --- Network fetchers (use the validated input + pure parsers) ---
+
+async function githubRepo(repo, limit = 6) {
+  if (!validRepo(repo)) { console.error(`[scout] skipping invalid github repo: ${JSON.stringify(repo)}`); return []; }
+  try {
+    const { stdout } = await pexec(path.join(BIN, 'scout-github'), [repo], { timeout: 30000, maxBuffer: 1024 * 1024 });
+    return parseGithubActivity(stdout, repo, limit);
+  } catch { return []; }
+}
 
 async function redditSub(sub, mode = 'hot', limit = 10) {
   if (!validSub(sub)) { console.error(`[scout] skipping invalid subreddit: ${JSON.stringify(sub)}`); return []; }
@@ -88,11 +112,12 @@ async function farcasterUser(handleOrFid, limit = 8) {
   } catch { return []; }
 }
 
-// watchlist: { reddit: ["LocalLLaMA","ClaudeAI"], farcaster: ["dwr.eth","3"], x: [...] }
+// watchlist: { reddit: [...], farcaster: [...], github: ["owner/repo"], x: [...] }
 export async function readWatchlist(wl) {
   const out = [];
   for (const sub of (wl.reddit || [])) out.push(...await redditSub(sub));
   for (const u of (wl.farcaster || [])) out.push(...await farcasterUser(u));
+  for (const repo of (wl.github || [])) out.push(...await githubRepo(repo));
   // x: timelines walled - skipped on purpose. Forward individual X links instead.
   return out;
 }
