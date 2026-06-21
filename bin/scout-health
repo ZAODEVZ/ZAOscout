@@ -15,12 +15,24 @@ FAIL=0   # a CRITICAL fetcher regressed -> exit 1
 WARN=0   # only a BEST-EFFORT (mirror-volatile) fetcher is down -> still exit 0
 report=""
 
+# Optional: run only the named checks (keys: x, farcaster, reddit, github).
+# `scout-health github` runs just that one - used for targeted re-checks and by
+# the offline test (with SCOUT_GH_FIXTURE_DIR). No args = run all.
+WANT=("$@")
+want() {
+  [[ ${#WANT[@]} -eq 0 ]] && return 0
+  local w; for w in "${WANT[@]}"; do [[ "$w" == "$1" ]] && return 0; done
+  return 1
+}
+
 # check NAME SCRIPT ARG NEEDLE TIER - array call, no eval.
 # TIER: "critical" (X, Farcaster - stable first-party-style mirrors) or
-#       "best-effort" (Reddit - the Redlib instance pool is volatile and often
-#       Cloudflare-gated; its being down does NOT mean ZAOscout is broken).
+#       "best-effort" (Reddit, GitHub - volatile or IP-rate-limited; being down
+#       does NOT mean ZAOscout is broken).
 check() {
   local name="$1" script="$2" arg="$3" needle="$4" tier="${5:-critical}"
+  local key="${name%% *}"   # first word: x, farcaster, reddit, github
+  want "$key" || return 0
   local out attempt
   # Retry once on miss - public mirrors blip; only a 2nd miss counts.
   for attempt in 1 2; do
@@ -46,6 +58,10 @@ check "x (FxTwitter)" "$DIR/scout-x" "2062149859394585061" "USER:|ARTICLE|TEXT:"
 check "farcaster (Haatz)" "$DIR/scout-farcaster" "3" "FID: 3|Dan Romero" "critical"
 # Reddit (Redlib) - a subreddit listing. BEST-EFFORT (Redlib pool is Cloudflare-volatile).
 check "reddit (Redlib)" "$DIR/scout-reddit" "r/announcements" "COMMENTS|post|TITLE|post_title" "best-effort"
+# GitHub (REST + discussions scrape) - farcasterxyz/protocol is permanent. A watched
+# source now, so guard it too. BEST-EFFORT: unauthenticated GitHub is 60 req/hr per
+# IP, so a busy IP can blip - that is not a ZAOscout regression.
+check "github (REST)" "$DIR/scout-github" "farcasterxyz/protocol" "GitHub:|RECENT|DISCUSSIONS|discussions/" "best-effort"
 
 printf "%s\n%s" "$TS" "$report" | tr -s '\n' >> "$LOG"
 echo "[$TS] zao-fetch healthcheck:"
@@ -56,7 +72,7 @@ if [[ $FAIL -ne 0 ]]; then
   exit 1
 fi
 if [[ $WARN -ne 0 ]]; then
-  echo "all critical fetchers green; reddit degraded (volatile Redlib mirrors - best-effort, not a regression)."
+  echo "all critical fetchers green; a best-effort source (reddit/github) is degraded - volatile mirrors / IP rate-limit, not a regression."
   echo "WARN $TS" >> "$LOG"
   exit 0
 fi
