@@ -25,7 +25,7 @@ catch { console.error(`[scout] no watchlist at ${wlPath}. Copy watchlist.example
 const tag = (p) => p.source === 'reddit' ? `r/${p.sub}` : p.source === 'farcaster' ? `@${p.user}` : p.source;
 
 const items = await readWatchlist(wl);
-const seen = loadSeen();
+const seen = loadSeen('digest');   // own dedup namespace - does not cannibalize watch/share
 const picks = triage(items, seen, Number(process.env.SCOUT_TOP || 12));
 if (!picks.length) { console.error('[scout] nothing new to digest.'); process.exit(0); }
 
@@ -55,5 +55,5 @@ if (brain) {
 
 const res = await notifyText(body);
 for (const p of picks) seen.add(p.source + ':' + p.id);
-if (!process.env.DRY_RUN) saveSeen(seen);
+if (!process.env.DRY_RUN) saveSeen(seen, 'digest');
 console.error(`[scout] digest of ${picks.length} delivered via ${res.via}`);

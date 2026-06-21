@@ -23,7 +23,7 @@ catch { console.error(`[scout] no watchlist at ${wlPath}.`); process.exit(1); }
 
 const N = Number(process.env.SCOUT_SHARE_N || 3);
 const items = await readWatchlist(wl);
-const seen = loadSeen();
+const seen = loadSeen('share');   // own dedup namespace - drafting does not consume the watch/digest feed
 const picks = triage(items, seen, N);
 if (!picks.length) { console.error('[scout] nothing new to draft.'); process.exit(0); }
 
@@ -45,6 +45,6 @@ fs.mkdirSync(dest, { recursive: true });
 const file = path.join(dest, 'drafts.md');
 fs.appendFileSync(file, out);
 for (const p of picks) seen.add(p.source + ':' + p.id);
-saveSeen(seen);
+saveSeen(seen, 'share');
 console.log(out);
 console.error(`[scout] ${drafts.length} drafts queued in ${file} - review + post manually (scout never auto-posts).`);
