@@ -13,7 +13,19 @@ export async function logUsage(rec) {
   return row;
 }
 export function readUsage(limit = 1000) {
-  try { return fs.readFileSync(file(), 'utf8').trim().split('\n').slice(-limit).map((l) => JSON.parse(l)); } catch { return []; }
+  // Parse line-by-line and SKIP unparseable lines. A single torn/partial line
+  // (crash mid-append, interleaved write) used to throw and return [] - which
+  // made countToday read 0 for everyone, silently disabling all rate limits
+  // (fail-open). One bad line must not nuke the whole ledger.
+  let text;
+  try { text = fs.readFileSync(file(), 'utf8'); } catch { return []; }
+  const rows = [];
+  for (const line of text.split('\n')) {
+    const l = line.trim();
+    if (!l) continue;
+    try { rows.push(JSON.parse(l)); } catch { /* skip corrupt line */ }
+  }
+  return rows.slice(-limit);
 }
 export function leaderboard() {
   const by = {};
@@ -22,5 +34,5 @@ export function leaderboard() {
 }
 export function countToday(who) {
   const day = new Date().toISOString().slice(0, 10);
-  return readUsage(5000).filter((r) => r.who === who && r.ts.startsWith(day)).length;
+  return readUsage(5000).filter((r) => r.who === who && typeof r.ts === 'string' && r.ts.startsWith(day)).length;
 }
