@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadDotenv } from './env.js';
 import { readWatchlist } from './reader.js';
 import { triage } from './triage.js';
 import { loadSeen, saveSeen } from './state.js';
@@ -13,17 +14,7 @@ import { makeBrain } from './brain.js';
 import { groundBody } from './ground.js';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-try {
-  const envText = fs.readFileSync(path.join(dir, '..', '.env'), 'utf8');
-  for (const line of envText.split('\n')) {
-    if (/^\s*#/.test(line)) continue;
-    const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$/);
-    if (!m || (m[1] in process.env)) continue;
-    let v = m[2];
-    if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
-    process.env[m[1]] = v;
-  }
-} catch { /* no .env */ }
+loadDotenv(path.join(dir, '..', '.env'));
 
 const wlPath = process.env.SCOUT_WATCHLIST || path.join(dir, '..', 'watchlist.json');
 let wl;
