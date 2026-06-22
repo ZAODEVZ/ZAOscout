@@ -159,3 +159,30 @@
     https://farcaster.xyz/jacek/0x9c5c504f
 [12] (@jacek) Shoutout to  and /poidh for making this bounty happen and bringing these videos to life.
     https://farcaster.xyz/jacek/0x5a440271
+
+---
+**ZAOscout digest - 12 items**
+[1] (@thezao) zm showing minted merch zaoos  — Proposed by  • Approved by ZAO governance from zaoos.com
+    https://farcaster.xyz/thezao/0xf91a20d0
+[2] (@chriscocreated) See you On the Sopha in an hour 12:30 EST
+    https://farcaster.xyz/chriscocreated/0x576182ba
+[3] (@chriscocreated) Join us later        ? 🦉🛋️
+    https://farcaster.xyz/chriscocreated/0x34835b52
+[4] (@chriscocreated) Join us on the Sopha today to discuss what's 𝘕𝘦𝘹𝘵 𝘧𝘰𝘳 𝘚𝘰𝘱𝘩𝘢 following the Purple grant.  Agenda includes: Funding curators, comm
+    https://farcaster.xyz/chriscocreated/0xd78ddd0b
+[5] (@jacek) The devs sent me this and said POV markets will hit like: “SHH-SH-FSHH-SHH.”  No idea what that means, but I’m ready. 😅🎩  Turn sound on.
+    https://farcaster.xyz/jacek/0xb8bca07a
+[6] (@jacek) Everyone has an opinion.  Few are willing to back it.  POV gives the power back to the people who are.  Believe it. Create it. Trade it.  Me
+    https://farcaster.xyz/jacek/0xf490d528
+[7] (@dwr.eth) From my walk this morning
+    https://farcaster.xyz/dwr.eth/0x6f0bb48b
+[8] (@dwr.eth) gm
+    https://farcaster.xyz/dwr.eth/0x7611d9f4
+[9] (@v) great game!
+    https://farcaster.xyz/v/0x854c9bf8
+[10] (@v) thanks, i think
+    https://farcaster.xyz/v/0x610125c4
+[11] (@v) Elon likes the Farcasters  https://x.com/elonmusk/status/2034410549438755168?s=20
+    https://farcaster.xyz/v/0x4391e09e
+[12] (@v) 🫡 🫡 🫡 🫡
+    https://farcaster.xyz/v/0x7dc24d92
