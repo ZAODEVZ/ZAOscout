@@ -83,6 +83,13 @@ Read the Praxis command language in full - it is **genuinely excellent and pedag
 - **Official cluster descriptions** (fuller than the first read): Protocol = harden/scale + "scaling self-sovereignty"; Access = self-sovereignty "available, legible and survivable" across read/transact/prove/delegate/exit; User = ground EF in real users (segments, personas, failure modes, tradeoffs); Community = make legible "what the EF stands for, and how that materially differs from zero-sum financial crypto, from corpo-compromised crypto, and from the bland, status-quo-preserving... grant-managing parts of the non-profit world"; Institutional = enterprises/governments/universities/nonprofits/financial institutions, preserving self-sovereignty + CROPS.
 - Date refinement: Hsiao-Wei Wang's co-ED/board resignation is reported as **June 19** by some outlets (others said ~June 22) - minor source variance, flag as ~June 19-22.
 
+## Loop iteration (2026-06-23, later 2) - the budget numbers sharpen
+
+- **~40% budget cut this year.** Vitalik says the EF is moving to an **endowment-style model**, cutting annual spend from **~15% of treasury now toward ~5% by 2030**. So the "5% opex" target is the 2030 destination; this year's step is a ~40% reduction. (Refines the earlier "5% baseline" note with the trajectory + this-year magnitude.)
+- Vitalik framed the structure post as his **personal perspective, not an official board statement** - Bastian Aue (interim co-ED) is executing; the board is expanding; his own influence keeps shrinking.
+- Senior departures since January now counted at **nine** (earlier counts said eight - the Hsiao-Wei Wang exit pushed it to nine).
+- No change on Initium this tick (last commit still 06:17Z, the hardened biometric mint).
+
 ## Sources
 
 - [FULL] Ethereum Foundation blog - "EF Structure" (blog.ethereum.org/2026/06/23/ef-structure, fetched 2026-06-23)
