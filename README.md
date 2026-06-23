@@ -182,6 +182,7 @@ PORT=8799 node api/server.js     # GET /fetch  POST /digest  POST /claim  GET /c
 | [docs/SCHEDULED.md](docs/SCHEDULED.md) | Free serverless scheduled runs (GitHub Actions + local cron). |
 | [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) | The capture -> synthesize -> distribute loop and mining. |
 | [docs/MCP.md](docs/MCP.md) | Use ZAOscout from any AI agent via MCP. |
+| [docs/DISCORD.md](docs/DISCORD.md) | `/research <url or topic>` slash command - ask in Discord, get a grounded brief back. |
 | [docs/API.md](docs/API.md) | The HTTP API surface. |
 | [docs/TIERS.md](docs/TIERS.md) | Social-capital tiers (Farcaster / ZAO Respect). |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Architecture, how to add a source, conventions. |

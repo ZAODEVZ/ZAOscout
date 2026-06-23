@@ -16,6 +16,7 @@ import { TIERS, tierFor } from './tiers.js';
 import { logUsage, leaderboard, countToday } from './usage.js';
 import { farcasterCapital, respectFor } from './identity.js';
 import { isAllowedFetchUrl } from '../scout/urlguard.js';
+import { verifyRequest, handleInteraction } from './discord.js';
 
 const pexec = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -50,11 +51,46 @@ const body = (req) => new Promise((resolve, reject) => {
   req.on('error', () => { if (!done) resolve({}); });
 });
 
+// Raw body string (same cap), needed where the exact bytes matter - Discord
+// signs timestamp + raw body, so we must verify against the untouched string,
+// not a re-serialized parse.
+const rawBody = (req) => new Promise((resolve, reject) => {
+  let b = '', size = 0, done = false;
+  req.on('data', (d) => {
+    if (done) return;
+    size += d.length;
+    if (size > MAX_BODY) { done = true; reject(new Error('PAYLOAD_TOO_LARGE')); return; }
+    b += d;
+  });
+  req.on('end', () => { if (!done) resolve(b); });
+  req.on('error', () => { if (!done) resolve(''); });
+});
+
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   const p = url.pathname;
   try {
     if (p === '/health') return json(res, 200, { ok: true });
+
+    // Discord slash-command endpoint (/research). Signature-verified, ungated
+    // (Discord has no ZAOscout token). Replies deferred, then edits in the
+    // followup once the research is done. See docs/DISCORD.md.
+    if (p === '/discord' && req.method === 'POST') {
+      const pub = process.env.DISCORD_PUBLIC_KEY;
+      if (!pub) return json(res, 503, { error: 'discord not configured (set DISCORD_PUBLIC_KEY)' });
+      const raw = await rawBody(req);
+      const sig = req.headers['x-signature-ed25519'];
+      const ts = req.headers['x-signature-timestamp'];
+      if (!verifyRequest(raw, sig, ts, pub)) { res.writeHead(401); return res.end('invalid request signature'); }
+      let interaction; try { interaction = JSON.parse(raw || '{}'); } catch { interaction = {}; }
+      const { response, followup } = handleInteraction(interaction, { appId: process.env.DISCORD_APP_ID });
+      json(res, 200, response);
+      if (followup) {
+        try { await logUsage({ who: 'discord', tier: 'discord', tool: 'research', target: (interaction.data && interaction.data.options && interaction.data.options[0] && interaction.data.options[0].value) || '' }); } catch {}
+        followup();   // fire-and-forget: edits the deferred message when done
+      }
+      return;
+    }
 
     if (p === '/claim' && req.method === 'POST') {
       const b = await body(req);
