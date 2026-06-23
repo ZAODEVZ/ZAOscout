@@ -1,6 +1,6 @@
-# `/research` - ask ZAOscout in Discord
+# `/research` in Discord
 
-Drop a URL or a topic in your Discord server with `/research`, and ZAOscout fetches it (keyless) and posts a grounded brief back in the channel.
+Type `/research <url or topic>` in your Discord server and ZAOscout fetches it (keyless) and posts a grounded brief back in the channel.
 
 ```
 /research https://www.reddit.com/r/LocalLLaMA/comments/...
@@ -8,55 +8,64 @@ Drop a URL or a topic in your Discord server with `/research`, and ZAOscout fetc
 /research what are people saying about the CEF creator sprint
 ```
 
-It reuses everything the CLI already does: the keyless fetchers for URLs (Reddit / X / Farcaster / GitHub / web), Exa for topic search (if `EXA_API_KEY` is set), and your BYOK LLM for the synthesis. No `discord.js`, no gateway socket - it rides the existing HTTP API as a signed Interactions endpoint.
+It reuses the keyless fetchers for URLs (Reddit / X / Farcaster / GitHub / web), Exa for topic search (if `EXA_API_KEY` is set), and your BYOK LLM for synthesis.
 
-## How it works
+There are two ways to run it. **The gateway bot is the recommended one** - it needs no domain, no TLS, no open ports.
 
-1. Discord POSTs every interaction to your endpoint, **Ed25519-signed**. The server verifies the signature (`api/discord.js`) or returns 401 - this is what lets Discord trust the endpoint.
-2. A `PING` gets a `PONG`. A `/research` command replies **deferred** ("thinking...") within Discord's 3-second limit, then does the research and **edits the message** with the brief.
+---
 
-## Setup (one time, ~5 min)
+## Option A (recommended): Gateway bot - no domain, no HTTPS
 
-### 1. Create the Discord app
-- Go to <https://discord.com/developers/applications> -> **New Application**.
-- **Bot** tab -> add a bot. Copy the **token** -> `DISCORD_BOT_TOKEN`.
-- **General Information** -> copy the **Application ID** -> `DISCORD_APP_ID`, and the **Public Key** -> `DISCORD_PUBLIC_KEY`.
+The bot connects *out* to Discord over a websocket (the same way farscout already runs) and listens for `/research`. Nothing inbound - no public URL, no reverse proxy, no certificate. Runs as a service on any box with the bot token. Zero-dep: uses Node 22's built-in `WebSocket` (no discord.js).
 
-### 2. Get your server (guild) id
-- In Discord: User Settings -> Advanced -> enable **Developer Mode**.
-- Right-click your ZABAL server -> **Copy Server ID** -> `DISCORD_GUILD_ID` (this makes the command register instantly on just that server; omit it for a global command that takes ~1h to appear).
+**Requires Node >= 22** (for the global `WebSocket`).
 
-### 3. Put the values in `.env`
-```bash
-DISCORD_PUBLIC_KEY=...   # required - verifies signatures
-DISCORD_APP_ID=...       # required - edits the reply + registers the command
-DISCORD_BOT_TOKEN=...    # required to register the command
-DISCORD_GUILD_ID=...     # your ZABAL server (instant); omit for global
-# and a BYOK LLM key for the brief (and optionally EXA_API_KEY for topic search):
-OPENROUTER_API_KEY=...   # or LLM_PROVIDER/LLM_API_KEY, ANTHROPIC_API_KEY, etc.
-EXA_API_KEY=...          # optional - enables web search for free-text topics
-```
+### Setup
+1. You already have a Discord app. Grab from the [Developer Portal](https://discord.com/developers/applications):
+   - **Application ID** -> `DISCORD_APP_ID`
+   - **Bot token** -> `DISCORD_BOT_TOKEN` (the bot's token; `DISCORD_TOKEN` is also accepted)
+2. **Leave the app's "Interactions Endpoint URL" BLANK.** If it's set, Discord delivers interactions over HTTP instead of the gateway and the bot won't see them.
+3. Put values in `.env` (LLM + Exa keys too):
+   ```bash
+   DISCORD_BOT_TOKEN=...
+   DISCORD_APP_ID=...
+   DISCORD_GUILD_ID=...      # your ZABAL server id -> instant command registration (omit = global, ~1h)
+   OPENROUTER_API_KEY=...    # or LLM_PROVIDER/LLM_API_KEY, ANTHROPIC_API_KEY, etc.
+   EXA_API_KEY=...           # optional - web search for free-text topics
+   ```
+4. Register the slash command (once): `npm run discord-register` (or `node bin/scout-discord-register`).
+5. Invite the bot: Developer Portal -> OAuth2 -> URL Generator -> scopes `applications.commands` (+ `bot`), open the URL, add it to ZABAL.
+6. Run the bot:
+   ```bash
+   npm run discord-bot        # foreground test
+   ```
+   To run it as a service (systemd), a unit template is at `scripts/zaoscout-discord-bot.service` (edit `WorkingDirectory`/`EnvironmentFile` paths):
+   ```bash
+   cp scripts/zaoscout-discord-bot.service ~/.config/systemd/user/
+   systemctl --user daemon-reload
+   systemctl --user enable --now zaoscout-discord-bot.service
+   systemctl --user status zaoscout-discord-bot.service
+   ```
 
-### 4. Deploy the API server somewhere reachable
-The endpoint must be a public HTTPS URL. The repo ships a `Dockerfile` + `fly.toml`:
-```bash
-npm run api            # local test on :8799
-# or deploy (always-on):
-fly deploy             # uses the included fly.toml
-```
-Your endpoint URL is `https://<your-host>/discord`.
+That's it. `/research` works in any channel the bot can see.
 
-### 5. Point Discord at it + register the command
-- In the Developer Portal -> your app -> **General Information** -> **Interactions Endpoint URL** = `https://<your-host>/discord`. Discord sends a test PING; it saves only if the signature check passes (so the server must be live with `DISCORD_PUBLIC_KEY` set).
-- Register the slash command:
-  ```bash
-  node bin/scout-discord-register
-  ```
-- **Invite the bot** to your server: Developer Portal -> **OAuth2 -> URL Generator** -> scopes `applications.commands` (+ `bot`), open the URL, add it to ZABAL.
+---
 
-Now type `/research <url or topic>` in any channel the bot can see.
+## Option B: HTTP interactions endpoint (needs a public HTTPS URL)
+
+If you'd rather run it inside the HTTP API (`api/server.js`) - e.g. you already expose it behind HTTPS - it also handles Discord interactions at `POST /discord`, Ed25519-verified.
+
+1. Same app values, plus the **Public Key** -> `DISCORD_PUBLIC_KEY` (this verifies Discord's signatures).
+2. Expose the API over HTTPS (e.g. Caddy auto-TLS in front of `:8799`, or any reverse proxy) at a public domain.
+3. Set the app's **Interactions Endpoint URL** = `https://<your-host>/discord` (Discord sends a test PING; it saves only if the signature check passes, so the server must be live with `DISCORD_PUBLIC_KEY` set).
+4. Register the command: `npm run discord-register`. Invite the bot as above.
+
+Use this only if you already have HTTPS ingress. Otherwise Option A is simpler.
+
+---
 
 ## Notes
-- **Keyless-first:** with no LLM key, `/research` still replies with the fetched content (just not synthesized). With `EXA_API_KEY` unset, topic (non-URL) queries lean on the model and flag that context is thin - paste a direct URL for best results.
-- **Security:** the endpoint rejects any request whose Ed25519 signature doesn't verify, so only Discord can drive it. The bot token and LLM keys stay server-side.
-- **Cost:** each `/research` is one LLM call (+ one Exa call for topics). Usage is logged to the chart like other tools (`who: discord`).
+- **Keyless-first:** with no LLM key, `/research` still replies with the fetched content (just unsynthesized). Without `EXA_API_KEY`, topic (non-URL) queries lean on the model and flag thin context - paste a direct URL for best results.
+- **Security:** Option A holds the bot token + LLM keys server-side and never opens an inbound port. Option B rejects any request whose Ed25519 signature doesn't verify.
+- **Cost:** each `/research` is one LLM call (+ one Exa call for topics).
+- **One app, two transports:** don't run both A and B for the same app at once - if an Interactions Endpoint URL is set, the gateway bot stops receiving interactions.

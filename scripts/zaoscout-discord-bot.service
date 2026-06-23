@@ -1,0 +1,16 @@
+[Unit]
+Description=ZAOscout /research Discord gateway bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/ZAOscout
+ExecStart=/usr/bin/env node scout/discord-bot.js
+Restart=always
+RestartSec=5
+# Loads DISCORD_BOT_TOKEN / DISCORD_APP_ID / OPENROUTER_API_KEY / EXA_API_KEY etc.
+EnvironmentFile=/root/ZAOscout/.env
+
+[Install]
+WantedBy=default.target

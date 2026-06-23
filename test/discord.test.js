@@ -9,6 +9,7 @@ import {
   RESEARCH_COMMAND,
 } from '../api/discord.js';
 import { looksLikeUrl } from '../scout/research.js';
+import { parseInteraction } from '../scout/discord-bot.js';
 
 // Make a real Ed25519 keypair and return { publicHex, sign(msg)->sigHex } so the
 // signature tests exercise the actual crypto path Discord uses.
@@ -85,6 +86,27 @@ test('RESEARCH_COMMAND is a valid chat-input command with a required string quer
   assert.equal(opt.name, 'query');
   assert.equal(opt.type, 3);
   assert.equal(opt.required, true);
+});
+
+test('parseInteraction extracts a /research gateway interaction', () => {
+  const payload = {
+    t: 'INTERACTION_CREATE',
+    d: {
+      id: 'i1',
+      token: 'tok',
+      type: 2,
+      data: { name: 'research', options: [{ name: 'query', value: 'https://x.com/a/status/1' }] },
+    },
+  };
+  const parsed = parseInteraction(payload);
+  assert.deepEqual(parsed, { interactionId: 'i1', interactionToken: 'tok', query: 'https://x.com/a/status/1' });
+});
+
+test('parseInteraction ignores non-research and non-interaction events', () => {
+  assert.equal(parseInteraction({ t: 'MESSAGE_CREATE', d: {} }), null);
+  assert.equal(parseInteraction({ t: 'INTERACTION_CREATE', d: { type: 2, data: { name: 'other' } } }), null);
+  assert.equal(parseInteraction({ t: 'INTERACTION_CREATE', d: { type: 1 } }), null); // PING
+  assert.equal(parseInteraction(null), null);
 });
 
 test('looksLikeUrl distinguishes fetchable URLs from topics', () => {

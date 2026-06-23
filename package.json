@@ -8,7 +8,9 @@
     "scout-digest": "scout/digest.js",
     "scout-share": "scout/share.js",
     "zaoscout-mcp": "mcp/server.js",
-    "scout-api": "api/server.js"
+    "scout-api": "api/server.js",
+    "scout-discord-bot": "scout/discord-bot.js",
+    "scout-discord-register": "bin/scout-discord-register"
   },
   "scripts": {
     "watch": "node scout/watch.js",
@@ -16,7 +18,9 @@
     "test": "node --test",
     "digest": "node scout/digest.js",
     "share": "node scout/share.js",
-    "api": "node api/server.js"
+    "api": "node api/server.js",
+    "discord-bot": "node scout/discord-bot.js",
+    "discord-register": "node bin/scout-discord-register"
   },
   "engines": {
     "node": ">=18"
