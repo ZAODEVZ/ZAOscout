@@ -187,6 +187,22 @@ PORT=8799 node api/server.js     # GET /fetch  POST /digest  POST /claim  GET /c
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Architecture, how to add a source, conventions. |
 | [SECURITY.md](SECURITY.md) | Secret hygiene and the keyless guarantee. |
 
+## Session notes (2026-06-23)
+
+Research + work notes from the 2026-06-23 session, kept in [`notes/`](notes/). Personal/strategic - this branch is local-only, not pushed. Index: [notes/README.md](notes/README.md).
+
+| Note | What |
+|------|------|
+| [notes/SUMMARY.md](notes/SUMMARY.md) | One-page summary across everything below. Start here. |
+| [notes/CEF-APPLICATION.md](notes/CEF-APPLICATION.md) | CEF Creator Sprint application (Clanker Ecosystem Fund) - Farcaster composability + ZABAL/ZABAL Gamez. Ready to submit. |
+| [notes/INITIUM-SIGNIUM-RESEARCH.md](notes/INITIUM-SIGNIUM-RESEARCH.md) | Initium.Builders deep dive (systems-thinking console on Intuition L3, $TRUST, MOTIVUS ONE, the Motus Graph). |
+| [notes/INITIUM-FEEDBACK-FOR-AUGUST.md](notes/INITIUM-FEEDBACK-FOR-AUGUST.md) | 6-point feedback for August on Initium. Already sent. |
+| [notes/EF-STRUCTURE-RESEARCH.md](notes/EF-STRUCTURE-RESEARCH.md) | Ethereum Foundation restructure (5 clusters, 54 cuts, CROPS, Ethlabs, ETH -7%). |
+| [notes/UNLOCK-DAO-RESEARCH.md](notes/UNLOCK-DAO-RESEARCH.md) | Unlock Protocol DAO (UP token, Base, memberships) - ZAO gating prior-art. |
+| [notes/SIMMER-RESEARCH.md](notes/SIMMER-RESEARCH.md) | Simmer (simmer.markets) - prediction markets for AI agents. Relevant to WaveWarZ. |
+
+Also shipped this session: the `/research` Discord feature (branch `feat/discord-research`, pushed) and its live deploy on the VPS as `zaoscout-discord-bot.service`.
+
 ## License
 
 MIT. Built in the [ZAO](https://thezao.com) lab. Fork it freely - it is designed to stand alone.
