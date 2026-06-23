@@ -186,3 +186,30 @@
     https://farcaster.xyz/v/0x4391e09e
 [12] (@v) 🫡 🫡 🫡 🫡
     https://farcaster.xyz/v/0x7dc24d92
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeAI) The $20 → $100 gap is pushing solo power users to split spend with OpenAI
+    https://www.reddit.com/r/ClaudeAI/comments/1ud388h/the_20_100_gap_is_pushing_solo_power_users_to/
+[2] (@chriscocreated) implemented, but weird behaviour fuzzing out the whole screen when clicked ?
+    https://farcaster.xyz/chriscocreated/0x2510b52a
+[3] (r/ClaudeAI) Claude is my financial dashboard now
+    https://www.reddit.com/r/ClaudeAI/comments/1ucw1nz/claude_is_my_financial_dashboard_now/
+[4] (@chriscocreated) testing  Shared from the
+    https://farcaster.xyz/chriscocreated/0x0a91984e
+[5] (r/ClaudeAI) Four members of congress respectfully request an explanation of Howard W. Lutnick's export ban against Anthropic no later than the 26th of June
+    https://www.reddit.com/r/ClaudeAI/comments/1ucvp8v/four_members_of_congress_respectfully_request_an/
+[6] (@chriscocreated) oh! smart idea! I'd forgotten about snaps!
+    https://farcaster.xyz/chriscocreated/0x05c644de
+[7] (r/ClaudeAI) Opus 4.8 is now labeled as “Best for Everyday Tasks”
+    https://www.reddit.com/r/ClaudeAI/comments/1ucs4a3/opus_48_is_now_labeled_as_best_for_everyday_tasks/
+[8] (@chriscocreated) please can we do something about this behaviour. Miniapp is prioritised over the quote cast even though the quote cast is listed first in th
+    https://farcaster.xyz/chriscocreated/0xb94586a7
+[9] (r/ClaudeAI) Claude is brutally honest at times
+    https://www.reddit.com/r/ClaudeAI/comments/1udalrb/claude_is_brutally_honest_at_times/
+[10] (@jacek) Your POV rewarded!  $5000 Questing rewards unlocked!  Opinions matter & should be rewarded.  Quest now to earn: http://pov.co
+    https://farcaster.xyz/jacek/0x9bbae8b7
+[11] (r/ClaudeAI) Using Claude Code to reverse engineer car data
+    https://www.reddit.com/r/ClaudeAI/comments/1uda0l6/using_claude_code_to_reverse_engineer_car_data/
+[12] (@v) It was a good run!
+    https://farcaster.xyz/v/0x3e1bb2c6
