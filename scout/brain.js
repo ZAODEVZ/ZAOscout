@@ -170,5 +170,23 @@ export function makeBrain() {
         return out.replace(/^["']|["']$/g, '').slice(0, 260) + `\n\n${url}`;
       } catch { return ''; }
     },
+
+    // Research brief for a single QUERY (a topic or one fetched URL), grounded in
+    // CONTEXT (a fetched body and/or web search results). Used by `/research` in
+    // Discord and the research CLI. Returns '' on failure so the caller can
+    // fall back to the raw context. cite-or-drop: grounds only in CONTEXT, and
+    // is told to flag what's missing rather than invent.
+    async research(query, context) {
+      const ctx = String(context || '').trim();
+      const system =
+        'You are a research scout. Given a QUERY and CONTEXT gathered from the web and social posts, write a SHORT brief (max 160 words): ' +
+        'one opening sentence that directly answers the query, then 2-4 tight bullet lines with the most important specifics (numbers, names, dates) - grounded ONLY in the CONTEXT. ' +
+        'If the CONTEXT is thin or off-topic, say briefly what is known and flag what is missing. No preamble, no fluff, no emojis.';
+      const user = `QUERY: ${String(query || '').slice(0, 300)}\n\nCONTEXT:\n${ctx.slice(0, 12000)}`;
+      try {
+        const out = (await call(cfg, system, user) || '').trim();
+        return out || '';
+      } catch { return ''; }
+    },
   };
 }
