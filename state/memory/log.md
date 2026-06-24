@@ -204,3 +204,29 @@
     https://www.reddit.com/r/ClaudeAI/comments/1uda0l6/using_claude_code_to_reverse_engineer_car_data/
 [12] (@v) It was a good run!
     https://farcaster.xyz/v/0x3e1bb2c6
+
+## 2026-06-24T15:36:24.670Z
+[1] (r/ClaudeAI) Day 3 of Vibe Coding
+    https://www.reddit.com/r/ClaudeAI/comments/1ue2ba0/day_3_of_vibe_coding/
+[2] (@chriscocreated) I made a friend for Hannibal
+    https://farcaster.xyz/chriscocreated/0xa71b98d9
+[3] (r/ClaudeCode) Coding is largely solved.
+    https://www.reddit.com/r/ClaudeCode/comments/1udr97p/coding_is_largely_solved/
+[4] (@chriscocreated) https://farcaster.xyz/sopha/0x1a17fdd3
+    https://farcaster.xyz/chriscocreated/0x58d878f8
+[5] (r/ClaudeAI) Day 2 of Vibecoding
+    https://www.reddit.com/r/ClaudeAI/comments/1udm8c7/day_2_of_vibecoding/
+[6] (@chriscocreated) Yay!! love that! maybe I should make one for laguna!?
+    https://farcaster.xyz/chriscocreated/0x56b34bdb
+[7] (r/ClaudeCode) I built a status light for Claude Code. Do you think this is actually useful?
+    https://www.reddit.com/r/ClaudeCode/comments/1ue5inx/i_built_a_status_light_for_claude_code_do_you/
+[8] (@chriscocreated) sopha.social
+    https://farcaster.xyz/chriscocreated/0x5ca89112
+[9] (r/vibecoding) What is a service that society badly needs but hasn't been invented yet, and it could be built with vibe coding, and people will pay 30$ a month for it, and what's the first 8 prompts to start building it, and could you just build it for me? Actually just send me money.
+    https://www.reddit.com/r/vibecoding/comments/1udwxec/what_is_a_service_that_society_badly_needs_but/
+[10] (@chriscocreated) https://sopha.social/snaps/open-miniapp
+    https://farcaster.xyz/chriscocreated/0x9eec28ee
+[11] (r/ClaudeCode) Anthropic saw this number and sent me this hat
+    https://www.reddit.com/r/ClaudeCode/comments/1udw1d6/anthropic_saw_this_number_and_sent_me_this_hat/
+[12] (@jacek) There is only one way...  & that way is UP! 🎩
+    https://farcaster.xyz/jacek/0xbf20036f
