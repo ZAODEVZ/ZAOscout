@@ -240,3 +240,30 @@
     https://www.reddit.com/r/ClaudeCode/comments/1udw1d6/anthropic_saw_this_number_and_sent_me_this_hat/
 [12] (@jacek) There is only one way...  & that way is UP! 🎩
     https://farcaster.xyz/jacek/0xbf20036f
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeCode) Perception is reality.
+    https://www.reddit.com/r/ClaudeCode/comments/1ueecnm/perception_is_reality/
+[2] (@chriscocreated) smart fox
+    https://farcaster.xyz/chriscocreated/0x39db8e5a
+[3] (r/vibecoding) I Sold My Vibe Coded App for $25,000. AMA
+    https://www.reddit.com/r/vibecoding/comments/1uevlk6/i_sold_my_vibe_coded_app_for_25000_ama/
+[4] (@chriscocreated) angry kinda cute. must be making a meeeeean curry!
+    https://farcaster.xyz/chriscocreated/0x9c4d7fd2
+[5] (r/LocalLLaMA) The Swiss Federal Supreme Court is evaluating Heretic
+    https://www.reddit.com/r/LocalLLaMA/comments/1ueeund/the_swiss_federal_supreme_court_is_evaluating/
+[6] (@chriscocreated) I'm not sure you can crash a party you were invited to to! it was lovely to have you there :) 🌴 uci
+    https://farcaster.xyz/chriscocreated/0xe3f771f3
+[7] (r/vibecoding) Changed my name
+    https://www.reddit.com/r/vibecoding/comments/1ued35h/changed_my_name/
+[8] (@jacek) You can use Camelot to swap it on Degen Chain: https://app.camelot.exchange/
+    https://farcaster.xyz/jacek/0x05d3f392
+[9] (r/LocalLLaMA) If LLMs are so good at coding…
+    https://www.reddit.com/r/LocalLLaMA/comments/1uf0oso/if_llms_are_so_good_at_coding/
+[10] (@jacek) Love the polo, looks great! 🎩
+    https://farcaster.xyz/jacek/0x5846ddb0
+[11] (r/LocalLLaMA) Anthropic accuses Alibaba of campaign to ‘brazenly’ and ‘illicitly’ extract AI capabilities
+    https://www.reddit.com/r/LocalLLaMA/comments/1ueyl2i/anthropic_accuses_alibaba_of_campaign_to_brazenly/
+[12] (@jacek) Always! 🫡 🎩
+    https://farcaster.xyz/jacek/0x0d1cc88b
