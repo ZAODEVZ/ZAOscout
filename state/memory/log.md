@@ -256,3 +256,29 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1ueyl2i/anthropic_accuses_alibaba_of_campaign_to_brazenly/
 [12] (@jacek) Always! 🫡 🎩
     https://farcaster.xyz/jacek/0x0d1cc88b
+
+## 2026-06-26T15:28:59.521Z
+[1] (r/ClaudeAI) Good
+    https://www.reddit.com/r/ClaudeAI/comments/1ufh9u2/good/
+[2] (@jacek) Degen is standing up an independent validator node for Farcaster.  We’re big believers in decentralized social and what it represents: users
+    https://farcaster.xyz/jacek/0xcffc9142
+[3] (r/LocalLLaMA) US Govt to individually approve who gets GPT 5.6.
+    https://www.reddit.com/r/LocalLLaMA/comments/1ufo0un/us_govt_to_individually_approve_who_gets_gpt_56/
+[4] (r/vibecoding) More true than ever
+    https://www.reddit.com/r/vibecoding/comments/1uf4uz1/more_true_than_ever/
+[5] (r/ClaudeCode) I was sick of checking for Fable 5 to be restored and being disappointed, so I made this Fable 5 checker which always tells you that Fable 5 is available. This can make you feel good.
+    https://www.reddit.com/r/ClaudeCode/comments/1ufe12u/i_was_sick_of_checking_for_fable_5_to_be_restored/
+[6] (r/LocalLLaMA) Report: Apple to skip M6 Pro/Max chips, fast-track M7 for local AI
+    https://www.reddit.com/r/LocalLLaMA/comments/1ufhu3s/report_apple_to_skip_m6_promax_chips_fasttrack_m7/
+[7] (r/vibecoding) User never understand simple UI/UX
+    https://www.reddit.com/r/vibecoding/comments/1ug0npa/user_never_understand_simple_uiux/
+[8] (r/ClaudeAI) Didn't know Anthropic already erected a monument for Claude
+    https://www.reddit.com/r/ClaudeAI/comments/1ufik6p/didnt_know_anthropic_already_erected_a_monument/
+[9] (r/LocalLLaMA) Ornith-1.0 released on Hugging Face
+    https://www.reddit.com/r/LocalLLaMA/comments/1ufc9vp/ornith10_released_on_hugging_face/
+[10] (r/ClaudeCode) Average Claude Code session
+    https://www.reddit.com/r/ClaudeCode/comments/1ufzpon/average_claude_code_session/
+[11] (r/LocalLLaMA) audio.cpp: 12 audio models (Qwen3-TTS, PocketTTS, VeVo2 etc) in 1 C++/ggml runtime — TTS up to 5x faster than Python on CUDA
+    https://www.reddit.com/r/LocalLLaMA/comments/1ufpnm6/audiocpp_12_audio_models_qwen3tts_pockettts_vevo2/
+[12] (r/ClaudeAI) Claude Plays World of ClaudeCraft
+    https://www.reddit.com/r/ClaudeAI/comments/1ufz93w/claude_plays_world_of_claudecraft/
