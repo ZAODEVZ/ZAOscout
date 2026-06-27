@@ -294,3 +294,30 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1ufpnm6/audiocpp_12_audio_models_qwen3tts_pockettts_vevo2/
 [12] (r/ClaudeAI) Claude Plays World of ClaudeCraft
     https://www.reddit.com/r/ClaudeAI/comments/1ufz93w/claude_plays_world_of_claudecraft/
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeAI) I used Claude to fix my biggest frustration with PDFs
+    https://www.reddit.com/r/ClaudeAI/comments/1ugj1bt/i_used_claude_to_fix_my_biggest_frustration_with/
+[2] (@thezao) gm zm from the ZAO OS tutorial with   — Proposed by  • Approved by ZAO governance from zaoos.com
+    https://farcaster.xyz/thezao/0xfa778d4f
+[3] (r/ClaudeAI) Anthropic speaks out
+    https://www.reddit.com/r/ClaudeAI/comments/1ugonxn/anthropic_speaks_out/
+[4] (@chriscocreated) He is lucky to have someone to get angry on his behalf 🫂
+    https://farcaster.xyz/chriscocreated/0x3dc12d97
+[5] (r/ClaudeCode) Anthropic speaks after 2 weeks
+    https://www.reddit.com/r/ClaudeCode/comments/1ugok2i/anthropic_speaks_after_2_weeks/
+[6] (r/LocalLLaMA) Why do people keep investing in Intel for AI?
+    https://www.reddit.com/r/LocalLLaMA/comments/1ugcbqx/why_do_people_keep_investing_in_intel_for_ai/
+[7] (r/ClaudeAI) Trump admin allows Anthropic to release Mythos AI model to some companies, government agencies: Reports
+    https://www.reddit.com/r/ClaudeAI/comments/1uglxiz/trump_admin_allows_anthropic_to_release_mythos_ai/
+[8] (r/ClaudeAI) i can't read anything anymore without checking if claude wrote it
+    https://www.reddit.com/r/ClaudeAI/comments/1ugdzhq/i_cant_read_anything_anymore_without_checking_if/
+[9] (r/vibecoding) Many people are talking about AI more than they are building with it.
+    https://www.reddit.com/r/vibecoding/comments/1uggnfa/many_people_are_talking_about_ai_more_than_they/
+[10] (r/LocalLLaMA) "What should I do?" - consider post-training
+    https://www.reddit.com/r/LocalLLaMA/comments/1ugg1dm/what_should_i_do_consider_posttraining/
+[11] (r/ClaudeAI) Non-coder doctor here — rebuilt my department's website (dead for 2 years) with Claude + Claude Design over a weekend. ~14x the traffic 3 months on.
+    https://www.reddit.com/r/ClaudeAI/comments/1ugcnkd/noncoder_doctor_here_rebuilt_my_departments/
+[12] (r/ClaudeAI) Asked Claude to mock up an outfit for me
+    https://www.reddit.com/r/ClaudeAI/comments/1uglhwy/asked_claude_to_mock_up_an_outfit_for_me/
