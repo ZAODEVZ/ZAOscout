@@ -321,3 +321,30 @@
     https://www.reddit.com/r/ClaudeAI/comments/1ugcnkd/noncoder_doctor_here_rebuilt_my_departments/
 [12] (r/ClaudeAI) Asked Claude to mock up an outfit for me
     https://www.reddit.com/r/ClaudeAI/comments/1uglhwy/asked_claude_to_mock_up_an_outfit_for_me/
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/LocalLLaMA) We're probably going to need that soon.
+    https://www.reddit.com/r/LocalLLaMA/comments/1uht2m0/were_probably_going_to_need_that_soon/
+[2] (r/ClaudeAI) They must to switch between fable and gpt 5.6
+    https://www.reddit.com/r/ClaudeAI/comments/1uh3dkx/they_must_to_switch_between_fable_and_gpt_56/
+[3] (r/LocalLLaMA) 96gb+ 4090's and 5090 are literally a scam. I mods these cards myself
+    https://www.reddit.com/r/LocalLLaMA/comments/1uh1lc7/96gb_4090s_and_5090_are_literally_a_scam_i_mods/
+[4] (r/ClaudeAI) Why are all the Claude Code skill files I see online completely pointless?
+    https://www.reddit.com/r/ClaudeAI/comments/1uhed8x/why_are_all_the_claude_code_skill_files_i_see/
+[5] (r/ClaudeAI) POV: Security concerns have entered the chat
+    https://www.reddit.com/r/ClaudeAI/comments/1uh4pit/pov_security_concerns_have_entered_the_chat/
+[6] (r/LocalLLaMA) Even Google still believes in small models for coding.
+    https://www.reddit.com/r/LocalLLaMA/comments/1uh8ir7/even_google_still_believes_in_small_models_for/
+[7] (r/ClaudeAI) What are your favourite prompts you always use with Claude?
+    https://www.reddit.com/r/ClaudeAI/comments/1uhjcsi/what_are_your_favourite_prompts_you_always_use/
+[8] (r/LocalLLaMA) Qwen3.6 27B local vs Opus 4.8, voxel engine in raw C with zero frameworks
+    https://www.reddit.com/r/LocalLLaMA/comments/1uhv3wc/qwen36_27b_local_vs_opus_48_voxel_engine_in_raw_c/
+[9] (r/ClaudeAI) Claude is genuinely good at game dev now, It just needed the right context loaded in
+    https://www.reddit.com/r/ClaudeAI/comments/1uhji5e/claude_is_genuinely_good_at_game_dev_now_it_just/
+[10] (r/ClaudeAI) $20 of lapdance in Miami last longer than $20 of tokens with Claude
+    https://www.reddit.com/r/ClaudeAI/comments/1uhu8s4/20_of_lapdance_in_miami_last_longer_than_20_of/
+[11] (r/LocalLLaMA) Model Registry: Torrents for open models using Hugging Face as a fallback web seed.
+    https://www.reddit.com/r/LocalLLaMA/comments/1uhevvf/model_registry_torrents_for_open_models_using/
+[12] (r/LocalLLaMA) Koboldcpp v1.116 released
+    https://www.reddit.com/r/LocalLLaMA/comments/1uhj4aw/koboldcpp_v1116_released/
