@@ -348,3 +348,28 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1uhevvf/model_registry_torrents_for_open_models_using/
 [12] (r/LocalLLaMA) Koboldcpp v1.116 released
     https://www.reddit.com/r/LocalLLaMA/comments/1uhj4aw/koboldcpp_v1116_released/
+
+---
+**ZAOscout digest - 11 items**
+[1] (r/LocalLLaMA) The number 1 public enemy of open-source.
+    https://www.reddit.com/r/LocalLLaMA/comments/1ui241x/the_number_1_public_enemy_of_opensource/
+[2] (@chriscocreated) I just donated. Small contributions get quadratic matched
+    https://farcaster.xyz/chriscocreated/0x43291101
+[3] (r/LocalLLaMA) NPC Engine Using Local Models
+    https://www.reddit.com/r/LocalLLaMA/comments/1uibt9o/npc_engine_using_local_models/
+[4] (r/LocalLLaMA) Effect of GLM 5.2 !!
+    https://www.reddit.com/r/LocalLLaMA/comments/1uiv8e4/effect_of_glm_52/
+[5] (r/LocalLLaMA) GLM 5.2 Q1_S vs Qwen 27B Q8
+    https://www.reddit.com/r/LocalLLaMA/comments/1uimjdi/glm_52_q1_s_vs_qwen_27b_q8/
+[6] (r/LocalLLaMA) Any good uses for a 192 GB DDR3 Server in the LLM world?
+    https://www.reddit.com/r/LocalLLaMA/comments/1uiqiei/any_good_uses_for_a_192_gb_ddr3_server_in_the_llm/
+[7] (r/LocalLLaMA) DeepSeek V4 by am17an · Pull Request #24162 · ggml-org/llama.cpp
+    https://www.reddit.com/r/LocalLLaMA/comments/1uindb2/deepseek_v4_by_am17an_pull_request_24162/
+[8] (r/LocalLLaMA) NASA testing local LLM inference for future space missions
+    https://www.reddit.com/r/LocalLLaMA/comments/1uisspl/nasa_testing_local_llm_inference_for_future_space/
+[9] (r/LocalLLaMA) Kimi and GLM on frontier code
+    https://www.reddit.com/r/LocalLLaMA/comments/1uir5u3/kimi_and_glm_on_frontier_code/
+[10] (r/LocalLLaMA) Going from single GPU to dual GPU is nice but not in the way I expected
+    https://www.reddit.com/r/LocalLLaMA/comments/1uiuyyp/going_from_single_gpu_to_dual_gpu_is_nice_but_not/
+[11] (r/LocalLLaMA) Samsung, SK hynix, Micron Sued in US Over Memory Price Fixing
+    https://www.reddit.com/r/LocalLLaMA/comments/1uiwtd7/samsung_sk_hynix_micron_sued_in_us_over_memory/
