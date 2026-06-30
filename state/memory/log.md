@@ -358,3 +358,27 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1uiuyyp/going_from_single_gpu_to_dual_gpu_is_nice_but_not/
 [11] (r/LocalLLaMA) Samsung, SK hynix, Micron Sued in US Over Memory Price Fixing
     https://www.reddit.com/r/LocalLLaMA/comments/1uiwtd7/samsung_sk_hynix_micron_sued_in_us_over_memory/
+
+## 2026-06-30T15:37:57.957Z
+[1] (r/LocalLLaMA) on Dario’s statement
+    https://www.reddit.com/r/LocalLLaMA/comments/1uj2yym/on_darios_statement/
+[2] (@chriscocreated) Thank you for everything you are doing ✊
+    https://farcaster.xyz/chriscocreated/0x062ec52b
+[3] (r/LocalLLaMA) I Hate Dario Amodei, and everything he stands for.
+    https://www.reddit.com/r/LocalLLaMA/comments/1uj7xcs/i_hate_dario_amodei_and_everything_he_stands_for/
+[4] (@jacek) What would you choose? 🤷‍♂️
+    https://farcaster.xyz/jacek/0x9ef4a166
+[5] (r/LocalLLaMA) It’s time, Sam, it’s time.
+    https://www.reddit.com/r/LocalLLaMA/comments/1uj1kna/its_time_sam_its_time/
+[6] (r/LocalLLaMA) nvidia/Qwen3.6-27B-NVFP4 just dropped
+    https://www.reddit.com/r/LocalLLaMA/comments/1ujlltn/nvidiaqwen3627bnvfp4_just_dropped/
+[7] (r/LocalLLaMA) Well.. it's a step up from nonstop bot spam I guess
+    https://www.reddit.com/r/LocalLLaMA/comments/1ujouxg/well_its_a_step_up_from_nonstop_bot_spam_i_guess/
+[8] (r/LocalLLaMA) Huawei open-sources OpenPangu-2.0-Flash - 92B total,6B active
+    https://www.reddit.com/r/LocalLLaMA/comments/1ujn5u3/huawei_opensources_openpangu20flash_92b_total6b/
+[9] (r/LocalLLaMA) Microsoft has taken down fastcontext model from everywhere
+    https://www.reddit.com/r/LocalLLaMA/comments/1ujjk9s/microsoft_has_taken_down_fastcontext_model_from/
+[10] (r/LocalLLaMA) Bartowski has delivered DS4 GGUF
+    https://www.reddit.com/r/LocalLLaMA/comments/1ujlwbm/bartowski_has_delivered_ds4_gguf/
+[11] (r/LocalLLaMA) Qwen 3.6 27B Speculative Decoding Bench: Pushing ~100 TPS on a single RTX 3090
+    https://www.reddit.com/r/LocalLLaMA/comments/1ujo46r/qwen_36_27b_speculative_decoding_bench_pushing/
