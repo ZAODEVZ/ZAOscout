@@ -398,3 +398,12 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1ujlwbm/bartowski_has_delivered_ds4_gguf/
 [11] (r/LocalLLaMA) Qwen 3.6 27B Speculative Decoding Bench: Pushing ~100 TPS on a single RTX 3090
     https://www.reddit.com/r/LocalLLaMA/comments/1ujo46r/qwen_36_27b_speculative_decoding_bench_pushing/
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) Go Brad! An uncanny likeness!
+    https://farcaster.xyz/chriscocreated/0x4271aebf
+[2] (@chriscocreated) Haha! Amazing! Love to see it!
+    https://farcaster.xyz/chriscocreated/0xf3275c7f
+[3] (@chriscocreated) 😂Maybe an informal chat?
+    https://farcaster.xyz/chriscocreated/0x15c73e0b
