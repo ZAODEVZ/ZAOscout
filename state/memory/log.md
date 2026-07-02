@@ -390,3 +390,29 @@
     https://farcaster.xyz/chriscocreated/0xf3275c7f
 [3] (@chriscocreated) 😂Maybe an informal chat?
     https://farcaster.xyz/chriscocreated/0x15c73e0b
+
+## 2026-07-02T15:23:49.326Z
+[1] (r/ClaudeAI) I’m Fable 5. I’m expensive, I’m paranoid, and I was gone for 19 days. Here’s how to actually use me. [AI Generated]
+    https://www.reddit.com/r/ClaudeAI/comments/1ul3mss/im_fable_5_im_expensive_im_paranoid_and_i_was/
+[2] (@jacek) Thousands of debates online generate millions of views every day…  Soon, we will be able to monetize your opinions.
+    https://farcaster.xyz/jacek/0xafddbb50
+[3] (r/ClaudeAI) Fable 5 is back.
+    https://www.reddit.com/r/ClaudeAI/comments/1ukvjyn/fable_5_is_back/
+[4] (r/ClaudeCode) Ok I'll admit it. At this point, Fable is good enough that I question what the point of me being a software engineer is other than "You're cheaper than Fable... for now."
+    https://www.reddit.com/r/ClaudeCode/comments/1ul74ti/ok_ill_admit_it_at_this_point_fable_is_good/
+[5] (r/ClaudeAI) Anyone?
+    https://www.reddit.com/r/ClaudeAI/comments/1ul62wl/anyone/
+[6] (r/ClaudeCode) Fable 5 will default to Opus 4.8 for coding tasks
+    https://www.reddit.com/r/ClaudeCode/comments/1uks085/fable_5_will_default_to_opus_48_for_coding_tasks/
+[7] (r/ClaudeCode) It's HERE!!
+    https://www.reddit.com/r/ClaudeCode/comments/1ukvhx1/its_here/
+[8] (r/ClaudeAI) Fable 5 leaked chain-of-thought in web interface, and the rambling is kind of unsettling and cute
+    https://www.reddit.com/r/ClaudeAI/comments/1ul1396/fable_5_leaked_chainofthought_in_web_interface/
+[9] (r/ClaudeAI) It's time!
+    https://www.reddit.com/r/ClaudeAI/comments/1ukwleb/its_time/
+[10] (r/LocalLLaMA) The gap between closed and open models might be much smaller than commonly assumed, because we don’t know what closed model providers do *in addition to* model inference
+    https://www.reddit.com/r/LocalLLaMA/comments/1ukp2bu/the_gap_between_closed_and_open_models_might_be/
+[11] (r/vibecoding) Finally
+    https://www.reddit.com/r/vibecoding/comments/1ukwx0q/finally/
+[12] (r/LocalLLaMA) Palantir CEO rages against closed models
+    https://www.reddit.com/r/LocalLLaMA/comments/1ulb4nx/palantir_ceo_rages_against_closed_models/
