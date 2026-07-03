@@ -434,3 +434,30 @@
     https://www.reddit.com/r/vibecoding/comments/1ukwx0q/finally/
 [12] (r/LocalLLaMA) Palantir CEO rages against closed models
     https://www.reddit.com/r/LocalLLaMA/comments/1ulb4nx/palantir_ceo_rages_against_closed_models/
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeCode) Fable Came Back Nerfed
+    https://www.reddit.com/r/ClaudeCode/comments/1ull4g0/fable_came_back_nerfed/
+[2] (@chriscocreated) Hi, sorry no :/
+    https://farcaster.xyz/chriscocreated/0x50ddd5cd
+[3] (r/ClaudeAI) I end every AI session with two questions
+    https://www.reddit.com/r/ClaudeAI/comments/1ulti1r/i_end_every_ai_session_with_two_questions/
+[4] (@chriscocreated) I'm cooking on Sopha today -> org and token design. It's energising to be working on the next stage of development beyond the code.  Makes m
+    https://farcaster.xyz/chriscocreated/0x209f39af
+[5] (r/ClaudeAI) Legend Spotted
+    https://www.reddit.com/r/ClaudeAI/comments/1um5u8c/legend_spotted/
+[6] (@jacek) 😂
+    https://farcaster.xyz/jacek/0xf673debd
+[7] (r/ClaudeAI) I made a manual shifter for claude
+    https://www.reddit.com/r/ClaudeAI/comments/1um2m94/i_made_a_manual_shifter_for_claude/
+[8] (@jacek) Court is now in session. 🧑‍⚖️
+    https://farcaster.xyz/jacek/0x6e734203
+[9] (r/LocalLLaMA) It's officially over. One of the fathers of AI at Nvidia doesn't believe in AGI and compares OpenAI and Anthropic's closed models to AOL and Prodigy's closed internets. Says the future is every business having a customized open source model.
+    https://www.reddit.com/r/LocalLLaMA/comments/1ult0f4/its_officially_over_one_of_the_fathers_of_ai_at/
+[10] (@jacek) The app isn't live yet, we're launching soon.  Where were you trying to log in?
+    https://farcaster.xyz/jacek/0x8445392d
+[11] (r/ClaudeAI) Claude Sonnet 5 vs 4.6 on arena.ai
+    https://www.reddit.com/r/ClaudeAI/comments/1uloomx/claude_sonnet_5_vs_46_on_arenaai/
+[12] (@jacek) The old Degen Vault (used for tip allowances) was removed after airdrops ended in August.  If you still have Locked DEGEN, you can unlock it
+    https://farcaster.xyz/jacek/0x5920e95e
