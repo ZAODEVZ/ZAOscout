@@ -461,3 +461,10 @@
     https://www.reddit.com/r/ClaudeAI/comments/1uloomx/claude_sonnet_5_vs_46_on_arenaai/
 [12] (@jacek) The old Degen Vault (used for tip allowances) was removed after airdrops ended in August.  If you still have Locked DEGEN, you can unlock it
     https://farcaster.xyz/jacek/0x5920e95e
+
+---
+**ZAOscout digest - 2 items**
+[1] (@chriscocreated) great to see this depth of thought, thank you
+    https://farcaster.xyz/chriscocreated/0xbfebe644
+[2] (@jacek) lol
+    https://farcaster.xyz/jacek/0x0f99b271
