@@ -468,3 +468,10 @@
     https://farcaster.xyz/chriscocreated/0xbfebe644
 [2] (@jacek) lol
     https://farcaster.xyz/jacek/0x0f99b271
+
+---
+**ZAOscout digest - 2 items**
+[1] (@chriscocreated) Showtime!
+    https://farcaster.xyz/chriscocreated/0x4c6380e2
+[2] (@jacek) Happy 4th Degens 🦅 🇺🇸
+    https://farcaster.xyz/jacek/0x165ddc61
