@@ -458,3 +458,15 @@
 ## 2026-07-06T16:26:30.234Z
 [1] (@chriscocreated) GM, BIZARRE ☕  Claiming my FREE "GM, BIZARRE" mint from : hand-illustrated animation of Hans sipping from his new purple /cef mug, celebrati
     https://farcaster.xyz/chriscocreated/0xbfe64ebc
+
+## 2026-07-07T15:47:31.151Z
+[1] (@chriscocreated) not sure how to report bugs so telling you. hope that's ok?  the above snap should be working fine according to the emulator. but I just see
+    https://farcaster.xyz/chriscocreated/0x3c3585ee
+[2] (@jacek) Waitlist POV Market campaign winners can now claim their funds at pov.co 🙌🎩  Thank you all.  https://x.com/POVMarket/status/20744790530763
+    https://farcaster.xyz/jacek/0xb9e73321
+[3] (@jacek) Maybe we should start keeping score... 💭
+    https://farcaster.xyz/jacek/0x15619fa8
+[4] (@dwr.eth) gm
+    https://farcaster.xyz/dwr.eth/0x3685a25f
+[5] (@dwr.eth) Neat!
+    https://farcaster.xyz/dwr.eth/0xab380399
