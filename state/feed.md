@@ -493,3 +493,18 @@
     https://farcaster.xyz/dwr.eth/0x3685a25f
 [5] (@dwr.eth) Neat!
     https://farcaster.xyz/dwr.eth/0xab380399
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) I love  work so much. Just happened upon this from months ago, and wanted to share
+    https://farcaster.xyz/chriscocreated/0xa7ce3d16
+[2] (@chriscocreated) DePIN people. Thinking to run some DePIN stack on an old Intel Mac instead of selling it. This is what chat recommends I run in the hope of 
+    https://farcaster.xyz/chriscocreated/0x4d983098
+[3] (@chriscocreated) Amazing! Congratulations. So pleased for you both.
+    https://farcaster.xyz/chriscocreated/0x191a36dd
+[4] (@jacek) Is Robinhood’s crypto blockchain actually great for memes? 🤔  https://pov.co/markets/is-robinhood-s-crypto-blockchain-actually-great-for-me
+    https://farcaster.xyz/jacek/0x6f3a571a
+[5] (@jacek) Is French toast overrated? 🤔  https://pov.co/markets/is-french-toast-overrated  https://x.com/blknoiz06/status/2074484342718390273?s=20
+    https://farcaster.xyz/jacek/0x2616af93
+[6] (@jacek) That's one way to use the trump card...
+    https://farcaster.xyz/jacek/0x9e640181
