@@ -484,3 +484,21 @@
     https://farcaster.xyz/jacek/0x2616af93
 [6] (@jacek) That's one way to use the trump card...
     https://farcaster.xyz/jacek/0x9e640181
+
+## 2026-07-09T16:07:03.139Z
+[1] (@chriscocreated) what do you earn off grass?
+    https://farcaster.xyz/chriscocreated/0xff1be387
+[2] (@chriscocreated) Everyone is an Artist! Even Brad! Love to see it!!
+    https://farcaster.xyz/chriscocreated/0x6a7d2255
+[3] (@chriscocreated) is this something I can do if I see it?   (side point, anything i can do to effect which order these show in? I want the snap below the quot
+    https://farcaster.xyz/chriscocreated/0x0a03251a
+[4] (@chriscocreated) thanks, it's a snap though not a miniapp - works fine in the emulator (it just happens to be a snap that opens the miniapp)
+    https://farcaster.xyz/chriscocreated/0x6008ca5c
+[5] (@chriscocreated) Thanks Duck!  do you need to toggle something? This Was the thing I flagged yesterday and seemed to be fixed
+    https://farcaster.xyz/chriscocreated/0x92f95842
+[6] (@jacek) You'll do fookin' nuttin.
+    https://farcaster.xyz/jacek/0xca318b82
+[7] (@jacek) natural 💪
+    https://farcaster.xyz/jacek/0x78ed57f0
+[8] (@jacek) 👀
+    https://farcaster.xyz/jacek/0xfe5fc167
