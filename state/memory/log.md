@@ -502,3 +502,23 @@
     https://farcaster.xyz/jacek/0x78ed57f0
 [8] (@jacek) 👀
     https://farcaster.xyz/jacek/0xfe5fc167
+
+## 2026-07-10T15:37:28.456Z
+[1] (@chriscocreated) https://www.bbc.co.uk/sport/football/live/c30y244nl8mt?post=asset%3A5e2de767-27ea-43c2-b572-e67a38e225fd#post  Weird watching a human read a
+    https://farcaster.xyz/chriscocreated/0xacd10c46
+[2] (@chriscocreated) erg, sounds rubish
+    https://farcaster.xyz/chriscocreated/0x3b491876
+[3] (@chriscocreated) well that is splendid! I shall look forward to that :)
+    https://farcaster.xyz/chriscocreated/0x67abb213
+[4] (@chriscocreated) splendid on both fronts!
+    https://farcaster.xyz/chriscocreated/0x88ea749e
+[5] (@jacek) Our plan is to move staking from Dream to POV, so the NFTs will have real utility in the app.
+    https://farcaster.xyz/jacek/0x99348b91
+[6] (@jacek) Our plan is to move staking from Dream to POV, so the NFTs will have real utility in the app.
+    https://farcaster.xyz/jacek/0x1fd76a05
+[7] (@jacek) The future of internet debates starts here.  http://pov.co is now live!
+    https://farcaster.xyz/jacek/0xe2db17de
+[8] (@jacek) Is Michael Jordan the NBA GOAT? 🏀 🐐  https://pov.co/markets/is-michael-jordan-the-nba-goat-3
+    https://farcaster.xyz/jacek/0x57a53ddd
+[9] (@jacek) Yeah, could definitely see us adding Farcaster login at some point down the line.
+    https://farcaster.xyz/jacek/0xef1eb489
