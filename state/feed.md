@@ -548,3 +548,14 @@
     https://farcaster.xyz/jacek/0x57a53ddd
 [9] (@jacek) Yeah, could definitely see us adding Farcaster login at some point down the line.
     https://farcaster.xyz/jacek/0xef1eb489
+
+---
+**ZAOscout digest - 4 items**
+[1] (@chriscocreated) 😂
+    https://farcaster.xyz/chriscocreated/0x66ceb277
+[2] (@chriscocreated) it's still happening, and no option to refresh embed
+    https://farcaster.xyz/chriscocreated/0x26b7a7d8
+[3] (@chriscocreated) damn! did you work out where to turn this off?
+    https://farcaster.xyz/chriscocreated/0xcc6ea846
+[4] (@jacek) let's goooo
+    https://farcaster.xyz/jacek/0xfc539d65
