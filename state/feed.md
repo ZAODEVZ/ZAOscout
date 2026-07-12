@@ -559,3 +559,14 @@
     https://farcaster.xyz/chriscocreated/0xcc6ea846
 [4] (@jacek) let's goooo
     https://farcaster.xyz/jacek/0xfc539d65
+
+---
+**ZAOscout digest - 4 items**
+[1] (@chriscocreated) mmm why no miniapp preview.. trying again sopha.social/pulse
+    https://farcaster.xyz/chriscocreated/0x34d93b34
+[2] (@chriscocreated) Hey yes    Thanks! And ht to  who curates sopha.social/pulse
+    https://farcaster.xyz/chriscocreated/0xc0d58a22
+[3] (@chriscocreated) Take a look at the latest casts curated on Sopha
+    https://farcaster.xyz/chriscocreated/0x29cfd70b
+[4] (@jacek) 5 opinion markets on pov.co worth a position rn:  🏀 Is MJ the NBA GOAT https://pov.co/markets/is-michael-jordan-the-nba-goat-3  ⚡ Solana > 
+    https://farcaster.xyz/jacek/0x2bdcc6a3
