@@ -570,3 +570,16 @@
     https://farcaster.xyz/chriscocreated/0x29cfd70b
 [4] (@jacek) 5 opinion markets on pov.co worth a position rn:  🏀 Is MJ the NBA GOAT https://pov.co/markets/is-michael-jordan-the-nba-goat-3  ⚡ Solana > 
     https://farcaster.xyz/jacek/0x2bdcc6a3
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) I just added 0.001 ETH to 's /poidh bounty about    Sopha will add some funds once I’ve got back into the wallet there
+    https://farcaster.xyz/chriscocreated/0x20d67d29
+[2] (@chriscocreated) Make a poem about a Sopha! Love this use of poidh so much
+    https://farcaster.xyz/chriscocreated/0x2325d5c7
+[3] (@jacek) Will at least one POV opinion market hit a $1,000 market cap this week? 👀  https://pov.co/markets/will-the-market-cap-of-at-least-one-opini
+    https://farcaster.xyz/jacek/0x0e1a4f11
+[4] (@jacek) You can now connect to http://POV.co with external Ethereum wallets like MetaMask and Coinbase Wallet.
+    https://farcaster.xyz/jacek/0x8906ace5
+[5] (@jacek) Degens took over Wimbledon 🎾
+    https://farcaster.xyz/jacek/0xfe3dbf33
