@@ -583,3 +583,8 @@
     https://farcaster.xyz/jacek/0x8906ace5
 [5] (@jacek) Degens took over Wimbledon 🎾
     https://farcaster.xyz/jacek/0xfe3dbf33
+
+---
+**ZAOscout digest - 1 items**
+[1] (@jacek) if you’ve tried pov.co, my DMs are open. would love to hear your honest feedback and what we can improve.
+    https://farcaster.xyz/jacek/0x45ab306c
