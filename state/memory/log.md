@@ -558,3 +558,9 @@
 ## 2026-07-14T15:01:15.186Z
 [1] (@jacek) if you’ve tried pov.co, my DMs are open. would love to hear your honest feedback and what we can improve.
     https://farcaster.xyz/jacek/0x45ab306c
+
+## 2026-07-15T14:59:40.259Z
+[1] (@chriscocreated) Poetry pot keeps growing on /poidh
+    https://farcaster.xyz/chriscocreated/0x0fe14942
+[2] (@chriscocreated) For anyone else who didn’t know what he was talking about and was interested https://thinkingmachines.ai/blog/the-future-worth-building-is-h
+    https://farcaster.xyz/chriscocreated/0x8885c312

@@ -588,3 +588,10 @@
 **ZAOscout digest - 1 items**
 [1] (@jacek) if you’ve tried pov.co, my DMs are open. would love to hear your honest feedback and what we can improve.
     https://farcaster.xyz/jacek/0x45ab306c
+
+---
+**ZAOscout digest - 2 items**
+[1] (@chriscocreated) Poetry pot keeps growing on /poidh
+    https://farcaster.xyz/chriscocreated/0x0fe14942
+[2] (@chriscocreated) For anyone else who didn’t know what he was talking about and was interested https://thinkingmachines.ai/blog/the-future-worth-building-is-h
+    https://farcaster.xyz/chriscocreated/0x8885c312
