@@ -595,3 +595,20 @@
     https://farcaster.xyz/chriscocreated/0x0fe14942
 [2] (@chriscocreated) For anyone else who didn’t know what he was talking about and was interested https://thinkingmachines.ai/blog/the-future-worth-building-is-h
     https://farcaster.xyz/chriscocreated/0x8885c312
+
+---
+**ZAOscout digest - 7 items**
+[1] (@chriscocreated) 😹🕵️
+    https://farcaster.xyz/chriscocreated/0x68c16951
+[2] (@chriscocreated) 💯 but poor strategy ain’t injustice.
+    https://farcaster.xyz/chriscocreated/0x7c025388
+[3] (@chriscocreated) No injustice this time
+    https://farcaster.xyz/chriscocreated/0xc14cc6b2
+[4] (@chriscocreated) One of the most traumatic events of my young life. The injustice hasn’t left me.
+    https://farcaster.xyz/chriscocreated/0xa178f656
+[5] (@jacek) Looking forward to Cobie fixing  🫡  https://x.com/cobie/status/2077694974443876800?s=20
+    https://farcaster.xyz/jacek/0x93a5d076
+[6] (@jacek) YES OR NO.  YES OR NO.  YES OR NO.
+    https://farcaster.xyz/jacek/0xdea6e65e
+[7] (@jacek) 🫡 🎩 thank you for the feedback
+    https://farcaster.xyz/jacek/0xef4eda9d
