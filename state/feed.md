@@ -612,3 +612,12 @@
     https://farcaster.xyz/jacek/0xdea6e65e
 [7] (@jacek) 🫡 🎩 thank you for the feedback
     https://farcaster.xyz/jacek/0xef4eda9d
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) a perfect desctiption!
+    https://farcaster.xyz/chriscocreated/0x3dd5a9e3
+[2] (@chriscocreated) what song!
+    https://farcaster.xyz/chriscocreated/0x6e2a5322
+[3] (@jacek) Lets goooo
+    https://farcaster.xyz/jacek/0xf836f9f9
