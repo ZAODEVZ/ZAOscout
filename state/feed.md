@@ -621,3 +621,30 @@
     https://farcaster.xyz/chriscocreated/0x6e2a5322
 [3] (@jacek) Lets goooo
     https://farcaster.xyz/jacek/0xf836f9f9
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeAI) Fable staying on Max
+    https://www.reddit.com/r/ClaudeAI/comments/1uzjcop/fable_staying_on_max/
+[2] (@jacek) Gm HOODrats. Creators earn 4.5% of every buy made in the markets they create on pov.co.  In HOODrat terms: create a market, someone trades $
+    https://farcaster.xyz/jacek/0x1ab3ec1f
+[3] (r/ClaudeCode) As predicted
+    https://www.reddit.com/r/ClaudeCode/comments/1uzjbeh/as_predicted/
+[4] (@jacek) IMPORTANT FOR $DEGEN HOLDERS  - DEGEN contract address on Robinhood Chain: 0x0830A9Dd26a04e959657AB6788d45f5725590c32  - This does not chang
+    https://farcaster.xyz/jacek/0x477b3948
+[5] (r/ClaudeAI) I built an open-source canvas where Claude responds beside your handwritings
+    https://www.reddit.com/r/ClaudeAI/comments/1uz0ajn/i_built_an_opensource_canvas_where_claude/
+[6] (@jacek) $DEGEN is now live on Robinhood Chain.  Your financial advisor probably wouldn't recommend this.  Roaring Kitty didn't ask his either.  Good
+    https://farcaster.xyz/jacek/0x59749afb
+[7] (r/ClaudeAI) Got 6 months of Claude Max 20x for free — thanks Anthropic and OpenSource
+    https://www.reddit.com/r/ClaudeAI/comments/1uz5gtz/got_6_months_of_claude_max_20x_for_free_thanks/
+[8] (@jacek) THE BALD MAN.
+    https://farcaster.xyz/jacek/0x1cf4ce30
+[9] (r/LocalLLaMA) What kind of dark magic is Deepseek using?
+    https://www.reddit.com/r/LocalLLaMA/comments/1uzqspl/what_kind_of_dark_magic_is_deepseek_using/
+[10] (r/ClaudeCode) It's happened
+    https://www.reddit.com/r/ClaudeCode/comments/1uz7oae/its_happened/
+[11] (r/LocalLLaMA) Kimi K3 is top of nextjs eval
+    https://www.reddit.com/r/LocalLLaMA/comments/1uza5wb/kimi_k3_is_top_of_nextjs_eval/
+[12] (r/LocalLLaMA) Bonsai 27B runs locally on an iPhone - a 27B model in 3.9GB
+    https://www.reddit.com/r/LocalLLaMA/comments/1uyz9n2/bonsai_27b_runs_locally_on_an_iphone_a_27b_model/
