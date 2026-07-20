@@ -648,3 +648,30 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1uza5wb/kimi_k3_is_top_of_nextjs_eval/
 [12] (r/LocalLLaMA) Bonsai 27B runs locally on an iPhone - a 27B model in 3.9GB
     https://www.reddit.com/r/LocalLLaMA/comments/1uyz9n2/bonsai_27b_runs_locally_on_an_iphone_a_27b_model/
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/vibecoding) Made a trailer for my 100% vibe coded game!
+    https://www.reddit.com/r/vibecoding/comments/1v0q1aa/made_a_trailer_for_my_100_vibe_coded_game/
+[2] (@jacek) lezzz goooo
+    https://farcaster.xyz/jacek/0xac09b15d
+[3] (r/LocalLLaMA) HuggingFace security incident report: "the attacker was bound by no usage policy, while our own forensic work was blocked by the guardrails"
+    https://www.reddit.com/r/LocalLLaMA/comments/1v0ywoi/huggingface_security_incident_report_the_attacker/
+[4] (@jacek) 🫡 🎩
+    https://farcaster.xyz/jacek/0x24a2cf7e
+[5] (r/vibecoding) I never seen "Sold out" on a software product (KIMI K3)
+    https://www.reddit.com/r/vibecoding/comments/1v0y9nf/i_never_seen_sold_out_on_a_software_product_kimi/
+[6] (@jacek) 🧠
+    https://farcaster.xyz/jacek/0x7947dc74
+[7] (r/ClaudeCode) tokenmaxing and successmaxing not the same
+    https://www.reddit.com/r/ClaudeCode/comments/1v0tw4s/tokenmaxing_and_successmaxing_not_the_same/
+[8] (@jacek) There can be only one winner… ⚽️  Who will it be? 👀
+    https://farcaster.xyz/jacek/0xa3988dcd
+[9] (r/LocalLLaMA) Kimi K3 just fixed 15 critical security bugs that Codex and Fable refused because of “cyber guardrails”. Hugging Face: We had this experience ourselves this week! Very scary to be guardrailed as a defender when you know attackers are likely bypassing
+    https://www.reddit.com/r/LocalLLaMA/comments/1v1k3pw/kimi_k3_just_fixed_15_critical_security_bugs_that/
+[10] (r/vibecoding) Vibecoding is singlehandedly reversing greed and enshitification
+    https://www.reddit.com/r/vibecoding/comments/1v0rgje/vibecoding_is_singlehandedly_reversing_greed_and/
+[11] (r/LocalLLaMA) Sources: parts of the Trump administration are reigniting efforts to implement de facto bans on foreign open-source models, as Chinese AI models gain momentum
+    https://www.reddit.com/r/LocalLLaMA/comments/1v1j3ns/sources_parts_of_the_trump_administration_are/
+[12] (r/LocalLLaMA) With all the Kimi drama I feel like I want to download all the current best models in case there is a ridiculous knee jerk political move pulled
+    https://www.reddit.com/r/LocalLLaMA/comments/1v170vg/with_all_the_kimi_drama_i_feel_like_i_want_to/
