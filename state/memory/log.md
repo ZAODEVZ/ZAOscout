@@ -640,3 +640,17 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1v1j3ns/sources_parts_of_the_trump_administration_are/
 [12] (r/LocalLLaMA) With all the Kimi drama I feel like I want to download all the current best models in case there is a ridiculous knee jerk political move pulled
     https://www.reddit.com/r/LocalLLaMA/comments/1v170vg/with_all_the_kimi_drama_i_feel_like_i_want_to/
+
+## 2026-07-21T15:10:25.331Z
+[1] (@chriscocreated) You should do that!
+    https://farcaster.xyz/chriscocreated/0xc4a5d007
+[2] (@chriscocreated) cal subscription if that's your jam: webcal://p33-caldav.icloud.com/published/2/NDM2MDk1MTYwNDM2MDk1MRWn-XhYror467QlB_B5Je9lRnQ12uwT7aK3xtzL
+    https://farcaster.xyz/chriscocreated/0xe9e44426
+[3] (@chriscocreated) 🛋️ Join us On the Sopha tomorrow (Wednesday)   ⏰ at it's NEW time of 11:30 ET (17:30 CET)  We'll be discussing the best curated casts of th
+    https://farcaster.xyz/chriscocreated/0x2034f72b
+[4] (@jacek) Near or far...  This universe or the next...  You'll always find $DEGEN.
+    https://farcaster.xyz/jacek/0x3d8f2fe3
+[5] (@jacek) Bridge Now: https://stargate.finance/?srcChain=base&srcToken=0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed&dstChain=robinhood&dstToken=0x0830A9
+    https://farcaster.xyz/jacek/0x0b4c2782
+[6] (@dwr.eth) We would have shipped this feature if we had 10M+ DAU.  And of course anyone was free to build their own client. :)
+    https://farcaster.xyz/dwr.eth/0x190ab6bb
