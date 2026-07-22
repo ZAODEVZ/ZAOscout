@@ -654,3 +654,29 @@
     https://farcaster.xyz/jacek/0x0b4c2782
 [6] (@dwr.eth) We would have shipped this feature if we had 10M+ DAU.  And of course anyone was free to build their own client. :)
     https://farcaster.xyz/dwr.eth/0x190ab6bb
+
+## 2026-07-22T15:09:20.941Z
+[1] (r/LocalLLaMA) OpenAI admits responsibility for HuggingFace Attack - an agent from an internal evaluation is reportedly the cause.
+    https://www.reddit.com/r/LocalLLaMA/comments/1v2w7jl/openai_admits_responsibility_for_huggingface/
+[2] (@chriscocreated) ⏰🛋️ see you in 60mins  https://www.sopha.social/event/09c5960e-c6c8-4021-bec3-3ecd609f8b20
+    https://farcaster.xyz/chriscocreated/0x1729d7ba
+[3] (r/ClaudeAI) New: Teach Claude a skill
+    https://www.reddit.com/r/ClaudeAI/comments/1v2qdct/new_teach_claude_a_skill/
+[4] (@chriscocreated) See you On the Sopha in 90mins
+    https://farcaster.xyz/chriscocreated/0x9f969ff8
+[5] (r/ClaudeAI) claude doesn’t lie anymore
+    https://www.reddit.com/r/ClaudeAI/comments/1v2u429/claude_doesnt_lie_anymore/
+[6] (@jacek) Pack your bags.
+    https://farcaster.xyz/jacek/0x4b260796
+[7] (r/LocalLLaMA) Solve the CyberGym benchmark
+    https://www.reddit.com/r/LocalLLaMA/comments/1v3ba1z/solve_the_cybergym_benchmark/
+[8] (r/ClaudeAI) Favorite claude-isms in no particular order
+    https://www.reddit.com/r/ClaudeAI/comments/1v33cab/favorite_claudeisms_in_no_particular_order/
+[9] (r/LocalLLaMA) Felix Rieseberg (Anthropic, ElectronJS) has released a free Mac app designed to help people build their own LLMs from scratch.
+    https://www.reddit.com/r/LocalLLaMA/comments/1v32ob7/felix_rieseberg_anthropic_electronjs_has_released/
+[10] (r/LocalLLaMA) Unsloth Quantization of Laguna S 2.1 Is Out
+    https://www.reddit.com/r/LocalLLaMA/comments/1v34ob0/unsloth_quantization_of_laguna_s_21_is_out/
+[11] (r/LocalLLaMA) The second K3's weights drop, I'm downloading the full FP16 and storing them in mattresses
+    https://www.reddit.com/r/LocalLLaMA/comments/1v3f41b/the_second_k3s_weights_drop_im_downloading_the/
+[12] (r/ClaudeAI) Anthropic Claims 50% usage boost that doesn't exist :)
+    https://www.reddit.com/r/ClaudeAI/comments/1v3d8iz/anthropic_claims_50_usage_boost_that_doesnt_exist/
