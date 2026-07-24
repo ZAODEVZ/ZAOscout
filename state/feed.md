@@ -728,3 +728,30 @@
     https://farcaster.xyz/chriscocreated/0x65d2a72b
 [4] (@chriscocreated) Join us On the Sopha next week https://www.sopha.social/event/c9da774a-60ea-4908-99dc-259effc44523
     https://farcaster.xyz/chriscocreated/0x4ac62ab5
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/LocalLLaMA) The LLM distillation process simplified for politicians:
+    https://www.reddit.com/r/LocalLLaMA/comments/1v4moxy/the_llm_distillation_process_simplified_for/
+[2] (@jacek) No one can stand between us and the future.  The Degen Odyssey.
+    https://farcaster.xyz/jacek/0x993355db
+[3] (r/LocalLLaMA) CEO of Hugging face: Heading to San Francisco to have a little chat with that “rogue agent”
+    https://www.reddit.com/r/LocalLLaMA/comments/1v4avga/ceo_of_hugging_face_heading_to_san_francisco_to/
+[4] (r/ClaudeAI) I made a Claude Code skill that turns a photo of your handwriting into an installable font
+    https://www.reddit.com/r/ClaudeAI/comments/1v55he0/i_made_a_claude_code_skill_that_turns_a_photo_of/
+[5] (r/ClaudeCode) Opus 5 might be dropping today 👀
+    https://www.reddit.com/r/ClaudeCode/comments/1v4fc9r/opus_5_might_be_dropping_today/
+[6] (r/ClaudeCode) Opus 5 nerfed?
+    https://www.reddit.com/r/ClaudeCode/comments/1v4gfj8/opus_5_nerfed/
+[7] (r/ClaudeAI) What is the most expensive app that you or your company replaced by coding it yourself?
+    https://www.reddit.com/r/ClaudeAI/comments/1v4rudf/what_is_the_most_expensive_app_that_you_or_your/
+[8] (r/ClaudeAI) I let claude direct this short movie.... it did pretty good
+    https://www.reddit.com/r/ClaudeAI/comments/1v4u6wy/i_let_claude_direct_this_short_movie_it_did/
+[9] (r/ClaudeAI) Used claude to replay everybody that played my daily racing game yesterday at the same time
+    https://www.reddit.com/r/ClaudeAI/comments/1v4xc5j/used_claude_to_replay_everybody_that_played_my/
+[10] (r/LocalLLaMA) The "distillation" claim is just ridiculous in nature
+    https://www.reddit.com/r/LocalLLaMA/comments/1v52t2d/the_distillation_claim_is_just_ridiculous_in/
+[11] (r/ClaudeCode) Claude usage feels like way less than before
+    https://www.reddit.com/r/ClaudeCode/comments/1v4w9d2/claude_usage_feels_like_way_less_than_before/
+[12] (r/vibecoding) There is something deeply toxic about this community.
+    https://www.reddit.com/r/vibecoding/comments/1v58zn4/there_is_something_deeply_toxic_about_this/
