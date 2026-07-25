@@ -716,3 +716,9 @@
     https://www.reddit.com/r/ClaudeCode/comments/1v4w9d2/claude_usage_feels_like_way_less_than_before/
 [12] (r/vibecoding) There is something deeply toxic about this community.
     https://www.reddit.com/r/vibecoding/comments/1v58zn4/there_is_something_deeply_toxic_about_this/
+
+## 2026-07-25T14:40:24.212Z
+[1] (@chriscocreated) Ordered myself a squeezebox of eBay! While I wait impatiently I made a tool to teach myself when it arrives.   Next step phone simulator
+    https://farcaster.xyz/chriscocreated/0x31265c8b
+[2] (@chriscocreated) Love that question
+    https://farcaster.xyz/chriscocreated/0x5d9f12b9
