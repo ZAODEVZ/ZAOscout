@@ -762,3 +762,10 @@
     https://farcaster.xyz/chriscocreated/0x31265c8b
 [2] (@chriscocreated) Love that question
     https://farcaster.xyz/chriscocreated/0x5d9f12b9
+
+---
+**ZAOscout digest - 2 items**
+[1] (@chriscocreated) Maybe there is a question in their about accessing your creative energy whilst still doing the necessary work
+    https://farcaster.xyz/chriscocreated/0x1cd8b9d3
+[2] (@chriscocreated) This! 😁
+    https://farcaster.xyz/chriscocreated/0xf81f0cce
