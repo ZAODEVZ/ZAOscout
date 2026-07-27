@@ -769,3 +769,14 @@
     https://farcaster.xyz/chriscocreated/0x1cd8b9d3
 [2] (@chriscocreated) This! 😁
     https://farcaster.xyz/chriscocreated/0xf81f0cce
+
+---
+**ZAOscout digest - 4 items**
+[1] (@jacek) 😂
+    https://farcaster.xyz/jacek/0x6fac4a60
+[2] (@jacek) GM degens, can chickens fly or nah? 🐔  https://www.youtube.com/watch?v=idDtTGEbyGA  https://pov.co/markets/can-chickens-fly
+    https://farcaster.xyz/jacek/0x8bde8bed
+[3] (@jacek) Yup, I like that he’s experimenting with new primitives here. It gives me a bit of Blur vibes. Not sure how the NFT scene is doing overall, 
+    https://farcaster.xyz/jacek/0x90b5ac23
+[4] (@jacek) https://x.com/jacek0x/status/2081332541324140648?s=20
+    https://farcaster.xyz/jacek/0xf8e847e9
