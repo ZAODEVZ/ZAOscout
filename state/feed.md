@@ -780,3 +780,10 @@
     https://farcaster.xyz/jacek/0x90b5ac23
 [4] (@jacek) https://x.com/jacek0x/status/2081332541324140648?s=20
     https://farcaster.xyz/jacek/0xf8e847e9
+
+---
+**ZAOscout digest - 2 items**
+[1] (@chriscocreated) Vote here: https://www.sopha.social/poll/on-the-sopha-2026-07-29
+    https://farcaster.xyz/chriscocreated/0x5eb5d423
+[2] (@chriscocreated) What casts from the week shall we discuss On the Sopha tomorrow? 🛋️🦉  https://www.sopha.social/poll/on-the-sopha-2026-07-29  https://www.s
+    https://farcaster.xyz/chriscocreated/0x06a21f24
