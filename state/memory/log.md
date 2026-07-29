@@ -744,3 +744,15 @@
     https://farcaster.xyz/chriscocreated/0x5eb5d423
 [2] (@chriscocreated) What casts from the week shall we discuss On the Sopha tomorrow? 🛋️🦉  https://www.sopha.social/poll/on-the-sopha-2026-07-29  https://www.s
     https://farcaster.xyz/chriscocreated/0x06a21f24
+
+## 2026-07-29T15:13:30.273Z
+[1] (@chriscocreated) Join me at On the Sopha in 30mins
+    https://farcaster.xyz/chriscocreated/0x4775e28d
+[2] (@chriscocreated) Any help, was supposed to be Any help?
+    https://farcaster.xyz/chriscocreated/0xe245292d
+[3] (@chriscocreated) Any help - https://farcaster.xyz/chriscocreated/0xe9e44426
+    https://farcaster.xyz/chriscocreated/0xbf5581a9
+[4] (@chriscocreated) 11:30 - our new regular slot
+    https://farcaster.xyz/chriscocreated/0x0301f334
+[5] (@chriscocreated) What we yapping about later?
+    https://farcaster.xyz/chriscocreated/0x92f014dd
