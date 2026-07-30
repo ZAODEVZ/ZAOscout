@@ -756,3 +756,15 @@
     https://farcaster.xyz/chriscocreated/0x0301f334
 [5] (@chriscocreated) What we yapping about later?
     https://farcaster.xyz/chriscocreated/0x92f014dd
+
+## 2026-07-30T15:17:50.311Z
+[1] (@chriscocreated) I can’t tell if this is for real, but I think it is?!
+    https://farcaster.xyz/chriscocreated/0xd0a132da
+[2] (@chriscocreated) was good to (not) see you! look forward to next time
+    https://farcaster.xyz/chriscocreated/0x4f824e45
+[3] (@chriscocreated) i reported this to the intern: I want video on spaces please   upvote if you have the same problem
+    https://farcaster.xyz/chriscocreated/0x71a878ed
+[4] (@chriscocreated) I want video on spaces please
+    https://farcaster.xyz/chriscocreated/0xf74105d5
+[5] (@jacek) Can _____ fly?  You already have a guess.  Now find out if you're with the 71% that said NO.  pov.co
+    https://farcaster.xyz/jacek/0xc66d67e6
