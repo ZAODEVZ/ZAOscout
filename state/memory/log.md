@@ -768,3 +768,21 @@
     https://farcaster.xyz/chriscocreated/0xf74105d5
 [5] (@jacek) Can _____ fly?  You already have a guess.  Now find out if you're with the 71% that said NO.  pov.co
     https://farcaster.xyz/jacek/0xc66d67e6
+
+## 2026-07-31T15:24:54.376Z
+[1] (@chriscocreated) I ment the small hole you had dug
+    https://farcaster.xyz/chriscocreated/0x8932f27e
+[2] (@chriscocreated) All I want is a connection 🫂
+    https://farcaster.xyz/chriscocreated/0x7d07f980
+[3] (@chriscocreated) I'm really like the networked.art approach to selling cryptoart () hits a great sweet spot imo.  Preserves the scarcity and intent of the 1/
+    https://farcaster.xyz/chriscocreated/0x4e1077e0
+[4] (@chriscocreated) Made one - confused though about joining the group https://networked.art/11x11/token/6342834492015544477052145167810326356650025210324747001
+    https://farcaster.xyz/chriscocreated/0x44e95209
+[5] (@chriscocreated) love to see you there. Is the hole functional or asthetic?
+    https://farcaster.xyz/chriscocreated/0x3ab8bf52
+[6] (@jacek) Appreciate it, Chris! 🙏
+    https://farcaster.xyz/jacek/0xae5eed72
+[7] (@jacek) Just shipped a major overhaul of market charts on pov.co.  The biggest piece of feedback we heard was that the old charts made it hard to se
+    https://farcaster.xyz/jacek/0xb34e7728
+[8] (@jacek) export wallet is now live on pov.co 🔑  head to your wallet page to export your private key or seed phrase anytime.  your wallet, your keys.
+    https://farcaster.xyz/jacek/0xf45f27df
