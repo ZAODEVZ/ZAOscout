@@ -832,3 +832,20 @@
     https://farcaster.xyz/jacek/0xb34e7728
 [8] (@jacek) export wallet is now live on pov.co 🔑  head to your wallet page to export your private key or seed phrase anytime.  your wallet, your keys.
     https://farcaster.xyz/jacek/0xf45f27df
+
+---
+**ZAOscout digest - 7 items**
+[1] (@chriscocreated) a Kurt Vonnegut passage that is about telling his wife he’s going out to buy an envelope: ​​ “She says, ‘Well, you’re not a poor man. You kn
+    https://farcaster.xyz/chriscocreated/0xe3c2d8cc
+[2] (@chriscocreated) For clarity  is trying to log into Sopha which I implemented SIWN November last year
+    https://farcaster.xyz/chriscocreated/0xec3f61a4
+[3] (@chriscocreated) I’ve asked Rish, clearly not mid August yet!
+    https://farcaster.xyz/chriscocreated/0xa14f549a
+[4] (@chriscocreated) any ideas, seems it’s been depreciated early? cc
+    https://farcaster.xyz/chriscocreated/0xdb94f919
+[5] (@chriscocreated) ... to include myself in the FC collection
+    https://farcaster.xyz/chriscocreated/0xd00e428a
+[6] (@jacek) Awesome 😭
+    https://farcaster.xyz/jacek/0xe7408114
+[7] (@jacek) People have always told you to speak your mind.  We think you should be able to trade it.  4 days remain to compete for your share of the $5
+    https://farcaster.xyz/jacek/0xad15c7fb
