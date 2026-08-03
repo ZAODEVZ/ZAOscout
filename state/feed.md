@@ -856,3 +856,8 @@
     https://farcaster.xyz/chriscocreated/0x45f7d7c6
 [2] (@jacek) yes 🫡
     https://farcaster.xyz/jacek/0x0431765c
+
+---
+**ZAOscout digest - 1 items**
+[1] (@chriscocreated) And now I have learnt some Czech! What a delight it is 😁
+    https://farcaster.xyz/chriscocreated/0x6dca6f5e
