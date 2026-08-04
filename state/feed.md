@@ -861,3 +861,18 @@
 **ZAOscout digest - 1 items**
 [1] (@chriscocreated) And now I have learnt some Czech! What a delight it is 😁
     https://farcaster.xyz/chriscocreated/0x6dca6f5e
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) 💥 💪🤖
+    https://farcaster.xyz/chriscocreated/0x1063f97a
+[2] (@chriscocreated) and was it worth 6hrs of your life?
+    https://farcaster.xyz/chriscocreated/0x65912be1
+[3] (@jacek) gm. another great day to be a degen 🎩
+    https://farcaster.xyz/jacek/0x10d0b956
+[4] (@jacek) Are cold wallets still safe?  What’s the best way to store funds now?  https://pov.co/markets/are-cold-wallets-still-safe?utm_source=farcast
+    https://farcaster.xyz/jacek/0x1a415b7b
+[5] (@jacek) should be working now
+    https://farcaster.xyz/jacek/0xcdfad62e
+[6] (@dwr.eth) Fujifilm and a tripod
+    https://farcaster.xyz/dwr.eth/0x105bf427
