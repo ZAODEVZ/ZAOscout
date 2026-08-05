@@ -826,3 +826,19 @@
     https://farcaster.xyz/jacek/0xcdfad62e
 [6] (@dwr.eth) Fujifilm and a tripod
     https://farcaster.xyz/dwr.eth/0x105bf427
+
+## 2026-08-05T15:21:11.776Z
+[1] (@chriscocreated) yes! dm me
+    https://farcaster.xyz/chriscocreated/0xeadc306b
+[2] (@chriscocreated) does this work for you?  https://calendar.google.com/calendar/ical/ad9ac39f1a8506da2e456abaa97b08426eb84c08cd8682ef7cdd0d6f16881dc8%40group.
+    https://farcaster.xyz/chriscocreated/0x1b2314bb
+[3] (@chriscocreated) NB half an hour later than usual!   cc
+    https://farcaster.xyz/chriscocreated/0xd4cfd5b3
+[4] (@chriscocreated) https://www.sopha.social/poll/on-the-sopha-2026-08-05
+    https://farcaster.xyz/chriscocreated/0x83c4de3d
+[5] (@chriscocreated) New host, wo dis?  is hosting On the Sopha tomorrow! (while I'm off being a good dad and watching elite /padel )  Which casts of the week yo
+    https://farcaster.xyz/chriscocreated/0xcb41d3ef
+[6] (@jacek) lezz gooooo
+    https://farcaster.xyz/jacek/0x6b7d9518
+[7] (@jacek) The biggest Bitcoin maxi sells BTC?!  Strategy, the company closely associated with Michael Saylor, disclosed that it sold 1,638 BTC (about 
+    https://farcaster.xyz/jacek/0xc2509a03
