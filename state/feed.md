@@ -893,3 +893,12 @@
     https://farcaster.xyz/jacek/0x6b7d9518
 [7] (@jacek) The biggest Bitcoin maxi sells BTC?!  Strategy, the company closely associated with Michael Saylor, disclosed that it sold 1,638 BTC (about 
     https://farcaster.xyz/jacek/0xc2509a03
+
+---
+**ZAOscout digest - 3 items**
+[1] (@jacek) $250 up for grabs.  10 hours. $25 every hour, on the hour. 14:00 UTC until midnight.  How it works:  Trade the market. Every $1 you buy = 1 
+    https://farcaster.xyz/jacek/0x56b2491e
+[2] (@jacek) Both. YES/NO tokens on their own curves, never resolve. Price = how many people agree with you.
+    https://farcaster.xyz/jacek/0x58f9aacc
+[3] (@jacek) Yes! 💯
+    https://farcaster.xyz/jacek/0xac974cb0
