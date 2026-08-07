@@ -850,3 +850,13 @@
     https://farcaster.xyz/jacek/0x58f9aacc
 [3] (@jacek) Yes! 💯
     https://farcaster.xyz/jacek/0xac974cb0
+
+## 2026-08-07T14:16:09.104Z
+[1] (@jacek) 😀
+    https://farcaster.xyz/jacek/0xd49b7891
+[2] (@jacek) Rules:  Every $1 you buy on that market = 1 ticket. Fees count. No cap, so size counts.  Hold your position to the top of the hour or your t
+    https://farcaster.xyz/jacek/0xd2cd8fa2
+[3] (@jacek) $50 an hour, every hour, for 5 hours.  Starts 11:00 UTC.  Every $1 you trade is a ticket. No limit. At the top of the hour one ticket wins $
+    https://farcaster.xyz/jacek/0xe52a46c1
+[4] (@jacek) congrats  🏆 $25 in the last hour.  new hour, new $25 on the table. tickets reset, so everyone's back to zero.  $1 of buying = 1 ticket, hol
+    https://farcaster.xyz/jacek/0x92b8aef6
