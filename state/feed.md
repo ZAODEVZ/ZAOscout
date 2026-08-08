@@ -913,3 +913,30 @@
     https://farcaster.xyz/jacek/0xe52a46c1
 [4] (@jacek) congrats  🏆 $25 in the last hour.  new hour, new $25 on the table. tickets reset, so everyone's back to zero.  $1 of buying = 1 ticket, hol
     https://farcaster.xyz/jacek/0x92b8aef6
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeCode) what is hapening with Antropic?
+    https://www.reddit.com/r/ClaudeCode/comments/1vhymk2/what_is_hapening_with_antropic/
+[2] (@thezao) Holding 500 $ZAO  gets you into their portal with a shot at a WL spot. A clean win for the ZAO in the Year of the ZAO.  https://wl.firesideb
+    https://farcaster.xyz/thezao/0xc841a9dc
+[3] (r/LocalLLaMA) Got job as Director of AI and Systems development self-taught
+    https://www.reddit.com/r/LocalLLaMA/comments/1vi8jlr/got_job_as_director_of_ai_and_systems_development/
+[4] (@thezao) Cold season is kicking in, so stay warm with ZAO and @Firesidebase.  If you’re building anywhere in the ZAO ecosystem, tap into FireSide — t
+    https://farcaster.xyz/thezao/0x318cfba6
+[5] (r/LocalLLaMA) 2027 Memory Capacity Is Reportedly Sold Out
+    https://www.reddit.com/r/LocalLLaMA/comments/1viqtgm/2027_memory_capacity_is_reportedly_sold_out/
+[6] (@thezao) Fractal Bot testing wrapped yesterday - solid turnout from builders who actually shipped feedback instead of just lurking 🤖  Nothing beats 
+    https://farcaster.xyz/thezao/0xb0d5583b
+[7] (r/LocalLLaMA) DeepSeek V4 Flash 0731 appreciation post
+    https://www.reddit.com/r/LocalLLaMA/comments/1vio0x6/deepseek_v4_flash_0731_appreciation_post/
+[8] (@thezao) I've just sparked up a Fireside! Come join the conversation https://farcaster.xyz/miniapps/mMg32-HGwt1Y/fireside/room/692488a2414c0cec575a5e
+    https://farcaster.xyz/thezao/0x4946993a
+[9] (r/LocalLLaMA) Is anyone else finding DeepSeek-V4-Flash unreliable for non-coding tasks?
+    https://www.reddit.com/r/LocalLLaMA/comments/1vikgrj/is_anyone_else_finding_deepseekv4flash_unreliable/
+[10] (@thezao) ZM new Let’s Talk About Web 3 episodes just landed.  and  are back on the mic, and we’re going live again at 6pm est with . https://www.yout
+    https://farcaster.xyz/thezao/0xeb0fd346
+[11] (r/ClaudeCode) I built a terminal with Claude to replace Claude Desktop
+    https://www.reddit.com/r/ClaudeCode/comments/1vinmb3/i_built_a_terminal_with_claude_to_replace_claude/
+[12] (@chriscocreated) Clankers may be a new mode of cultural expression - perhaps even a new kind of art. Most are disposable, a few become durable. They often ca
+    https://farcaster.xyz/chriscocreated/0xd11eaeb2
