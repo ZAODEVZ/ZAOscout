@@ -940,3 +940,12 @@
     https://www.reddit.com/r/ClaudeCode/comments/1vinmb3/i_built_a_terminal_with_claude_to_replace_claude/
 [12] (@chriscocreated) Clankers may be a new mode of cultural expression - perhaps even a new kind of art. Most are disposable, a few become durable. They often ca
     https://farcaster.xyz/chriscocreated/0xd11eaeb2
+
+---
+**ZAOscout digest - 3 items**
+[1] (@jacek) Rules:  Every $1 you buy on that market = 1 ticket. Fees count. No cap, so size counts.  Hold your position to the top of the hour or your t
+    https://farcaster.xyz/jacek/0x8acf9213
+[2] (@jacek) $50 an hour, every hour, for 5 hours.  Starts 11:00 UTC.  Every $1 you trade is a ticket. No limit. At the top of the hour one ticket wins $
+    https://farcaster.xyz/jacek/0xd06c7609
+[3] (@jacek) Builders have plenty of chains to choose from. I picked .  Part of that is . Long term vision, innovation, and above everything else, integr
+    https://farcaster.xyz/jacek/0x8531a7b6
