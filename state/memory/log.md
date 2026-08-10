@@ -894,3 +894,13 @@
     https://farcaster.xyz/jacek/0xd06c7609
 [3] (@jacek) Builders have plenty of chains to choose from. I picked .  Part of that is . Long term vision, innovation, and above everything else, integr
     https://farcaster.xyz/jacek/0x8531a7b6
+
+## 2026-08-10T14:22:38.990Z
+[1] (@chriscocreated) It almost tempted me to sign up!
+    https://farcaster.xyz/chriscocreated/0xb79a4470
+[2] (@chriscocreated) Things fall apart
+    https://farcaster.xyz/chriscocreated/0xab05b9f8
+[3] (@chriscocreated) ‘I walked from one end of Europe to the other this morning’ 😂😂😂
+    https://farcaster.xyz/chriscocreated/0xd4c110be
+[4] (@jacek) Did Pump.fun just admit it's losing to FOMO?  https://pov.co/markets/did-pump-fun-just-admit-it-s-losing-to-fomo
+    https://farcaster.xyz/jacek/0x3f5439cd
