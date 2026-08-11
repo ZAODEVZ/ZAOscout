@@ -904,3 +904,13 @@
     https://farcaster.xyz/chriscocreated/0xd4c110be
 [4] (@jacek) Did Pump.fun just admit it's losing to FOMO?  https://pov.co/markets/did-pump-fun-just-admit-it-s-losing-to-fomo
     https://farcaster.xyz/jacek/0x3f5439cd
+
+## 2026-08-11T14:22:31.066Z
+[1] (@jacek) yup, degen as an attention mechanism and sort of the reward token of farcaster was a great complement to the tech the farcaster team built. 
+    https://farcaster.xyz/jacek/0x26ca5478
+[2] (@jacek) degen brought attention to farcaster. good or bad attention is debatable, but if you line up the user growth curve with the degen launch and
+    https://farcaster.xyz/jacek/0x8556fdbb
+[3] (@jacek) i never left, i post almost daily. just shipped pov.co
+    https://farcaster.xyz/jacek/0xf938206b
+[4] (@jacek) we cut POV buy fees to 5%  your $100 now goes as far as $200 did last week  trade twice as much for the same cost on pov.co
+    https://farcaster.xyz/jacek/0xce43a4c6
