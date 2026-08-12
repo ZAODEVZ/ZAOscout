@@ -914,3 +914,19 @@
     https://farcaster.xyz/jacek/0xf938206b
 [4] (@jacek) we cut POV buy fees to 5%  your $100 now goes as far as $200 did last week  trade twice as much for the same cost on pov.co
     https://farcaster.xyz/jacek/0xce43a4c6
+
+## 2026-08-12T14:23:03.748Z
+[1] (@chriscocreated) vote here https://www.sopha.social/poll/on-the-sopha-2026-08-12
+    https://farcaster.xyz/chriscocreated/0xa8354c9b
+[2] (@chriscocreated) What casts from the week shall we discuss On the Sopha today? 🛋️🦉  https://www.sopha.social/poll/on-the-sopha-2026-08-12
+    https://farcaster.xyz/chriscocreated/0x215fb632
+[3] (@jacek) 🔥
+    https://farcaster.xyz/jacek/0x6e966d5f
+[4] (@jacek) hey all, doing a small DEGEN giveaway on Robinhood Chain 🎩  trace amounts, extra for wallets that held CASHCAT in july. sending tomorrow ar
+    https://farcaster.xyz/jacek/0x3efe3318
+[5] (@jacek) Your friendly neighborhood Degen. 🕸️
+    https://farcaster.xyz/jacek/0xd5cd2f00
+[6] (@dwr.eth) They have the best UX
+    https://farcaster.xyz/dwr.eth/0x2696dd8f
+[7] (@dwr.eth) Fomo is a *great* wallet with a leaderboard.   The daily driver social network for Fomo users is Twitter.
+    https://farcaster.xyz/dwr.eth/0xb40a3440
