@@ -988,3 +988,20 @@
     https://farcaster.xyz/dwr.eth/0x2696dd8f
 [7] (@dwr.eth) Fomo is a *great* wallet with a leaderboard.   The daily driver social network for Fomo users is Twitter.
     https://farcaster.xyz/dwr.eth/0xb40a3440
+
+---
+**ZAOscout digest - 7 items**
+[1] (@chriscocreated) I've got to drive my daughter at 4pm UTC, don't sweat it, catch the next one
+    https://farcaster.xyz/chriscocreated/0x6b752d04
+[2] (@chriscocreated) See you in 15mins
+    https://farcaster.xyz/chriscocreated/0x89f0cd44
+[3] (@jacek) btw. DEGEN is up 5% year to date, above the 200 day, and we've shipped every week through the worst part of this market. that's us showing u
+    https://farcaster.xyz/jacek/0x189a1afa
+[4] (@jacek) everything i do is for $DEGEN and this community. no second token, no third token, no fresh cap table for the team.  the pattern: founder la
+    https://farcaster.xyz/jacek/0x08646ea8
+[5] (@jacek) He’s stable...But for how long?!
+    https://farcaster.xyz/jacek/0x444d1f31
+[6] (@jacek) 1 ticket can absolutely win, it's a random draw. more tickets just means better odds  only thing is 5,000 $DEGEN is the minimum for that 1 t
+    https://farcaster.xyz/jacek/0x775fea70
+[7] (@jacek) gm degens  raffling 100k $DEGEN to one winner on robinhood chain. drawn tomorrow at 15:00 UTC  every 5,000 $DEGEN you buy = 1 ticket. more t
+    https://farcaster.xyz/jacek/0x1d22233a
