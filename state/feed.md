@@ -1005,3 +1005,16 @@
     https://farcaster.xyz/jacek/0x775fea70
 [7] (@jacek) gm degens  raffling 100k $DEGEN to one winner on robinhood chain. drawn tomorrow at 15:00 UTC  every 5,000 $DEGEN you buy = 1 ticket. more t
     https://farcaster.xyz/jacek/0x1d22233a
+
+---
+**ZAOscout digest - 5 items**
+[1] (@jacek) beautiful 🤩
+    https://farcaster.xyz/jacek/0x42667d70
+[2] (@jacek) fresh papa, so been juggling a lot at once 😅 but it's been great.  the highlight has been watching my 6-month-old grow.
+    https://farcaster.xyz/jacek/0xe6c573dc
+[3] (@jacek) I never did 👀
+    https://farcaster.xyz/jacek/0xca23ed71
+[4] (@jacek) sHould Jacek go BACK to Farcaster? 🤔   https://pov.co/markets/should-jacek-go-back-to-farcaster
+    https://farcaster.xyz/jacek/0x300ddd1c
+[5] (@jacek) this is the right approach. enjoy the vacation 🫡
+    https://farcaster.xyz/jacek/0x04896f5c
