@@ -958,3 +958,17 @@
     https://farcaster.xyz/jacek/0x300ddd1c
 [5] (@jacek) this is the right approach. enjoy the vacation 🫡
     https://farcaster.xyz/jacek/0x04896f5c
+
+## 2026-08-15T13:36:24.524Z
+[1] (@jacek) 👀
+    https://farcaster.xyz/jacek/0xa786402f
+[2] (@jacek) 🫡🎩
+    https://farcaster.xyz/jacek/0x0233b789
+[3] (@jacek) degen app is on the back burner for now. give pov.co a spin instead and tell me what you think
+    https://farcaster.xyz/jacek/0xcf27d154
+[4] (@jacek) just renewed my Farcaster badge for another year 🥳
+    https://farcaster.xyz/jacek/0x3c6429bb
+[5] (@dwr.eth) Got a green to orange transition.   (Otherwise super cloudy.)
+    https://farcaster.xyz/dwr.eth/0x751717b7
+[6] (@dwr.eth) Perseid and Andromeda
+    https://farcaster.xyz/dwr.eth/0x761540b4
