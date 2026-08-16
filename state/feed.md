@@ -1033,3 +1033,14 @@
     https://farcaster.xyz/dwr.eth/0x751717b7
 [6] (@dwr.eth) Perseid and Andromeda
     https://farcaster.xyz/dwr.eth/0x761540b4
+
+---
+**ZAOscout digest - 4 items**
+[1] (@jacek) awesome! 🔥
+    https://farcaster.xyz/jacek/0xbb8958b7
+[2] (@jacek) Yes
+    https://farcaster.xyz/jacek/0x59677d69
+[3] (@jacek) Not dumb, everyone asks this.  POV markets never settle. No resolution date, no oracle, nothing decides a winner.  YES and NO are two indepe
+    https://farcaster.xyz/jacek/0xb9800ddc
+[4] (@jacek) $100 to one POV trader 🎩  is serial token launching ok? take a side https://pov.co/markets/is-serial-token-launching-ok  → like + repost → 
+    https://farcaster.xyz/jacek/0x22de1b3c
