@@ -1044,3 +1044,16 @@
     https://farcaster.xyz/jacek/0xb9800ddc
 [4] (@jacek) $100 to one POV trader 🎩  is serial token launching ok? take a side https://pov.co/markets/is-serial-token-launching-ok  → like + repost → 
     https://farcaster.xyz/jacek/0x22de1b3c
+
+---
+**ZAOscout digest - 5 items**
+[1] (@jacek) is BASECAT the next meme coin runner on Base?  blue hardhat cat, early or already over?  pick a side, meeeow 🐱  https://pov.co/markets/is-b
+    https://farcaster.xyz/jacek/0x0af131cd
+[2] (@jacek) 💯
+    https://farcaster.xyz/jacek/0xd1d58439
+[3] (@jacek) I guess the question is, do you think Clanker could regain its status as a power law winning launcher? And if so, what do you think it would
+    https://farcaster.xyz/jacek/0xefa18b72
+[4] (@jacek) why does this matter tho?
+    https://farcaster.xyz/jacek/0x41a46334
+[5] (@jacek) wut? 🤔
+    https://farcaster.xyz/jacek/0xde83935f
