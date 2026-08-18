@@ -994,3 +994,21 @@
     https://farcaster.xyz/jacek/0x41a46334
 [5] (@jacek) wut? 🤔
     https://farcaster.xyz/jacek/0xde83935f
+
+## 2026-08-18T13:48:28.798Z
+[1] (@chriscocreated) well said Brad! Thank you intern!
+    https://farcaster.xyz/chriscocreated/0x6672cc79
+[2] (@chriscocreated) Massive thanks and love for all you have done here. I owe you and Neynar huge credit for all I’ve created over the years. Thank you and huge
+    https://farcaster.xyz/chriscocreated/0x8c15a329
+[3] (@jacek) dzięki
+    https://farcaster.xyz/jacek/0x6b5702de
+[4] (@jacek) 🙏
+    https://farcaster.xyz/jacek/0xe5d709b9
+[5] (@jacek) 💜
+    https://farcaster.xyz/jacek/0x57721200
+[6] (@jacek) 😭
+    https://farcaster.xyz/jacek/0x138e1ca5
+[7] (@jacek) not a goodbye. i keep building, i keep pushing degen. same as always.
+    https://farcaster.xyz/jacek/0x7c6dff55
+[8] (@dwr.eth) Grateful for   continuing on with Farcaster for the last 8 months (and the years of building on the protocol).
+    https://farcaster.xyz/dwr.eth/0xe1129b4d
