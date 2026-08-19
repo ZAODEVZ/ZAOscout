@@ -1076,3 +1076,12 @@
     https://farcaster.xyz/jacek/0x7c6dff55
 [8] (@dwr.eth) Grateful for   continuing on with Farcaster for the last 8 months (and the years of building on the protocol).
     https://farcaster.xyz/dwr.eth/0xe1129b4d
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) See you in 10hrs or so
+    https://farcaster.xyz/chriscocreated/0x890ef67d
+[2] (@chriscocreated) On the Sopha - Wednesday 11:30 Eastern 15:30 UTC.  ofc chatting about what's next for the purple protocol. Come sit with us.  https://www.so
+    https://farcaster.xyz/chriscocreated/0x79718189
+[3] (@jacek) We’re giving away ~$250 every day on POV from 7am to 12pm ET.  Come trade, hang out, and take a shot at the Daily Pot 👇  https://pov.co/dai
+    https://farcaster.xyz/jacek/0x34716d32
