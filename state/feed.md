@@ -1085,3 +1085,24 @@
     https://farcaster.xyz/chriscocreated/0x79718189
 [3] (@jacek) We’re giving away ~$250 every day on POV from 7am to 12pm ET.  Come trade, hang out, and take a shot at the Daily Pot 👇  https://pov.co/dai
     https://farcaster.xyz/jacek/0x34716d32
+
+---
+**ZAOscout digest - 9 items**
+[1] (@chriscocreated) Always thought provoking when you sit on the Sopha Jose! Appreciate your perspective
+    https://farcaster.xyz/chriscocreated/0xbb29c2d4
+[2] (@chriscocreated) On the Sopha now - talking about everything emerging for FC
+    https://farcaster.xyz/chriscocreated/0x2512eab4
+[3] (@jacek) YouTube videos are now live on pov.co.  First of many social features shipping soon.
+    https://farcaster.xyz/jacek/0xd8ccd14d
+[4] (@jacek) 🫡 💯
+    https://farcaster.xyz/jacek/0x340f5f67
+[5] (@jacek) Just crossed $100k in total buy volume on pov.co, with $81k of that in the last 30 days alone.  > 3,978 users > 3,029 markets > 7,879 trades
+    https://farcaster.xyz/jacek/0x8ef426d6
+[6] (@jacek) $DEGEN ~$0.0010 A year ago it was ~$0.0034  Base didn't go anywhere.  The community didn't go anywhere.  We spent the year shipping products
+    https://farcaster.xyz/jacek/0x1e32ee59
+[7] (@dwr.eth) quick let’s all open up fc app to cast about fc dead  Have seen this movie before.
+    https://farcaster.xyz/dwr.eth/0x322c451e
+[8] (@dwr.eth) bro I created that thing
+    https://farcaster.xyz/dwr.eth/0xef4a9c43
+[9] (@dwr.eth) Somewhere over eastern Colorado
+    https://farcaster.xyz/dwr.eth/0x4631fe36
