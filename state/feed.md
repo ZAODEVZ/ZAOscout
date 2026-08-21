@@ -1106,3 +1106,16 @@
     https://farcaster.xyz/dwr.eth/0xef4a9c43
 [9] (@dwr.eth) Somewhere over eastern Colorado
     https://farcaster.xyz/dwr.eth/0x4631fe36
+
+---
+**ZAOscout digest - 5 items**
+[1] (@jacek) New hero section live on the POV homepage.  More homepage updates coming, but this should already make it much clearer what POV is at first 
+    https://farcaster.xyz/jacek/0x17ec62d2
+[2] (@jacek) counteroffer: all popcorn plus one bag of degen. do we have a deal? 🎩
+    https://farcaster.xyz/jacek/0x0d4782e5
+[3] (@jacek) Base season is officially back 🟦
+    https://farcaster.xyz/jacek/0x89115800
+[4] (@jacek) the core idea of decentralized social is too powerful to die.  someone is going to get it right eventually, and farcaster still has the best
+    https://farcaster.xyz/jacek/0xbc3fdb62
+[5] (@jacek) truth.
+    https://farcaster.xyz/jacek/0xf55a9156
