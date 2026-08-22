@@ -1052,3 +1052,11 @@
     https://farcaster.xyz/jacek/0xbc3fdb62
 [5] (@jacek) truth.
     https://farcaster.xyz/jacek/0xf55a9156
+
+## 2026-08-22T13:37:35.900Z
+[1] (@chriscocreated) Deeply inspiring vision for the next phase of
+    https://farcaster.xyz/chriscocreated/0xd74cd6af
+[2] (@jacek) Got that DEGEN in me.
+    https://farcaster.xyz/jacek/0xbbac1f0e
+[3] (@jacek) always 🫡
+    https://farcaster.xyz/jacek/0x6a1ef389
