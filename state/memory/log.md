@@ -1060,3 +1060,7 @@
     https://farcaster.xyz/jacek/0xbbac1f0e
 [3] (@jacek) always 🫡
     https://farcaster.xyz/jacek/0x6a1ef389
+
+## 2026-08-23T13:38:04.938Z
+[1] (@dwr.eth) Somewhere over Utah
+    https://farcaster.xyz/dwr.eth/0xa08de379
