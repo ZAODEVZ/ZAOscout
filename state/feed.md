@@ -1133,3 +1133,14 @@
 **ZAOscout digest - 1 items**
 [1] (@dwr.eth) Somewhere over Utah
     https://farcaster.xyz/dwr.eth/0xa08de379
+
+---
+**ZAOscout digest - 4 items**
+[1] (@jacek) Average DEGEN holder’s morning routine. 🎩
+    https://farcaster.xyz/jacek/0x588b265d
+[2] (@jacek) Few people have shaped modern computing more than Linus Torvalds.  He built the Linux kernel, which became the foundation of most of the int
+    https://farcaster.xyz/jacek/0xd2a24d5c
+[3] (@jacek) One of the key ingredients in YouTube going viral was MySpace.  YouTube built the technology to upload a video and embed it anywhere. MySpac
+    https://farcaster.xyz/jacek/0xfce3471e
+[4] (@jacek) Tough choice
+    https://farcaster.xyz/jacek/0x373e426f
