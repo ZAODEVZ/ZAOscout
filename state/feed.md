@@ -1144,3 +1144,16 @@
     https://farcaster.xyz/jacek/0xfce3471e
 [4] (@jacek) Tough choice
     https://farcaster.xyz/jacek/0x373e426f
+
+---
+**ZAOscout digest - 5 items**
+[1] (@jacek) Since launch, nearly 4,000 people have created over 3,000 markets and generated more than $100K in trading volume on POV.  Read our first ne
+    https://farcaster.xyz/jacek/0x2aa46693
+[2] (@jacek) What issue are you having with it?
+    https://farcaster.xyz/jacek/0xda121f02
+[3] (@jacek) $5,000 in rewards with pov.co  Choose your side, trade your opinions, and earn.  Join here: https://app.layer3.xyz/campaigns/pov-trading-mil
+    https://farcaster.xyz/jacek/0x478fc77c
+[4] (@jacek) Live with BaseJunkie right now!  https://x.com/BaseJunkie_/status/2092336031383408927
+    https://farcaster.xyz/jacek/0x47b608d8
+[5] (@jacek) going live 3:30PM ET today with BaseJunkie  talking POV and opinion markets  X and YouTube, come hang  https://x.com/BaseJunkie_/status/2092
+    https://farcaster.xyz/jacek/0x397de3b4
