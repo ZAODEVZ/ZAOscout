@@ -1086,3 +1086,29 @@
     https://farcaster.xyz/jacek/0x47b608d8
 [5] (@jacek) going live 3:30PM ET today with BaseJunkie  talking POV and opinion markets  X and YouTube, come hang  https://x.com/BaseJunkie_/status/2092
     https://farcaster.xyz/jacek/0x397de3b4
+
+## 2026-08-27T22:55:03.698Z
+[1] (r/LocalLLaMA) NVIDIA buying HF isn't a good thing for open source
+    https://www.reddit.com/r/LocalLLaMA/comments/1vzmqrk/nvidia_buying_hf_isnt_a_good_thing_for_open_source/
+[2] (@chriscocreated) why not!  https://farcaster.xyz/sopha/0x5e872dab
+    https://farcaster.xyz/chriscocreated/0x100968ce
+[3] (r/ClaudeCode) Opus 5 is insufferable
+    https://www.reddit.com/r/ClaudeCode/comments/1vzi6wp/opus_5_is_insufferable/
+[4] (@chriscocreated) We got email!   Want to Keep Up With Farcaster Important & Thoughtful Casts?   now has email weekly and daily digests available   Choose 'Th
+    https://farcaster.xyz/chriscocreated/0x72976658
+[5] (r/LocalLLaMA) With HuggingFace, Nvidia is also acquiring llama.cpp and the team behind it
+    https://www.reddit.com/r/LocalLLaMA/comments/1w01y1f/with_huggingface_nvidia_is_also_acquiring/
+[6] (@jacek) yesterday POV.co hit a record number of daily traders.  142 in a single day, roughly 15x our previous peak.
+    https://farcaster.xyz/jacek/0x3f5f56f7
+[7] (r/vibecoding) Saw this on another sub. Ouch. lol
+    https://www.reddit.com/r/vibecoding/comments/1vzcrbv/saw_this_on_another_sub_ouch_lol/
+[8] (@jacek) just messaged Racer on TG. no reply, but he read it.  maybe this Machi Big Brother deal isn't so far fetched after all.
+    https://farcaster.xyz/jacek/0x5f05dbff
+[9] (r/LocalLLaMA) No, Engrams won't let you run 1T models locally. It does something even better.
+    https://www.reddit.com/r/LocalLLaMA/comments/1w0198r/no_engrams_wont_let_you_run_1t_models_locally_it/
+[10] (@jacek) i'm ready for this 🫡 👀
+    https://farcaster.xyz/jacek/0x9aa4c13f
+[11] (r/LocalLLaMA) Qwen3.8-Flash-Next better then DeepSeek V4 Pro
+    https://www.reddit.com/r/LocalLLaMA/comments/1vzowwo/qwen38flashnext_better_then_deepseek_v4_pro/
+[12] (@jacek) 👀
+    https://farcaster.xyz/jacek/0xe88975fe
