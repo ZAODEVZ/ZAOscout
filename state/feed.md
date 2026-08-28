@@ -1184,3 +1184,12 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1vzowwo/qwen38flashnext_better_then_deepseek_v4_pro/
 [12] (@jacek) 👀
     https://farcaster.xyz/jacek/0xe88975fe
+
+---
+**ZAOscout digest - 3 items**
+[1] (@jacek) will have a look into it on Monday.
+    https://farcaster.xyz/jacek/0xcad80166
+[2] (@dwr.eth) I was able to get the Farcaster client running on the iOS Simulator on my MacBook using Codex + GPT5.6 Sol and goal.   It took 2 hours and 1
+    https://farcaster.xyz/dwr.eth/0xc73059b4
+[3] (@dwr.eth) Cool to see the Farcaster client open source!
+    https://farcaster.xyz/dwr.eth/0x128c700e
