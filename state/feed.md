@@ -1193,3 +1193,12 @@
     https://farcaster.xyz/dwr.eth/0xc73059b4
 [3] (@dwr.eth) Cool to see the Farcaster client open source!
     https://farcaster.xyz/dwr.eth/0x128c700e
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) Did it show the green tick for you?
+    https://farcaster.xyz/chriscocreated/0xc456b436
+[2] (@chriscocreated) Commemorating Neynar with a WeCast - Free mint and HD option.  There have been a small number of WeCast pieces, starting with the OG piece o
+    https://farcaster.xyz/chriscocreated/0x7be8adf9
+[3] (@chriscocreated) New WeCast on the launchpad  (note to self - these always take me way longer than I think they are going to)
+    https://farcaster.xyz/chriscocreated/0xfba7db28
