@@ -1213,3 +1213,30 @@
     https://farcaster.xyz/chriscocreated/0xea542175
 [4] (@jacek) There will be signs...
     https://farcaster.xyz/jacek/0x57f008b5
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeAI) This Claude's response made me think about our relationship with smartphones.
+    https://www.reddit.com/r/ClaudeAI/comments/1w3g17r/this_claudes_response_made_me_think_about_our/
+[2] (@chriscocreated) Who is a definite for On the Sopha tomorrow Wednesday 11:30 Eastern? Discussing the thoughtful casts of the week curated on Sopha?  We’ll do
+    https://farcaster.xyz/chriscocreated/0xba0af80a
+[3] (r/ClaudeAI) I can't do Opus 5 anymore. Every time I talk with it and try to read it, I literally get so confused. Has anyone figured out how to not make it weird to work with?
+    https://www.reddit.com/r/ClaudeAI/comments/1w3xtsz/i_cant_do_opus_5_anymore_every_time_i_talk_with/
+[4] (@chriscocreated) Ah love to hear that 💜
+    https://farcaster.xyz/chriscocreated/0x09f97fa4
+[5] (r/LocalLLaMA) New Gemma models on arena ai
+    https://www.reddit.com/r/LocalLLaMA/comments/1w47nif/new_gemma_models_on_arena_ai/
+[6] (@chriscocreated) You can see both from direct links on the frame (near the bottom)
+    https://farcaster.xyz/chriscocreated/0x1f61ce63
+[7] (r/LocalLLaMA) MTP released for Qwen3.8-Flash-Next-GGUF
+    https://www.reddit.com/r/LocalLLaMA/comments/1w42biu/mtp_released_for_qwen38flashnextgguf/
+[8] (@chriscocreated) Thanks dude!
+    https://farcaster.xyz/chriscocreated/0x2d3803e6
+[9] (r/LocalLLaMA) ExLlamav3 Recent Updates : CPU offload, GLM-5.3-FLASH, Qwen3.8-Flash, SC Quants ++
+    https://www.reddit.com/r/LocalLLaMA/comments/1w44jnv/exllamav3_recent_updates_cpu_offload_glm53flash/
+[10] (r/ClaudeAI) Weekly Limit on Pro vs Max
+    https://www.reddit.com/r/ClaudeAI/comments/1w465ko/weekly_limit_on_pro_vs_max/
+[11] (r/LocalLLaMA) Qwen 3.8 27b (Q4KM) oneshot a Super Mario clone
+    https://www.reddit.com/r/LocalLLaMA/comments/1w4821c/qwen_38_27b_q4km_oneshot_a_super_mario_clone/
+[12] (r/LocalLLaMA) I pushed Qwen3.8-27B to 2.000 prefill per second and 132 decode per second on A RTX 3090.
+    https://www.reddit.com/r/LocalLLaMA/comments/1w49id7/i_pushed_qwen3827b_to_2000_prefill_per_second_and/
