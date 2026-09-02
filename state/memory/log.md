@@ -1164,3 +1164,7 @@
     https://www.reddit.com/r/LocalLLaMA/comments/1w4821c/qwen_38_27b_q4km_oneshot_a_super_mario_clone/
 [12] (r/LocalLLaMA) I pushed Qwen3.8-27B to 2.000 prefill per second and 132 decode per second on A RTX 3090.
     https://www.reddit.com/r/LocalLLaMA/comments/1w49id7/i_pushed_qwen3827b_to_2000_prefill_per_second_and/
+
+## 2026-09-02T17:06:20.664Z
+[1] (@jacek) 72% of people on POV say Base season is officially back.  https://pov.co/markets/is-base-season-officially-back
+    https://farcaster.xyz/jacek/0x838e96f5
