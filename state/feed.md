@@ -1245,3 +1245,12 @@
 **ZAOscout digest - 1 items**
 [1] (@jacek) 72% of people on POV say Base season is officially back.  https://pov.co/markets/is-base-season-officially-back
     https://farcaster.xyz/jacek/0x838e96f5
+
+---
+**ZAOscout digest - 3 items**
+[1] (@jacek) Robinhood is doing over $1 BILLION in daily DEX volume, with thousands of new tokens launching every day.  Just when people thought the meme
+    https://farcaster.xyz/jacek/0x17e07e13
+[2] (@jacek) Going live on Late Nite Onchain (https://x.com/lateniteonchain) today.  Come hang out and hear all about POV.co, what we're building, and wh
+    https://farcaster.xyz/jacek/0x68fb7a75
+[3] (@jacek) #26 on the Base chain leaderboard and still day one.  shipping this week: > coinflip, a new side quest on the daily pot > X posts tied to ma
+    https://farcaster.xyz/jacek/0xf016fef2
