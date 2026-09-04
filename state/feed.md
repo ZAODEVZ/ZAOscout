@@ -1254,3 +1254,16 @@
     https://farcaster.xyz/jacek/0x68fb7a75
 [3] (@jacek) #26 on the Base chain leaderboard and still day one.  shipping this week: > coinflip, a new side quest on the daily pot > X posts tied to ma
     https://farcaster.xyz/jacek/0xf016fef2
+
+---
+**ZAOscout digest - 5 items**
+[1] (@jacek) 👀
+    https://farcaster.xyz/jacek/0x8b775bd1
+[2] (@jacek) Waiting patiently, sir 🫡
+    https://farcaster.xyz/jacek/0xa000b369
+[3] (@jacek) already available, you can bridge $DEGEN to Robinhood Chain via Stargate today.
+    https://farcaster.xyz/jacek/0xd8b4ddc1
+[4] (@jacek) Base remains undefeated.  Humanity: restored
+    https://farcaster.xyz/jacek/0x44c6e439
+[5] (@jacek) We’re live now on Late Nite Onchain.  Come hang out and hear all about POV, what we’re building, and where Opinion Markets are headed.  Tune
+    https://farcaster.xyz/jacek/0xe899fb13
