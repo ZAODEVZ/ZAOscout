@@ -1267,3 +1267,12 @@
     https://farcaster.xyz/jacek/0x44c6e439
 [5] (@jacek) We’re live now on Late Nite Onchain.  Come hang out and hear all about POV, what we’re building, and where Opinion Markets are headed.  Tune
     https://farcaster.xyz/jacek/0xe899fb13
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) Yes Probably  We don’t know yet  Cassie will fork if they don’t get it formally
+    https://farcaster.xyz/chriscocreated/0xd9737fcb
+[2] (@chriscocreated) hey - click the view the art button in the app (or go looking on opensea etc)
+    https://farcaster.xyz/chriscocreated/0xd19de556
+[3] (@chriscocreated) ⏰ 48 hrs left to mint if you haven't already  Thank you to the 71 who bought the HD version 💜 (and the dude who has listed an open free min
+    https://farcaster.xyz/chriscocreated/0x0c85050f
