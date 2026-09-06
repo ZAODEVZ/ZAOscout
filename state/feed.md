@@ -1276,3 +1276,22 @@
     https://farcaster.xyz/chriscocreated/0xd19de556
 [3] (@chriscocreated) ⏰ 48 hrs left to mint if you haven't already  Thank you to the 71 who bought the HD version 💜 (and the dude who has listed an open free min
     https://farcaster.xyz/chriscocreated/0x0c85050f
+
+---
+**ZAOscout digest - 8 items**
+[1] (@thezao) Lfg awesome to hear  reach out to
+    https://farcaster.xyz/thezao/0xb222335a
+[2] (@thezao) Hard agree
+    https://farcaster.xyz/thezao/0xb9ec07f6
+[3] (@thezao) Haha amazing
+    https://farcaster.xyz/thezao/0x0a71bdbe
+[4] (@chriscocreated) Excellent! Glad it was helpful gg  for this also
+    https://farcaster.xyz/chriscocreated/0xb7cfe1e5
+[5] (@chriscocreated) mmm odd, I've added some addiotnal error handling (although limited, becasue what you see is from Farcaster, not the app), can you try again
+    https://farcaster.xyz/chriscocreated/0x17f36b5a
+[6] (@chriscocreated) thanks! do you have eth in the wallet you're minting from? (and i need to improve error handling!)
+    https://farcaster.xyz/chriscocreated/0x30cce7c6
+[7] (@chriscocreated) Last 12 hours ~800 mints so far
+    https://farcaster.xyz/chriscocreated/0x15125261
+[8] (@chriscocreated) We're definitely On the Sopha this week. My wife is away and I'm going to be in need of some social interaction by Wednesday (11:30 ET)  htt
+    https://farcaster.xyz/chriscocreated/0x4ae1783f
