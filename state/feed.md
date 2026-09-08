@@ -1308,3 +1308,12 @@
     https://farcaster.xyz/chriscocreated/0x797d760a
 [5] (@chriscocreated) Congratulations   impressive consistency  Thank you for all you do here Collected
     https://farcaster.xyz/chriscocreated/0x79f7841a
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) The original Neynar nft app. They built a load of infra to run it that they realised was the better product, and the rest is history
+    https://farcaster.xyz/chriscocreated/0x2a1d501b
+[2] (@jacek) daily pot is one of our most used pages on POV.co right now  two reasons we think it works:  > resolution at the top of every hour. you win 
+    https://farcaster.xyz/jacek/0xc8bdfe65
+[3] (@jacek) Seemed like a good idea
+    https://farcaster.xyz/jacek/0x9e894da1
