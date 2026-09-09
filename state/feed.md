@@ -1317,3 +1317,16 @@
     https://farcaster.xyz/jacek/0xc8bdfe65
 [3] (@jacek) Seemed like a good idea
     https://farcaster.xyz/jacek/0x9e894da1
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) Come join me on the Sopha https://meet.google.com/cfw-ysog-yqc
+    https://farcaster.xyz/chriscocreated/0x7d2048eb
+[2] (@chriscocreated) haha yes - but you're reading is entirely valid! the ambiguity is all mine - I'm an idiot who's been awake for 10 hours :)
+    https://farcaster.xyz/chriscocreated/0xa369b408
+[3] (@chriscocreated) I love that  made an offer for one of these, I was very happy to accept - my first collection on my own contract back in '22   An experiment
+    https://farcaster.xyz/chriscocreated/0x197e4032
+[4] (@chriscocreated) reread my question - your answers make perfect sense. I'd ment to ask for any changes to the words describing the current culture. I like yo
+    https://farcaster.xyz/chriscocreated/0x84ee318d
+[5] (@chriscocreated) Am I understanding correctly that this is how you'd like to see the culture here shift, rather than how you currently see the culture?
+    https://farcaster.xyz/chriscocreated/0xc62272fa
