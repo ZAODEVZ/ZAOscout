@@ -1246,3 +1246,17 @@
     https://farcaster.xyz/chriscocreated/0x84ee318d
 [5] (@chriscocreated) Am I understanding correctly that this is how you'd like to see the culture here shift, rather than how you currently see the culture?
     https://farcaster.xyz/chriscocreated/0xc62272fa
+
+## 2026-09-10T16:57:47.509Z
+[1] (@thezao) Ellsworth maine
+    https://farcaster.xyz/thezao/0x919f45da
+[2] (@chriscocreated) Superstar! Thanks - next step to work out who actually collected
+    https://farcaster.xyz/chriscocreated/0xcaf3dd04
+[3] (@chriscocreated) What culture is this??
+    https://farcaster.xyz/chriscocreated/0xff3f3f03
+[4] (@chriscocreated) 🫡
+    https://farcaster.xyz/chriscocreated/0x826f2b80
+[5] (@chriscocreated) Anyone know how to find my old paragraph posts?
+    https://farcaster.xyz/chriscocreated/0x62a86016
+[6] (@jacek) Perfect weather today.
+    https://farcaster.xyz/jacek/0x5259e60d
