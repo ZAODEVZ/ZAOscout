@@ -1345,3 +1345,16 @@
     https://farcaster.xyz/chriscocreated/0x62a86016
 [6] (@jacek) Perfect weather today.
     https://farcaster.xyz/jacek/0x5259e60d
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) Are you at ns? What’s it like?
+    https://farcaster.xyz/chriscocreated/0x1b896a9c
+[2] (@chriscocreated) the culture here https://farcaster.xyz/chriscocreated/0x31154324
+    https://farcaster.xyz/chriscocreated/0x69f71ef3
+[3] (@chriscocreated) They are there still (and on arweave) but hard to find, and I can’t find the collection contracts atm
+    https://farcaster.xyz/chriscocreated/0x86281f2d
+[4] (@chriscocreated) I just added 0.0069 ETH to 's /poidh bounty run Arjan Run! 🏃‍♀️
+    https://farcaster.xyz/chriscocreated/0x818fb0f3
+[5] (@chriscocreated) this https://paragraph.com/
+    https://farcaster.xyz/chriscocreated/0x249f12cf
