@@ -1272,3 +1272,15 @@
     https://farcaster.xyz/chriscocreated/0x818fb0f3
 [5] (@chriscocreated) this https://paragraph.com/
     https://farcaster.xyz/chriscocreated/0x249f12cf
+
+## 2026-09-12T16:10:08.966Z
+[1] (@chriscocreated) ...Technology cuts both ways, but we can actively cultivate an environment that nurtures rigorous thought and serious artistic practice. If 
+    https://farcaster.xyz/chriscocreated/0x4b163e2c
+[2] (@chriscocreated) Some walking and talking on my Sopha thoughts.   It's bit rambly, so here's a tight version from gemini: I deeply believe in Farcaster’s pot
+    https://farcaster.xyz/chriscocreated/0x7181777e
+[3] (@chriscocreated) the meta challenge when your collection is an auto-curation of casts.  pkok cast about the collection now removed from the collection - as y
+    https://farcaster.xyz/chriscocreated/0x2a786971
+[4] (@chriscocreated) they are beutifully done, I'm pleased to give them space. Any thoughts on how the presentation can be improved are always welcome
+    https://farcaster.xyz/chriscocreated/0x3cb1bcb9
+[5] (@chriscocreated) Same
+    https://farcaster.xyz/chriscocreated/0x36a7baa4
