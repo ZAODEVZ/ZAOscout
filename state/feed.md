@@ -1371,3 +1371,16 @@
     https://farcaster.xyz/chriscocreated/0x3cb1bcb9
 [5] (@chriscocreated) Same
     https://farcaster.xyz/chriscocreated/0x36a7baa4
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) 🥹
+    https://farcaster.xyz/chriscocreated/0x00bab8a3
+[2] (@chriscocreated) Thanks for bringing this back into my life
+    https://farcaster.xyz/chriscocreated/0x217718a3
+[3] (@chriscocreated) The homegrown pumpkin seeds are giving me a lot of satisfaction rn
+    https://farcaster.xyz/chriscocreated/0xa1c59cc9
+[4] (@chriscocreated) Thanks Victor, I like your take. I hadn’t thought of cycling and cyclists in this way.
+    https://farcaster.xyz/chriscocreated/0x9617046e
+[5] (@chriscocreated) Glad you like where I’m heading. And a pertinent question as ever (have we had pertinent as word of the day yet?). The strategy rather depen
+    https://farcaster.xyz/chriscocreated/0x3b777a9f
