@@ -1384,3 +1384,16 @@
     https://farcaster.xyz/chriscocreated/0x9617046e
 [5] (@chriscocreated) Glad you like where I’m heading. And a pertinent question as ever (have we had pertinent as word of the day yet?). The strategy rather depen
     https://farcaster.xyz/chriscocreated/0x3b777a9f
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) Get back to work. And all power to you
+    https://farcaster.xyz/chriscocreated/0x93c8345e
+[2] (@chriscocreated) ok, I've got something for you. Was going to wait until you'd finished in Miami. It's much deeper than this, but it does have the trending f
+    https://farcaster.xyz/chriscocreated/0xb950c18c
+[3] (@chriscocreated) Hell yer Brad. Lets keep making the Farcaster we want. I'm building for this in a big way 🔜™️. lmk if you are interested in casting for dep
+    https://farcaster.xyz/chriscocreated/0x724a3d63
+[4] (@chriscocreated) I am the genie of the lamp. You can have one wish (so long as you wish for the deep client I’m building)
+    https://farcaster.xyz/chriscocreated/0x255a1ca8
+[5] (@chriscocreated) just DM'd you about a client I'm building that takes this to the next level
+    https://farcaster.xyz/chriscocreated/0x7f974a93
