@@ -1397,3 +1397,24 @@
     https://farcaster.xyz/chriscocreated/0x255a1ca8
 [5] (@chriscocreated) just DM'd you about a client I'm building that takes this to the next level
     https://farcaster.xyz/chriscocreated/0x7f974a93
+
+---
+**ZAOscout digest - 9 items**
+[1] (@chriscocreated) They let you ride a horse round central Paris??
+    https://farcaster.xyz/chriscocreated/0xf308591e
+[2] (@chriscocreated) Happy birthday - thank you for the laughter and leadership
+    https://farcaster.xyz/chriscocreated/0x6eb198a6
+[3] (@chriscocreated) Look mum we made it!
+    https://farcaster.xyz/chriscocreated/0x34ed3c83
+[4] (@chriscocreated) Normally playing Padel, but this time getting something out of the cupboard!
+    https://farcaster.xyz/chriscocreated/0xf0038b2f
+[5] (@chriscocreated) Haha. Working on my prison break!  It’s not too bad, working on today
+    https://farcaster.xyz/chriscocreated/0xf9867b3a
+[6] (@jacek) My take: hooks are fine, aggregators routing blind is the actual bug.  https://pov.co/markets/are-v4-hooks-doing-more-harm-than-good
+    https://farcaster.xyz/jacek/0x7b46058d
+[7] (@jacek) Only 19% of Uniswap v4 hooks are safe, per 0x.   says blame the routers.  Are hooks doing more harm than good?
+    https://farcaster.xyz/jacek/0x4d474a0e
+[8] (@jacek) new on POV.co: you can now attach an X post when you create a market.  the post embeds right on the market page, so the context sits next to
+    https://farcaster.xyz/jacek/0xd4a5e74c
+[9] (@jacek) Who did it better?
+    https://farcaster.xyz/jacek/0xf41528e7
