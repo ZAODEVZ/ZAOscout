@@ -1418,3 +1418,12 @@
     https://farcaster.xyz/jacek/0xd4a5e74c
 [9] (@jacek) Who did it better?
     https://farcaster.xyz/jacek/0xf41528e7
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) This is a true story
+    https://farcaster.xyz/chriscocreated/0x2eac1b5f
+[2] (@chriscocreated) My friend was a cereal entrepreneur. He tried one breakfast company and it didn’t work out.
+    https://farcaster.xyz/chriscocreated/0xa88be702
+[3] (@jacek) a few ideas we've been discussing for POV.co, and why we're not prioritizing them right now.  some of these are things i'd like us to build.
+    https://farcaster.xyz/jacek/0x1f2a808d
