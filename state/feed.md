@@ -1427,3 +1427,12 @@
     https://farcaster.xyz/chriscocreated/0xa88be702
 [3] (@jacek) a few ideas we've been discussing for POV.co, and why we're not prioritizing them right now.  some of these are things i'd like us to build.
     https://farcaster.xyz/jacek/0x1f2a808d
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) Side point I still find platform fees mental here 33% to
+    https://farcaster.xyz/chriscocreated/0xb3f45a7b
+[2] (@chriscocreated) Minted!
+    https://farcaster.xyz/chriscocreated/0x17a4ed11
+[3] (@chriscocreated) 🙌
+    https://farcaster.xyz/chriscocreated/0x751bb4be
