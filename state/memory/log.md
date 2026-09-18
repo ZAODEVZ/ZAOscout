@@ -1344,3 +1344,17 @@
     https://farcaster.xyz/chriscocreated/0x17a4ed11
 [3] (@chriscocreated) 🙌
     https://farcaster.xyz/chriscocreated/0x751bb4be
+
+## 2026-09-18T17:02:34.723Z
+[1] (@chriscocreated) How’s the move going?
+    https://farcaster.xyz/chriscocreated/0xfb88ac50
+[2] (@jacek) Earlier I mentioned launching a few tokens on RH. Seeing the response to $POOF, I'm doubling down on it instead. No other launches planned. 
+    https://farcaster.xyz/jacek/0x64f0abe8
+[3] (@jacek) CA: 0x1615C7761f08Be4B52dB72ca461a24aC268a2415 Chain: Robinhood Chain  Inspired by the classic WSB joke: if you lose money on Robinhood, jus
+    https://farcaster.xyz/jacek/0x3014b0b0
+[4] (@jacek) Meet POOF, the uninstall wizard 🪄  He thinks deleting the app deletes his losses. Hard to argue with that confidence.  $POOF is now live on
+    https://farcaster.xyz/jacek/0x1bc91d30
+[5] (@jacek) lol 😭
+    https://farcaster.xyz/jacek/0x287eff6f
+[6] (@jacek) 😍
+    https://farcaster.xyz/jacek/0x87c8b971
