@@ -1358,3 +1358,9 @@
     https://farcaster.xyz/jacek/0x287eff6f
 [6] (@jacek) 😍
     https://farcaster.xyz/jacek/0x87c8b971
+
+## 2026-09-19T16:21:27.765Z
+[1] (@chriscocreated) this is very cool  https://anyhumanever.com/
+    https://farcaster.xyz/chriscocreated/0x867b8799
+[2] (@jacek) How does $POOF help $DEGEN?  POOF’s main pool on Robinhood Chain is paired with DEGEN, giving traders a reason to use DEGEN too.  Today, DEG
+    https://farcaster.xyz/jacek/0x674ea23a
