@@ -1,0 +1,101 @@
+#!/usr/bin/env bash
+# scout-github - watch a GitHub repo's recent activity, keyless (no token).
+#
+# The GitHub REST API serves public commits / releases / issues unauthenticated
+# (60 req/hr per IP - plenty for a watch cadence). Discussions are GraphQL-only
+# in the API (needs a token), so we scrape the public /discussions web page for
+# recent titles instead. Same keyless ethos as the reddit/x/farcaster fetchers.
+#
+# Usage:
+#   scout-github <owner/repo>
+#   scout-github https://github.com/<owner>/<repo>[/...]
+#
+# Test hook: SCOUT_GH_FIXTURE_DIR=<dir> reads commits.json, releases.json,
+# issues.json, discussions.html from that dir instead of the network.
+#
+# Exit: 0 ok | 2 not found / fetch failed | 5 bad args
+
+set -uo pipefail
+UA="ZAOscout (+https://github.com/ZAODEVZ/ZAOscout)"
+API="https://api.github.com"
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: $0 <owner/repo or github.com URL>" >&2
+  exit 5
+fi
+
+ARG="$1"
+# Extract owner/repo from a URL or a bare owner/repo.
+if [[ "$ARG" =~ ^https?://github\.com/([^/]+)/([^/?#]+) ]]; then
+  REPO="${BASH_REMATCH[1]}/${BASH_REMATCH[2]}"
+elif [[ "$ARG" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]]; then
+  REPO="$ARG"
+else
+  echo "ERROR: expected <owner/repo> or a github.com repo URL" >&2
+  exit 5
+fi
+REPO="${REPO%.git}"
+
+FIX="${SCOUT_GH_FIXTURE_DIR:-}"
+gh_get() { # gh_get <api-path> <fixture-file>
+  if [[ -n "$FIX" ]]; then cat "$FIX/$2" 2>/dev/null; return; fi
+  curl -s -A "$UA" -H 'accept: application/vnd.github+json' --max-time 15 "$API/$1" 2>/dev/null
+}
+disc_html() {
+  if [[ -n "$FIX" ]]; then cat "$FIX/discussions.html" 2>/dev/null; return; fi
+  curl -s -A "Mozilla/5.0" --max-time 15 "https://github.com/$REPO/discussions" 2>/dev/null
+}
+
+COMMITS="$(gh_get "repos/$REPO/commits?per_page=5" commits.json)"
+RELEASES="$(gh_get "repos/$REPO/releases?per_page=1" releases.json)"
+ISSUES="$(gh_get "repos/$REPO/issues?per_page=6&state=open&sort=updated" issues.json)"
+DISC="$(disc_html)"
+
+if [[ -z "$COMMITS" || "$COMMITS" == *'"message": "Not Found"'* ]]; then
+  echo "ERROR: could not read $REPO (not found, or GitHub rate-limited this IP)" >&2
+  exit 2
+fi
+
+echo "=== GitHub: $REPO (keyless) ==="
+COMMITS="$COMMITS" RELEASES="$RELEASES" ISSUES="$ISSUES" DISC="$DISC" REPO="$REPO" python3 -c '
+import os, json, re, html
+
+def jload(s):
+    try: return json.loads(s)
+    except Exception: return None
+
+repo = os.environ["REPO"]
+
+rel = jload(os.environ.get("RELEASES",""))
+if isinstance(rel, list) and rel:
+    r = rel[0]
+    print("LATEST RELEASE: " + (r.get("name") or r.get("tag_name") or "?") + " (" + (r.get("published_at","") or "")[:10] + ")")
+
+commits = jload(os.environ.get("COMMITS","")) or []
+if isinstance(commits, list) and commits:
+    print("\nRECENT COMMITS:")
+    for c in commits[:5]:
+        msg = ((c.get("commit") or {}).get("message") or "").splitlines()[0][:90]
+        who = (((c.get("commit") or {}).get("author") or {}).get("name")) or (c.get("author") or {}).get("login") or "?"
+        sha = (c.get("sha") or "")[:7]
+        print("- " + sha + " " + msg + " (" + who + ")")
+
+issues = jload(os.environ.get("ISSUES","")) or []
+issues = [i for i in issues if isinstance(i, dict) and "pull_request" not in i]  # exclude PRs
+if issues:
+    print("\nOPEN ISSUES (recently updated):")
+    for i in issues[:5]:
+        print("- #" + str(i.get("number")) + " " + (i.get("title") or "")[:90])
+
+disc = os.environ.get("DISC","")
+links = re.findall(r"/" + re.escape(repo) + r"/discussions/(\d+)\"[^>]*>(?:<[^>]+>)*([^<]{4,120})", disc)
+seen = set(); rows = []
+for num, title in links:
+    t = html.unescape(re.sub(r"\s+", " ", title)).strip()
+    if t and num not in seen:
+        seen.add(num); rows.append((num, t))
+if rows:
+    print("\nRECENT DISCUSSIONS:")
+    for num, t in rows[:6]:
+        print("- #" + num + " " + t + " | https://github.com/" + repo + "/discussions/" + num)
+'

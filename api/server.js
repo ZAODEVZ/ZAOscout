@@ -15,6 +15,8 @@ import { fileURLToPath } from 'node:url';
 import { TIERS, tierFor } from './tiers.js';
 import { logUsage, leaderboard, countToday } from './usage.js';
 import { farcasterCapital, respectFor } from './identity.js';
+import { isAllowedFetchUrl } from '../scout/urlguard.js';
+import { verifyRequest, handleInteraction } from './discord.js';
 
 const pexec = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -32,13 +34,63 @@ function whoTier(req, url) {
   return { who: `anon:${ip}`, tier: TIERS.anon, token: null };
 }
 const json = (res, code, obj) => { res.writeHead(code, { 'content-type': 'application/json', 'access-control-allow-origin': '*' }); res.end(JSON.stringify(obj)); };
-const body = (req) => new Promise((r) => { let b = ''; req.on('data', (d) => (b += d)); req.on('end', () => { try { r(JSON.parse(b || '{}')); } catch { r({}); } }); });
+
+// Cap the request body. This is a public, keyless POST API - without a cap a
+// single client can stream an unbounded body and exhaust server memory (a
+// trivial DoS). Legitimate /claim and /digest bodies are well under 256KB.
+const MAX_BODY = Number(process.env.SCOUT_MAX_BODY || 256 * 1024);
+const body = (req) => new Promise((resolve, reject) => {
+  let b = '', size = 0, done = false;
+  req.on('data', (d) => {
+    if (done) return;                 // already over cap - drop further chunks, don't buffer
+    size += d.length;
+    if (size > MAX_BODY) { done = true; reject(new Error('PAYLOAD_TOO_LARGE')); return; }
+    b += d;
+  });
+  req.on('end', () => { if (done) return; try { resolve(JSON.parse(b || '{}')); } catch { resolve({}); } });
+  req.on('error', () => { if (!done) resolve({}); });
+});
+
+// Raw body string (same cap), needed where the exact bytes matter - Discord
+// signs timestamp + raw body, so we must verify against the untouched string,
+// not a re-serialized parse.
+const rawBody = (req) => new Promise((resolve, reject) => {
+  let b = '', size = 0, done = false;
+  req.on('data', (d) => {
+    if (done) return;
+    size += d.length;
+    if (size > MAX_BODY) { done = true; reject(new Error('PAYLOAD_TOO_LARGE')); return; }
+    b += d;
+  });
+  req.on('end', () => { if (!done) resolve(b); });
+  req.on('error', () => { if (!done) resolve(''); });
+});
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   const p = url.pathname;
   try {
     if (p === '/health') return json(res, 200, { ok: true });
+
+    // Discord slash-command endpoint (/research). Signature-verified, ungated
+    // (Discord has no ZAOscout token). Replies deferred, then edits in the
+    // followup once the research is done. See docs/DISCORD.md.
+    if (p === '/discord' && req.method === 'POST') {
+      const pub = process.env.DISCORD_PUBLIC_KEY;
+      if (!pub) return json(res, 503, { error: 'discord not configured (set DISCORD_PUBLIC_KEY)' });
+      const raw = await rawBody(req);
+      const sig = req.headers['x-signature-ed25519'];
+      const ts = req.headers['x-signature-timestamp'];
+      if (!verifyRequest(raw, sig, ts, pub)) { res.writeHead(401); return res.end('invalid request signature'); }
+      let interaction; try { interaction = JSON.parse(raw || '{}'); } catch { interaction = {}; }
+      const { response, followup } = handleInteraction(interaction, { appId: process.env.DISCORD_APP_ID });
+      json(res, 200, response);
+      if (followup) {
+        try { await logUsage({ who: 'discord', tier: 'discord', tool: 'research', target: (interaction.data && interaction.data.options && interaction.data.options[0] && interaction.data.options[0].value) || '' }); } catch {}
+        followup();   // fire-and-forget: edits the deferred message when done
+      }
+      return;
+    }
 
     if (p === '/claim' && req.method === 'POST') {
       const b = await body(req);
@@ -69,6 +121,14 @@ const server = http.createServer(async (req, res) => {
     if (p === '/fetch') {
       const target = url.searchParams.get('url');
       if (!target) return json(res, 400, { error: 'url required' });
+      // SSRF guard: only the supported platform hosts (or a bare tweet id).
+      const guard = isAllowedFetchUrl(target);
+      if (!guard.ok) {
+        return json(res, 400, {
+          error: `url not allowed: ${guard.reason}`,
+          allowed: 'reddit.com, x.com, twitter.com, farcaster.xyz, warpcast.com, redd.it, or a tweet id',
+        });
+      }
       await logUsage({ who, tier: tier.name, tool: 'fetch', target });
       const { stdout } = await pexec(BIN, [target], { timeout: 35000, maxBuffer: 6 * 1024 * 1024 });
       return json(res, 200, { tier: tier.name, content: stdout.trim() });
@@ -90,7 +150,14 @@ const server = http.createServer(async (req, res) => {
 
     return json(res, 404, { error: 'not found', routes: ['/fetch', '/digest', '/claim', '/me', '/chart', '/health'] });
   } catch (e) {
+    if (e.message === 'PAYLOAD_TOO_LARGE') return json(res, 413, { error: 'request body too large', limit: MAX_BODY });
     return json(res, 500, { error: e.message });
   }
 });
-server.listen(PORT, () => console.error(`[scout-api] listening on :${PORT} - GET /fetch /chart, POST /digest /claim`));
+
+// Only auto-listen when run directly (node api/server.js). When imported (tests)
+// the caller controls listen()/close() and the port.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) server.listen(PORT, () => console.error(`[scout-api] listening on :${PORT} - GET /fetch /chart, POST /digest /claim`));
+
+export { server };

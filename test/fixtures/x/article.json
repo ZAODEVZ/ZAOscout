@@ -1,0 +1,22 @@
+{
+  "code": 200,
+  "tweet": {
+    "author": { "screen_name": "heynavtoor", "name": "Nav" },
+    "created_at": "2026-06-01T12:00:00Z",
+    "likes": 120, "replies": 8, "views": 5400,
+    "text": "wrapping tweet text",
+    "article": {
+      "title": "The Keyless Web",
+      "preview_text": "Why first-party mirrors beat API keys.",
+      "content": {
+        "blocks": [
+          { "type": "header-one", "text": "The Keyless Web" },
+          { "type": "unstyled", "text": "Most tools need a key. This one does not." },
+          { "type": "header-two", "text": "How" },
+          { "type": "unordered-list-item", "text": "Read through a first-party mirror" },
+          { "type": "blockquote", "text": "No secrets means it is forkable." }
+        ]
+      }
+    }
+  }
+}

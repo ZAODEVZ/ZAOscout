@@ -96,7 +96,13 @@ emit_mirror_hints() {
 # Added 2026-06-08 (the README). The syndication tier below does NOT return article
 # bodies; FxTwitter exposes article.content.blocks (draft-js). Primary path now.
 FX_URL="https://api.fxtwitter.com/status/${ID}"
-FX=$(curl -sSL -A "$UA" --max-time 12 "$FX_URL" 2>/dev/null) || FX=""
+# Test hook: SCOUT_X_FIXTURE=<file> feeds a saved FxTwitter JSON response offline
+# (used by the Article-renderer tests, never in prod).
+if [[ -n "${SCOUT_X_FIXTURE:-}" && -f "${SCOUT_X_FIXTURE}" ]]; then
+  FX=$(cat "${SCOUT_X_FIXTURE}")
+else
+  FX=$(curl -sSL -A "$UA" --max-time 12 "$FX_URL" 2>/dev/null) || FX=""
+fi
 if [[ -n "$FX" && "${FX:0:1}" == "{" ]]; then
   FXOUT=$(echo "$FX" | python3 -c "
 import sys, json

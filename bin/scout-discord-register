@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+// scout-discord-register - register the /research slash command with Discord.
+//
+// Env (from .env or the shell):
+//   DISCORD_BOT_TOKEN   required - your app's bot token
+//   DISCORD_APP_ID      required - your application (client) id
+//   DISCORD_GUILD_ID    optional - register to ONE server (instant). Omit for a
+//                                  GLOBAL command (works everywhere, ~1h to appear).
+//
+// Run once after creating the app (and again if you change the command):
+//   node bin/scout-discord-register
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { loadDotenv } from '../scout/env.js';
+import { RESEARCH_COMMAND } from '../api/discord.js';
+
+const dir = path.dirname(fileURLToPath(import.meta.url));
+loadDotenv(path.join(dir, '..', '.env'));
+
+const token = process.env.DISCORD_BOT_TOKEN;
+const appId = process.env.DISCORD_APP_ID;
+const guildId = process.env.DISCORD_GUILD_ID;
+
+if (!token || !appId) {
+  console.error('Missing DISCORD_BOT_TOKEN and/or DISCORD_APP_ID (set them in .env). See docs/DISCORD.md.');
+  process.exit(1);
+}
+
+const scope = guildId ? `guild ${guildId}` : 'GLOBAL';
+const url = guildId
+  ? `https://discord.com/api/v10/applications/${appId}/guilds/${guildId}/commands`
+  : `https://discord.com/api/v10/applications/${appId}/commands`;
+
+const res = await fetch(url, {
+  method: 'POST',
+  headers: { authorization: `Bot ${token}`, 'content-type': 'application/json' },
+  body: JSON.stringify(RESEARCH_COMMAND),
+});
+
+if (!res.ok) {
+  console.error(`Failed (${res.status}): ${await res.text()}`);
+  process.exit(1);
+}
+
+const cmd = await res.json();
+console.log(`Registered /${cmd.name} to ${scope}.`);
+if (!guildId) console.log('Global commands can take up to ~1 hour to appear. Set DISCORD_GUILD_ID for instant registration on one server.');

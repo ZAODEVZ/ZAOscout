@@ -6,6 +6,8 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import fs from 'node:fs';
+import os from 'node:os';
 
 const pexec = promisify(execFile);
 const NAMED = { amp:'&', lt:'<', gt:'>', quot:'"', apos:"'", nbsp:' ', mdash:'—', ndash:'–', hellip:'…', rsquo:'’', lsquo:'‘', ldquo:'“', rdquo:'”' };
@@ -16,15 +18,37 @@ const decodeEnt = (t) => t
 
 const BIN = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'bin');
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36';
-const REDLIB = (process.env.REDLIB_INSTANCES || 'redlib.perennialte.ch reddit.rtrace.io redlib.privadency.com redlib.catsarch.com').split(/\s+/);
+const FALLBACK_REDLIB = ['redlib.perennialte.ch', 'reddit.rtrace.io', 'redlib.privadency.com', 'redlib.catsarch.com'];
+
+// Single source of truth for Redlib instances: REDLIB_INSTANCES override, else
+// the self-healed cache that scout-reddit refreshes from the official list
+// (~/.zaoscout/redlib-instances.txt), else the hardcoded fallback. This way the
+// watch/digest path benefits from the same self-heal as the CLI fetcher instead
+// of a separate stale list.
+export function getRedlibInstances(
+  cacheFile = path.join(process.env.SCOUT_CACHE_DIR || path.join(os.homedir(), '.zaoscout'), 'redlib-instances.txt'),
+) {
+  if (process.env.REDLIB_INSTANCES) return process.env.REDLIB_INSTANCES.split(/\s+/).filter(Boolean);
+  const out = [];
+  try {
+    for (const line of fs.readFileSync(cacheFile, 'utf-8').split('\n')) {
+      const h = line.trim();
+      if (h && !out.includes(h)) out.push(h);
+    }
+  } catch { /* no cache yet - scout-reddit/health populates it */ }
+  for (const f of FALLBACK_REDLIB) if (!out.includes(f)) out.push(f);
+  return out;
+}
 
 // --- Input validation: watchlist entries flow into URLs / fetcher args, so they
 //     must be strictly shaped to prevent URL/path injection. Reject anything else.
 const SUB_RE = /^[A-Za-z0-9_]{1,40}$/;                 // subreddit name
 const FID_RE = /^[0-9]{1,12}$/;                        // numeric Farcaster id
 const HANDLE_RE = /^[A-Za-z0-9_.-]{1,40}$/;            // fname or .eth handle
+const REPO_RE = /^[A-Za-z0-9_.-]{1,40}\/[A-Za-z0-9_.-]{1,100}$/; // owner/repo
 export const validSub = (s) => typeof s === 'string' && SUB_RE.test(s);
 export const validFcUser = (u) => typeof u === 'string' && (FID_RE.test(u) || HANDLE_RE.test(u));
+export const validRepo = (r) => typeof r === 'string' && REPO_RE.test(r);
 
 // --- Pure parsers (exported for tests; no network) ---
 
@@ -63,11 +87,33 @@ export function parseFarcasterCasts(stdout, user, limit = 8) {
   return items;
 }
 
+// Parse scout-github stdout into items (recent DISCUSSIONS are the high-signal
+// feed item for a repo - FIPs, proposals - each with a stable url).
+export function parseGithubActivity(stdout, repo, limit = 6) {
+  const items = [];
+  for (const line of stdout.split('\n')) {
+    const m = line.match(/^- #(\d+) (.+?) \| (https:\/\/github\.com\/\S+\/discussions\/\d+)/);
+    if (m) {
+      items.push({ source: 'github', repo: String(repo), id: `disc-${m[1]}`, title: `[${repo}] ${m[2].trim()}`.slice(0, 140), url: m[3], engagement: 0 });
+      if (items.length >= limit) break;
+    }
+  }
+  return items;
+}
+
 // --- Network fetchers (use the validated input + pure parsers) ---
+
+async function githubRepo(repo, limit = 6) {
+  if (!validRepo(repo)) { console.error(`[scout] skipping invalid github repo: ${JSON.stringify(repo)}`); return []; }
+  try {
+    const { stdout } = await pexec(path.join(BIN, 'scout-github'), [repo], { timeout: 30000, maxBuffer: 1024 * 1024 });
+    return parseGithubActivity(stdout, repo, limit);
+  } catch { return []; }
+}
 
 async function redditSub(sub, mode = 'hot', limit = 10) {
   if (!validSub(sub)) { console.error(`[scout] skipping invalid subreddit: ${JSON.stringify(sub)}`); return []; }
-  for (const inst of REDLIB) {
+  for (const inst of getRedlibInstances()) {
     try {
       const r = await fetch(`https://${inst}/r/${sub}/${mode}/`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(18000) });
       if (!r.ok) continue;
@@ -88,11 +134,12 @@ async function farcasterUser(handleOrFid, limit = 8) {
   } catch { return []; }
 }
 
-// watchlist: { reddit: ["LocalLLaMA","ClaudeAI"], farcaster: ["dwr.eth","3"], x: [...] }
+// watchlist: { reddit: [...], farcaster: [...], github: ["owner/repo"], x: [...] }
 export async function readWatchlist(wl) {
   const out = [];
   for (const sub of (wl.reddit || [])) out.push(...await redditSub(sub));
   for (const u of (wl.farcaster || [])) out.push(...await farcasterUser(u));
+  for (const repo of (wl.github || [])) out.push(...await githubRepo(repo));
   // x: timelines walled - skipped on purpose. Forward individual X links instead.
   return out;
 }

@@ -18,9 +18,10 @@ Platforms block generic scrapers but trust their own first-party clients. ZAOsco
 |--------|--------|-----------------|
 | **Reddit** | [Redlib](https://github.com/redlib-org/redlib) (emulates the Reddit Android app) | title, author, body, comment tree |
 | **X / Twitter** | [FxTwitter](https://github.com/FixTweet/FxTwitter) | tweet text, media, **full long-form Article body** |
-| **Farcaster** | [Haatz](https://haatz.quilibrium.com) (public Snapchain hub mirror) | cast text + embeds, profile, recent casts |
+| **Farcaster** | [Haatz](https://haatz.quilibrium.com) + Pinata (public Snapchain hub mirrors, with fallback) | cast text + embeds, profile, recent casts |
+| **GitHub** | public REST API + the discussions page | recent commits, latest release, open issues, discussions - keyless |
 
-No secrets means it's forkable: a clone works immediately, and it survives any repo reset because there's nothing to configure.
+No secrets means it's forkable: a clone works immediately, and it survives any repo reset because there's nothing to configure. After cloning, run `scout doctor` to see what's installed and configured.
 
 See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for the full method (and why the techniques most tutorials show you are already dead). New here, or picking this back up? Start with [STATUS.md](STATUS.md) - it captures what is shipped, what is parked, and how to resume.
 
@@ -29,8 +30,9 @@ See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for the full method (and why th
 ```bash
 git clone <this-repo> && cd ZAOscout
 ./setup.sh                 # chmod + dependency check, optionally adds bin/ to PATH
+scout doctor               # preflight: what's installed + configured (offline)
 scout https://www.reddit.com/r/LocalLLaMA/comments/...
-scout health               # verify all three fetchers still work
+scout health               # verify the fetchers still work live
 ```
 
 Requirements: `bash`, `curl`, `python3` (all standard on macOS/Linux). That's it.
@@ -42,8 +44,10 @@ Requirements: `bash`, `curl`, `python3` (all standard on macOS/Linux). That's it
 | `scout <url>` | auto-routes by host | the one you'll use |
 | `scout-reddit <url-or-/s/-link>` | Redlib (multi-instance fallback) | resolves `/s/` share links to canonical |
 | `scout-x <url-or-tweet-id>` | FxTwitter | renders draft-js Article blocks to markdown |
-| `scout-farcaster <url-or-fid>` | Haatz | resolves `@handle` -> FID, short-hash -> full cast |
-| `scout health` | all three | run weekly (cron) to catch silent breakage |
+| `scout-farcaster <url-or-fid>` | Haatz + Pinata (hub fallback) | resolves `@handle` -> FID, short-hash -> full cast |
+| `scout-github <owner/repo-or-url>` | GitHub REST + discussions | commits, latest release, open issues, discussions - keyless |
+| `scout doctor` | none (offline) | preflight: deps + what's configured + next steps |
+| `scout health` | all fetchers | run weekly (cron) to catch silent breakage |
 
 ## `scout watch` - the multi-platform feed
 
@@ -178,10 +182,27 @@ PORT=8799 node api/server.js     # GET /fetch  POST /digest  POST /claim  GET /c
 | [docs/SCHEDULED.md](docs/SCHEDULED.md) | Free serverless scheduled runs (GitHub Actions + local cron). |
 | [docs/CAPTURE-DISTRIBUTE.md](docs/CAPTURE-DISTRIBUTE.md) | The capture -> synthesize -> distribute loop and mining. |
 | [docs/MCP.md](docs/MCP.md) | Use ZAOscout from any AI agent via MCP. |
+| [docs/DISCORD.md](docs/DISCORD.md) | `/research <url or topic>` slash command - ask in Discord, get a grounded brief back. |
 | [docs/API.md](docs/API.md) | The HTTP API surface. |
 | [docs/TIERS.md](docs/TIERS.md) | Social-capital tiers (Farcaster / ZAO Respect). |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Architecture, how to add a source, conventions. |
 | [SECURITY.md](SECURITY.md) | Secret hygiene and the keyless guarantee. |
+
+## Session notes (2026-06-23)
+
+Research + work notes from the 2026-06-23 session, kept in [`notes/`](notes/). Personal/strategic - this branch is local-only, not pushed. Index: [notes/README.md](notes/README.md).
+
+| Note | What |
+|------|------|
+| [notes/SUMMARY.md](notes/SUMMARY.md) | One-page summary across everything below. Start here. |
+| [notes/CEF-APPLICATION.md](notes/CEF-APPLICATION.md) | CEF Creator Sprint application (Clanker Ecosystem Fund) - Farcaster composability + ZABAL/ZABAL Gamez. Ready to submit. |
+| [notes/INITIUM-SIGNIUM-RESEARCH.md](notes/INITIUM-SIGNIUM-RESEARCH.md) | Initium.Builders deep dive (systems-thinking console on Intuition L3, $TRUST, MOTIVUS ONE, the Motus Graph). |
+| [notes/INITIUM-FEEDBACK-FOR-AUGUST.md](notes/INITIUM-FEEDBACK-FOR-AUGUST.md) | 6-point feedback for August on Initium. Already sent. |
+| [notes/EF-STRUCTURE-RESEARCH.md](notes/EF-STRUCTURE-RESEARCH.md) | Ethereum Foundation restructure (5 clusters, 54 cuts, CROPS, Ethlabs, ETH -7%). |
+| [notes/UNLOCK-DAO-RESEARCH.md](notes/UNLOCK-DAO-RESEARCH.md) | Unlock Protocol DAO (UP token, Base, memberships) - ZAO gating prior-art. |
+| [notes/SIMMER-RESEARCH.md](notes/SIMMER-RESEARCH.md) | Simmer (simmer.markets) - prediction markets for AI agents. Relevant to WaveWarZ. |
+
+Also shipped this session: the `/research` Discord feature (branch `feat/discord-research`, pushed) and its live deploy on the VPS as `zaoscout-discord-bot.service`.
 
 ## License
 

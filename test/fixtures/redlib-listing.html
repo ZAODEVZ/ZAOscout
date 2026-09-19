@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="fixed_navbar">
+	<head>
+		
+		<title>
+	ClaudeAI
+	
+</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="View on Redlib, an alternative private front-end to Reddit.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!-- General PWA -->
+		<meta name="theme-color" content="#1F1F1F">
+		<!-- iOS Application -->
+		<meta name="apple-mobile-web-app-title" content="Redlib">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<!-- Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!-- iOS Logo -->
+		<link href="/touch-icon-iphone.png" rel="apple-touch-icon">
+		<!-- OpenSearch description file -->
+		<link rel="search" type="application/opensearchdescription+xml" title="Search Redlib" href="/opensearch.xml">
+		<!-- PWA Manifest -->
+		<link rel="manifest" type="application/json" href="/manifest.json">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="/style.css?v=0.36.0-yunyun">
+		<!-- Video quality -->
+		<div id="video_quality" data-value=""></div>
+		
+		</head>
+	<body class="
+		card
+		
+		 gold
+		 fixed_navbar">
+		<!-- NAVIGATION BAR -->
+		<nav class="
+			 fixed_navbar">
+			<div id="logo">
+				<a id="redlib" href="/"><span id="red">red</span><span id="lib">lib.</span></a>
+				
+	<details id="feeds">
+		<summary>Feeds</summary>
+		<div id="feed_list">
+			<p>MAIN FEEDS</p>
+			<a href="/">Home</a>
+			
+				<a href="/r/popular">Popular</a>
+				<a href="/r/all">All</a>
+			
+			
+		</div>
+	</details>
+
+			</div>
+			
+	<form action="/r/ClaudeAI/search" id="searchbox">
+	<input id="search" type="text" name="q" placeholder="Search" title="Search redlib" value="">
+	
+	<div id="inside">
+		<input type="checkbox" name="restrict_sr" id="restrict_sr" checked>
+		<label for="restrict_sr" class="search_label" title="Restrict search to this subreddit">in /r/ClaudeAI</label>
+	</div>
+	
+	<button class="submit">
+		<svg width="15" viewBox="0 0 110 100" fill="none" stroke-width="10" stroke-linecap="round">
+			<path d="M20 50 H100" />
+			<path d="M75 15 L100 50 L75 85" />
+			&rarr;
+		</svg>
+	</button>
+</form>
+
+			<div id="links">
+				<a id="reddit_link" href="https://www.reddit.com/r/ClaudeAI" rel="nofollow">
+					<span>reddit</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M22 2L12 22"/>
+						<path d="M2 6.70587C3.33333 8.07884 3.33333 11.5971 3.33333 11.5971M3.33333 19.647V11.5971M3.33333 11.5971C3.33333 11.5971 5.125 7.47817 8 7.47817C10.875 7.47817 12 8.85114 12 8.85114"/>
+					</svg>
+				</a>
+				
+				<a id="settings_link" href="/settings">
+					<span>settings</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<title>settings</title>
+						<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+					</svg>
+				</a>
+			</div>
+		</nav>
+		
+		<!-- MAIN CONTENT -->
+		
+	<main>
+		
+		<div id="column_one">
+			<form id="sort">
+				<div id="sort_options">
+					
+						
+		<a class="selected" href="/r/ClaudeAI/hot">
+			Hot
+		</a>
+	
+		<a  href="/r/ClaudeAI/new">
+			New
+		</a>
+	
+		<a  href="/r/ClaudeAI/top">
+			Top
+		</a>
+	
+		<a  href="/r/ClaudeAI/rising">
+			Rising
+		</a>
+	
+		<a  href="/r/ClaudeAI/controversial">
+			Controversial
+		</a>
+	
+					
+				</div>
+				
+			</form>
+
+			
+
+			
+
+			
+
+			
+			<div id="posts">
+			
+			
+			<hr class="sep" />
+			<div class="post stickied" id="1s7fepn">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author moderator" href="/u/sixbillionthsheep">u/sixbillionthsheep</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Mar 30 2026, 03:18:44 UTC">Mar 30 &#39;26</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Megathread List of Discussions%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#000000;"
+				dir="ltr"><span>Megathread List of Discussions</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1s7fepn/rclaudeai_list_of_ongoing_megathreads/">r/ClaudeAI List of Ongoing Megathreads</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_score" title="175">
+    
+    175
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>Please choose one of the following dedicated Megathreads discussing topics relevant to your issue.</p>
+
+<p><strong>UPDATE: Images and videos are now available in all comments (for now)</strong></p>
+
+<hr/>
+
+<p><strong>NEW: You can now see full logs and summaries of all recent problem reports submitted by <a href="/r/ClaudeAI">r/ClaudeAI</a> readers. These logs allow you to see how intensely people are experiencing problems at any time with Usage Limits, Performance, Bugs and Accounts. See <a href="/r/ClaudeAI/comments/1t33k25/rclaudeai_user_problem_report_log_and_surge/">https://www.reddit.com/r/ClaudeAI/comments/1t33k25/rclaudeai_user_problem_report_log_and_surge/</a></strong></p>
+
+<p><strong>UPDATE: All report posts are now mirrored here: <a href="/r/Claude_reports/">https://www.reddit.com/r/Claude_reports/</a> and linked to from the report log post.</strong></p>
+
+<hr/>
+
+<p><strong>Performance and Bugs Discussions</strong> :  <a href="/r/ClaudeAI/comments/1s7f72l/claude_performance_and_bugs_megathread_ongoing/">https://www.reddit.com/r/ClaudeAI/comments/1s7f72l/claude_performance_and_bugs_megathread_ongoing/</a></p>
+
+<p><strong>Usage Limits Discussions:</strong> <a href="/r/ClaudeAI/comments/1s7fcjf/claude_usage_limits_discussion_megathread_ongoing/">https://www.reddit.com/r/ClaudeAI/comments/1s7fcjf/claude_usage_limits_discussion_megathread_ongoing/</a></p>
+
+<hr/>
+
+<p>⭐ <strong>Built with Claude Project Showcase Megathread</strong> ⭐</p>
+
+<p><a href="/r/ClaudeAI/comments/1sly3jm/built_with_claude_project_showcase_megathread/">https://www.reddit.com/r/ClaudeAI/comments/1sly3jm/built_with_claude_project_showcase_megathread/</a></p>
+
+<hr/>
+
+<p><strong>Claude Competitor Comparison Megathread:</strong> <a href="/r/ClaudeAI/comments/1sxppkf/claude_competitor_comparison_megathread_sort_this/"><strong>https://www.reddit.com/r/ClaudeAI/comments/1sxppkf/claude_competitor_comparison_megathread_sort_this/</strong></a></p>
+
+<hr/>
+
+<p><strong>Claude Identity, Sentience and Expression Discussion Megathread</strong></p>
+
+<p><a href="/r/ClaudeAI/comments/1scy0ww/claude_identity_sentience_and_expression/">https://www.reddit.com/r/ClaudeAI/comments/1scy0ww/claude_identity_sentience_and_expression/</a></p>
+
+<hr/>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1s7fepn/rclaudeai_list_of_ongoing_megathreads/" class="post_comments" title="0 comments">0 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post stickied" id="1u4dij4">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/sixbillionthsheep">u/sixbillionthsheep</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 13 2026, 01:22:38 UTC">7d ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Moderator%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#2177bc;"
+				dir="ltr"><span>Moderator</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1u4dij4/megathread_for_us_government_suspension_of_fable/">Megathread for US government suspension of Fable and Mythos</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_score" title="1503">
+    
+    1.5k
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>Anthropic announcement: <a href="https://www.anthropic.com/news/fable-mythos-access">https://www.anthropic.com/news/fable-mythos-access</a></p>
+
+<p><strong>UPDATE</strong>: Refunds now being offered. Check your email.</p>
+
+<p>All posts about the suspension will be directed here.</p>
+
+<p>NOTE: This Megathread has been stickied to the subreddit.</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1u4dij4/megathread_for_us_government_suspension_of_fable/" class="post_comments" title="1474 comments">1.5k comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uaqyni">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/Terrible-Priority-21">u/Terrible-Priority-21</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 08:09:47 UTC">13h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Humor%22&restrict_sr=on"
+				class="post_flair"
+				style="color:black; background:#ffff00;"
+				dir="ltr"><span>Humor</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1uaqyni/ai_has_revealed_that_most_people_have_the_reading/">AI has revealed that most people have the reading ability at a third-grade level</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_media_content">
+		<a href="/preview/pre/815tebw0be8h1.png?auto=webp&#38;s=a67dd250728e13ee3c7f4bea93e336c641f4257a" class="post_media_image short" >
+			<img width="100%" height="100%" loading="lazy" alt="Post image" src="/preview/pre/815tebw0be8h1.png?auto=webp&#38;s=a67dd250728e13ee3c7f4bea93e336c641f4257a"/>
+		</a>
+	</div>
+	
+	<div class="post_score" title="1547">
+    
+    1.5k
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>Like, where do you think the AI learned all these phrases and em dashes from?</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1uaqyni/ai_has_revealed_that_most_people_have_the_reading/" class="post_comments" title="404 comments">404 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uau8au">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/Oliveaniss_">u/Oliveaniss_</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 11:27:09 UTC">10h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Humor%22&restrict_sr=on"
+				class="post_flair"
+				style="color:black; background:#ffff00;"
+				dir="ltr"><span>Humor</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1uau8au/new_devs_be_like/">New devs be like</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_media_content">
+		<a href="/preview/pre/awpf6u5laf8h1.jpeg?auto=webp&#38;s=44a2097d6004bb952a4b72691aaf824ddc2371de" class="post_media_image short" >
+			<img width="100%" height="100%" loading="lazy" alt="Post image" src="/preview/pre/awpf6u5laf8h1.jpeg?auto=webp&#38;s=44a2097d6004bb952a4b72691aaf824ddc2371de"/>
+		</a>
+	</div>
+	
+	<div class="post_score" title="789">
+    
+    789
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1uau8au/new_devs_be_like/" class="post_comments" title="126 comments">126 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uat4bc">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/BuildwithVignesh">u/BuildwithVignesh</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 10:24:08 UTC">11h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22News%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#000000;"
+				dir="ltr"><span>News</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1uat4bc/trump_on_anthropic_ceo_dario_and_ai_national/">Trump on Anthropic, CEO Dario and AI National Security</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	
+	<div class="post_media_content">
+        <video class="post_media_video short" width="720" height="407" poster="/preview/external-pre/YzQzcmo4dmJ6ZThoMchI3fPYUcgbbHSaXR9Xa2QFvcrW-GL3YtPXCE6-muyU.png?format=pjpg&#38;auto=webp&#38;s=81ad9cc91fbb3d9dd8fe30d222a1a93169fbda7d" controls preload="none">
+			<source src="/hls/hb4lx17cze8h1/HLSPlaylist.m3u8?a=1784584366%2CZGFhODE2YmZlNGQxZDNjMGI5NWY0ZmIxZmZjMmZjYTEwNGNmNDY1NDU5NGI2NzMxMGFmYjQ5MGE0NzM0NDI4NQ%3D%3D&#38;v=1&#38;f=sd" type="application/vnd.apple.mpegurl" />
+			<source src="/vid/hb4lx17cze8h1/CMAF" type="video/mp4" />
+		</video>
+	</div>
+	
+	
+	<div class="post_score" title="404">
+    
+    404
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>From a recent Axios interview, President Trump was asked about Anthropic, CEO Dario Amodei and whether AI could become a national security concern.</p>
+
+<p>He also discussed the possibility of using the Defense Production Act for AI regulation and shared his current view on Anthropic&#39;s role in the AI landscape.</p>
+
+<p><strong>Source:</strong> <a href="https://youtu.be/UuxNyX7We5U?si=xNfqd4V4wvYJqJem">Axios Show interview</a> released today.</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1uat4bc/trump_on_anthropic_ceo_dario_and_ai_national/" class="post_comments" title="210 comments">210 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1ub4fxx">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/Azellana0415">u/Azellana0415</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 18:56:11 UTC">2h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Built with Claude%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#fe7701;"
+				dir="ltr"><span>Built with Claude</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1ub4fxx/ccswitch/">CCSwitch</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_media_content">
+		<a href="/preview/pre/baf5c08oih8h1.png?auto=webp&#38;s=186e2b5a46ecb35e1f46cea63d65727557fe09df" class="post_media_image short" >
+			<img width="100%" height="100%" loading="lazy" alt="Post image" src="/preview/pre/baf5c08oih8h1.png?auto=webp&#38;s=186e2b5a46ecb35e1f46cea63d65727557fe09df"/>
+		</a>
+	</div>
+	
+	<div class="post_score" title="51">
+    
+    51
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>I can’t afford Claude Max.  </p>
+
+<p>But I can somehow scrape together enough for two Claude Pro accounts.  </p>
+
+<p>So for a while, my workflow looked like this:  </p>
+
+<p>Use one account until I got close to the limit during an active session, open another terminal instance, run /login, to make sure the active session is not interrupted.  </p>
+
+<p>Repeat.  </p>
+
+<p>It worked surprisingly well — until both accounts hit their limits, of course. But that wasn’t really the main problem.  </p>
+
+<p>The real problem was the manual switching.  </p>
+
+<p>Being able to automatically switch between accounts was a game changer for keeping my coding sessions going, especially when I was developing something important and didn’t want to lose momentum. But constantly switching terminals, logging in again, and checking usage got annoying fast.  </p>
+
+<p>So I built ccswitch.  </p>
+
+<p>It’s a small open-source tool that helps you manage and switch between your own Claude accounts more smoothly, without constantly running /login.  </p>
+
+<p>What it does:  </p>
+
+<ul>
+<li>Keeps multiple Claude accounts organized in one place</li>
+<li>Lets you switch accounts with a single command</li>
+<li>Shows your 5-hour and weekly usage across accounts</li>
+<li>Can automatically move you to the best available account before you hit your limit</li>
+<li>Picks the account with the most remaining room, or the one that refreshes soonest</li>
+<li>Keeps your login data encrypted locally on your own  machine</li>
+</ul>
+
+<p>The idea is simple:  </p>
+
+<p>If you already use more than one Claude account for work, coding, or research, ccswitch makes the switching process less painful and less disruptive.  </p>
+
+<p>It should also work with Claude Max in theory, but I mainly built it because I couldn’t afford Max yet and needed something practical for my own workflow.  </p>
+
+<p>It’s free and open source.  </p>
+
+<p>GitHub: GG-Santos/ccswitch  </p>
+
+<p>Would genuinely love feedback, especially from people who rely on Claude for long coding or writing sessions.   </p>
+
+<p>And if you find it useful, leaving a ⭐ on GitHub would mean a lot.</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1ub4fxx/ccswitch/" class="post_comments" title="6 comments">6 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uan2ow">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/Tiny_Dirt6979">u/Tiny_Dirt6979</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 04:28:04 UTC">17h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22News%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#000000;"
+				dir="ltr"><span>News</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1uan2ow/nobel_winner_john_jumper_to_leave_google_deepmind/">Nobel Winner John Jumper to Leave Google DeepMind for Anthropic</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<a class="post_thumbnail" href="/r/ClaudeAI/comments/1uan2ow/nobel_winner_john_jumper_to_leave_google_deepmind/" rel="nofollow">
+		
+		<div style="max-width:140px;max-height:117px;">
+			<img width="100%" height="100%" loading="lazy" alt="Thumbnail" src="/preview/pre/sgwvx4bm7d8h1.jpg?width=140&#38;height=117&#38;auto=webp&#38;s=b2dab2db7e9593c486fe6f63b81aef4c15a86b13"/>
+		</div>
+		
+		<span>gallery</span>
+	</a>
+	
+	<div class="post_score" title="654">
+    
+    654
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>NOBEL WINNER moves to Anthropic.</p>
+
+<p>John Jumper, who led AlphaFold and won the 2024 Nobel in Chemistry, is leaving Google DeepMind after 9 years to join Anthropic.</p>
+
+<p>- He shared that Nobel with DeepMind&#39;s own CEO</p>
+
+<p>- Google had him working on AI coding, not science</p>
+
+<p>- He leaves right after Gemini co-lead Noam Shazeer went to OpenAI</p>
+
+<p>- DeepMind also just lost David Silver, the mind behind AlphaGo</p>
+
+<p>✨️John Jumper (JohnJumperSci on x) said:</p>
+
+<p>&quot;After nearly 9 years, I have decided to leave Google DeepMind and join Anthropic (after taking some time to recharge). I am incredibly grateful for my time at GDM. Demis Hassabis took a real chance letting me lead the AlphaFold team just six months after finishing my PhD, and the entire GDM team taught me so much about how to do great science. GDM is a special place, and I’ll still be excited to hear about what amazing things they discover next.&quot;</p>
+
+<p>✨️Anthropic  is killing it with the 2026 hiring run:</p>
+
+<p>▪️ Andrej Karpathy (joined in May) — OpenAI  co-founder and ex-Tesla AI lead, who came from his own startup Eureka Labs to work on Claude pretraining.</p>
+
+<p>▪️ John Jumper (announced June 19) — Google DeepMind VP and 2024 Nobel laureate in Chemistry for AlphaFold, leaving after nearly nine years.</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1uan2ow/nobel_winner_john_jumper_to_leave_google_deepmind/" class="post_comments" title="64 comments">64 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uagwhk">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/benitoblanco888">u/benitoblanco888</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 19 2026, 23:20:58 UTC">22h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22:redditgold: Workaround%22&restrict_sr=on"
+				class="post_flair"
+				style="color:black; background:#e3891c;"
+				dir="ltr"><span class="emoji" style="background-image:url('/emoji/5knu5pox1guz_t5_3nqvj/redditgold');"></span><span> Workaround</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1uagwhk/claude_gave_me_the_number_to_a_phone_sex_line/">Claude gave me the number to a phone sex line instead of AMEX</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_media_content">
+		<a href="/preview/pre/cd76zw01pb8h1.jpeg?auto=webp&#38;s=3221756fe8edfb5e6338533342c2bb8aa0d12bf9" class="post_media_image short" >
+			<img width="100%" height="100%" loading="lazy" alt="Post image" src="/preview/pre/cd76zw01pb8h1.jpeg?auto=webp&#38;s=3221756fe8edfb5e6338533342c2bb8aa0d12bf9"/>
+		</a>
+	</div>
+	
+	<div class="post_score" title="1602">
+    
+    1.6k
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>So I was discussing with Claude a credit card bonus issue I was having with an American Express credit card and it told me to call customer service. Turned out it was a phone sex line. </p>
+
+<p>Casual response. </p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1uagwhk/claude_gave_me_the_number_to_a_phone_sex_line/" class="post_comments" title="161 comments">161 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uahx8i">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/ceRtzz">u/ceRtzz</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 00:08:50 UTC">21h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Claude Code%22&restrict_sr=on"
+				class="post_flair"
+				style="color:black; background:#d87757;"
+				dir="ltr"><span>Claude Code</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1uahx8i/update_weve_gone_ahead_and_reset_5hour_and_weekly/">Update: we&#39;ve gone ahead and reset 5-hour and weekly usage limits for everyone, across all plans. Enjoy your weekend!</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<a class="post_thumbnail no_thumbnail" href="https://x.com/ClaudeDevs/status/2068122937308426676" rel="nofollow">
+		
+		<svg viewBox="0 0 100 106" width="140" height="53" xmlns="http://www.w3.org/2000/svg">
+			<title>Thumbnail</title>
+			<path d="M35,15h-15a10,10 0,0,0 0,20h25a10,10 0,0,0 10,-10m-12.5,0a10, 10 0,0,1 10, -10h25a10,10 0,0,1 0,20h-15" fill="none" stroke-width="5" stroke-linecap="round"/>
+		</svg>
+		
+		<span>x.com</span>
+	</a>
+	
+	<div class="post_score" title="1345">
+    
+    1.3k
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/ClaudeAI/comments/1uahx8i/update_weve_gone_ahead_and_reset_5hour_and_weekly/" class="post_comments" title="156 comments">156 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1ub7lxv">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/ClaudeAI">r/ClaudeAI</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/One_Beginning2199">u/One_Beginning2199</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 20 2026, 21:09:04 UTC">43m ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/ClaudeAI/search?q=flair_name%3A%22Productivity%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#4eb171;"
+				dir="ltr"><span>Productivity</span></a>
+		
+		<a href="/r/ClaudeAI/comments/1ub7lxv/whats_your_mostused_claude_prompt_that_you_cant/">What’s your most-used Claude prompt that you can’t live without?</a>
+	</h2>
+</main></body></html>

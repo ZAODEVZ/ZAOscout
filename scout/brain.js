@@ -120,11 +120,14 @@ export function makeBrain() {
     // synthesize a connected brief that names the cross-cutting theme. cite-or-drop:
     // every claim carries its item index; the brief references items by [n].
     async digest(items, priorThemes = []) {
-      // items: [{ title, body, tag, url }]
-      const grounded = items.filter((it) => it.body && it.body.length >= 40);
-      if (!grounded.length) return '';
+      // items: [{ title, body, tag, url }]. Number by ORIGINAL position, not by a
+      // re-filtered subset: the caller's source list is numbered over all items,
+      // so the brief's [n] citations must use the same indices or they point at
+      // the wrong source link whenever an item fails to ground. Empty items are
+      // marked SKIP in the claims pass instead of being renumbered out.
+      if (!items.some((it) => it.body && it.body.length >= 40)) return '';
       const claimsSys = 'For each numbered item, write ONE factual claim (max 20 words) grounded ONLY in its text. Output one line per item as "n. claim". If an item is empty/off-topic, output "n. SKIP". No preamble.';
-      const claimsUser = grounded.map((it, i) => `[${i + 1}] ${it.title}\n${it.body.slice(0, 1500)}`).join('\n\n');
+      const claimsUser = items.map((it, i) => `[${i + 1}] ${it.title}\n${(it.body || '').slice(0, 1500)}`).join('\n\n');
       let claims;
       try { claims = (await call(cfg, claimsSys, claimsUser) || '').trim(); } catch { return ''; }
       if (!claims) return '';
@@ -165,6 +168,24 @@ export function makeBrain() {
         const out = (await call(cfg, system, `TITLE: ${title}\n\nCONTENT:\n${body.slice(0, 3000)}`) || '').trim();
         if (!out || /^skip$/i.test(out)) return '';
         return out.replace(/^["']|["']$/g, '').slice(0, 260) + `\n\n${url}`;
+      } catch { return ''; }
+    },
+
+    // Research brief for a single QUERY (a topic or one fetched URL), grounded in
+    // CONTEXT (a fetched body and/or web search results). Used by `/research` in
+    // Discord and the research CLI. Returns '' on failure so the caller can
+    // fall back to the raw context. cite-or-drop: grounds only in CONTEXT, and
+    // is told to flag what's missing rather than invent.
+    async research(query, context) {
+      const ctx = String(context || '').trim();
+      const system =
+        'You are a research scout. Given a QUERY and CONTEXT gathered from the web and social posts, write a SHORT brief (max 160 words): ' +
+        'one opening sentence that directly answers the query, then 2-4 tight bullet lines with the most important specifics (numbers, names, dates) - grounded ONLY in the CONTEXT. ' +
+        'If the CONTEXT is thin or off-topic, say briefly what is known and flag what is missing. No preamble, no fluff, no emojis.';
+      const user = `QUERY: ${String(query || '').slice(0, 300)}\n\nCONTEXT:\n${ctx.slice(0, 12000)}`;
+      try {
+        const out = (await call(cfg, system, user) || '').trim();
+        return out || '';
       } catch { return ''; }
     },
   };
