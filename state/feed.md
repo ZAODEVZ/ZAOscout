@@ -1465,3 +1465,8 @@
     https://farcaster.xyz/jacek/0x309130ea
 [2] (@jacek) Prepared for anything.
     https://farcaster.xyz/jacek/0x69de43d8
+
+---
+**ZAOscout digest - 1 items**
+[1] (@chriscocreated) was this you??
+    https://farcaster.xyz/chriscocreated/0xf6c0d609
