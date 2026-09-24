@@ -1374,3 +1374,9 @@
 ## 2026-09-23T17:48:24.169Z
 [1] (@chriscocreated) was this you??
     https://farcaster.xyz/chriscocreated/0xf6c0d609
+
+## 2026-09-24T17:49:46.367Z
+[1] (@chriscocreated) Dear Alina, I am touched that you would spend so many credits deeply coming to understand my practice but I’ll pass on this occasion
+    https://farcaster.xyz/chriscocreated/0x760d9745
+[2] (@chriscocreated) I’ll be there on a family holiday in Feb
+    https://farcaster.xyz/chriscocreated/0xe16fab19
