@@ -1380,3 +1380,15 @@
     https://farcaster.xyz/chriscocreated/0x760d9745
 [2] (@chriscocreated) I’ll be there on a family holiday in Feb
     https://farcaster.xyz/chriscocreated/0xe16fab19
+
+## 2026-09-26T17:02:02.303Z
+[1] (@chriscocreated) Walked past the site of the first /london farcaster meet-up.  I organised it just after the first FarCon. Anyone else remember it?
+    https://farcaster.xyz/chriscocreated/0xbee61c04
+[2] (@chriscocreated) Was this you?
+    https://farcaster.xyz/chriscocreated/0x7a92ddf4
+[3] (@chriscocreated) Shared this with Jcocreated and she gerfowed out loud in the street
+    https://farcaster.xyz/chriscocreated/0x3057cfd9
+[4] (@jacek) I dug into the first wallets that bought $POOF to understand how much supply snipers and bundlers picked up, where it went, and how much the
+    https://farcaster.xyz/jacek/0x60d6b8e0
+[5] (@jacek) New on POV this week👇  - Follow other users - Preview profiles on hover - New category sub-navigation bar - Like messages in Daily Pot chat
+    https://farcaster.xyz/jacek/0x82c5cdf0
