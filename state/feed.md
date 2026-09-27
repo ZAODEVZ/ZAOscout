@@ -1490,3 +1490,16 @@
     https://farcaster.xyz/jacek/0x60d6b8e0
 [5] (@jacek) New on POV this week👇  - Follow other users - Preview profiles on hover - New category sub-navigation bar - Like messages in Daily Pot chat
     https://farcaster.xyz/jacek/0x82c5cdf0
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) can’t go wrong
+    https://farcaster.xyz/chriscocreated/0xfb2d392e
+[2] (@chriscocreated) Great shout!
+    https://farcaster.xyz/chriscocreated/0x3f9494fe
+[3] (@chriscocreated) CHRIS CORP CREATES
+    https://farcaster.xyz/chriscocreated/0x0160bf5d
+[4] (@chriscocreated) 🐟
+    https://farcaster.xyz/chriscocreated/0xe730ab6a
+[5] (@chriscocreated) Exactly- an elegant solution
+    https://farcaster.xyz/chriscocreated/0xd6bc57b5
