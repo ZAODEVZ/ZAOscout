@@ -1404,3 +1404,7 @@
     https://farcaster.xyz/chriscocreated/0xe730ab6a
 [5] (@chriscocreated) Exactly- an elegant solution
     https://farcaster.xyz/chriscocreated/0xd6bc57b5
+
+## 2026-09-28T20:04:42.295Z
+[1] (@jacek) PFPs are now live on POV.co charts.  More social features on the way. 🎩
+    https://farcaster.xyz/jacek/0x4331bb09

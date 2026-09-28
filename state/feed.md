@@ -1503,3 +1503,8 @@
     https://farcaster.xyz/chriscocreated/0xe730ab6a
 [5] (@chriscocreated) Exactly- an elegant solution
     https://farcaster.xyz/chriscocreated/0xd6bc57b5
+
+---
+**ZAOscout digest - 1 items**
+[1] (@jacek) PFPs are now live on POV.co charts.  More social features on the way. 🎩
+    https://farcaster.xyz/jacek/0x4331bb09
