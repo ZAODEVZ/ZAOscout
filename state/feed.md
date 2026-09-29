@@ -1508,3 +1508,18 @@
 **ZAOscout digest - 1 items**
 [1] (@jacek) PFPs are now live on POV.co charts.  More social features on the way. 🎩
     https://farcaster.xyz/jacek/0x4331bb09
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) It really depends on the 1000 people.  if they understand the context or not (and if they don’t understand the context they probably won’t t
+    https://farcaster.xyz/chriscocreated/0x791b465d
+[2] (@chriscocreated) But only because her intentionality is different. I think if she shifted her intention towards her emotional honesty and the kind of impact 
+    https://farcaster.xyz/chriscocreated/0x1d30d5c8
+[3] (@chriscocreated) Exactly!
+    https://farcaster.xyz/chriscocreated/0x389556e3
+[4] (@chriscocreated) Being a ‘vast minority’ is an interesting image
+    https://farcaster.xyz/chriscocreated/0xfa55fc59
+[5] (@chriscocreated) I am in the vasdt minority of humans! which kinda makes it fjun - and results in me being missujndertood quite a lot :)
+    https://farcaster.xyz/chriscocreated/0x325eb748
+[6] (@jacek) The POOF Telegram is open 🎩  A home for the POOF Wizards. Come say gm.  https://t.me/poofonrh
+    https://farcaster.xyz/jacek/0x5119cd19
