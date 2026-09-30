@@ -1523,3 +1523,20 @@
     https://farcaster.xyz/chriscocreated/0x325eb748
 [6] (@jacek) The POOF Telegram is open 🎩  A home for the POOF Wizards. Come say gm.  https://t.me/poofonrh
     https://farcaster.xyz/jacek/0x5119cd19
+
+---
+**ZAOscout digest - 7 items**
+[1] (@chriscocreated) I’m sorry to hear this Willy. Hope all is good with you
+    https://farcaster.xyz/chriscocreated/0x8740525c
+[2] (@chriscocreated) Heya, Why is this your pinned cast? They stopped physical cards, and are now partnering
+    https://farcaster.xyz/chriscocreated/0x79babcc2
+[3] (@chriscocreated) Love that (the decision, not the institution supposed to develop you that make you more insecure).   Glad to hear you are owning it. To my m
+    https://farcaster.xyz/chriscocreated/0x1b079cee
+[4] (@chriscocreated) Indeed! Though I might change it to   Art is anything you want to get away with  Because if intent
+    https://farcaster.xyz/chriscocreated/0xe9c46990
+[5] (@chriscocreated) It comes from being one of the most important things in their world.   And for me taking on the identity of artist was transformative for me
+    https://farcaster.xyz/chriscocreated/0xa15d5604
+[6] (@jacek) We just added a feed to POV 👀  Follow people and see their latest trades, comments, markets they've created, and who they're following.  An
+    https://farcaster.xyz/jacek/0x548886d3
+[7] (@jacek) h00d names are now live.  100% of proceeds → $POOF buybacks.  h00d name holders will also receive a $POOF airdrop.  The rest stays in the ha
+    https://farcaster.xyz/jacek/0x21ca7cd0
