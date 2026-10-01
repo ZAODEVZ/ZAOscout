@@ -1438,3 +1438,11 @@
     https://farcaster.xyz/jacek/0x548886d3
 [7] (@jacek) h00d names are now live.  100% of proceeds → $POOF buybacks.  h00d name holders will also receive a $POOF airdrop.  The rest stays in the ha
     https://farcaster.xyz/jacek/0x21ca7cd0
+
+## 2026-10-01T18:47:23.401Z
+[1] (@chriscocreated) My teenage kid isn’t vibing that!!
+    https://farcaster.xyz/chriscocreated/0x620af2b9
+[2] (@chriscocreated) 🔜
+    https://farcaster.xyz/chriscocreated/0x0eef5450
+[3] (@jacek) I’ll be joining  today for a roundtable on memes and culture on Base.  Come hang out at 5:30 PM UTC / 1:30 PM ET 🎩  https://x.com/buildonba
+    https://farcaster.xyz/jacek/0xef4ce75e
