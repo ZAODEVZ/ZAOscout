@@ -1549,3 +1549,24 @@
     https://farcaster.xyz/chriscocreated/0x0eef5450
 [3] (@jacek) I’ll be joining  today for a roundtable on memes and culture on Base.  Come hang out at 5:30 PM UTC / 1:30 PM ET 🎩  https://x.com/buildonba
     https://farcaster.xyz/jacek/0xef4ce75e
+
+---
+**ZAOscout digest - 9 items**
+[1] (@chriscocreated) I can never ever spell it and always have to look it up to use it
+    https://farcaster.xyz/chriscocreated/0x1e240b08
+[2] (@chriscocreated) Haha it’s a terminal command to keep your Mac awake
+    https://farcaster.xyz/chriscocreated/0xf240c5c7
+[3] (@chriscocreated) Why did they make caffeinate so hard to spell??
+    https://farcaster.xyz/chriscocreated/0xb5049283
+[4] (@chriscocreated) Hell yer Arjan!
+    https://farcaster.xyz/chriscocreated/0x6a9065b1
+[5] (@chriscocreated) Negative Affect (Sadness, Fear, Distress): Heavily mediated by circuits involving the amygdala, periaqueductal gray, subgenual anterior cing
+    https://farcaster.xyz/chriscocreated/0xff64cd0f
+[6] (@jacek) Just added top tokens by volume and recently launched tokens to yeetr.fun.  Yeetr done before the weekend 🫡
+    https://farcaster.xyz/jacek/0x27d8d2b0
+[7] (@jacek) awesome tool 🍾
+    https://farcaster.xyz/jacek/0xee3a529c
+[8] (@jacek) Launch in chat. Trade in chat. Now claim your fees in chat too.  /fees → Claim all → paid. Gas is on us.  Close the browser and yeet with yo
+    https://farcaster.xyz/jacek/0x1a993a7c
+[9] (@jacek) paris?
+    https://farcaster.xyz/jacek/0xacf39199
