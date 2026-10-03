@@ -1570,3 +1570,26 @@
     https://farcaster.xyz/jacek/0x1a993a7c
 [9] (@jacek) paris?
     https://farcaster.xyz/jacek/0xacf39199
+
+---
+**ZAOscout digest - 10 items**
+[1] (@thezao) Zm we are live   Zaostock.com/live
+    https://farcaster.xyz/thezao/0xac17bbe5
+[2] (@chriscocreated) Waiting for the show to start at a dance venue near me (daughter is in the show raiser so I’m here eeeerly) this is the projected clock on t
+    https://farcaster.xyz/chriscocreated/0xa7487760
+[3] (@chriscocreated) I take this history and environment so much for granted. But it’s an amazing thing to just be on a walk past building that have been here 60
+    https://farcaster.xyz/chriscocreated/0x5526e705
+[4] (@chriscocreated) Who in the feed is most likely to caffeinate a situation? ☕️⚡️  (caffeinate /kaf-uh-neyt/ • verb: to take a low-stakes interaction or mild d
+    https://farcaster.xyz/chriscocreated/0x280c270b
+[5] (@chriscocreated) 👏🫖
+    https://farcaster.xyz/chriscocreated/0xbbd6e404
+[6] (@chriscocreated) Whoop! And oh no - I used it twice yesterday already. I might need to coffee before I work out out to weave this in
+    https://farcaster.xyz/chriscocreated/0xf8469ec7
+[7] (@jacek) Just added holder info to token pages on yeetr.fun.  See top holders, burned supply and liquidity pool in one place. A little due diligence 
+    https://farcaster.xyz/jacek/0x00029c36
+[8] (@jacek) 😥
+    https://farcaster.xyz/jacek/0xcac1ce20
+[9] (@jacek) either works
+    https://farcaster.xyz/jacek/0x795fd150
+[10] (@jacek) Launched yeetr.fun yesterday. Over 400 people stopped by.  The homepage features the top 10 tokens by volume. It’s still early, so even a sm
+    https://farcaster.xyz/jacek/0x1196da77
