@@ -1593,3 +1593,18 @@
     https://farcaster.xyz/jacek/0x795fd150
 [10] (@jacek) Launched yeetr.fun yesterday. Over 400 people stopped by.  The homepage features the top 10 tokens by volume. It’s still early, so even a sm
     https://farcaster.xyz/jacek/0x1196da77
+
+---
+**ZAOscout digest - 6 items**
+[1] (@thezao) Zm we live for zaostock
+    https://farcaster.xyz/thezao/0x25956e39
+[2] (@chriscocreated) keeping reading to the end
+    https://farcaster.xyz/chriscocreated/0xa3afdbd3
+[3] (@chriscocreated) Hell yer!
+    https://farcaster.xyz/chriscocreated/0x28cb3a9e
+[4] (@chriscocreated) This is really impressive. Also moving - weirdly alienating and disturbing.   I’m curious  do you think of this as a piece of art?
+    https://farcaster.xyz/chriscocreated/0x8fad880e
+[5] (@chriscocreated) Bust is coming - fabulous work    A combination from the FarCon Rome drawings.  Built with fragments by , , , , and .  An example, not a min
+    https://farcaster.xyz/chriscocreated/0x8a5583e9
+[6] (@chriscocreated) hell yer!  Oh shit I just remember I met  there to, back when he was just dipping his toe into FC.  Seems like an age ago.  Looking forward 
+    https://farcaster.xyz/chriscocreated/0xa56e81c0
