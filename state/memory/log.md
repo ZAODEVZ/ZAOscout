@@ -1502,3 +1502,21 @@
     https://farcaster.xyz/chriscocreated/0x8a5583e9
 [6] (@chriscocreated) hell yer!  Oh shit I just remember I met  there to, back when he was just dipping his toe into FC.  Seems like an age ago.  Looking forward 
     https://farcaster.xyz/chriscocreated/0xa56e81c0
+
+## 2026-10-05T21:03:51.821Z
+[1] (@chriscocreated) anyone get an easy way for me to get the protocol firehose to ingest in Sopha?
+    https://farcaster.xyz/chriscocreated/0x61c59c3e
+[2] (@chriscocreated) Testing something: just a developer poking around in production hoping nothing catches fire. If this shows up on your feed looking completel
+    https://farcaster.xyz/chriscocreated/0xc00272b7
+[3] (@chriscocreated) testy test test
+    https://farcaster.xyz/chriscocreated/0x511de0f7
+[4] (@chriscocreated) Testing something: just a developer poking around in production hoping nothing catches fire. If this shows up on your feed looking completel
+    https://farcaster.xyz/chriscocreated/0xa9cd02ee
+[5] (@chriscocreated) Nah it’s just AI slop some junior put together
+    https://farcaster.xyz/chriscocreated/0xa15184d8
+[6] (@jacek) launching a token is as simple as sending a text.  that’s it.  yeetr.fun 🎩
+    https://farcaster.xyz/jacek/0xac7a4e14
+[7] (@jacek) Daily Rewards are LIVE on Yeetr.fun  Every day we spend $150 DEGEN buying the top 3 tokens, then burn everything we buy.  🥇 $75  🥈 $45  🥉
+    https://farcaster.xyz/jacek/0xaf0d40ba
+[8] (@jacek) Yeetr Wallet is live 👛  Your own wallet inside Telegram. Send /wallet to YeetrBot and you're ready.  Buy in one tap. Track, sell and withdr
+    https://farcaster.xyz/jacek/0xc75b6f5e
