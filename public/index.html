@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAOscout</title>
+<meta name="description" content="Read Reddit, X and Farcaster from the command line. No API keys, no login.">
+<style>
+  :root { --bg: #ffffff; --fg: #111111; --muted: #555555; --line: #e3e3e3; --code: #f4f4f4; --link: #1a56db; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f0f10; --fg: #f2f2f2; --muted: #a8a8a8; --line: #2a2a2d; --code: #1b1b1e; --link: #7aa2ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 8px; }
+  p { margin: 0 0 12px; }
+  .lead { color: var(--muted); font-size: 1.1rem; }
+  pre { background: var(--code); border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto; font-size: 14px; }
+  ul { padding-left: 20px; }
+  a { color: var(--link); }
+  .button { display: inline-block; margin-top: 8px; padding: 10px 16px; border-radius: 8px; background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 600; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ZAOscout</h1>
+  <p class="lead">Read Reddit, X (including long-form Articles) and Farcaster from the command line. No API keys, no OAuth, no login, no browser.</p>
+  <a class="button" href="https://github.com/ZAODEVZ/ZAOscout">Get it on GitHub</a>
+
+  <h2>Try it</h2>
+<pre>git clone https://github.com/ZAODEVZ/ZAOscout.git && cd ZAOscout
+./setup.sh
+scout doctor
+scout https://farcaster.xyz/dwr.eth</pre>
+
+  <h2>What it reads</h2>
+  <ul>
+    <li><strong>Reddit:</strong> title, author, body and the comment tree.</li>
+    <li><strong>X:</strong> tweet text, media and the full Article body.</li>
+    <li><strong>Farcaster:</strong> casts, embeds, profiles and recent casts.</li>
+    <li><strong>GitHub:</strong> commits, releases, issues and discussions.</li>
+  </ul>
+
+  <h2>Three ways to use it</h2>
+  <p>A CLI, an MCP server for AI agents, and an HTTP API. It runs on your machine, or free on GitHub Actions with a daily digest.</p>
+
+  <h2>Read more</h2>
+  <ul>
+    <li><a href="https://github.com/ZAODEVZ/ZAOscout/blob/main/README.md">README</a></li>
+    <li><a href="https://github.com/ZAODEVZ/ZAOscout/blob/main/docs/HOW-IT-WORKS.md">How it works</a></li>
+    <li><a href="https://github.com/ZAODEVZ/ZAOscout/blob/main/STATUS.md">Status</a></li>
+  </ul>
+
+  <footer>Built by ZAO DEVZ. MIT license.</footer>
+</main>
+</body>
+</html>
