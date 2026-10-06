@@ -1627,3 +1627,18 @@
     https://farcaster.xyz/jacek/0xaf0d40ba
 [8] (@jacek) Yeetr Wallet is live 👛  Your own wallet inside Telegram. Send /wallet to YeetrBot and you're ready.  Buy in one tap. Track, sell and withdr
     https://farcaster.xyz/jacek/0xc75b6f5e
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) that’s a great one!
+    https://farcaster.xyz/chriscocreated/0xc5421183
+[2] (@chriscocreated) Loving my BUST #58 — hand-drawn in Rome, assembled on Base.  Traits drawn by , , , , , and .   Thank you  !
+    https://farcaster.xyz/chriscocreated/0x87e1bd36
+[3] (@chriscocreated) Y'all should prob know about affinity
+    https://farcaster.xyz/chriscocreated/0x38cc6b3f
+[4] (@chriscocreated) Exactly!
+    https://farcaster.xyz/chriscocreated/0xb2faf3fb
+[5] (@chriscocreated) I mean I’m in ms teams. I used the emoji to sympathise with a colleague. Colleague hovered on emoji and ms teams told him it meant confused.
+    https://farcaster.xyz/chriscocreated/0x54cbec38
+[6] (@jacek) try yeetr.fun on me 🎁  your first $1 trade is free. tap ⚡ $1 on any token in Telegram and it buys instantly. no deposit needed.  deposit $1
+    https://farcaster.xyz/jacek/0x0e334727
