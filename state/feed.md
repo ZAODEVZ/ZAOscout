@@ -1642,3 +1642,16 @@
     https://farcaster.xyz/chriscocreated/0x54cbec38
 [6] (@jacek) try yeetr.fun on me 🎁  your first $1 trade is free. tap ⚡ $1 on any token in Telegram and it buys instantly. no deposit needed.  deposit $1
     https://farcaster.xyz/jacek/0x0e334727
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) no, no dog, just me and my daughter ;)
+    https://farcaster.xyz/chriscocreated/0x68970e53
+[2] (@chriscocreated) Oh god!
+    https://farcaster.xyz/chriscocreated/0x6b357df6
+[3] (@chriscocreated) You appear to be in your natural habitat!
+    https://farcaster.xyz/chriscocreated/0x47104240
+[4] (@chriscocreated) This is an extremely confusing response! 😅
+    https://farcaster.xyz/chriscocreated/0x2012b022
+[5] (@chriscocreated) I’m all good! Just me and daughter number 1 (I only have 1) having an unofficial competition to see how bad it can get before either of us d
+    https://farcaster.xyz/chriscocreated/0x36ad9e32
