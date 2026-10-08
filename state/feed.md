@@ -1655,3 +1655,10 @@
     https://farcaster.xyz/chriscocreated/0x2012b022
 [5] (@chriscocreated) I’m all good! Just me and daughter number 1 (I only have 1) having an unofficial competition to see how bad it can get before either of us d
     https://farcaster.xyz/chriscocreated/0x36ad9e32
+
+---
+**ZAOscout digest - 2 items**
+[1] (@chriscocreated) A really nice piece of work, totally reduced to one pixelated image by farcaster.  Looking forward to a day when we are rendering work prope
+    https://farcaster.xyz/chriscocreated/0xe15d013a
+[2] (@chriscocreated) We have 3 Suri toothbrushes in our family (and 3 humans). My wife’s started randomly switching, so we got the manufacturer to replace, it ha
+    https://farcaster.xyz/chriscocreated/0xea6da0dc
