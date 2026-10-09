@@ -1662,3 +1662,16 @@
     https://farcaster.xyz/chriscocreated/0xe15d013a
 [2] (@chriscocreated) We have 3 Suri toothbrushes in our family (and 3 humans). My wife’s started randomly switching, so we got the manufacturer to replace, it ha
     https://farcaster.xyz/chriscocreated/0xea6da0dc
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) Happy to promote for genuine value add creators here  The /bizarrebeasts ($BB) Farcaster channel is 2 years old! 🎂  Claiming my FREE "A Yea
+    https://farcaster.xyz/chriscocreated/0xab4121ce
+[2] (@chriscocreated) Wen rap??
+    https://farcaster.xyz/chriscocreated/0x86a9f2ff
+[3] (@chriscocreated) So street!
+    https://farcaster.xyz/chriscocreated/0x8d487a47
+[4] (@chriscocreated) We’ve finally made the big time  https://www.theguardian.com/commentisfree/2026/oct/08/you-can-eat-kiwifruit-skin-benefits-fibre?CMP=Share_i
+    https://farcaster.xyz/chriscocreated/0x956ee05d
+[5] (@jacek) Degen frontend dev  just shipped https://Poof.bet 🎩  Built for the Poof community. 3 arcade games live, more coming.  Go play, win some $PO
+    https://farcaster.xyz/jacek/0x3df93949
