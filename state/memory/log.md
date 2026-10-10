@@ -1564,3 +1564,7 @@
     https://farcaster.xyz/chriscocreated/0x956ee05d
 [5] (@jacek) Degen frontend dev  just shipped https://Poof.bet 🎩  Built for the Poof community. 3 arcade games live, more coming.  Go play, win some $PO
     https://farcaster.xyz/jacek/0x3df93949
+
+## 2026-10-10T17:45:24.056Z
+[1] (@jacek) Most people still think in browsers and apps.  The next wave won't. They'll ask a chat, get an answer, and buy right there. Trading included
+    https://farcaster.xyz/jacek/0x6890d81d
