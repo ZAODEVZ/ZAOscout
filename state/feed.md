@@ -1708,3 +1708,18 @@
     https://farcaster.xyz/jacek/0x8f565f65
 [6] (@jacek) gm degens 🫡  crypto native is going through a rough patch.  after 10/10 last year, alt volumes have fallen close to all-time lows. most of 
     https://farcaster.xyz/jacek/0x88b989c7
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Feel for your dad
+    https://farcaster.xyz/chriscocreated/0x5dcdda3c
+[2] (@chriscocreated) oh I know that your intention was humour - and it was :)
+    https://farcaster.xyz/chriscocreated/0x7e1aa697
+[3] (@chriscocreated) This is nuts.
+    https://farcaster.xyz/chriscocreated/0xe9f5e0a0
+[4] (@chriscocreated) I checked that already. Maybe I delegated
+    https://farcaster.xyz/chriscocreated/0x18230489
+[5] (@jacek) honestly a bit of both rn.  Empire Builder could be a great fit for that. we’re heads down on the core product so can’t take on an integrati
+    https://farcaster.xyz/jacek/0x79828264
+[6] (@jacek) gm yeeters 🫡 quick update on yeetr.fun:  > cleaned up the Tokens page > added a leaderboard > new How it works page > mobile nav now has a 
+    https://farcaster.xyz/jacek/0x8dedefb2
