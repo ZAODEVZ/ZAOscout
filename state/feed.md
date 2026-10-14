@@ -1723,3 +1723,12 @@
     https://farcaster.xyz/jacek/0x79828264
 [6] (@jacek) gm yeeters 🫡 quick update on yeetr.fun:  > cleaned up the Tokens page > added a leaderboard > new How it works page > mobile nav now has a 
     https://farcaster.xyz/jacek/0x8dedefb2
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) Thank you!!
+    https://farcaster.xyz/chriscocreated/0x4586690f
+[2] (@jacek) 🫡
+    https://farcaster.xyz/jacek/0x61f24a27
+[3] (@jacek) I think options markets will ultimately be much bigger than perpetuals.  Perps are easier to understand. Options are far more interesting.  
+    https://farcaster.xyz/jacek/0xb024422c
