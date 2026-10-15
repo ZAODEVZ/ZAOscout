@@ -1732,3 +1732,16 @@
     https://farcaster.xyz/jacek/0x61f24a27
 [3] (@jacek) I think options markets will ultimately be much bigger than perpetuals.  Perps are easier to understand. Options are far more interesting.  
     https://farcaster.xyz/jacek/0xb024422c
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) 😂🧸
+    https://farcaster.xyz/chriscocreated/0x5d33026f
+[2] (@chriscocreated) That’s one natty hat you’ve got there
+    https://farcaster.xyz/chriscocreated/0xa05fc131
+[3] (@chriscocreated) https://farcaster.xyz/chriscocreated/0x9018c5e6
+    https://farcaster.xyz/chriscocreated/0x96bd109e
+[4] (@chriscocreated) Hurrah! Glad to hear you are in
+    https://farcaster.xyz/chriscocreated/0x7d3ebcbd
+[5] (@chriscocreated) Oh so 4g now works on the london tube, prob has for ages, I only just noticed. I am so not london any more.
+    https://farcaster.xyz/chriscocreated/0xe7219e0e
