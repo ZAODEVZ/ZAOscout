@@ -1745,3 +1745,30 @@
     https://farcaster.xyz/chriscocreated/0x7d3ebcbd
 [5] (@chriscocreated) Oh so 4g now works on the london tube, prob has for ages, I only just noticed. I am so not london any more.
     https://farcaster.xyz/chriscocreated/0xe7219e0e
+
+---
+**ZAOscout digest - 12 items**
+[1] (@chriscocreated) Please to see you here. You were one I was wondering if you’d accept the new terms of service.
+    https://farcaster.xyz/chriscocreated/0x82c123be
+[2] (@chriscocreated) though it's not designed as a daily driver
+    https://farcaster.xyz/chriscocreated/0x867d3cf9
+[3] (@chriscocreated) Hope more people read this thread rn.  "I've been here for a few years and I respect the heck out of so many of you, who are and will likely
+    https://farcaster.xyz/chriscocreated/0x4fd85825
+[4] (@chriscocreated) ofc, it's still the farcaster protocol.  everyone is behaving as if we are inside a walled garden, this all still sits on top of a *sufficie
+    https://farcaster.xyz/chriscocreated/0x5d8a5dd7
+[5] (@jacek) Stake 100k DEGEN (≈ $97) on yeetr.fun/predict, get $87 USDC instantly.  You keep the $87 no matter what.  Next Friday, Oct 23: DEGEN closes 
+    https://farcaster.xyz/jacek/0xa9aef40d
+[6] (@jacek) up up up
+    https://farcaster.xyz/jacek/0xa3725532
+[7] (@jacek) You can now earn yield on your $DEGEN with yeetr.fun/predict  Stake your DEGEN, earn USDC today. The tradeoff: if price rips, your tokens ca
+    https://farcaster.xyz/jacek/0xa07ad2af
+[8] (@jacek) New on Yeetr.fun: DEGEN Up or Down.  One question a week: will DEGEN close above the line on Friday?  Stake your DEGEN → you get paid in USD
+    https://farcaster.xyz/jacek/0x8fb0c4ea
+[9] (@dwr.eth) I just want it for me.
+    https://farcaster.xyz/dwr.eth/0x40a0d26b
+[10] (@dwr.eth) Snapchain node wishlist  1. I want to sync only a subset of the network.   2. I don’t want to keep more than 7 days worth of content.
+    https://farcaster.xyz/dwr.eth/0x35f104e9
+[11] (@dwr.eth) 5. Remove mini apps  6. Remove DMs  7. Have Claude make it super super fast
+    https://farcaster.xyz/dwr.eth/0x660b6bf5
+[12] (@dwr.eth) Client wishlist  1. Restrict notifications to mutuals only  2. Remove channels  3. Remove wallet   4. Reverse chronological following only f
+    https://farcaster.xyz/dwr.eth/0x597007de
