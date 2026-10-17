@@ -1772,3 +1772,22 @@
     https://farcaster.xyz/dwr.eth/0x660b6bf5
 [12] (@dwr.eth) Client wishlist  1. Restrict notifications to mutuals only  2. Remove channels  3. Remove wallet   4. Reverse chronological following only f
     https://farcaster.xyz/dwr.eth/0x597007de
+
+---
+**ZAOscout digest - 8 items**
+[1] (@chriscocreated) Agree. Though I think the issue is that people didn’t feel like they had other places to go to access their group chats and friends etc.   I
+    https://farcaster.xyz/chriscocreated/0x53f1c876
+[2] (@chriscocreated) Doesn’t seem the positioning to me. But I can see why people would be cross enough to do it
+    https://farcaster.xyz/chriscocreated/0xe9fe6033
+[3] (@chriscocreated) https://farcaster.xyz/chriscocreated/0x9a08eefd
+    https://farcaster.xyz/chriscocreated/0x0c2466dc
+[4] (@chriscocreated) Unless of course there are no diplomatic agreements between any of the farcaster clients/communities/states
+    https://farcaster.xyz/chriscocreated/0x9a08eefd
+[5] (@chriscocreated) LOUDER
+    https://farcaster.xyz/chriscocreated/0x953c67b7
+[6] (@jacek) Not sure how yeetr.fun/predict works? Made a short video to walk through it.  The simple version:  > Stake your DEGEN → get USDC right away,
+    https://farcaster.xyz/jacek/0x1e89409f
+[7] (@jacek) always 🫡
+    https://farcaster.xyz/jacek/0x425e0bef
+[8] (@dwr.eth) Neat
+    https://farcaster.xyz/dwr.eth/0xec0c8a22
