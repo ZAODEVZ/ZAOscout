@@ -1672,3 +1672,13 @@
     https://farcaster.xyz/jacek/0x425e0bef
 [8] (@dwr.eth) Neat
     https://farcaster.xyz/dwr.eth/0xec0c8a22
+
+## 2026-10-18T16:26:12.460Z
+[1] (@chriscocreated) really well, no damage, they had an absolute blast, ours had a great time. Felt great as parents.
+    https://farcaster.xyz/chriscocreated/0xcae6d487
+[2] (@chriscocreated) it’s true, aaaand I think we will see some of the old crowd coming back, and new aligned people.   Not that it’s necessarily your main conce
+    https://farcaster.xyz/chriscocreated/0x260121f8
+[3] (@chriscocreated) I can't download in the uk - wierd
+    https://farcaster.xyz/chriscocreated/0x948f921d
+[4] (@chriscocreated) Starting to research for this piece I'm making for Dover.  Exploring future orientated themes of immigration and citizenship.  Seems we had 
+    https://farcaster.xyz/chriscocreated/0xea2d1774
