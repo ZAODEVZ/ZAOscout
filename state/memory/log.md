@@ -1682,3 +1682,19 @@
     https://farcaster.xyz/chriscocreated/0x948f921d
 [4] (@chriscocreated) Starting to research for this piece I'm making for Dover.  Exploring future orientated themes of immigration and citizenship.  Seems we had 
     https://farcaster.xyz/chriscocreated/0xea2d1774
+
+## 2026-10-19T19:12:28.086Z
+[1] (@chriscocreated) Hey Arjan, thanks for the love. The piece won’t be closed until the vote is properly resolved - that everyone who doesn’t want to be in has 
+    https://farcaster.xyz/chriscocreated/0x388c75d3
+[2] (@chriscocreated) I think it will become more meaningful. There will be better options (Quorum has the DMs, there are at least a couple with miniapps) the bot
+    https://farcaster.xyz/chriscocreated/0x268adcab
+[3] (@chriscocreated) oh hell yer! I'd love to.
+    https://farcaster.xyz/chriscocreated/0x90f082eb
+[4] (@chriscocreated) aw you 😘
+    https://farcaster.xyz/chriscocreated/0xe5ae38cd
+[5] (@jacek) Yup, working on it.
+    https://farcaster.xyz/jacek/0xe8aa0747
+[6] (@jacek) It’s not staking in the usual “lock and collect rewards” sense.  Closer to selling a covered call: you get paid USDC now for agreeing to giv
+    https://farcaster.xyz/jacek/0xb07d05d4
+[7] (@jacek) Right now on yeetr.fun/predict you can stake 100k DEGEN (≈ $94) and earn $80 USDC upfront. It's yours to keep, no matter what.  Friday's clo
+    https://farcaster.xyz/jacek/0x25b96f0b
