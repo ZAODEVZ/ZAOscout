@@ -1819,3 +1819,22 @@
     https://farcaster.xyz/jacek/0xb07d05d4
 [7] (@jacek) Right now on yeetr.fun/predict you can stake 100k DEGEN (≈ $94) and earn $80 USDC upfront. It's yours to keep, no matter what.  Friday's clo
     https://farcaster.xyz/jacek/0x25b96f0b
+
+---
+**ZAOscout digest - 8 items**
+[1] (@chriscocreated) *why not both*
+    https://farcaster.xyz/chriscocreated/0x01eee36b
+[2] (@chriscocreated) which makes you beutiful
+    https://farcaster.xyz/chriscocreated/0x14e2db62
+[3] (@chriscocreated) thanks, yes token number is FID
+    https://farcaster.xyz/chriscocreated/0xddba6691
+[4] (@chriscocreated) Learning MadMapper projection mapping software
+    https://farcaster.xyz/chriscocreated/0x346a197f
+[5] (@chriscocreated) Anyone having any issues. Restart the miniapp.   I’ll take a look later
+    https://farcaster.xyz/chriscocreated/0x3b4808be
+[6] (@jacek) From the Up buyers 🙂   When you stake, your DEGEN backs "Up" shares that get sold to people betting DEGEN closes above the line. The USDC t
+    https://farcaster.xyz/jacek/0x1397a3c5
+[7] (@jacek) super simple version: every week you bet whether DEGEN ends above or below a price on Friday. Think it goes up? Buy Up. Think it won't? Stak
+    https://farcaster.xyz/jacek/0x00576c38
+[8] (@jacek) I've been in plenty of memecoins where I believed in the project but was nervous about the next week. The only move was to sell and hope to 
+    https://farcaster.xyz/jacek/0xffc8e022
