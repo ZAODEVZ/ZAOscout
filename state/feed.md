@@ -1838,3 +1838,22 @@
     https://farcaster.xyz/jacek/0x00576c38
 [8] (@jacek) I've been in plenty of memecoins where I believed in the project but was nervous about the next week. The only move was to sell and hope to 
     https://farcaster.xyz/jacek/0xffc8e022
+
+---
+**ZAOscout digest - 8 items**
+[1] (@chriscocreated) Engineers have feelings too! And families.   And culture = more diversity = more = ideas = cross fertilisation = better product
+    https://farcaster.xyz/chriscocreated/0xdf2b442c
+[2] (@chriscocreated) it'll be interesting to see how things go in the new order. I think there are now a lot of clear ways for people to make positive contributi
+    https://farcaster.xyz/chriscocreated/0x30efcafc
+[3] (@chriscocreated) Thinking about startup societies and the cultural layer. We tend towards being engineering heavy, but states are formed by emotion as much a
+    https://farcaster.xyz/chriscocreated/0x00bdae5a
+[4] (@chriscocreated) Ah thanks mobile rendering limits. Ns has more pixels
+    https://farcaster.xyz/chriscocreated/0x351eafca
+[5] (@chriscocreated) Click the pfp, click the bubble takes you to farcaster xyz
+    https://farcaster.xyz/chriscocreated/0x35ff23e6
+[6] (@jacek) Will DEGEN close above the line on Friday?  Think it will? Buy Up. Each share pays 1,000 DEGEN if it does. Think it won't? Stake DEGEN and g
+    https://farcaster.xyz/jacek/0x088cdd95
+[7] (@jacek) On Monday I let our dev team go. It was a tough call.  First, the important part: Tomasz () and Marcin () are fantastic engineers. Tomasz on
+    https://farcaster.xyz/jacek/0x8595cc8e
+[8] (@jacek) Right now on yeetr.fun, you can stake 100k DEGEN (~$95) and earn ~$71 USDC.  If Friday closes below $0.000953, you keep the USDC and your DE
+    https://farcaster.xyz/jacek/0xffc7f92b
