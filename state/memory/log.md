@@ -1734,3 +1734,15 @@
     https://farcaster.xyz/jacek/0x8595cc8e
 [8] (@jacek) Right now on yeetr.fun, you can stake 100k DEGEN (~$95) and earn ~$71 USDC.  If Friday closes below $0.000953, you keep the USDC and your DE
     https://farcaster.xyz/jacek/0xffc7f92b
+
+## 2026-10-22T17:55:11.829Z
+[1] (@chriscocreated) ‘Current mood’  Do they do ‘Movember’ in France?  Do people generally know what a Mo is??
+    https://farcaster.xyz/chriscocreated/0x2a867e8d
+[2] (@chriscocreated) Nice tash!
+    https://farcaster.xyz/chriscocreated/0xd446d139
+[3] (@chriscocreated) I’m not sure what you’re suggesting, but probs up for the experiment :)
+    https://farcaster.xyz/chriscocreated/0xa874902f
+[4] (@chriscocreated) How startup society’s and states decide what to preserve of the culture and art that is created is worth considering.   “The numbers are sta
+    https://farcaster.xyz/chriscocreated/0xe18d649c
+[5] (@chriscocreated) nice, thanks for the insight Chris. good to hear
+    https://farcaster.xyz/chriscocreated/0x99d816b4
