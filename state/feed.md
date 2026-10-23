@@ -1870,3 +1870,30 @@
     https://farcaster.xyz/chriscocreated/0xe18d649c
 [5] (@chriscocreated) nice, thanks for the insight Chris. good to hear
     https://farcaster.xyz/chriscocreated/0x99d816b4
+
+---
+**ZAOscout digest - 12 items**
+[1] (r/ClaudeAI) a preview of AGI..😭
+    https://www.reddit.com/r/ClaudeAI/comments/1xcsmzs/a_preview_of_agi/
+[2] (@chriscocreated) There is nothing to fear but fear itself (and beurocracy)
+    https://farcaster.xyz/chriscocreated/0x5202dbd4
+[3] (r/ClaudeCode) We should be furious about this. Let’s see if we can move the giant.
+    https://www.reddit.com/r/ClaudeCode/comments/1xcnrxk/we_should_be_furious_about_this_lets_see_if_we/
+[4] (@chriscocreated) That egg does not look happy!
+    https://farcaster.xyz/chriscocreated/0xfddaebff
+[5] (r/ClaudeCode) Your agent could be leaking your email online at this very moment!!
+    https://www.reddit.com/r/ClaudeCode/comments/1xd5bv6/your_agent_could_be_leaking_your_email_online_at/
+[6] (@chriscocreated) https://share.gemini.google/eiDQAEL3BIiE
+    https://farcaster.xyz/chriscocreated/0xa8664921
+[7] (r/ClaudeCode) AGIㅤㅤ
+    https://www.reddit.com/r/ClaudeCode/comments/1xcoblo/agiㅤㅤ/
+[8] (@chriscocreated) I'm intrigued by the Singapore analogy. And believe we have a long way to go with art and culture in web3/farcaster/ns  So I got Gemni to do
+    https://farcaster.xyz/chriscocreated/0x7f039e4f
+[9] (r/LocalLLaMA) Models disappearing from Huggingface
+    https://www.reddit.com/r/LocalLLaMA/comments/1xd7ptj/models_disappearing_from_huggingface/
+[10] (@jacek) DEGEN Up or Down closes in 2 hours.  18 of 26 traders are in profit this week. The top one is up $435.  Will DEGEN close above the line toda
+    https://farcaster.xyz/jacek/0xf3eacf9e
+[11] (r/ClaudeAI) Sweden’s government is blocking ChatGPT and Claude on staff computers from Monday
+    https://www.reddit.com/r/ClaudeAI/comments/1xdcmm4/swedens_government_is_blocking_chatgpt_and_claude/
+[12] (r/vibecoding) How many unfinished projects do you have?
+    https://www.reddit.com/r/vibecoding/comments/1xcdknv/how_many_unfinished_projects_do_you_have/
