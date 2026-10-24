@@ -1897,3 +1897,18 @@
     https://www.reddit.com/r/ClaudeAI/comments/1xdcmm4/swedens_government_is_blocking_chatgpt_and_claude/
 [12] (r/vibecoding) How many unfinished projects do you have?
     https://www.reddit.com/r/vibecoding/comments/1xcdknv/how_many_unfinished_projects_do_you_have/
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Described this to my wife. “It might bring me back to farcaster if that is what is going on”  Me: “you’ll need to join a techno optimistic n
+    https://farcaster.xyz/chriscocreated/0x51a577ff
+[2] (@chriscocreated) collected "trpplzine #1 | autumn 2026 | colour" by  on
+    https://farcaster.xyz/chriscocreated/0xafbeb550
+[3] (@chriscocreated) She was impressed
+    https://farcaster.xyz/chriscocreated/0xc34a6d15
+[4] (@chriscocreated) Had a conversation with a woman who yesterday used AI for the first time in her life. She's a mortgage advisor, two kids, active business wo
+    https://farcaster.xyz/chriscocreated/0xfeb63c8d
+[5] (@chriscocreated) nice, yes, it is clearer. you might want to update your channel description too
+    https://farcaster.xyz/chriscocreated/0x0924119f
+[6] (@jacek) New on Yeetr: Trade.  Swap any token on Base from your own wallet. See trending and new tokens, and run safety checks before you buy.  yeetr
+    https://farcaster.xyz/jacek/0x76f04e0b
