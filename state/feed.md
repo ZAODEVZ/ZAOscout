@@ -1912,3 +1912,16 @@
     https://farcaster.xyz/chriscocreated/0x0924119f
 [6] (@jacek) New on Yeetr: Trade.  Swap any token on Base from your own wallet. See trending and new tokens, and run safety checks before you buy.  yeetr
     https://farcaster.xyz/jacek/0x76f04e0b
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) correct (imo)
+    https://farcaster.xyz/chriscocreated/0x24e00b48
+[2] (@chriscocreated) Thanks Braq, this is my off the cuff take:  Is it optimistic in some way about our society  Is it using technology in a new way.   Does it e
+    https://farcaster.xyz/chriscocreated/0xa00d09a2
+[3] (@chriscocreated) This is techno-optimistic imo  what other art (on the timeline or not) reflects the  culture?
+    https://farcaster.xyz/chriscocreated/0xd2806499
+[4] (@chriscocreated) it gave me such a bolt of delight to see some inspiring art on my timeline here again. is there anyone around here that is inspiring you sti
+    https://farcaster.xyz/chriscocreated/0x5ae959cd
+[5] (@chriscocreated) I'd love that
+    https://farcaster.xyz/chriscocreated/0x96ce78e8
