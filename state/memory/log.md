@@ -1798,3 +1798,17 @@
     https://farcaster.xyz/chriscocreated/0x5ae959cd
 [5] (@chriscocreated) I'd love that
     https://farcaster.xyz/chriscocreated/0x96ce78e8
+
+## 2026-10-26T19:08:44.482Z
+[1] (@thezao) Gmzm
+    https://farcaster.xyz/thezao/0x99dbe7b5
+[2] (@chriscocreated) Awesome!
+    https://farcaster.xyz/chriscocreated/0xba2cb26a
+[3] (@chriscocreated) Love to see you building!
+    https://farcaster.xyz/chriscocreated/0xf7451ceb
+[4] (@chriscocreated) Hope so
+    https://farcaster.xyz/chriscocreated/0xfc568b59
+[5] (@chriscocreated) great question, instinctive response is absolutely. I suspect that chimes with some of the vision for the ns farcaster
+    https://farcaster.xyz/chriscocreated/0xd1288af8
+[6] (@chriscocreated) nice! still got my care business. Building  making art here an irl. and a couple of other things cooking
+    https://farcaster.xyz/chriscocreated/0xc60b8ac6
