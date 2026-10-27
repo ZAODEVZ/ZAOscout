@@ -1812,3 +1812,29 @@
     https://farcaster.xyz/chriscocreated/0xd1288af8
 [6] (@chriscocreated) nice! still got my care business. Building  making art here an irl. and a couple of other things cooking
     https://farcaster.xyz/chriscocreated/0xc60b8ac6
+
+## 2026-10-27T18:38:21.374Z
+[1] (r/ClaudeAI) Claude throwing punches out here
+    https://www.reddit.com/r/ClaudeAI/comments/1xganwd/claude_throwing_punches_out_here/
+[2] (@chriscocreated) Did some scrolling back - I could have sworn you were an art guy! 🌊
+    https://farcaster.xyz/chriscocreated/0x9ec408b0
+[3] (r/ClaudeAI) Claude Opus 5.5 is insane in creating creating 3D movies.
+    https://www.reddit.com/r/ClaudeAI/comments/1xgu73u/claude_opus_55_is_insane_in_creating_creating_3d/
+[4] (@chriscocreated) very cool - pulls a Rothko based on the light at your location. (And good to have  back on the timeline - more art related content please
+    https://farcaster.xyz/chriscocreated/0x5f82b97d
+[5] (r/ClaudeAI) Incredible accomplishment
+    https://www.reddit.com/r/ClaudeAI/comments/1xgjqrf/incredible_accomplishment/
+[6] (@chriscocreated) ooooh damn this is cool, watch to the end (its only 12 secs)
+    https://farcaster.xyz/chriscocreated/0x73a13c05
+[7] (r/ClaudeAI) Since the screen cracked, Claude helps fit the window into the normal area.
+    https://www.reddit.com/r/ClaudeAI/comments/1xgimyc/since_the_screen_cracked_claude_helps_fit_the/
+[8] (@chriscocreated) Great thoughts on a vision for legal services in our ai future. and applicable to many domains.
+    https://farcaster.xyz/chriscocreated/0x65b4505f
+[9] (r/ClaudeAI) Claude is performing 3.8x poorer compared to last week based on my claude code token analysis
+    https://www.reddit.com/r/ClaudeAI/comments/1xguw7r/claude_is_performing_38x_poorer_compared_to_last/
+[10] (@jacek) Options are live on yeetr.fun 🎉  Hold DEGEN? Stake it and get paid now, in USDC, every week. If DEGEN pumps past the week's price, you give
+    https://farcaster.xyz/jacek/0xb3f417b6
+[11] (r/ClaudeAI) Claude Code reverse-engineered the Xbox 360 kernel and wrote a native driver so Series X|S controllers work on it
+    https://www.reddit.com/r/ClaudeAI/comments/1xgtghe/claude_code_reverseengineered_the_xbox_360_kernel/
+[12] (r/ClaudeAI) Opus 5.5 touched a nerve 💀
+    https://www.reddit.com/r/ClaudeAI/comments/1xgwpbr/opus_55_touched_a_nerve/
