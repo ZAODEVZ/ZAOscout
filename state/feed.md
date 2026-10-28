@@ -1967,3 +1967,16 @@
     https://www.reddit.com/r/ClaudeAI/comments/1xgtghe/claude_code_reverseengineered_the_xbox_360_kernel/
 [12] (r/ClaudeAI) Opus 5.5 touched a nerve 💀
     https://www.reddit.com/r/ClaudeAI/comments/1xgwpbr/opus_55_touched_a_nerve/
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) hahah
+    https://farcaster.xyz/chriscocreated/0x4af9cd8e
+[2] (@chriscocreated) Oh sorry. Missed a whole word! There weren’t many of them either
+    https://farcaster.xyz/chriscocreated/0x10261e8d
+[3] (@chriscocreated) why wrong?
+    https://farcaster.xyz/chriscocreated/0x5b596f10
+[4] (@chriscocreated) He talked about it on GM yesterday  The "Crypto Resume": Farcaster will pivot toward structured education, spaced repetition, and computer-a
+    https://farcaster.xyz/chriscocreated/0xa71f9c32
+[5] (@jacek) Nice!
+    https://farcaster.xyz/jacek/0xa0aedceb
