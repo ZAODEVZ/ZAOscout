@@ -1980,3 +1980,24 @@
     https://farcaster.xyz/chriscocreated/0xa71f9c32
 [5] (@jacek) Nice!
     https://farcaster.xyz/jacek/0xa0aedceb
+
+---
+**ZAOscout digest - 9 items**
+[1] (@chriscocreated) Claude artifacts is 🔥 compared to Gemini.   Wife asked me to do slides for her for a report. I went Gemini first, looked good, but lots of 
+    https://farcaster.xyz/chriscocreated/0xa0187adb
+[2] (@chriscocreated) Are you using object social?
+    https://farcaster.xyz/chriscocreated/0xeba7ce5a
+[3] (@chriscocreated) Write your name with the Earth!  Here's chriscocreated, spelled in real places on Earth 🛰️  From Deception Island, Antarctica to Akimiski I
+    https://farcaster.xyz/chriscocreated/0x456daa1d
+[4] (@chriscocreated) *Good* Art changes…  most of it is slop because people are making without intention imo
+    https://farcaster.xyz/chriscocreated/0x89cea767
+[5] (@jacek) Possible but unlikely, there is a 1% chance that happens every 100 years.   Eventually something like a reset can happen and it’s why space 
+    https://farcaster.xyz/jacek/0xce1d3cb6
+[6] (@jacek) 💯 compassion costs nothing and scales infinitely. It’s the easiest no cost thing you can do to upscale your life.
+    https://farcaster.xyz/jacek/0x754fa2fb
+[7] (@jacek) Crazy times, your frames were epic 🔥
+    https://farcaster.xyz/jacek/0x319e0a21
+[8] (@jacek) A short message to DEGEN holders.  Some things are better said than written. 🎩
+    https://farcaster.xyz/jacek/0xce865107
+[9] (@jacek) AI and robotics are about to usher in the greatest age of abundance humanity has ever seen.  Elon predicts that in 10 to 20 years work will 
+    https://farcaster.xyz/jacek/0xb9f07047
