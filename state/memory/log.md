@@ -1870,3 +1870,17 @@
     https://farcaster.xyz/jacek/0xce865107
 [9] (@jacek) AI and robotics are about to usher in the greatest age of abundance humanity has ever seen.  Elon predicts that in 10 to 20 years work will 
     https://farcaster.xyz/jacek/0xb9f07047
+
+## 2026-10-31T17:37:24.609Z
+[1] (@chriscocreated) Looking for some interesting fc reading. Take a scroll of the Sopha feed.  Comfortable wisdom on Farcaster  (and anyone can always tag  if y
+    https://farcaster.xyz/chriscocreated/0x4c6fad1c
+[2] (@chriscocreated) Oh hell yer! Go Arjan!
+    https://farcaster.xyz/chriscocreated/0xf0373728
+[3] (@chriscocreated) damn, I really missjudged from a fc fashion perspective
+    https://farcaster.xyz/chriscocreated/0x9f18a702
+[4] (@chriscocreated) Indeed! was having a similar - see purple chat
+    https://farcaster.xyz/chriscocreated/0xe2620e2d
+[5] (@chriscocreated) I think people have had enough and want to move on cleanly. Which is fair enough in circumstance. But if we can use at least some of the fun
+    https://farcaster.xyz/chriscocreated/0xdd2f3d87
+[6] (@jacek) Happy Halloween 🎃  Quick video on how Yeetr’s DEGEN options work today.  I’re working on tightening spreads and figuring out the best way t
+    https://farcaster.xyz/jacek/0x61957cf7
