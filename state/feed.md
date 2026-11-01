@@ -2016,3 +2016,16 @@
     https://farcaster.xyz/chriscocreated/0xdd2f3d87
 [6] (@jacek) Happy Halloween 🎃  Quick video on how Yeetr’s DEGEN options work today.  I’re working on tightening spreads and figuring out the best way t
     https://farcaster.xyz/jacek/0x61957cf7
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) How were these made?
+    https://farcaster.xyz/chriscocreated/0xc6c77211
+[2] (@chriscocreated) This is cool  https://www.atlasobscura.com  Highlights the oddball and out of the way attractions in the area.   Nailed it for my local area
+    https://farcaster.xyz/chriscocreated/0x979d1f21
+[3] (@chriscocreated) Interesting and nice summary, thanks
+    https://farcaster.xyz/chriscocreated/0xf1a3ab76
+[4] (@chriscocreated) That is the correct answer
+    https://farcaster.xyz/chriscocreated/0x2bf5b638
+[5] (@chriscocreated) Trending conversation view is interesting (see answers painfully slow and also incomplete)
+    https://farcaster.xyz/chriscocreated/0xd5b61cce
