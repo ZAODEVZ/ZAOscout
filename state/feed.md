@@ -2029,3 +2029,14 @@
     https://farcaster.xyz/chriscocreated/0x2bf5b638
 [5] (@chriscocreated) Trending conversation view is interesting (see answers painfully slow and also incomplete)
     https://farcaster.xyz/chriscocreated/0xd5b61cce
+
+---
+**ZAOscout digest - 4 items**
+[1] (@chriscocreated) Who are your favourite artists still active here?
+    https://farcaster.xyz/chriscocreated/0x9fa25da6
+[2] (@chriscocreated) I don't like how art is swallowed into the timeline churn, so I'm doing something about it
+    https://farcaster.xyz/chriscocreated/0x3b8378a0
+[3] (@chriscocreated) wahoo! congrats buddy! :)
+    https://farcaster.xyz/chriscocreated/0x02f75a89
+[4] (@chriscocreated) haha indeed!
+    https://farcaster.xyz/chriscocreated/0xc5f046a4
