@@ -1906,3 +1906,15 @@
     https://farcaster.xyz/chriscocreated/0x02f75a89
 [4] (@chriscocreated) haha indeed!
     https://farcaster.xyz/chriscocreated/0xc5f046a4
+
+## 2026-11-03T20:01:52.482Z
+[1] (@chriscocreated) I totally agree with this. And part of the joy of a networked society is that we can be present across multiple communities and societies an
+    https://farcaster.xyz/chriscocreated/0x568fe2b7
+[2] (@chriscocreated) hey Green - I DM'd check your requests
+    https://farcaster.xyz/chriscocreated/0x99185c85
+[3] (@chriscocreated) How was it for you. Pure shilling slop when I went in, but I have a cold start
+    https://farcaster.xyz/chriscocreated/0xcf74ecbd
+[4] (@chriscocreated) I’ve DM’d please check your requests cause you don’t follow me. Bizarre thought you’d be interested
+    https://farcaster.xyz/chriscocreated/0xe1a3f9a3
+[5] (@chriscocreated) Social Singapore needs art & culture so that creativity doesn't become stifled in an engineering monoculture. I've been thinking about this 
+    https://farcaster.xyz/chriscocreated/0xab6cf34d
