@@ -2053,3 +2053,18 @@
     https://farcaster.xyz/chriscocreated/0xe1a3f9a3
 [5] (@chriscocreated) Social Singapore needs art & culture so that creativity doesn't become stifled in an engineering monoculture. I've been thinking about this 
     https://farcaster.xyz/chriscocreated/0xab6cf34d
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) do you have a tldttm (to long didn't travel to mumbai)?
+    https://farcaster.xyz/chriscocreated/0xa40bbad5
+[2] (@chriscocreated) ok this is up a level!
+    https://farcaster.xyz/chriscocreated/0x9f25ade2
+[3] (@chriscocreated) hehe it's working!
+    https://farcaster.xyz/chriscocreated/0x5546a726
+[4] (@chriscocreated) One of the up/downsides of vibe coding is while I'm waiting for turns to complete I tend to work on a distracting side project.  Currently b
+    https://farcaster.xyz/chriscocreated/0xb489a029
+[5] (@chriscocreated) very cool. love the main character. look and feel is great. Will be interested to see the game elements
+    https://farcaster.xyz/chriscocreated/0xb685500b
+[6] (@dwr.eth) Test test test
+    https://farcaster.xyz/dwr.eth/0x8615535b
