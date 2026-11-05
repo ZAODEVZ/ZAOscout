@@ -2068,3 +2068,18 @@
     https://farcaster.xyz/chriscocreated/0xb685500b
 [6] (@dwr.eth) Test test test
     https://farcaster.xyz/dwr.eth/0x8615535b
+
+---
+**ZAOscout digest - 6 items**
+[1] (@thezao) Welcome.
+    https://farcaster.xyz/thezao/0xaa47295d
+[2] (@chriscocreated) nothing like an english forest in the mist - beutiful
+    https://farcaster.xyz/chriscocreated/0x0920c9c3
+[3] (@chriscocreated) love that thought
+    https://farcaster.xyz/chriscocreated/0xb260d067
+[4] (@chriscocreated) cc
+    https://farcaster.xyz/chriscocreated/0x893371f6
+[5] (@chriscocreated) love that vibeshift has a  feed. and an /empirebuilder one.  composability is lit  https://farcaster.xyz/miniapps/lrLLH3I_vhpw/vibeshift
+    https://farcaster.xyz/chriscocreated/0x902f01f5
+[6] (@chriscocreated) and thank you for picks! DM'ing them all for inclusion in a FC artist project.
+    https://farcaster.xyz/chriscocreated/0x11e413bc
