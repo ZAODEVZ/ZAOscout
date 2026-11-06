@@ -1946,3 +1946,17 @@
     https://farcaster.xyz/chriscocreated/0x902f01f5
 [6] (@chriscocreated) and thank you for picks! DM'ing them all for inclusion in a FC artist project.
     https://farcaster.xyz/chriscocreated/0x11e413bc
+
+## 2026-11-06T19:54:59.826Z
+[1] (@chriscocreated) here's the pool https://app.safe.global/home?safe=base:0x2091A4f2390cE5e941Da3322a644B91a76e0Effe
+    https://farcaster.xyz/chriscocreated/0x9e0a74e2
+[2] (@chriscocreated) One last monument to Purple. 🟪  Purple had a vibe, an energy, and a collective creative momentum that deserves to be marked permanently bef
+    https://farcaster.xyz/chriscocreated/0x78224394
+[3] (@chriscocreated) https://explorer.splits.org/ is the answer to my practical question  though not to my ux one :)
+    https://farcaster.xyz/chriscocreated/0xc805b3a8
+[4] (@chriscocreated) thanks exlporer.splits got me there
+    https://farcaster.xyz/chriscocreated/0x668633e6
+[5] (@chriscocreated) thanks! that did the job  6618 $UCI
+    https://farcaster.xyz/chriscocreated/0xdd32533b
+[6] (@jacek) ETH staking is live on yeetr.fun.  Hold ETH? Stake it for a week and get paid in USDC now.  This week: 2.9% (about 150% APR).  yeetr.fun/ear
+    https://farcaster.xyz/jacek/0x701de10d
