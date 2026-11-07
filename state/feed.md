@@ -2098,3 +2098,18 @@
     https://farcaster.xyz/chriscocreated/0xdd32533b
 [6] (@jacek) ETH staking is live on yeetr.fun.  Hold ETH? Stake it for a week and get paid in USDC now.  This week: 2.9% (about 150% APR).  yeetr.fun/ear
     https://farcaster.xyz/jacek/0x701de10d
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Not public yet, but if other artists want a profile hmu
+    https://farcaster.xyz/chriscocreated/0x08413926
+[2] (@chriscocreated) 16652 $UCI
+    https://farcaster.xyz/chriscocreated/0xad97b938
+[3] (@chriscocreated) 😂
+    https://farcaster.xyz/chriscocreated/0x8ab4e346
+[4] (@chriscocreated) Building a pool to commission a commemorative artwork  https://farcaster.xyz/chriscocreated/0x78224394
+    https://farcaster.xyz/chriscocreated/0xcda5a558
+[5] (@chriscocreated) another
+    https://farcaster.xyz/chriscocreated/0x30125158
+[6] (@dwr.eth) opportunity
+    https://farcaster.xyz/dwr.eth/0x05e2ff3e
