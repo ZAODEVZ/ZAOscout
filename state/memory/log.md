@@ -1974,3 +1974,9 @@
     https://farcaster.xyz/chriscocreated/0x30125158
 [6] (@dwr.eth) opportunity
     https://farcaster.xyz/dwr.eth/0x05e2ff3e
+
+## 2026-11-08T18:17:44.273Z
+[1] (@chriscocreated) I like this word cloud for me  My most-used words on Farcaster · Last 30 days.  Check yours!  faralytics - created by  with
+    https://farcaster.xyz/chriscocreated/0x47841550
+[2] (@chriscocreated) why do you say it’s *more* important? Arn’t they symbiotic?
+    https://farcaster.xyz/chriscocreated/0xb98c2a2f
