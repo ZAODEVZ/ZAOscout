@@ -1980,3 +1980,25 @@
     https://farcaster.xyz/chriscocreated/0x47841550
 [2] (@chriscocreated) why do you say it’s *more* important? Arn’t they symbiotic?
     https://farcaster.xyz/chriscocreated/0xb98c2a2f
+
+## 2026-11-09T22:56:39.628Z
+[1] (@chriscocreated) Thank you to everyone funding a Purple Memorial Artwork so far:
+    https://farcaster.xyz/chriscocreated/0x60ffb034
+[2] (@chriscocreated) I researched (with Gemini) really interesting !  The irony of Obey isn’t just that counter-culture got co-opted by commerce—it's that Shepar
+    https://farcaster.xyz/chriscocreated/0xdfe83c15
+[3] (@chriscocreated) I find obey fascinating, counter cultural brand that got co-opted by a business. Do you know the copyright status?
+    https://farcaster.xyz/chriscocreated/0xfd6fe2de
+[4] (@chriscocreated) ✅✅✅✅
+    https://farcaster.xyz/chriscocreated/0x40c52849
+[5] (@chriscocreated) I'm guessing you don't want to Obey anymore ?
+    https://farcaster.xyz/chriscocreated/0xe9006292
+[6] (@dwr.eth) Test
+    https://farcaster.xyz/dwr.eth/0x402187a9
+[7] (@dwr.eth) It’s not that much time if you know what you want and get prompt Claude properly
+    https://farcaster.xyz/dwr.eth/0xbf02a395
+[8] (@dwr.eth) No plans to merge in other code but it’s MIT so feel free to fork. I’m not planning to add many other features for the foreseeable future.  
+    https://farcaster.xyz/dwr.eth/0x13d5e3ac
+[9] (@dwr.eth) No idea. You’d have to ask Claude.   I’m assuming you can easily port this to your version of macOS.
+    https://farcaster.xyz/dwr.eth/0x051b70ca
+[10] (@dwr.eth) This took ~2 hours of my time (and a lot more time for Opus 5.5) over a week.  It's incredibly good at building native Mac and iOS apps.
+    https://farcaster.xyz/dwr.eth/0x51aab687
