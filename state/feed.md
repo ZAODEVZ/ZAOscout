@@ -2143,3 +2143,12 @@
     https://farcaster.xyz/dwr.eth/0x051b70ca
 [10] (@dwr.eth) This took ~2 hours of my time (and a lot more time for Opus 5.5) over a week.  It's incredibly good at building native Mac and iOS apps.
     https://farcaster.xyz/dwr.eth/0x51aab687
+
+---
+**ZAOscout digest - 3 items**
+[1] (@chriscocreated) I'd recommend the challenge of the meeting the bounty criteria - forced learning
+    https://farcaster.xyz/chriscocreated/0x94a3c81a
+[2] (@chriscocreated) I'm enjoying the process of learning by working with the AI to articulate a 59 second video. very stimulating.
+    https://farcaster.xyz/chriscocreated/0x65e5aa17
+[3] (@jacek) DEGEN pumped 50% above Friday's price on Saturday, then gave most of it back.  A $20 Up ticket bought at Friday's open could have sold for a
+    https://farcaster.xyz/jacek/0xc94b6707
