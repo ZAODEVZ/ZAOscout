@@ -2152,3 +2152,26 @@
     https://farcaster.xyz/chriscocreated/0x65e5aa17
 [3] (@jacek) DEGEN pumped 50% above Friday's price on Saturday, then gave most of it back.  A $20 Up ticket bought at Friday's open could have sold for a
     https://farcaster.xyz/jacek/0xc94b6707
+
+---
+**ZAOscout digest - 10 items**
+[1] (@chriscocreated) tldr was doing something in this sort of space around college athletes in the US (back in the days of early farcaster), might be worth seein
+    https://farcaster.xyz/chriscocreated/0xc5b5ae66
+[2] (@chriscocreated) Tiebout Sorting video submission plus bonus Warplet companion interactive webpage.  https://claude.ai/artifact/HiZGGRwaikZQw9xX632CM5?t=2
+    https://farcaster.xyz/chriscocreated/0xa940defb
+[3] (@chriscocreated) Create and learn and maybe earn, what’s not to like!
+    https://farcaster.xyz/chriscocreated/0x8ea33052
+[4] (@chriscocreated) This is not the outcome I was hoping for! 😂  Keep creating!
+    https://farcaster.xyz/chriscocreated/0x6170db62
+[5] (@chriscocreated) Who likes Warplets? Who likes niche social economic theory? Boy have I got a treat for you!
+    https://farcaster.xyz/chriscocreated/0x53c6d58f
+[6] (@dwr.eth) Grateful for our veterans.   I owe my freedom to the brave men and women who served.
+    https://farcaster.xyz/dwr.eth/0x8cfbc6d6
+[7] (@dwr.eth) Fatline now has 3 open source clients  1. macOS 2. iOS 3. Chrome extension  I don't plan to add many more features. Fork the repo and just a
+    https://farcaster.xyz/dwr.eth/0x9d01060c
+[8] (@dwr.eth) Introducing the Fatline Chrome extension  Browse Farcaster while scrolling X. Replaces the right sidebar.  Build from source here: https://g
+    https://farcaster.xyz/dwr.eth/0xae9ec93b
+[9] (@dwr.eth) Source code  https://github.com/danromero/fatline-monorepo
+    https://farcaster.xyz/dwr.eth/0x1f87e969
+[10] (@dwr.eth) Introducing Fatline for iOS  Same opinionated Mac client, but now on iOS.  TestFlight:  https://testflight.apple.com/join/SnTSSbrE
+    https://farcaster.xyz/dwr.eth/0x1a3b8a96
