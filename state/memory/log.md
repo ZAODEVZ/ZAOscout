@@ -2032,3 +2032,19 @@
     https://farcaster.xyz/dwr.eth/0x1f87e969
 [10] (@dwr.eth) Introducing Fatline for iOS  Same opinionated Mac client, but now on iOS.  TestFlight:  https://testflight.apple.com/join/SnTSSbrE
     https://farcaster.xyz/dwr.eth/0x1a3b8a96
+
+## 2026-11-12T20:44:05.297Z
+[1] (@chriscocreated) haha! winning the simulation! - might be worth gamifying more.  wen Festivus? wen grevance airing? - oh we did that already, right....
+    https://farcaster.xyz/chriscocreated/0xc7dab9df
+[2] (@chriscocreated) Claude (with sprites from Gemini)
+    https://farcaster.xyz/chriscocreated/0x362c0cae
+[3] (@chriscocreated) Loads more fun looking at Nordhoff's findings on successful communes in 19th Century America, and what's transferable to digital startup soc
+    https://farcaster.xyz/chriscocreated/0x2bc0ad68
+[4] (@chriscocreated) Updated Video, along with interactive simulator. https://claude.ai/artifact/PgMkdRKdi3HJeMQFYMC7EC
+    https://farcaster.xyz/chriscocreated/0x560557ec
+[5] (@chriscocreated) PSA: this sort of thing will result in me muting you.
+    https://farcaster.xyz/chriscocreated/0xa49182d9
+[6] (@jacek) The DEGEN site just got a refresh.  DEGEN is the community token of Base. As Base grows, we grow with it, and we're here to bring the next w
+    https://farcaster.xyz/jacek/0x54614898
+[7] (@jacek) Success means little if you fail at being a decent human being.  As a founder, I've looked up to Bezos, Gates, Musk and Jensen Huang. Not ju
+    https://farcaster.xyz/jacek/0xa765554c
