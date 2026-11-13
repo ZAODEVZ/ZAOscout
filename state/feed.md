@@ -2192,3 +2192,18 @@
     https://farcaster.xyz/jacek/0x54614898
 [7] (@jacek) Success means little if you fail at being a decent human being.  As a founder, I've looked up to Bezos, Gates, Musk and Jensen Huang. Not ju
     https://farcaster.xyz/jacek/0xa765554c
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Thanks for sharing. I just DM’d you
+    https://farcaster.xyz/chriscocreated/0x5e0f16dd
+[2] (@chriscocreated) 😘
+    https://farcaster.xyz/chriscocreated/0x46ca16fa
+[3] (@chriscocreated) Thank you Farcaster. I got to learn and create and earn with my friends. 💜  Highly recommended doing these earn bounties. Not just slapping
+    https://farcaster.xyz/chriscocreated/0x49596777
+[4] (@chriscocreated) Just watched the UX for a user who hadn't been in for a while.   First open (after redoenloading on iPhone) was an old version of the app - 
+    https://farcaster.xyz/chriscocreated/0x7e6b8627
+[5] (@chriscocreated) More performance poetry on Farcaster please  https://www.instagram.com/reel/DfpfRx0sUGx/?cplk=NnV3N2o5bnk5YWNl
+    https://farcaster.xyz/chriscocreated/0x6399ec38
+[6] (@dwr.eth) Good book
+    https://farcaster.xyz/dwr.eth/0x86836094
