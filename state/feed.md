@@ -2207,3 +2207,16 @@
     https://farcaster.xyz/chriscocreated/0x6399ec38
 [6] (@dwr.eth) Good book
     https://farcaster.xyz/dwr.eth/0x86836094
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) the one you have most energy for. looking forward to whichever it is.  (I'd also be interested in your platform/hosting/distribution thinkin
+    https://farcaster.xyz/chriscocreated/0xca270246
+[2] (@chriscocreated) very niche!
+    https://farcaster.xyz/chriscocreated/0x361e4ac5
+[3] (@chriscocreated) [sp]
+    https://farcaster.xyz/chriscocreated/0x327d2223
+[4] (@chriscocreated) my daughter tells me this is TicTok coded, and the people will eat it up. is she lying to me?
+    https://farcaster.xyz/chriscocreated/0x416c9e4e
+[5] (@dwr.eth) Fatline networks  Fatline now supports private networks.  Private networks use Farcaster FIDs for identity but the backend is completely pri
+    https://farcaster.xyz/dwr.eth/0x6ba6089b
