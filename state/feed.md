@@ -2220,3 +2220,16 @@
     https://farcaster.xyz/chriscocreated/0x416c9e4e
 [5] (@dwr.eth) Fatline networks  Fatline now supports private networks.  Private networks use Farcaster FIDs for identity but the backend is completely pri
     https://farcaster.xyz/dwr.eth/0x6ba6089b
+
+---
+**ZAOscout digest - 5 items**
+[1] (@chriscocreated) The theory of four distinct migrations that shaped America in Albion Seed is fascinating.   I worked up a full miniapp to go with it. with t
+    https://farcaster.xyz/chriscocreated/0x22201c3b
+[2] (@chriscocreated) thanks man. Mix of claude and gemini, making the app really informs the video making, plus a willingness to spend the time
+    https://farcaster.xyz/chriscocreated/0x8acbcadf
+[3] (@chriscocreated) thanks Dude. check out my latest: https://farcaster.xyz/chriscocreated/0xeae34b21
+    https://farcaster.xyz/chriscocreated/0xeee553b2
+[4] (@chriscocreated) I took the Albion's Seed quiz and I'm a Quaker.  “I doff my hat to God alone, Friend.”  Which of the four colonial folkways are you?
+    https://farcaster.xyz/chriscocreated/0x3752073f
+[5] (@chriscocreated) Explainer video on Albion's Seed and the four cultures that shaped America.   Plus bonus miniapp https://albions-seed.vercel.app/ for you to
+    https://farcaster.xyz/chriscocreated/0xeae34b21
