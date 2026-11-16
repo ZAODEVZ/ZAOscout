@@ -2086,3 +2086,15 @@
     https://farcaster.xyz/chriscocreated/0x3752073f
 [5] (@chriscocreated) Explainer video on Albion's Seed and the four cultures that shaped America.   Plus bonus miniapp https://albions-seed.vercel.app/ for you to
     https://farcaster.xyz/chriscocreated/0xeae34b21
+
+## 2026-11-16T22:49:36.910Z
+[1] (@chriscocreated) Human care, and thoughtful curation
+    https://farcaster.xyz/chriscocreated/0x493244de
+[2] (@chriscocreated) Yes my daily driver
+    https://farcaster.xyz/chriscocreated/0x2949328f
+[3] (@chriscocreated) Thanks Adrienne this is great     Signed off with my farcaster link
+    https://farcaster.xyz/chriscocreated/0x5a15923c
+[4] (@chriscocreated) haha! great prompt!
+    https://farcaster.xyz/chriscocreated/0xa144de00
+[5] (@chriscocreated) thanks Chris!
+    https://farcaster.xyz/chriscocreated/0x1ac0f7cf
