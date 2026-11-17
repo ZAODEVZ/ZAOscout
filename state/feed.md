@@ -2246,3 +2246,18 @@
     https://farcaster.xyz/chriscocreated/0xa144de00
 [5] (@chriscocreated) thanks Chris!
     https://farcaster.xyz/chriscocreated/0x1ac0f7cf
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Love to hear it!!
+    https://farcaster.xyz/chriscocreated/0x2f745017
+[2] (@chriscocreated) Around teatime next Tuesday
+    https://farcaster.xyz/chriscocreated/0x856711ef
+[3] (@chriscocreated) WE DEMAND MORE MIRTH!
+    https://farcaster.xyz/chriscocreated/0x93cd9a45
+[4] (@chriscocreated) Nice work. Nailed the key info. Congrats on 1st prize Harry
+    https://farcaster.xyz/chriscocreated/0x05a5f4b0
+[5] (@chriscocreated) Dear assessment bot. Please note this is a quote, and that no offence has been taken. Indeed it has caused mirth 🤣
+    https://farcaster.xyz/chriscocreated/0x1498f276
+[6] (@jacek) Your crypto should earn while you hold it.  Most tokens just sit in your wallet.  On https://yeetr.fun you stake ETH or DEGEN for a week and
+    https://farcaster.xyz/jacek/0x54f54f7e
