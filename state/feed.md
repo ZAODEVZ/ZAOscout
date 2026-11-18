@@ -2261,3 +2261,18 @@
     https://farcaster.xyz/chriscocreated/0x1498f276
 [6] (@jacek) Your crypto should earn while you hold it.  Most tokens just sit in your wallet.  On https://yeetr.fun you stake ETH or DEGEN for a week and
     https://farcaster.xyz/jacek/0x54f54f7e
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Great! Glad to hear it.   Oh made me think of FISK really enjoyable Australian comedy set in a solicitors office - mediation comes into it. 
+    https://farcaster.xyz/chriscocreated/0x87b3fa25
+[2] (@chriscocreated) Oh wowow that is big news. Is it fun?
+    https://farcaster.xyz/chriscocreated/0x6f145fa4
+[3] (@chriscocreated) Love the scenius. Pro social critique from Arjan.   Though I think main point of the bookclub was to take learnings from the book in terms o
+    https://farcaster.xyz/chriscocreated/0x76bb3faf
+[4] (@chriscocreated) Haha nice!!
+    https://farcaster.xyz/chriscocreated/0x6686daad
+[5] (@chriscocreated) ooh checkout the characters down the bottom - inspired by warplets ofc  😂 farticles
+    https://farcaster.xyz/chriscocreated/0x85eb69e0
+[6] (@jacek) A lot has been happening behind the scenes with DEGEN.  Some things are changing, the focus is getting sharper, and the ambitions are gettin
+    https://farcaster.xyz/jacek/0xed36ef52
