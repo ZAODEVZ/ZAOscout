@@ -2142,3 +2142,7 @@
     https://farcaster.xyz/jacek/0x3f73ac69
 [7] (@dwr.eth) Recently, I've been building a few personal iOS apps.  I asked Claude to help create a ~1000 word prompt based on what it struggled and subs
     https://farcaster.xyz/dwr.eth/0x796ad973
+
+## 2026-11-20T20:59:24.910Z
+[1] (@chriscocreated) oh ffs  devs can't you do something??
+    https://farcaster.xyz/chriscocreated/0x97760adb
