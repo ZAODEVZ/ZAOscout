@@ -2146,3 +2146,9 @@
 ## 2026-11-20T20:59:24.910Z
 [1] (@chriscocreated) oh ffs  devs can't you do something??
     https://farcaster.xyz/chriscocreated/0x97760adb
+
+## 2026-11-21T20:00:25.445Z
+[1] (@chriscocreated) My entry to How China Became Capitalist. Or experiment in a sandbox until everyone wants to play.  Plus interactive webpage  https://chrisco
+    https://farcaster.xyz/chriscocreated/0x8deac701
+[2] (@chriscocreated) 🤣
+    https://farcaster.xyz/chriscocreated/0xba3da6d9
