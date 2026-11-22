@@ -2152,3 +2152,11 @@
     https://farcaster.xyz/chriscocreated/0x8deac701
 [2] (@chriscocreated) 🤣
     https://farcaster.xyz/chriscocreated/0xba3da6d9
+
+## 2026-11-22T20:16:38.158Z
+[1] (@chriscocreated) Thank you!
+    https://farcaster.xyz/chriscocreated/0x703ccaec
+[2] (@chriscocreated) Still loving the bookclub. Pieceing together the background thinking behind the Network State. All pieces partial and indicative and also il
+    https://farcaster.xyz/chriscocreated/0x50f2ac1a
+[3] (@jacek) Something I haven't talked about enough is the role of the DEGEN NFT in what we're building next.  Our sloth character originated with the N
+    https://farcaster.xyz/jacek/0x3049593a
