@@ -2160,3 +2160,19 @@
     https://farcaster.xyz/chriscocreated/0x50f2ac1a
 [3] (@jacek) Something I haven't talked about enough is the role of the DEGEN NFT in what we're building next.  Our sloth character originated with the N
     https://farcaster.xyz/jacek/0x3049593a
+
+## 2026-11-24T00:42:18.281Z
+[1] (@chriscocreated) oh, we're just engaging in a project replacing coercive, geographic monopolies with consensual, opt-in governance. And saving the farcaster 
+    https://farcaster.xyz/chriscocreated/0x1453fbd3
+[2] (@chriscocreated) Course you are!
+    https://farcaster.xyz/chriscocreated/0x2f74fee5
+[3] (@chriscocreated) is dead a feeling?
+    https://farcaster.xyz/chriscocreated/0xdf67c100
+[4] (@jacek) DEGEN burns and buybacks  > in 2026 the Degen treasury purchased around 180 million DEGEN (~$189K) > burned over 1.13 billion DEGEN + 5 mill
+    https://farcaster.xyz/jacek/0xedeaccb9
+[5] (@jacek) I believe in Base.  It may not feel like Base season right now, but I'm still betting on Coinbase to bring the next billion people onchain. 
+    https://farcaster.xyz/jacek/0x41d0f849
+[6] (@dwr.eth) Source code  https://github.com/danromero/fatline-monorepo
+    https://farcaster.xyz/dwr.eth/0xed4accbf
+[7] (@dwr.eth) Fatline iOS updates  - Private networks now have push notifications - Improved photo display UX - Likes show up in the Activity tab - @ sugg
+    https://farcaster.xyz/dwr.eth/0x42c0c26a
