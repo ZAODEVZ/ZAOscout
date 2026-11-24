@@ -2331,3 +2331,14 @@
     https://farcaster.xyz/dwr.eth/0xed4accbf
 [7] (@dwr.eth) Fatline iOS updates  - Private networks now have push notifications - Improved photo display UX - Likes show up in the Activity tab - @ sugg
     https://farcaster.xyz/dwr.eth/0x42c0c26a
+
+---
+**ZAOscout digest - 4 items**
+[1] (@chriscocreated) For the first time in 4 years of working with  he had no notes.  I think I'm ready to ship.  I've been working on a coherent articulation of
+    https://farcaster.xyz/chriscocreated/0x76c3c9a3
+[2] (@chriscocreated) hi Aly, just checking you saw my DM's it would be good to be able to show your work
+    https://farcaster.xyz/chriscocreated/0x1ffb66b8
+[3] (@chriscocreated) nicely done
+    https://farcaster.xyz/chriscocreated/0x4cf32735
+[4] (@chriscocreated) no way! and (haha re parenting!)
+    https://farcaster.xyz/chriscocreated/0xb82a1bb4
