@@ -2186,3 +2186,21 @@
     https://farcaster.xyz/chriscocreated/0x4cf32735
 [4] (@chriscocreated) no way! and (haha re parenting!)
     https://farcaster.xyz/chriscocreated/0xb82a1bb4
+
+## 2026-11-25T22:21:19.553Z
+[1] (@chriscocreated) a pleasure! I'm curious, what is it causing you to think about?
+    https://farcaster.xyz/chriscocreated/0xadfeda87
+[2] (@chriscocreated) Also releasing a first step in some of these directions for farcaster next week
+    https://farcaster.xyz/chriscocreated/0xc96fc18d
+[3] (@chriscocreated) Exactly. The facilitators role is to create and hold spaces that enable the deep and compelling to emerge.   All an interesting problem when
+    https://farcaster.xyz/chriscocreated/0xf0683008
+[4] (@chriscocreated) Thank you Nikki, really appreciate your support. I didn't even realise I had a subscription open!
+    https://farcaster.xyz/chriscocreated/0xa0fb0b39
+[5] (@chriscocreated) Thank you, and for the links. Black Mountain College is a great example of what I'm getting at: conditions for art designed on purpose, and 
+    https://farcaster.xyz/chriscocreated/0x5e3ec264
+[6] (@jacek) Degen started on Farcaster, here's where I want to take it.  https://x.com/jacek0x/status/2125555413798064298
+    https://farcaster.xyz/jacek/0xe41f85f3
+[7] (@dwr.eth) More about Liquid Glass   https://developer.apple.com/design/human-interface-guidelines/materials#Liquid-Glass
+    https://farcaster.xyz/dwr.eth/0x54307013
+[8] (@dwr.eth) Introducing Glazier  An iPhone app for experimenting with Liquid Glass layouts on a phone.  1. Pick one of nine real SwiftUI screens 2. Twea
+    https://farcaster.xyz/dwr.eth/0xf755bb63
