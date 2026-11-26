@@ -2361,3 +2361,18 @@
     https://farcaster.xyz/dwr.eth/0x54307013
 [8] (@dwr.eth) Introducing Glazier  An iPhone app for experimenting with Liquid Glass layouts on a phone.  1. Pick one of nine real SwiftUI screens 2. Twea
     https://farcaster.xyz/dwr.eth/0xf755bb63
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) yes, this is for the protocol and scenius.
+    https://farcaster.xyz/chriscocreated/0xde4457d5
+[2] (@chriscocreated) The 'main' client on desktop, has an articles button down the left hand side
+    https://farcaster.xyz/chriscocreated/0xa2f9b7e3
+[3] (@chriscocreated) Hi Ana, (and thanks  )  I've sent you a DM, but it might be hidden in requests
+    https://farcaster.xyz/chriscocreated/0xb14c93c0
+[4] (@chriscocreated) Love to see terminus happening.  More spaces for artists and expression is a good thing.  I'm here for scenius.
+    https://farcaster.xyz/chriscocreated/0x09319573
+[5] (@chriscocreated) when I say farcaster I'm thinking of the protocol / scene as a whole. is that still what it means for you? or do you see NS owned farcaster?
+    https://farcaster.xyz/chriscocreated/0xa8d79e7b
+[6] (@dwr.eth) Sharing one of my personal iOS apps  Simo  Anki-compatible SRS flash card app for iOS. Use Claude to create a deck on any topic or based off
+    https://farcaster.xyz/dwr.eth/0x7a624392
