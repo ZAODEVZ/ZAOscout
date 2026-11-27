@@ -2376,3 +2376,18 @@
     https://farcaster.xyz/chriscocreated/0xa8d79e7b
 [6] (@dwr.eth) Sharing one of my personal iOS apps  Simo  Anki-compatible SRS flash card app for iOS. Use Claude to create a deck on any topic or based off
     https://farcaster.xyz/dwr.eth/0x7a624392
+
+---
+**ZAOscout digest - 6 items**
+[1] (@chriscocreated) Dm me if you’d like a profile
+    https://farcaster.xyz/chriscocreated/0x8f9e40c7
+[2] (@chriscocreated) DM me if you'd like a profile
+    https://farcaster.xyz/chriscocreated/0x71ae0614
+[3] (@chriscocreated) sweet! just DMd
+    https://farcaster.xyz/chriscocreated/0x69173448
+[4] (@chriscocreated) if you'd like a profile drop me a DM
+    https://farcaster.xyz/chriscocreated/0x5d3b218a
+[5] (@chriscocreated) Do we have a word to describe the wider ecosystem at the moment if Farcaster no longer works.  The Arts Centre ingests links from both hyper
+    https://farcaster.xyz/chriscocreated/0xc77fcdde
+[6] (@jacek) Happy DEGEN Friday.  All crypto is on sale.
+    https://farcaster.xyz/jacek/0x0fb79976
