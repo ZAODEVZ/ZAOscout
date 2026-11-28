@@ -2391,3 +2391,8 @@
     https://farcaster.xyz/chriscocreated/0xc77fcdde
 [6] (@jacek) Happy DEGEN Friday.  All crypto is on sale.
     https://farcaster.xyz/jacek/0x0fb79976
+
+---
+**ZAOscout digest - 1 items**
+[1] (@dwr.eth) Anything
+    https://farcaster.xyz/dwr.eth/0x5329af76
